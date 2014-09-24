@@ -4,13 +4,13 @@ $columnThird: ($flagWidth / 3);
 $lineThird: ($flagHeight / 3);
 
 // Three equal vertical stripes
-@mixin stripes-vertical-three(color1, color2, color3) {
-  border-right:$columnThird solid color1;
-  background:color2;
-  border-left: $columnThird solid color3;
+@mixin stripes-vertical-three($color1, $color2, $color3) {
+  border-right:$columnThird solid $color1;
+  background:$color2;
+  border-left: $columnThird solid $color3;
 }
 // Symbol in central column
-@mixin symbol-central-column(symbol, color) {
+@mixin symbol-central-column($symbol, $color) {
     content:$symbol;
     color:$color;
     font-size:40px;
@@ -38,16 +38,37 @@ $lineThird: ($flagHeight / 3);
 .flag-be {
   @include stripes-vertical-three(black, yellow, red);
 }
-
 // Ivory Coast
 .flag-ci {
   @include stripes-vertical-three(orange, white, green);
 }
-
-
 // France
 .flag-fr {
   @include stripes-vertical-three(red, white, blue);
+}
+// Guinea 
+.flag-gn {
+  @include stripes-vertical-three(red, yellow, green);
+}
+// Italy
+.flag-it {
+  @include stripes-vertical-three(green, white, red);
+}
+// Ireland
+.flag-ie {
+  @include stripes-vertical-three(green, white, orange);
+}
+// Mali
+.flag-ml {
+  @include stripes-vertical-three(green, yellow, red);
+}
+// Romania
+.flag-ro {
+  @include stripes-vertical-three(blue, yellow, red);
+}
+// Chad
+.flag-td {
+  @include stripes-vertical-three(blue, yellow, red);
 }
 
 /**
@@ -72,6 +93,25 @@ $lineThird: ($flagHeight / 3);
     @include symbol-central-column("★", yellow)
   }
   @include stripes-vertical-three(green, red, yellow);
+}
 
+// Mexico
+// TODO: Need center symbol
+.flag-mx {
+  @include stripes-vertical-three(green, white, red);
+}
+
+// Moldova
+// TODO: Need center symbol
+.flag-md {
+  @include stripes-vertical-three(blue, yellow, red);
+}
+
+// Senegal
+.flag-se {
+  &:before {
+    @include symbol-central-column("★", green)
+  }
+  @include stripes-vertical-three(green, yellow, red);
 }
 
