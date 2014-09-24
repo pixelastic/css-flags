@@ -1,0 +1,21 @@
+# build
+/dist/*/
+/.tmp
+
+# dependencies
+/node_modules
+/bower_components
+/vendors
+
+
+# various junk
+.ds_store
+._*
+thumbs.db
+.cache
+.project
+.settings
+.tmproj
+.idea
+
+

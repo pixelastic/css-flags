@@ -1,0 +1,26 @@
+{
+  "name": "css-flags",
+  "version": "0.0.1",
+  "description": "Flags of the world in pure CSS in only one div",
+  "author": "Tim \"pixelastic\" Carry",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:pixelastic/css-flags.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pixelastic/css-flags/issues"
+  },
+  "engines": {
+    "node": "0.10.21",
+    "npm": "1.3.11"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "matchdep": "~0.3.0",
+    "time-grunt": "~0.4.0",
+    "glob": "~4.0.4"
+  },
+  "dependencies": {}
+}
+
