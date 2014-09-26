@@ -6,7 +6,7 @@ module.exports = {
   },
   build: {
     options: {
-      src: '<%= config.app %>/*',
+      src: '<%= config.app %>/**',
       dest: '<%= config.dist %>',
       exclude: ['css/']
     }

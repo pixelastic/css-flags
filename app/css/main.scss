@@ -1,3 +1,14 @@
+@font-face {
+	font-family: "Symbolsxxx";
+	src: url("./fonts/Symbols.eot");
+	src: url("./fonts/Symbols.eot#iefix") format("embedded-opentype"),
+	url("./fonts/Symbols.woff") format("woff"),
+	url("./fonts/Symbols.ttf") format("truetype"),
+	url("./fonts/Symbols.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* VARIABLES */
 $flagWidth: 220px;
 $flagHeight: 160px;
@@ -27,7 +38,6 @@ $lineThird: ($flagHeight / 3);
     line-height:$flagHeight;
     width:$columnThird;
     text-align:center;
-
 }
 // Three equal horizontal stripes
 @mixin stripes-horizontal-three($color1, $color2, $color3) {
@@ -35,6 +45,17 @@ $lineThird: ($flagHeight / 3);
   background:$color2;
   border-bottom: $lineThird solid $color3;
 }
+// Symbol in central line
+@mixin symbol-central-line($symbol, $color) {
+    content:$symbol;
+    color:$color;
+    font-size:4em;
+    display:block;
+    height:$lineThird;
+    line-height:$lineThird;
+    text-align:center;
+}
+
 /**
  * Nordic cross, like Sweden, Norway or Finland.
  *
@@ -110,6 +131,7 @@ $lineThird: ($flagHeight / 3);
 body {
   font-family:Verdana;
 }
+
 .flag-list {
   list-style:none;
   li {
@@ -283,10 +305,10 @@ body {
 }
 // Cameroon
 .flag-cmr {
+  @include stripes-vertical-three(#007A5E, #CE1126, #FCD116);
   &:before {
     @include symbol-central-column("★", #FCD116)
   }
-  @include stripes-vertical-three(#007A5E, #CE1126, #FCD116);
 }
 // Canada
 .flag-can {
@@ -431,6 +453,10 @@ body {
 }
 // Ghana
 .flag-gha {
+  @include stripes-horizontal-three(#CE1126, #FCD116, #006B3F);
+  &:before {
+    @include symbol-central-line("★", black)
+  }
 }
 // Gibraltar
 .flag-gib {
@@ -644,6 +670,12 @@ body {
 }
 // Morocco
 .flag-mar {
+  background:#C1272D;
+  &:before {
+    font-family: Symbol;
+    content: "\e800";
+    color:#006233;
+  }
 }
 // Mozambique
 .flag-moz {
@@ -783,10 +815,10 @@ body {
 }
 // Senegal
 .flag-sen {
+  @include stripes-vertical-three(green, yellow, red);
   &:before {
     @include symbol-central-column("★", green)
   }
-  @include stripes-vertical-three(green, yellow, red);
 }
 // Serbia
 .flag-srb {
