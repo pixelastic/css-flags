@@ -1,6 +1,6 @@
 /* VARIABLES */
-$flagWidth: 150px;
-$flagHeight: 75px;
+$flagWidth: 220px;
+$flagHeight: 160px;
 $columnThird: ($flagWidth / 3);
 $lineThird: ($flagHeight / 3);
 
@@ -16,7 +16,7 @@ $lineThird: ($flagHeight / 3);
 @mixin symbol-central-column($symbol, $color) {
     content:$symbol;
     color:$color;
-    font-size:40px;
+    font-size:4em;
     display:block;
     height:$flagHeight;
     line-height:$flagHeight;
@@ -52,6 +52,48 @@ $lineThird: ($flagHeight / 3);
     height:$flagHeight; /* 2 */
     top: -(2 * $y); /* 2 */
     left: (2 * $x); /* 2 */
+  }
+}
+/**
+ * Nordic cross with borders.
+ *
+ * We set a background color and will the define the cross by positioning
+ * 4 squares in the 4 angles, each composed of a filled box-shadow and 3 border
+ * box-shadow.
+ **/
+@mixin nordic-cross-border($background-color, $cross-color, $border-color) {
+  $x: $flagWidth / 22;
+  background:$cross-color;
+  overflow:hidden;
+  &:before {
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:(12 * $x);
+    height:(6 * $x);
+    background:$background-color;
+    box-shadow:0px $x 0px $border-color,  /* Bottom */
+               -$x 0px 0px $border-color, /* Left */
+               -$x $x 0px $border-color, /* Bottom-left corner */
+
+               /* Bottom right */
+               0px (10 * $x) 0px $background-color, /* Background */
+               0px (9 * $x) 0px $border-color, /* Top */
+               -$x (10 * $x) 0px $border-color, /* Left */
+               -$x (9 * $x) 0px $border-color, /* Top-left corner */
+
+               /* Top left */
+               (-16 * $x) 0px 0px $background-color, /* Background */
+               (-16 * $x) $x 0px $border-color, /* Bottom */
+               (-15 * $x) 0px 0px $border-color, /* Right */
+               (-15 * $x) $x 0px $border-color, /* Bottom-right corner */
+
+               /* Bottom left */
+               (-16 * $x) (10 * $x) 0px $background-color, /* Background */
+               (-16 * $x) (9 * $x) 0px $border-color, /* Top */
+               (-15 * $x) (10 * $x) 0px $border-color, /* Right */
+               (-15 * $x) (9 * $x) 0px $border-color; /* Top-right corner */
   }
 }
 
@@ -95,10 +137,11 @@ body {
 // Afghanistan
 // TODO: Incomplete
 .flag-afg {
-  @include stripes-vertical-three(black, red, green);
+  @include stripes-vertical-three(black, #BF0000, #009900);
 }
 // Åland Islands
 .flag-ala {
+  @include nordic-cross-border(#0053A5, #D21034, #FFCE00);
 }
 // Albania
 .flag-alb {
@@ -129,7 +172,7 @@ body {
 }
 // Armenia
 .flag-arm {
-  @include stripes-horizontal-three(red, blue, orange);
+  @include stripes-horizontal-three(#D90012, #0033A0, #F2A800);
 }
 // Aruba
 .flag-abw {
@@ -160,7 +203,7 @@ body {
 }
 // Belgium
 .flag-bel {
-  @include stripes-vertical-three(black, yellow, red);
+  @include stripes-vertical-three(black, #FAE042, #ED2939);
 }
 // Belize
 .flag-blz {
@@ -176,7 +219,7 @@ body {
 }
 // Bolivia, Plurinational State of
 .flag-bol {
-  @include stripes-horizontal-three(red, yellow, green);
+  @include stripes-horizontal-three(#D52B1E, #FFE000, #007934);
 }
 // Bonaire, Sint Eustatius and Saba
 .flag-bes {
@@ -201,7 +244,7 @@ body {
 }
 // Bulgaria
 .flag-bgr {
-  @include stripes-horizontal-three(white, green, red);
+  @include stripes-horizontal-three(white, #00966E, #D62612);
 }
 // Burkina Faso
 .flag-bfa {
@@ -215,9 +258,9 @@ body {
 // Cameroon
 .flag-cmr {
   &:before {
-    @include symbol-central-column("★", yellow)
+    @include symbol-central-column("★", #FCD116)
   }
-  @include stripes-vertical-three(green, red, yellow);
+  @include stripes-vertical-three(#007A5E, #CE1126, #FCD116);
 }
 // Canada
 .flag-can {
@@ -233,7 +276,7 @@ body {
 }
 // Chad
 .flag-tcd {
-  @include stripes-vertical-three(blue, yellow, red);
+  @include stripes-vertical-three(#002664, #FECB00, #C60C30);
 }
 // Chile
 .flag-chl {
@@ -267,7 +310,7 @@ body {
 }
 // Côte d'Ivoire
 .flag-civ {
-  @include stripes-vertical-three(orange, white, green);
+  @include stripes-vertical-three(#F77F00, white, #009E60);
 }
 // Croatia
 .flag-hrv {
@@ -286,7 +329,7 @@ body {
 }
 // Denmark
 .flag-dnk {
-  @include nordic-cross(red, white);
+  @include nordic-cross(#C60C30, white);
 }
 // Djibouti
 .flag-dji {
@@ -314,7 +357,7 @@ body {
 }
 // Estonia
 .flag-est {
-  @include stripes-horizontal-three(blue, black, white);
+  @include stripes-horizontal-three(#4891D9, black, white);
 }
 // Ethiopia
 .flag-eth {
@@ -324,17 +367,18 @@ body {
 }
 // Faroe Islands
 .flag-fro {
+  @include nordic-cross-border(white, #ED2939, #0065BD);
 }
 // Fiji
 .flag-fji {
 }
 // Finland
 .flag-fin {
-  @include nordic-cross(white, blue);
+  @include nordic-cross(white, #003580);
 }
 // France
 .flag-fra {
-  @include stripes-vertical-three(blue, white, red);
+  @include stripes-vertical-three(#002395, white, #ED2939);
 }
 // French Guiana
 .flag-guf {
@@ -347,7 +391,7 @@ body {
 }
 // Gabon
 .flag-gab {
-  @include stripes-horizontal-three(green, yellow, blue);
+  @include stripes-horizontal-three(#009E60, #FCD116, #3A75C4);
 }
 // Gambia
 .flag-gmb {
@@ -357,7 +401,7 @@ body {
 }
 // Germany
 .flag-deu {
-  @include stripes-horizontal-three(black, red, yellow);
+  @include stripes-horizontal-three(black, #DD0000, #FFCE00);
 }
 // Ghana
 .flag-gha {
@@ -388,7 +432,7 @@ body {
 }
 // Guinea
 .flag-gin {
-  @include stripes-vertical-three(red, yellow, green);
+  @include stripes-vertical-three(#CE1126, #FCD116, #009460);
 }
 // Guinea-Bissau
 .flag-gnb {
@@ -417,6 +461,7 @@ body {
 }
 // Iceland
 .flag-isl {
+  @include nordic-cross-border(#003897, #D72828, white);
 }
 // India
 .flag-ind {
@@ -619,6 +664,7 @@ body {
 }
 // Norway
 .flag-nor {
+  @include nordic-cross-border(#ED2939, #002664, white);
 }
 // Oman
 .flag-omn {
@@ -870,7 +916,7 @@ body {
 }
 // Yemen
 .flag-yem {
-  @include stripes-horizontal-three(red, white, black);
+  @include stripes-horizontal-three(#CE1126, white, black);
 }
 // Zambia
 .flag-zmb {
