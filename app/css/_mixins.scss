@@ -1,0 +1,139 @@
+/* MIXINS */
+
+/**
+ * Star and crescent : ☪
+ * ★☆☨☬☭☽☾♢♦⚙⚜⚫⚪
+ **/
+
+/**
+ * Centered symbol on plain flag
+ **/
+@mixin symbol-central-plain($symbol, $color) {
+  content: $symbol;
+  position:absolute;
+  top:0;
+  left:0;
+  display:block;
+  width:$flagWidth;
+  height:$flagHeight;
+  text-align:center;
+  line-height:$flagHeight;
+  font-size:5em;
+  color:$color;
+}
+
+/**
+ * Three equal vertical stripes.
+ * Done with a background color for the central stripe and two large right and
+ * left borders for the other stripes
+ **/
+@mixin stripes-vertical-three($color1, $color2, $color3) {
+  border-left:$columnThird solid $color1;
+  background:$color2;
+  border-right: $columnThird solid $color3;
+}
+/**
+ * Symbol centered in the middle column.
+ * 
+ * Just centering it vertically and horizontally
+ **/
+@mixin symbol-central-column($symbol, $color) {
+    content:$symbol;
+    color:$color;
+    font-size:4em;
+    display:block;
+    height:$flagHeight;
+    line-height:$flagHeight;
+    width:$columnThird;
+    text-align:center;
+}
+/**
+ * Three equal horizontal stripes.
+ * Done with a background for the middle one and large borders for the top and
+ * bottom one.
+ **/
+@mixin stripes-horizontal-three($color1, $color2, $color3) {
+  border-top:$lineThird solid $color1;
+  background:$color2;
+  border-bottom: $lineThird solid $color3;
+}
+/**
+ * Centered symbol on the middle line
+ **/
+@mixin symbol-central-line($symbol, $color) {
+    content:$symbol;
+    color:$color;
+    font-size:4em;
+    display:block;
+    height:$lineThird;
+    line-height:$lineThird;
+    text-align:center;
+}
+
+/**
+ * Nordic cross, like Sweden, Norway or Finland.
+ *
+ * 1. Three horizontal stripes
+ * 2. Vertical bar for the cross
+ **/
+@mixin nordic-cross($background-color, $cross-color) {
+  $x: $flagWidth / 7;
+  $y: $flagHeight / 5;
+
+  background:$cross-color; /* 1 */
+  border-top: (2 * $y) solid $background-color; /* 1 */
+  border-bottom:(2 * $y) solid $background-color; /* 1 */
+  &:before {
+    content:"";
+    position:absolute;
+    display:block;
+    background:$cross-color; /* 2 */
+    width: $y; /* 2 */
+    height:$flagHeight; /* 2 */
+    top: -(2 * $y); /* 2 */
+    left: (2 * $x); /* 2 */
+  }
+}
+/**
+ * Nordic cross with borders.
+ *
+ * We set a background color and will the define the cross by positioning
+ * 4 squares in the 4 angles, each composed of a filled box-shadow and 3 border
+ * box-shadow.
+ **/
+@mixin nordic-cross-border($background-color, $cross-color, $border-color) {
+  $x: $flagWidth / 22;
+  background:$cross-color;
+  overflow:hidden;
+  &:before {
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:(12 * $x);
+    height:(6 * $x);
+    background:$background-color;
+    box-shadow:0px $x 0px $border-color,  /* Bottom */
+               -$x 0px 0px $border-color, /* Left */
+               -$x $x 0px $border-color, /* Bottom-left corner */
+
+               /* Bottom right */
+               0px (10 * $x) 0px $background-color, /* Background */
+               0px (9 * $x) 0px $border-color, /* Top */
+               -$x (10 * $x) 0px $border-color, /* Left */
+               -$x (9 * $x) 0px $border-color, /* Top-left corner */
+
+               /* Top left */
+               (-16 * $x) 0px 0px $background-color, /* Background */
+               (-16 * $x) $x 0px $border-color, /* Bottom */
+               (-15 * $x) 0px 0px $border-color, /* Right */
+               (-15 * $x) $x 0px $border-color, /* Bottom-right corner */
+
+               /* Bottom left */
+               (-16 * $x) (10 * $x) 0px $background-color, /* Background */
+               (-16 * $x) (9 * $x) 0px $border-color, /* Top */
+               (-15 * $x) (10 * $x) 0px $border-color, /* Right */
+               (-15 * $x) (9 * $x) 0px $border-color; /* Top-right corner */
+  }
+}
+

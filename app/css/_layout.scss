@@ -1,0 +1,31 @@
+/* LAYOUT */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:Verdana;
+}
+
+.flag-list {
+  list-style:none;
+  li {
+    float:left;
+    display:block;
+    padding:10px;
+    border:1px solid grey;
+    border-radius:5px;
+    margin-right:5px;
+    margin-bottom:5px;
+  }
+  strong {
+    display:block;
+    text-align:center;
+    height:20px;
+    width:$flagWidth;
+    overflow:hidden;
+    margin-top:10px;
+  }
+}
+

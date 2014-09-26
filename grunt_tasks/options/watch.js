@@ -2,7 +2,7 @@ module.exports = {
   css: {
     files: ['<%= config.app %>/css/*.scss'],
     tasks: [
-      'newer:sass:build',
+      'sass:build',
       'newer:autoprefixer:build'
     ],
     options: {
