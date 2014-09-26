@@ -4,6 +4,11 @@ $flagHeight: 160px;
 $columnThird: ($flagWidth / 3);
 $lineThird: ($flagHeight / 3);
 
+/**
+ * Star and crescent : ☪
+ * ★☆☨☬☭☽☾♢♦⚙⚜⚫⚪
+ **/
+
 /* MIXINS */
 
 // Three equal vertical stripes
@@ -144,10 +149,31 @@ body {
   @include nordic-cross-border(#0053A5, #D21034, #FFCE00);
 }
 // Albania
+// TODO: Incomplet
 .flag-alb {
+  background:#E41E20;
 }
 // Algeria
+/**
+ * Two large borders to make the two columns. And an UTF-8 symbol vertically
+ * and horizontally centered
+ **/
 .flag-dza {
+  border-left:($flagWidth / 2) solid #006233;
+  border-right:($flagWidth /2) solid white;
+  &:before {
+    content: "☪";
+    color: #D21034;
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: -($flagWidth / 2);
+    width:$flagWidth;
+    height: $flagHeight;
+    line-height: $flagHeight;
+    text-align: center;
+    font-size: 7em;
+  }
 }
 // American Samoa
 .flag-asm {
