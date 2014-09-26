@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require 'json'
+
+list = JSON.parse(File.read('./all.json'))
+
+
+list.each do |item|
+  puts "// #{item['name']}"
+  puts ".flag-#{item['alpha-3'].downcase} {"
+  puts "}"
+end
+#
+#

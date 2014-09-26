@@ -1,101 +1,5 @@
-/* VARIABLES */
-$flagWidth: 150px;
-$flagHeight: 75px;
-$columnThird: ($flagWidth / 3);
-$lineThird: ($flagHeight / 3);
-
-/* MIXINS */
-
-// Three equal vertical stripes
-@mixin stripes-vertical-three($color1, $color2, $color3) {
-  border-left:$columnThird solid $color1;
-  background:$color2;
-  border-right: $columnThird solid $color3;
-}
-// Symbol in central column
-@mixin symbol-central-column($symbol, $color) {
-    content:$symbol;
-    color:$color;
-    font-size:40px;
-    display:block;
-    height:$flagHeight;
-    line-height:$flagHeight;
-    width:$columnThird;
-    text-align:center;
-
-}
-// Three equal horizontal stripes
-@mixin stripes-horizontal-three($color1, $color2, $color3) {
-  border-top:$lineThird solid $color1;
-  background:$color2;
-  border-bottom: $lineThird solid $color3;
-}
-/**
- * Nordic cross, like Sweden, Norway or Finland.
- *
- * 1. Three horizontal stripes
- * 2. Vertical bar for the cross
- **/
-@mixin nordic-cross($background-color, $cross-color) {
-  $x: $flagWidth / 7;
-  $y: $flagHeight / 5;
-
-  background:$cross-color; /* 1 */
-  border-top: (2 * $y) solid $background-color; /* 1 */
-  border-bottom:(2 * $y) solid $background-color; /* 1 */
-  &:before {
-    content:"";
-    position:absolute;
-    display:block;
-    background:$cross-color; /* 2 */
-    width: $y; /* 2 */
-    height:$flagHeight; /* 2 */
-    top: -(2 * $y); /* 2 */
-    left: (2 * $x); /* 2 */
-  }
-}
-
-/* LAYOUT */
-
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family:Verdana;
-}
-.flag-list {
-  list-style:none;
-  li {
-    float:left;
-    display:block;
-    padding:10px;
-    border:1px solid grey;
-    border-radius:5px;
-    margin-right:5px;
-    margin-bottom:5px;
-  }
-  strong {
-    display:block;
-    text-align:center;
-    height:20px;
-    width:$flagWidth;
-    overflow:hidden;
-    margin-top:10px;
-  }
-}
-
-/* FLAGS */
-
-.flag {
-  width:$flagWidth;
-  height:$flagHeight;
-  position:relative;
-}
-
 // Afghanistan
-// TODO: Incomplete
 .flag-afg {
-  @include stripes-vertical-three(black, red, green);
 }
 // Åland Islands
 .flag-ala {
@@ -129,7 +33,6 @@ body {
 }
 // Armenia
 .flag-arm {
-  @include stripes-horizontal-three(red, blue, orange);
 }
 // Aruba
 .flag-abw {
@@ -160,7 +63,6 @@ body {
 }
 // Belgium
 .flag-bel {
-  @include stripes-vertical-three(black, yellow, red);
 }
 // Belize
 .flag-blz {
@@ -176,7 +78,6 @@ body {
 }
 // Bolivia, Plurinational State of
 .flag-bol {
-  @include stripes-horizontal-three(red, yellow, green);
 }
 // Bonaire, Sint Eustatius and Saba
 .flag-bes {
@@ -201,7 +102,6 @@ body {
 }
 // Bulgaria
 .flag-bgr {
-  @include stripes-horizontal-three(white, green, red);
 }
 // Burkina Faso
 .flag-bfa {
@@ -214,10 +114,6 @@ body {
 }
 // Cameroon
 .flag-cmr {
-  &:before {
-    @include symbol-central-column("★", yellow)
-  }
-  @include stripes-vertical-three(green, red, yellow);
 }
 // Canada
 .flag-can {
@@ -233,7 +129,6 @@ body {
 }
 // Chad
 .flag-tcd {
-  @include stripes-vertical-three(blue, yellow, red);
 }
 // Chile
 .flag-chl {
@@ -267,7 +162,6 @@ body {
 }
 // Côte d'Ivoire
 .flag-civ {
-  @include stripes-vertical-three(orange, white, green);
 }
 // Croatia
 .flag-hrv {
@@ -286,7 +180,6 @@ body {
 }
 // Denmark
 .flag-dnk {
-  @include nordic-cross(red, white);
 }
 // Djibouti
 .flag-dji {
@@ -314,7 +207,6 @@ body {
 }
 // Estonia
 .flag-est {
-  @include stripes-horizontal-three(blue, black, white);
 }
 // Ethiopia
 .flag-eth {
@@ -330,11 +222,9 @@ body {
 }
 // Finland
 .flag-fin {
-  @include nordic-cross(white, blue);
 }
 // France
 .flag-fra {
-  @include stripes-vertical-three(blue, white, red);
 }
 // French Guiana
 .flag-guf {
@@ -347,7 +237,6 @@ body {
 }
 // Gabon
 .flag-gab {
-  @include stripes-horizontal-three(green, yellow, blue);
 }
 // Gambia
 .flag-gmb {
@@ -357,7 +246,6 @@ body {
 }
 // Germany
 .flag-deu {
-  @include stripes-horizontal-three(black, red, yellow);
 }
 // Ghana
 .flag-gha {
@@ -388,7 +276,6 @@ body {
 }
 // Guinea
 .flag-gin {
-  @include stripes-vertical-three(red, yellow, green);
 }
 // Guinea-Bissau
 .flag-gnb {
@@ -413,7 +300,6 @@ body {
 }
 // Hungary
 .flag-hun {
-  @include stripes-horizontal-three(red, white, green);
 }
 // Iceland
 .flag-isl {
@@ -432,7 +318,6 @@ body {
 }
 // Ireland
 .flag-irl {
-  @include stripes-vertical-three(green, white, orange);
 }
 // Isle of Man
 .flag-imn {
@@ -442,7 +327,6 @@ body {
 }
 // Italy
 .flag-ita {
-  @include stripes-vertical-three(green, white, red);
 }
 // Jamaica
 .flag-jam {
@@ -500,11 +384,9 @@ body {
 }
 // Lithuania
 .flag-ltu {
-  @include stripes-horizontal-three(yellow, green, red);
 }
 // Luxembourg
 .flag-lux {
-  @include stripes-horizontal-three(red, white, blue);
 }
 // Macao
 .flag-mac {
@@ -526,7 +408,6 @@ body {
 }
 // Mali
 .flag-mli {
-  @include stripes-vertical-three(green, yellow, red);
 }
 // Malta
 .flag-mlt {
@@ -547,17 +428,13 @@ body {
 .flag-myt {
 }
 // Mexico
-// TODO: Incomplete
 .flag-mex {
-  @include stripes-vertical-three(green, white, red);
 }
 // Micronesia, Federated States of
 .flag-fsm {
 }
 // Moldova, Republic of
-// TODO: Incomplete
 .flag-mda {
-  @include stripes-vertical-three(blue, yellow, red);
 }
 // Monaco
 .flag-mco {
@@ -591,7 +468,6 @@ body {
 }
 // Netherlands
 .flag-nld {
-  @include stripes-horizontal-three(darkred, white, blue);
 }
 // New Caledonia
 .flag-ncl {
@@ -667,11 +543,9 @@ body {
 }
 // Romania
 .flag-rou {
-  @include stripes-vertical-three(blue, yellow, red);
 }
 // Russian Federation
 .flag-rus {
-  @include stripes-horizontal-three(white, blue, red);
 }
 // Rwanda
 .flag-rwa {
@@ -711,10 +585,6 @@ body {
 }
 // Senegal
 .flag-sen {
-  &:before {
-    @include symbol-central-column("★", green)
-  }
-  @include stripes-vertical-three(green, yellow, red);
 }
 // Serbia
 .flag-srb {
@@ -724,7 +594,6 @@ body {
 }
 // Sierra Leone
 .flag-sle {
-  @include stripes-horizontal-three(green, white, blue);
 }
 // Singapore
 .flag-sgp {
@@ -773,7 +642,6 @@ body {
 }
 // Sweden
 .flag-swe {
-  @include nordic-cross(blue, yellow);
 }
 // Switzerland
 .flag-che {
@@ -870,7 +738,6 @@ body {
 }
 // Yemen
 .flag-yem {
-  @include stripes-horizontal-three(red, white, black);
 }
 // Zambia
 .flag-zmb {
