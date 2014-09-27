@@ -186,8 +186,67 @@
 // Colombia
 .flag-col {
 }
+/**
+ * Comoros
+ *
+ * The Comoros flag is made of three elements. The div itself for the 4 colored
+ * lines, :before for the green triangle and :after for the crescent and stars.
+ *
+ * See below for detail of each element.
+ **/
 // Comoros
 .flag-com {
+  // The 4 lines are simply made of 4 inset drop-shadows.
+  box-shadow:inset 0px $lineQuarter 0px #FFC61E,
+             inset 0px (2 * $lineQuarter) 0px white,
+             inset 0px (3 * $lineQuarter) 0px #CE1126,
+             inset 0px (4 * $lineQuarter) 0px #3A75C4;
+  /**
+   * The green triangle is absolutly positioned and shaped using transparent
+   * borders.
+   *
+   * 1. Position on the left
+   * 2. Create triangle with borders
+   **/
+  &:before {
+    content:""; /* 1 */
+    position:absolute; /* 1 */
+    top:0; /* 1 */
+    left:0; /* 1 */
+    display:block; /* 1 */
+    border-left:($flagWidth / 2) solid #3D8E33; /* 2 */
+    border-top:($flagHeight / 2) solid transparent; /* 2 */
+    border-bottom:($flagHeight / 2) solid transparent; /* 2 */
+  }
+  /**
+   * The crescent and stars is a little more tricky. The crescent itself is
+   * simply a green rounded block with a white box-shadow. The stars are UTF-8
+   * stars with a repeating text-shadow.
+   *
+   * 1. Position element
+   * 2. Stars positionned in crescent and repeated through text-shadow
+   * 3. Create crescent by doing an eclipse with the circle box-shadow
+   */
+  &:after {
+    position: absolute;
+    display: block;
+    width: ($flagHeight / 2.5); /* 1 */
+    height: ($flagHeight / 2.5); /* 1 */
+    top: 50%; /* 1 */
+    margin-top:-($flagHeight / 5); /* 1 */
+    left: ($flagWidth / 10);/* 1 */
+
+    content: "★"; /* 2 */
+    color: white; /* 2 */
+    text-align:center; /* 2 */
+    text-indent: -10px; /* 2 */
+    text-shadow:0px 15px 0px white, 0px 30px 0px white, 0px 45px 0px white; /* 2 */
+    line-height:18px; /* 2 */
+
+    background: #3D8E33; /* 3 */
+    border-radius: 100%; /* 3 */
+    box-shadow: -11px 0px 0px white; /* 3 */
+  }
 }
 // Congo
 .flag-cog {
