@@ -10,7 +10,7 @@
  **/
 @mixin symbol-central-plain($background, $symbol, $symbol-color) {
   background:$background;
-  &:before {
+  &:after {
     content: $symbol;
     font-family: Symbols;
     position:absolute;
@@ -23,6 +23,45 @@
     line-height:$flagHeight;
     font-size:5em;
     color:$symbol-color;
+  }
+}
+
+/**
+ * Creating a crescent by overlapping two circles, like an eclipse.
+ * This will use both :before and :after and will center them by default
+ * Use transform: translateX() to move it around if you do not need it in the
+ * center.
+ *
+ * 1. Position :before vertically and horizontally centered
+ * 2. Position :after the same, but slightly more on the right
+ * 3. Center :after content, just in case
+ **/
+@mixin crescent($outer-width, $inner-width, $color, $background) {
+  &:before, &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    border-radius:100%;
+  }
+  // Background circle, used as the crescent
+  &:before {
+    background:$color;
+    width:$outer-width; /* 1 */
+    height:$outer-width; /* 1 */
+    margin-top:(-$outer-width / 2); /* 1 */
+    margin-left:(-$outer-width / 2); /* 1 */
+  }
+  // Foregroup circle, used to to the eclipse
+  &:after {
+    background: $background;
+    width: $inner-width; /* 2 */
+    height:$inner-width; /* 2 */
+    margin-top: (-$inner-width / 2); /* 2 */
+    margin-left: ($outer-width - 2 * $inner-width) / 2 + 2; /* 2 */
+    text-align: center; /* 3 */
+    line-height: $inner-width; /* 3 */
   }
 }
 

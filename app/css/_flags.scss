@@ -482,7 +482,7 @@
 // Mauritania
 .flag-mrt {
   @include symbol-central-plain(#006233, "☪", #FFC400);
-  &:before {
+  &:after {
     transform:rotate(-90deg);
     font-size:8em;
   }
@@ -521,7 +521,7 @@
 // Morocco
 .flag-mar {
   @include symbol-central-plain(#C1272D, "\e800", #006233); //TODO: Should be \26E4
-  &:before {
+  &:after {
     font-weight:bold;
   }
 }
@@ -763,11 +763,43 @@
 // Trinidad and Tobago
 .flag-tto {
 }
-// Tunisia
+/**
+ * Tunisia
+ * Displaying a Crescent and Star in the middle, but adding white circle behind
+ * it by using the :before element
+ * TODO: By using the UTF-8 char, flag is not exactly as it should be
+ * http://en.wikipedia.org/wiki/Flag_of_Tunisia
+ **/
 .flag-tun {
+  @include symbol-central-plain(#E70013, "☪", #E70013);
+  &:before {
+    content:"";
+    display:block;
+    width:(8 * $unit);
+    height:(8 * $unit);
+    border-radius:100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:(-4 * $unit);
+    margin-left:(-4 * $unit);
+    background:white;
+  }
 }
 // Turkey
 .flag-tur {
+  background:#E30A17;
+  @include crescent(80px, 65px, white, #E30A17);
+  &:before {
+    transform: translateX(-(4 * $unit));
+  }
+  &:after {
+    content: "★";
+    color:white;
+    font-size: 3em;
+    text-indent: 50px;
+    transform:translateX(-(4 * $unit)) rotate(-10deg);
+  }
 }
 // Turkmenistan
 .flag-tkm {
