@@ -3,7 +3,7 @@ module.exports = {
     files: ['<%= config.app %>/css/*.scss'],
     tasks: [
       'sass:build',
-      'newer:autoprefixer:build'
+      'autoprefixer:build'
     ],
     options: {
       livereload: true

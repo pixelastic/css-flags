@@ -8,18 +8,22 @@
 /**
  * Centered symbol on plain flag
  **/
-@mixin symbol-central-plain($symbol, $color) {
-  content: $symbol;
-  position:absolute;
-  top:0;
-  left:0;
-  display:block;
-  width:$flagWidth;
-  height:$flagHeight;
-  text-align:center;
-  line-height:$flagHeight;
-  font-size:5em;
-  color:$color;
+@mixin symbol-central-plain($background, $symbol, $symbol-color) {
+  background:$background;
+  &:before {
+    content: $symbol;
+    font-family: Symbols;
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    width:$flagWidth;
+    height:$flagHeight;
+    text-align:center;
+    line-height:$flagHeight;
+    font-size:5em;
+    color:$symbol-color;
+  }
 }
 
 /**

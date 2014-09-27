@@ -354,7 +354,7 @@
 }
 // Hungary
 .flag-hun {
-  @include stripes-horizontal-three(red, white, green);
+  @include stripes-horizontal-three(#CD2A3E, white, #436F4D);
 }
 // Iceland
 .flag-isl {
@@ -374,7 +374,7 @@
 }
 // Ireland
 .flag-irl {
-  @include stripes-vertical-three(green, white, orange);
+  @include stripes-vertical-three(#009B48, white, #FF7900);
 }
 // Isle of Man
 .flag-imn {
@@ -384,7 +384,7 @@
 }
 // Italy
 .flag-ita {
-  @include stripes-vertical-three(green, white, red);
+  @include stripes-vertical-three(#009246, white, #CE2B37);
 }
 // Jamaica
 .flag-jam {
@@ -442,11 +442,11 @@
 }
 // Lithuania
 .flag-ltu {
-  @include stripes-horizontal-three(yellow, green, red);
+  @include stripes-horizontal-three(#FDB913, #006A44, #C1272D);
 }
 // Luxembourg
 .flag-lux {
-  @include stripes-horizontal-three(red, white, blue);
+  @include stripes-horizontal-three(#ED2939, white, #00A1DE);
 }
 // Macao
 .flag-mac {
@@ -468,7 +468,7 @@
 }
 // Mali
 .flag-mli {
-  @include stripes-vertical-three(green, yellow, red);
+  @include stripes-vertical-three(#14B53A, #FCD116, #CE1126);
 }
 // Malta
 .flag-mlt {
@@ -481,6 +481,11 @@
 }
 // Mauritania
 .flag-mrt {
+  @include symbol-central-plain(#006233, "☪", #FFC400);
+  &:before {
+    transform:rotate(-90deg);
+    font-size:8em;
+  }
 }
 // Mauritius
 .flag-mus {
@@ -491,7 +496,7 @@
 // Mexico
 // TODO: Incomplete
 .flag-mex {
-  @include stripes-vertical-three(green, white, red);
+  @include stripes-vertical-three(#006847, white, #CE1126);
 }
 // Micronesia, Federated States of
 .flag-fsm {
@@ -499,7 +504,7 @@
 // Moldova, Republic of
 // TODO: Incomplete
 .flag-mda {
-  @include stripes-vertical-three(blue, yellow, red);
+  @include stripes-vertical-three(#0046AE, #FFD200, #CC092F);
 }
 // Monaco
 .flag-mco {
@@ -515,10 +520,8 @@
 }
 // Morocco
 .flag-mar {
-  background:#C1272D;
+  @include symbol-central-plain(#C1272D, "\e800", #006233); //TODO: Should be \26E4
   &:before {
-    @include symbol-central-plain("\e800", #006233); //TODO: Should be \26E4
-    font-family: Symbols;
     font-weight:bold;
   }
 }
@@ -539,7 +542,7 @@
 }
 // Netherlands
 .flag-nld {
-  @include stripes-horizontal-three(darkred, white, blue);
+  @include stripes-horizontal-three(#AE1C28, white, #21468B);
 }
 // New Caledonia
 .flag-ncl {
@@ -588,7 +591,9 @@
 .flag-png {
 }
 // Paraguay
+// TODO: Incomplete symbol
 .flag-pry {
+  @include stripes-horizontal-three(#D52B1E, white, #0038A8);
 }
 // Peru
 .flag-per {
@@ -616,11 +621,11 @@
 }
 // Romania
 .flag-rou {
-  @include stripes-vertical-three(blue, yellow, red);
+  @include stripes-vertical-three(#002B7F, #FCD116, #CE1126);
 }
 // Russian Federation
 .flag-rus {
-  @include stripes-horizontal-three(white, blue, red);
+  @include stripes-horizontal-three(white, #0039A6, #D52B1E);
 }
 // Rwanda
 .flag-rwa {
@@ -660,9 +665,9 @@
 }
 // Senegal
 .flag-sen {
-  @include stripes-vertical-three(green, yellow, red);
+  @include stripes-vertical-three(#00853F, #FDEF42, #E31B23);
   &:before {
-    @include symbol-central-column("★", green)
+    @include symbol-central-column("★", #00853F)
   }
 }
 // Serbia
@@ -673,7 +678,7 @@
 }
 // Sierra Leone
 .flag-sle {
-  @include stripes-horizontal-three(green, white, blue);
+  @include stripes-horizontal-three(#1EB53A, white, #0072C6);
 }
 // Singapore
 .flag-sgp {
@@ -692,6 +697,7 @@
 }
 // Somalia
 .flag-som {
+  @include symbol-central-plain(#4189DD, "★", white);
 }
 // South Africa
 .flag-zaf {
@@ -722,7 +728,7 @@
 }
 // Sweden
 .flag-swe {
-  @include nordic-cross(blue, yellow);
+  @include nordic-cross(#006AA7, #FECC00);
 }
 // Switzerland
 .flag-che {
@@ -804,6 +810,7 @@
 }
 // Viet Nam
 .flag-vnm {
+  @include symbol-central-plain(#E21C1C, "★", #FFFF00);
 }
 // Virgin Islands, British
 .flag-vgb {
