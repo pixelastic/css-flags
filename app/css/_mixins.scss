@@ -180,3 +180,56 @@
   }
 }
 
+/**
+ * Saltire. Cross coming from the angle and separating the flag in 4 parts.
+ * eg. Jamaica.
+ *
+ * The :after and :before element are used to do the triangles by using the
+ * transparent border technique while the cross itself is only the div
+ * background color.
+ *
+ * Note: We use dotted borders instead of solid because the alias less.
+ *
+ * 1. Width of the cross, used as reference
+ * 2. Keep enough space in the center for 1 full cross width vertically
+ * 3. Keep enough space in the center for 2 full cross width horizontally
+ * 4. Background is the cross.
+ * 5. Top triangle
+ * 6. Right triangle
+ * 7. Bottom triangle
+ * 8. Left triangle
+ * 9. Move triangle slightly so the do not start in the angles
+ */
+@mixin saltire($cross-color, $top-color, $right-color, $bottom-color, $left-color) {
+  $saltire-width:20px; /* 1 */
+  $top-height:($flagHeight - $saltire-width) / 2; /* 2 */
+  $side-width:($flagWidth - 2 * $saltire-width) / 2; /* 3 */
+  background:$cross-color; /* 4 */
+  &:before, &:after {
+    content:"";
+    position:absolute;
+    display:block;
+  }
+  // Top and bottom
+  &:before {
+    top:0; /* 9 */
+    left:$saltire-width; /* 9 */
+    height: $saltire-width; /* 2 */
+    border-top:$top-height dotted $top-color; /* 5 */
+    border-bottom:$top-height dotted $bottom-color; /* 7 */
+    border-left: $side-width solid transparent;
+    border-right:$side-width solid transparent;
+  }
+  // Right and left
+  &:after {
+    top:($saltire-width / 2); /* 9 */
+    left:0px; /* 9 */
+    width:(2 * $saltire-width); /* 3 */
+    border-top:$top-height solid transparent;
+    border-bottom:$top-height solid transparent;
+    border-right:$side-width dotted $right-color; /* 6 */
+    border-left: $side-width dotted $left-color; /* 8 */
+  }
+}
+
+

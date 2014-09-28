@@ -447,6 +447,7 @@
 }
 // Jamaica
 .flag-jam {
+  @include saltire(#FED100, #009B3A, black, #009B3A, black);
 }
 // Japan
 .flag-jpn {
