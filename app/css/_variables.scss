@@ -1,8 +1,15 @@
 /* VARIABLES */
 $unit: 10px;
-$flagWidth: 220px;
-$flagHeight: 160px;
-$columnThird: ($flagWidth / 3);
-$lineThird: ($flagHeight / 3);
-$lineQuarter: ($flagHeight / 4);
 
+// Base flag dimensions
+$width:220px;
+$height:160px;
+
+// Syntactic sugar to get ratio
+$h2: $height/2;
+$h3: $height/3;
+$h4: $height/4;
+
+$w2: $width/2;
+$w3: $width/3;
+$w4: $width/4;

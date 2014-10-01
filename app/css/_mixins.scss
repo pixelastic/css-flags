@@ -6,134 +6,57 @@
  **/
 
 /**
- * Centered symbol on plain flag
- **/
-@mixin symbol-central-plain($background, $symbol, $symbol-color) {
-  background:$background;
-  &:after {
-    content: $symbol;
-    font-family: Symbols;
-    position:absolute;
-    top:0;
-    left:0;
-    display:block;
-    width:$flagWidth;
-    height:$flagHeight;
-    text-align:center;
-    line-height:$flagHeight;
-    font-size:5em;
-    color:$symbol-color;
-  }
-}
-
-/**
- * Creating a crescent by overlapping two circles, like an eclipse.
- * This will use both :before and :after and will center them by default
- * Use transform: translateX() to move it around if you do not need it in the
- * center.
+ * 3 horizontal stripes of equal height
+ * Eg. Netherlands, Germany, Luxembourg
  *
- * 1. Position :before vertically and horizontally centered
- * 2. Position :after the same, but slightly more on the right
- * 3. Center :after content, just in case
+ * 1. Top line
+ * 2. Middle line
+ * 3. Bottom line
  **/
-@mixin crescent($outer-width, $inner-width, $color, $background) {
-  &:before, &:after {
-    content:"";
-    display:block;
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    border-radius:100%;
-  }
-  // Background circle, used as the crescent
-  &:before {
-    background:$color;
-    width:$outer-width; /* 1 */
-    height:$outer-width; /* 1 */
-    margin-top:(-$outer-width / 2); /* 1 */
-    margin-left:(-$outer-width / 2); /* 1 */
-  }
-  // Foregroup circle, used to to the eclipse
-  &:after {
-    background: $background;
-    width: $inner-width; /* 2 */
-    height:$inner-width; /* 2 */
-    margin-top: (-$inner-width / 2); /* 2 */
-    margin-left: ($outer-width - 2 * $inner-width) / 2 + 2; /* 2 */
-    text-align: center; /* 3 */
-    line-height: $inner-width; /* 3 */
-  }
+@mixin rows-3($top, $middle, $bottom) {
+  box-shadow:inset 0px $h3 0px $top,
+             inset 0px (2 * $h3) 0px $middle,
+             inset 0px (3 * $h3) 0px $bottom;
 }
 
 /**
- * Three equal vertical stripes.
- * Done with a background color for the central stripe and two large right and
- * left borders for the other stripes
- **/
-@mixin stripes-vertical-three($color1, $color2, $color3) {
-  border-left:$columnThird solid $color1;
-  background:$color2;
-  border-right: $columnThird solid $color3;
-}
-/**
- * Symbol centered in the middle column.
- * 
- * Just centering it vertically and horizontally
- **/
-@mixin symbol-central-column($symbol, $color) {
-    content:$symbol;
-    color:$color;
-    font-size:4em;
-    display:block;
-    height:$flagHeight;
-    line-height:$flagHeight;
-    width:$columnThird;
-    text-align:center;
-}
-/**
- * Three equal horizontal stripes.
- * Done with a background for the middle one and large borders for the top and
- * bottom one.
- **/
-@mixin stripes-horizontal-three($color1, $color2, $color3) {
-  border-top:$lineThird solid $color1;
-  background:$color2;
-  border-bottom: $lineThird solid $color3;
-}
-/**
- * Centered symbol on the middle line
- **/
-@mixin symbol-central-line($symbol, $color) {
-    content:$symbol;
-    color:$color;
-    font-size:4em;
-    display:block;
-    height:$lineThird;
-    line-height:$lineThird;
-    text-align:center;
-}
-
-/**
- * Nordic cross, like Sweden, Norway or Finland.
+ * 3 vertical stripes of equal width
+ * Eg. France, Italy, Belgium
  *
- * 1. Three horizontal stripes
- * 2. Vertical bar for the cross
+ * 1. Left
+ * 2. Center
+ * 3. Right
  **/
-@mixin nordic-cross($background-color, $cross-color) {
-  $x: $flagWidth / 7;
-  $y: $flagHeight / 5;
+@mixin columns-3($left, $center, $right) {
+  box-shadow:inset $w3 0px 0px $left,
+             inset (2 * $w3) 0px 0px $center,
+             inset (3 * $w3) 0px 0px $right;
+}
 
-  background:$cross-color; /* 1 */
-  border-top: (2 * $y) solid $background-color; /* 1 */
-  border-bottom:(2 * $y) solid $background-color; /* 1 */
+/**
+ * Nordic cross, slightly on the left.
+ * Eg. Sweden, Norway or Finland.
+ *
+ * Making three horizontal stripes with box-shadow, and a vertical one with
+ * :before
+ *
+ * 1. Background
+ * 2. Cross
+ **/
+@mixin nordic-cross($background, $cross) {
+  $x: $width / 7;
+  $y: $height / 5;
+  box-shadow:inset 0px (2 * $y) 0px $background, /* 1 */
+             inset 0px (3 * $y) 0px 0px $cross, /* 2 */
+             inset 0px (5 * $y) 0px 0px $background; /* 1 */
   &:before {
     content:"";
     position:absolute;
     display:block;
-    background:$cross-color; /* 2 */
+    background:$cross; /* 2 */
     width: $y; /* 2 */
-    height:$flagHeight; /* 2 */
-    top: -(2 * $y); /* 2 */
+    height:$height; /* 2 */
+    top:0; /* 2 */
     left: (2 * $x); /* 2 */
   }
 }
@@ -145,7 +68,7 @@
  * box-shadow.
  **/
 @mixin nordic-cross-border($background-color, $cross-color, $border-color) {
-  $x: $flagWidth / 22;
+  $x: $width / 22;
   background:$cross-color;
   overflow:hidden;
   &:before {
@@ -202,8 +125,8 @@
  */
 @mixin saltire($cross-color, $top-color, $right-color, $bottom-color, $left-color) {
   $saltire-width:20px; /* 1 */
-  $top-height:($flagHeight - $saltire-width) / 2; /* 2 */
-  $side-width:($flagWidth - 2 * $saltire-width) / 2; /* 3 */
+  $top-height:($height - $saltire-width) / 2; /* 2 */
+  $side-width:($width - 2 * $saltire-width) / 2; /* 3 */
   background:$cross-color; /* 4 */
   &:before, &:after {
     content:"";
@@ -230,6 +153,108 @@
     border-right:$side-width dotted $right-color; /* 6 */
     border-left: $side-width dotted $left-color; /* 8 */
   }
+}
+
+@mixin symbol($symbol, $color) {
+  content:$symbol;
+  color:$color;
+  position:absolute;
+}
+/**
+ * Horizontally and vertically centered symbol.
+ * Note: Must be used on a :before/:after element
+ * Eg. Algeria, Cameroon, Senegal
+ **/
+@mixin centered-symbol($symbol, $color) {
+  @include symbol($symbol, $color);
+  display:block;
+  height:$height;
+  width:$width;
+  font-size:4em;
+  line-height:$height;
+  text-align:center;
+}
+
+/**
+ * Circle
+ * Note: Must be used on a :before/:after
+ **/
+@mixin circle($width, $color) {
+  content:"";
+  position:absolute;
+  display:block;
+  width:$width;
+  height:$width;
+  top:50%;
+  left:50%;
+  margin-top:-($width/2);
+  margin-left:-($width/2);
+  border-radius:50%;
+  background-color:$color;
+}
+
+/**
+ * Triangle
+ * Note: Must be used on a :before/:after
+ **/
+@mixin triangle-left($width, $height, $color) {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    border-left:$width solid $color;
+    border-top:($height / 2) solid transparent;
+    border-bottom:($height / 2) solid transparent;
+}
+
+
+/**
+ * Creating a crescent by overlapping two circles, like an eclipse.
+ * This will use both :before and :after and will center them by default
+ * Use transform: translateX() to move it around if you do not need it in the
+ * center.
+ *
+ * 1. Position :before vertically and horizontally centered
+ * 2. Position :after the same, but slightly more on the right
+ * 3. Center :after content, just in case
+ **/
+@mixin crescent($outer-width, $inner-width, $color, $background) {
+  &:before, &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    border-radius:100%;
+  }
+  // Background circle, used as the crescent
+  &:before {
+    background:$color;
+    width:$outer-width; /* 1 */
+    height:$outer-width; /* 1 */
+    margin-top:(-$outer-width / 2); /* 1 */
+    margin-left:(-$outer-width / 2); /* 1 */
+  }
+  // Foregroup circle, used to to the eclipse
+  &:after {
+    background: $background;
+    width: $inner-width; /* 2 */
+    height:$inner-width; /* 2 */
+    margin-top: (-$inner-width / 2); /* 2 */
+    margin-left: ($outer-width - 2 * $inner-width) / 2 + 2; /* 2 */
+    text-align: center; /* 3 */
+    line-height: $inner-width; /* 3 */
+  }
+}
+
+
+/**
+ * Three lines and a triangle on the left.
+ * Eg. Bahamas, Jordan, Sudan, Palestine
+ **/
+@mixin rows-3-with-triangle-left($row-color1, $row-color2, $row-color3, $triangle-color, $triangle-width) {
+  // @include stripes-vertical-three($color1, $color2, $color3) {
 }
 
 

@@ -1,15 +1,15 @@
 /* FLAGS */
 
 .flag {
-  width:$flagWidth;
-  height:$flagHeight;
+  width:$width;
+  height:$height;
   position:relative;
 }
 
 // Afghanistan
 // TODO: Incomplete
 .flag-afg {
-  @include stripes-vertical-three(black, #BF0000, #009900);
+  @include columns-3(black, #BF0000, #009900);
 }
 // Åland Islands
 .flag-ala {
@@ -26,18 +26,18 @@
  * and horizontally centered
  **/
 .flag-dza {
-  border-left:($flagWidth / 2) solid #006233;
-  border-right:($flagWidth /2) solid white;
+  border-left:($width / 2) solid #006233;
+  border-right:($width /2) solid white;
   &:before {
     content: "☪";
     color: #D21034;
     position: absolute;
     display: block;
     top: 0px;
-    left: -($flagWidth / 2);
-    width:$flagWidth;
-    height: $flagHeight;
-    line-height: $flagHeight;
+    left: -($width / 2);
+    width:$width;
+    height: $height;
+    line-height: $height;
     text-align: center;
     font-size: 7em;
   }
@@ -65,7 +65,7 @@
 }
 // Armenia
 .flag-arm {
-  @include stripes-horizontal-three(#D90012, #0033A0, #F2A800);
+  @include rows-3(#D90012, #0033A0, #F2A800);
 }
 // Aruba
 .flag-abw {
@@ -81,6 +81,10 @@
 }
 // Bahamas
 .flag-bhs {
+  @include rows-3(#00ABC9, #FAE042, #00ABC9);
+  &:before {
+    @include triangle-left($w3, $height, black);
+  }
 }
 // Bahrain
 .flag-bhr {
@@ -96,7 +100,7 @@
 }
 // Belgium
 .flag-bel {
-  @include stripes-vertical-three(black, #FAE042, #ED2939);
+  @include columns-3(black, #FAE042, #ED2939);
 }
 // Belize
 .flag-blz {
@@ -112,7 +116,7 @@
 }
 // Bolivia, Plurinational State of
 .flag-bol {
-  @include stripes-horizontal-three(#D52B1E, #FFE000, #007934);
+  @include rows-3(#D52B1E, #FFE000, #007934);
 }
 // Bonaire, Sint Eustatius and Saba
 .flag-bes {
@@ -137,7 +141,7 @@
 }
 // Bulgaria
 .flag-bgr {
-  @include stripes-horizontal-three(white, #00966E, #D62612);
+  @include rows-3(white, #00966E, #D62612);
 }
 // Burkina Faso
 .flag-bfa {
@@ -150,9 +154,9 @@
 }
 // Cameroon
 .flag-cmr {
-  @include stripes-vertical-three(#007A5E, #CE1126, #FCD116);
+  @include columns-3(#007A5E, #CE1126, #FCD116);
   &:before {
-    @include symbol-central-column("★", #FCD116)
+    @include centered-symbol("★", #FCD116)
   }
 }
 // Canada
@@ -169,7 +173,7 @@
 }
 // Chad
 .flag-tcd {
-  @include stripes-vertical-three(#002664, #FECB00, #C60C30);
+  @include columns-3(#002664, #FECB00, #C60C30);
 }
 // Chile
 .flag-chl {
@@ -197,10 +201,10 @@
 // Comoros
 .flag-com {
   // The 4 lines are simply made of 4 inset drop-shadows.
-  box-shadow:inset 0px $lineQuarter 0px #FFC61E,
-             inset 0px (2 * $lineQuarter) 0px white,
-             inset 0px (3 * $lineQuarter) 0px #CE1126,
-             inset 0px (4 * $lineQuarter) 0px #3A75C4;
+  box-shadow:inset 0px $h4 0px #FFC61E,
+             inset 0px (2 * $h4) 0px white,
+             inset 0px (3 * $h4) 0px #CE1126,
+             inset 0px (4 * $h4) 0px #3A75C4;
   /**
    * The green triangle is absolutly positioned and shaped using transparent
    * borders.
@@ -214,9 +218,9 @@
     top:0; /* 1 */
     left:0; /* 1 */
     display:block; /* 1 */
-    border-left:($flagWidth / 2) solid #3D8E33; /* 2 */
-    border-top:($flagHeight / 2) solid transparent; /* 2 */
-    border-bottom:($flagHeight / 2) solid transparent; /* 2 */
+    border-left:($width / 2) solid #3D8E33; /* 2 */
+    border-top:($height / 2) solid transparent; /* 2 */
+    border-bottom:($height / 2) solid transparent; /* 2 */
   }
   /**
    * The crescent and stars is a little more tricky. The crescent itself is
@@ -230,11 +234,11 @@
   &:after {
     position: absolute;
     display: block;
-    width: ($flagHeight / 2.5); /* 1 */
-    height: ($flagHeight / 2.5); /* 1 */
+    width: ($height / 2.5); /* 1 */
+    height: ($height / 2.5); /* 1 */
     top: 50%; /* 1 */
-    margin-top:-($flagHeight / 5); /* 1 */
-    left: ($flagWidth / 10);/* 1 */
+    margin-top:-($height / 5); /* 1 */
+    left: ($width / 10);/* 1 */
 
     content: "★"; /* 2 */
     color: white; /* 2 */
@@ -262,7 +266,7 @@
 }
 // Côte d'Ivoire
 .flag-civ {
-  @include stripes-vertical-three(#F77F00, white, #009E60);
+  @include columns-3(#F77F00, white, #009E60);
 }
 // Croatia
 .flag-hrv {
@@ -303,13 +307,17 @@
 }
 // Equatorial Guinea
 .flag-gnq {
+  @include rows-3(#3E9A00, white, #E32118);
+  &:before {
+    @include triangle-left($w4, $height, #0073CE);
+  }
 }
 // Eritrea
 .flag-eri {
 }
 // Estonia
 .flag-est {
-  @include stripes-horizontal-three(#4891D9, black, white);
+  @include rows-3(#4891D9, black, white);
 }
 // Ethiopia
 .flag-eth {
@@ -330,7 +338,7 @@
 }
 // France
 .flag-fra {
-  @include stripes-vertical-three(#002395, white, #ED2939);
+  @include columns-3(#002395, white, #ED2939);
 }
 // French Guiana
 .flag-guf {
@@ -343,7 +351,7 @@
 }
 // Gabon
 .flag-gab {
-  @include stripes-horizontal-three(#009E60, #FCD116, #3A75C4);
+  @include rows-3(#009E60, #FCD116, #3A75C4);
 }
 // Gambia
 .flag-gmb {
@@ -353,13 +361,13 @@
 }
 // Germany
 .flag-deu {
-  @include stripes-horizontal-three(black, #DD0000, #FFCE00);
+  @include rows-3(black, #DD0000, #FFCE00);
 }
 // Ghana
 .flag-gha {
-  @include stripes-horizontal-three(#CE1126, #FCD116, #006B3F);
+  @include rows-3(#CE1126, #FCD116, #006B3F);
   &:before {
-    @include symbol-central-line("★", black)
+    @include centered-symbol("★", black)
   }
 }
 // Gibraltar
@@ -388,7 +396,7 @@
 }
 // Guinea
 .flag-gin {
-  @include stripes-vertical-three(#CE1126, #FCD116, #009460);
+  @include columns-3(#CE1126, #FCD116, #009460);
 }
 // Guinea-Bissau
 .flag-gnb {
@@ -413,7 +421,7 @@
 }
 // Hungary
 .flag-hun {
-  @include stripes-horizontal-three(#CD2A3E, white, #436F4D);
+  @include rows-3(#CD2A3E, white, #436F4D);
 }
 // Iceland
 .flag-isl {
@@ -433,7 +441,7 @@
 }
 // Ireland
 .flag-irl {
-  @include stripes-vertical-three(#009B48, white, #FF7900);
+  @include columns-3(#009B48, white, #FF7900);
 }
 // Isle of Man
 .flag-imn {
@@ -443,7 +451,7 @@
 }
 // Italy
 .flag-ita {
-  @include stripes-vertical-three(#009246, white, #CE2B37);
+  @include columns-3(#009246, white, #CE2B37);
 }
 // Jamaica
 .flag-jam {
@@ -457,6 +465,20 @@
 }
 // Jordan
 .flag-jor {
+  @include rows-3(black, white, #007A3D);
+  &:before {
+    @include triangle-left($w2, $height, #CE1126);
+  }
+  &:after {
+    @include symbol("★", white);
+    display:block;
+    height:($height / 8);
+    line-height:($height / 8);
+    top:50%;
+    margin-top:-($height/ 16);
+    left:($width/8);
+    font-size:2em;
+  }
 }
 // Kazakhstan
 .flag-kaz {
@@ -502,11 +524,11 @@
 }
 // Lithuania
 .flag-ltu {
-  @include stripes-horizontal-three(#FDB913, #006A44, #C1272D);
+  @include rows-3(#FDB913, #006A44, #C1272D);
 }
 // Luxembourg
 .flag-lux {
-  @include stripes-horizontal-three(#ED2939, white, #00A1DE);
+  @include rows-3(#ED2939, white, #00A1DE);
 }
 // Macao
 .flag-mac {
@@ -528,7 +550,7 @@
 }
 // Mali
 .flag-mli {
-  @include stripes-vertical-three(#14B53A, #FCD116, #CE1126);
+  @include columns-3(#14B53A, #FCD116, #CE1126);
 }
 // Malta
 .flag-mlt {
@@ -541,8 +563,9 @@
 }
 // Mauritania
 .flag-mrt {
-  @include symbol-central-plain(#006233, "☪", #FFC400);
-  &:after {
+  background:#006233;
+  &:before {
+    @include centered-symbol("☪", #FFC400);
     transform:rotate(-90deg);
     font-size:8em;
   }
@@ -556,7 +579,7 @@
 // Mexico
 // TODO: Incomplete
 .flag-mex {
-  @include stripes-vertical-three(#006847, white, #CE1126);
+  @include columns-3(#006847, white, #CE1126);
 }
 // Micronesia, Federated States of
 .flag-fsm {
@@ -564,7 +587,7 @@
 // Moldova, Republic of
 // TODO: Incomplete
 .flag-mda {
-  @include stripes-vertical-three(#0046AE, #FFD200, #CC092F);
+  @include columns-3(#0046AE, #FFD200, #CC092F);
 }
 // Monaco
 .flag-mco {
@@ -580,8 +603,10 @@
 }
 // Morocco
 .flag-mar {
-  @include symbol-central-plain(#C1272D, "\e800", #006233); //TODO: Should be \26E4
+  background:#C1272D;
   &:after {
+    @include centered-symbol("\e800", #006233); //TODO: Should be \26E4
+    font-family: Symbols;
     font-weight:bold;
   }
 }
@@ -590,6 +615,11 @@
 }
 // Myanmar
 .flag-mmr {
+  @include rows-3(#FECB00, #34B233, #EA2839);
+  &:before {
+    @include centered-symbol("★", white);
+    font-size:9em;
+  }
 }
 // Namibia
 .flag-nam {
@@ -602,7 +632,7 @@
 }
 // Netherlands
 .flag-nld {
-  @include stripes-horizontal-three(#AE1C28, white, #21468B);
+  @include rows-3(#AE1C28, white, #21468B);
 }
 // New Caledonia
 .flag-ncl {
@@ -643,6 +673,10 @@
 }
 // Palestine, State of
 .flag-pse {
+  @include rows-3(black, white, #007A3D);
+  &:before {
+    @include triangle-left($w2, $height, #CE1126);
+  }
 }
 // Panama
 .flag-pan {
@@ -653,7 +687,7 @@
 // Paraguay
 // TODO: Incomplete symbol
 .flag-pry {
-  @include stripes-horizontal-three(#D52B1E, white, #0038A8);
+  @include rows-3(#D52B1E, white, #0038A8);
 }
 // Peru
 .flag-per {
@@ -681,11 +715,11 @@
 }
 // Romania
 .flag-rou {
-  @include stripes-vertical-three(#002B7F, #FCD116, #CE1126);
+  @include columns-3(#002B7F, #FCD116, #CE1126);
 }
 // Russian Federation
 .flag-rus {
-  @include stripes-horizontal-three(white, #0039A6, #D52B1E);
+  @include rows-3(white, #0039A6, #D52B1E);
 }
 // Rwanda
 .flag-rwa {
@@ -725,9 +759,9 @@
 }
 // Senegal
 .flag-sen {
-  @include stripes-vertical-three(#00853F, #FDEF42, #E31B23);
+  @include columns-3(#00853F, #FDEF42, #E31B23);
   &:before {
-    @include symbol-central-column("★", #00853F)
+    @include centered-symbol("★", #00853F)
   }
 }
 // Serbia
@@ -738,7 +772,7 @@
 }
 // Sierra Leone
 .flag-sle {
-  @include stripes-horizontal-three(#1EB53A, white, #0072C6);
+  @include rows-3(#1EB53A, white, #0072C6);
 }
 // Singapore
 .flag-sgp {
@@ -757,7 +791,10 @@
 }
 // Somalia
 .flag-som {
-  @include symbol-central-plain(#4189DD, "★", white);
+  background:#4189DD;
+  &:before {
+    @include centered-symbol("★", white);
+  }
 }
 // South Africa
 .flag-zaf {
@@ -776,6 +813,10 @@
 }
 // Sudan
 .flag-sdn {
+  @include rows-3(#D21034, white, black);
+  &:before {
+    @include triangle-left($w2, $height, #007229);
+  }
 }
 // Suriname
 .flag-sur {
@@ -827,26 +868,21 @@
  * Tunisia
  * Displaying a Crescent and Star in the middle, but adding white circle behind
  * it by using the :before element
- * TODO: By using the UTF-8 char, flag is not exactly as it should be
- * http://en.wikipedia.org/wiki/Flag_of_Tunisia
  **/
 .flag-tun {
-  @include symbol-central-plain(#E70013, "☪", #E70013);
+  background:#E70013;
+  &:after {
+    @include centered-symbol("☪", #E70013);
+  }
   &:before {
-    content:"";
-    display:block;
-    width:(8 * $unit);
-    height:(8 * $unit);
-    border-radius:100%;
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-top:(-4 * $unit);
-    margin-left:(-4 * $unit);
-    background:white;
+    @include circle($height/2.5, white);
   }
 }
-// Turkey
+/**
+ * Turkey
+ * Making a crescent by making an eclipse of two circles, and slightly
+ * translating and rotation the star
+ **/
 .flag-tur {
   background:#E30A17;
   @include crescent(80px, 65px, white, #E30A17);
@@ -902,7 +938,8 @@
 }
 // Viet Nam
 .flag-vnm {
-  @include symbol-central-plain(#E21C1C, "★", #FFFF00);
+  background:#E21C1C;
+  @include centered-symbol("★", #FFFF00);
 }
 // Virgin Islands, British
 .flag-vgb {
@@ -918,7 +955,7 @@
 }
 // Yemen
 .flag-yem {
-  @include stripes-horizontal-three(#CE1126, white, black);
+  @include rows-3(#CE1126, white, black);
 }
 // Zambia
 .flag-zmb {
