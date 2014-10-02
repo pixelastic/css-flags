@@ -7,8 +7,8 @@
 }
 
 // Afghanistan
-// TODO: Incomplete
 .flag-afg {
+  @include incomplete();
   @include columns-3(black, #BF0000, #009900);
 }
 // Åland Islands
@@ -16,8 +16,8 @@
   @include nordic-cross-border(#0053A5, #D21034, #FFCE00);
 }
 // Albania
-// TODO: Incomplet
 .flag-alb {
+  @include incomplete();
   background:#E41E20;
 }
 // Algeria
@@ -62,6 +62,8 @@
 }
 // Argentina
 .flag-arg {
+  @include incomplete();
+  @include rows-3(#74ACDF, white, #74ACDF);
 }
 // Armenia
 .flag-arm {
@@ -75,6 +77,7 @@
 }
 // Austria
 .flag-aut {
+  @include rows-3(#ED2939, white, #ED2939);
 }
 // Azerbaijan
 .flag-aze {
@@ -282,6 +285,10 @@
 }
 // Czech Republic
 .flag-cze {
+  @include rows-2(white, #D7141A);
+  &:before {
+    @include triangle-left($w2, $height, #11457E);
+  }
 }
 // Denmark
 .flag-dnk {
@@ -289,6 +296,14 @@
 }
 // Djibouti
 .flag-dji {
+  @include rows-2(#6AB2E7, #12AD2B);
+  &:before {
+    @include triangle-left($w2, $height, white);
+  }
+  &:after {
+    @include symbol-left("★", #D7141A, $w3);
+    font-size:3em;
+  }
 }
 // Dominica
 .flag-dma {
@@ -304,6 +319,8 @@
 }
 // El Salvador
 .flag-slv {
+  @include incomplete();
+  @include rows-3(#0F47AF, white, #0F47AF);
 }
 // Equatorial Guinea
 .flag-gnq {
@@ -415,6 +432,16 @@
 }
 // Honduras
 .flag-hnd {
+  @include rows-3(#0073CF, white, #0073CF);
+  &:before {
+    @include centered-symbol("★", #0073CF);
+    font-size:1.5em;
+    text-shadow:-1.5em -0.5em 0px #0073CF,
+                -1.5em 0.5em 0px #0073CF,
+                1.5em 0.5em 0px #0073CF,
+                1.5em -0.5em 0px #0073CF;
+
+  }
 }
 // Hong Kong
 .flag-hkg {
@@ -432,6 +459,7 @@
 }
 // Indonesia
 .flag-idn {
+  @include rows-2(#CE1126, white);
 }
 // Iran, Islamic Republic of
 .flag-irn {
@@ -470,14 +498,8 @@
     @include triangle-left($w2, $height, #CE1126);
   }
   &:after {
-    @include symbol("★", white);
-    display:block;
-    height:($height / 8);
-    line-height:($height / 8);
-    top:50%;
-    margin-top:-($height/ 16);
-    left:($width/8);
-    font-size:2em;
+    @include symbol-left("★", white, $w3);
+    font-size:3em;
   }
 }
 // Kazakhstan
@@ -577,20 +599,21 @@
 .flag-myt {
 }
 // Mexico
-// TODO: Incomplete
 .flag-mex {
+  @include incomplete();
   @include columns-3(#006847, white, #CE1126);
 }
 // Micronesia, Federated States of
 .flag-fsm {
 }
 // Moldova, Republic of
-// TODO: Incomplete
 .flag-mda {
+  @include incomplete();
   @include columns-3(#0046AE, #FFD200, #CC092F);
 }
 // Monaco
 .flag-mco {
+  @include rows-2(#CE1126, white);
 }
 // Mongolia
 .flag-mng {
@@ -642,6 +665,8 @@
 }
 // Nicaragua
 .flag-nic {
+  @include incomplete();
+  @include rows-3(#0067C6, white, #0067C6);
 }
 // Niger
 .flag-ner {
@@ -675,7 +700,7 @@
 .flag-pse {
   @include rows-3(black, white, #007A3D);
   &:before {
-    @include triangle-left($w2, $height, #CE1126);
+    @include triangle-left($w3, $height, #CE1126);
   }
 }
 // Panama
@@ -685,8 +710,8 @@
 .flag-png {
 }
 // Paraguay
-// TODO: Incomplete symbol
 .flag-pry {
+  @include incomplete();
   @include rows-3(#D52B1E, white, #0038A8);
 }
 // Peru
@@ -694,12 +719,18 @@
 }
 // Philippines
 .flag-phl {
+  @include incomplete();
+  @include rows-2(#0038A8, #CE1126);
+  &:before {
+    @include triangle-left($w3, $height, white);
+  }
 }
 // Pitcairn
 .flag-pcn {
 }
 // Poland
 .flag-pol {
+  @include rows-2(white, #DC143C);
 }
 // Portugal
 .flag-prt {
@@ -753,6 +784,16 @@
 }
 // Sao Tome and Principe
 .flag-stp {
+  @include rows-3(#12AD2B, #FFCE00, #12AD2B);
+  &:before {
+    @include triangle-left($w4, $height, #D21034);
+  }
+  &:after {
+    @include centered-symbol("★", black);
+    font-size:3em;
+    text-indent:-($width/8);
+    text-shadow:($width/4) 0px 0px black;
+  }
 }
 // Saudi Arabia
 .flag-sau {
@@ -815,7 +856,7 @@
 .flag-sdn {
   @include rows-3(#D21034, white, black);
   &:before {
-    @include triangle-left($w2, $height, #007229);
+    @include triangle-left($w4, $height, #007229);
   }
 }
 // Suriname
@@ -911,6 +952,7 @@
 }
 // Ukraine
 .flag-ukr {
+  @include rows-2(#005BBB, #FFD500);
 }
 // United Arab Emirates
 .flag-are {
@@ -939,7 +981,9 @@
 // Viet Nam
 .flag-vnm {
   background:#E21C1C;
-  @include centered-symbol("★", #FFFF00);
+  &:before {
+    @include centered-symbol("★", #FFFF00);
+  }
 }
 // Virgin Islands, British
 .flag-vgb {

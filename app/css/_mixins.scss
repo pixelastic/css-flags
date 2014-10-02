@@ -1,10 +1,22 @@
 /* MIXINS */
 
+
 /**
  * Star and crescent : ☪
  * ★☆☨☬☭☽☾♢♦⚙⚜⚫⚪
  **/
 
+/**
+ * 2 horizontal stripes of equal height
+ * Eg. Czech, Djibouti, Philippines
+ *
+ * 1. Top line
+ * 2. Bottom line
+ **/
+@mixin rows-2($top, $bottom) {
+  box-shadow:inset 0px $h2 0px $top,
+             inset 0px $height 0px $bottom;
+}
 /**
  * 3 horizontal stripes of equal height
  * Eg. Netherlands, Germany, Luxembourg
@@ -160,6 +172,25 @@
   color:$color;
   position:absolute;
 }
+
+
+/**
+ * Put a symbol on the left of the flag.
+ * Eg. Djibouti, Jordan
+ **/
+@mixin symbol-left($symbol, $color, $width) {
+  @include symbol($symbol, $color);
+  display:block;
+  top:0;
+  left:0;
+  height:$height;
+  line-height:$height;
+  width:$width;
+  text-align:center;
+  font-size:2em;
+}
+
+
 /**
  * Horizontally and vertically centered symbol.
  * Note: Must be used on a :before/:after element
@@ -208,6 +239,14 @@
     border-bottom:($height / 2) solid transparent;
 }
 
+/**
+ * Mark incomplete flags with a red title
+ **/
+@mixin incomplete() {
+  & + strong {
+    color:red;
+  }
+}
 
 /**
  * Creating a crescent by overlapping two circles, like an eclipse.
