@@ -31,6 +31,7 @@
              inset 0px (3 * $h3) 0px $bottom;
 }
 
+
 /**
  * 3 vertical stripes of equal width
  * Eg. France, Italy, Belgium
@@ -207,10 +208,29 @@
 }
 
 /**
- * Circle
+ * Symbol in top left corner inside a square
+ * Note: Must be used on :before/:after element
+ * Eg. Chile, Liberia
+ **/
+@mixin top-left-symbol($symbol, $width, $background, $color) {
+  content:$symbol;
+  position:absolute;
+  top:0;
+  left:0;
+  width:$width;
+  height:$width;
+  line-height:$width;
+  text-align:center;
+  font-size:3em;
+  color:$color;
+  background:$background;
+}
+
+/**
+ * Square
  * Note: Must be used on a :before/:after
  **/
-@mixin circle($width, $color) {
+@mixin square($width, $color) {
   content:"";
   position:absolute;
   display:block;
@@ -220,8 +240,16 @@
   left:50%;
   margin-top:-($width/2);
   margin-left:-($width/2);
-  border-radius:50%;
   background-color:$color;
+}
+
+/**
+ * Circle
+ * Note: Must be used on a :before/:after
+ **/
+@mixin circle($width, $color) {
+  @include square($width, $color);
+  border-radius:50%;
 }
 
 /**
@@ -238,6 +266,7 @@
     border-top:($height / 2) solid transparent;
     border-bottom:($height / 2) solid transparent;
 }
+
 
 /**
  * Mark incomplete flags with a red title
@@ -287,13 +316,81 @@
   }
 }
 
-
 /**
- * Three lines and a triangle on the left.
- * Eg. Bahamas, Jordan, Sudan, Palestine
+ * American canton, known as the "Union", the blue rectanble with 51 stars.
  **/
-@mixin rows-3-with-triangle-left($row-color1, $row-color2, $row-color3, $triangle-color, $triangle-width) {
-  // @include stripes-vertical-three($color1, $color2, $color3) {
+@mixin american-union() {
+  content:"★";
+  position:absolute;
+  top:0;
+  left:0;
+  display:block;
+  width:($width/2.5);
+  height:($h13*7);
+  background: #002868;
+  color:white;
+  font-size:0.6em;
+  text-indent:2px;
+  overflow:hidden;
+
+  $line-padding:9px;
+  text-shadow:15px 0px 0px white,
+              30px 0px 0px white,
+              45px 0px 0px white,
+              60px 0px 0px white,
+              75px 0px 0px white,
+
+              8px  ($line-padding) 0px white,
+              23px ($line-padding) 0px white,
+              38px ($line-padding) 0px white,
+              53px ($line-padding) 0px white,
+              68px ($line-padding) 0px white,
+
+              0px  (2 * $line-padding) 0px white,
+              15px (2 * $line-padding) 0px white,
+              30px (2 * $line-padding) 0px white,
+              45px (2 * $line-padding) 0px white,
+              60px (2 * $line-padding) 0px white,
+              75px (2 * $line-padding) 0px white,
+
+              8px  (3 * $line-padding) 0px white,
+              23px (3 * $line-padding) 0px white,
+              38px (3 * $line-padding) 0px white,
+              53px (3 * $line-padding) 0px white,
+              68px (3 * $line-padding) 0px white,
+
+              0px  (4 * $line-padding) 0px white,
+              15px (4 * $line-padding) 0px white,
+              30px (4 * $line-padding) 0px white,
+              45px (4 * $line-padding) 0px white,
+              60px (4 * $line-padding) 0px white,
+              75px (4 * $line-padding) 0px white,
+
+              8px  (5 * $line-padding) 0px white,
+              23px (5 * $line-padding) 0px white,
+              38px (5 * $line-padding) 0px white,
+              53px (5 * $line-padding) 0px white,
+              68px (5 * $line-padding) 0px white,
+
+              0px  (6 * $line-padding) 0px white,
+              15px (6 * $line-padding) 0px white,
+              30px (6 * $line-padding) 0px white,
+              45px (6 * $line-padding) 0px white,
+              60px (6 * $line-padding) 0px white,
+              75px (6 * $line-padding) 0px white,
+
+              8px  (7 * $line-padding) 0px white,
+              23px (7 * $line-padding) 0px white,
+              38px (7 * $line-padding) 0px white,
+              53px (7 * $line-padding) 0px white,
+              68px (7 * $line-padding) 0px white,
+
+              0px  (8 * $line-padding) 0px white,
+              15px (8 * $line-padding) 0px white,
+              30px (8 * $line-padding) 0px white,
+              45px (8 * $line-padding) 0px white,
+              60px (8 * $line-padding) 0px white,
+              75px (8 * $line-padding) 0px white;
 }
 
 

@@ -47,9 +47,13 @@
 }
 // Andorra
 .flag-and {
+  @include incomplete();
+  @include columns-3(#0018A8, #FEDF00, #D0103A);
 }
 // Angola
 .flag-ago {
+  @include incomplete();
+  @include rows-2(#CE1126, black);
 }
 // Anguilla
 .flag-aia {
@@ -180,6 +184,11 @@
 }
 // Chile
 .flag-chl {
+  box-shadow:inset 0px $h2 0px white,
+             inset 0px (2 * $h2) 0px #D52B1E;
+  &:before {
+    @include top-left-symbol("★", $h2, #0039A6, white);
+  }
 }
 // China
 .flag-chn {
@@ -276,6 +285,18 @@
 }
 // Cuba
 .flag-cub {
+  box-shadow:inset 0px $h5 0px #002A8F,
+             inset 0px (2 * $h5) 0px white,
+             inset 0px (3 * $h5) 0px #002A8F,
+             inset 0px (4 * $h5) 0px white,
+             inset 0px (5 * $h5) 0px #002A8F;
+  &:before {
+    @include triangle-left($w2, $height, #CF142B);
+  }
+  &:after {
+    @include symbol-left("★", white, $w3);
+    font-size:3em;
+  }
 }
 // Curaçao
 .flag-cuw {
@@ -537,6 +558,20 @@
 }
 // Liberia
 .flag-lbr {
+  box-shadow:inset 0px $h11 0px #BF0A30,
+             inset 0px (2 * $h11) 0px white,
+             inset 0px (3 * $h11) 0px #BF0A30,
+             inset 0px (4 * $h11) 0px white,
+             inset 0px (5 * $h11) 0px #BF0A30,
+             inset 0px (6 * $h11) 0px white,
+             inset 0px (7 * $h11) 0px #BF0A30,
+             inset 0px (8 * $h11) 0px white,
+             inset 0px (9 * $h11) 0px #BF0A30,
+             inset 0px (10 * $h11) 0px white,
+             inset 0px (11 * $h11) 0px #BF0A30;
+  &:before {
+    @include top-left-symbol("★", ($h11 * 5), #002868, white);
+  }
 }
 // Libya
 .flag-lby {
@@ -895,6 +930,15 @@
 }
 // Togo
 .flag-tgo {
+  box-shadow:inset 0px $h5 0px #006A4E,
+             inset 0px (2 * $h5) 0px #FFCE00,
+             inset 0px (3 * $h5) 0px #006A4E,
+             inset 0px (4 * $h5) 0px #FFCE00,
+             inset 0px (5 * $h5) 0px #006A4E;
+  &:before {
+    @include top-left-symbol("★", ($h5 * 3), #D21034, white);
+    font-size:4em;
+  }
 }
 // Tokelau
 .flag-tkl {
@@ -949,6 +993,16 @@
 }
 // Uganda
 .flag-uga {
+  @include incomplete();
+  box-shadow:inset 0px $h6 0px black,
+             inset 0px (2 * $h6) 0px #FCDC04,
+             inset 0px (3 * $h6) 0px #D90000,
+             inset 0px (4 * $h6) 0px black,
+             inset 0px (5 * $h6) 0px #FCDC04,
+             inset 0px (6 * $h6) 0px #D90000;
+  &:before {
+    @include circle($h3, white);
+  }
 }
 // Ukraine
 .flag-ukr {
@@ -962,6 +1016,23 @@
 }
 // United States
 .flag-usa {
+  box-shadow:inset 0px $h13 0px #B22234,
+             inset 0px (2 * $h13) 0px white,
+             inset 0px (3 * $h13) 0px #B22234,
+             inset 0px (4 * $h13) 0px white,
+             inset 0px (5 * $h13) 0px #B22234,
+             inset 0px (6 * $h13) 0px white,
+             inset 0px (7 * $h13) 0px #B22234,
+             inset 0px (8 * $h13) 0px white,
+             inset 0px (9 * $h13) 0px #B22234,
+             inset 0px (10 * $h13) 0px white,
+             inset 0px (11 * $h13) 0px #B22234,
+             inset 0px (12 * $h13) 0px white,
+             inset 0px (13 * $h13) 0px #B22234;
+  &:before {
+    @include american-union();
+
+  }
 }
 // United States Minor Outlying Islands
 .flag-umi {
