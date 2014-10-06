@@ -253,7 +253,7 @@
 }
 
 /**
- * Triangle
+ * Triangle left
  * Note: Must be used on a :before/:after
  **/
 @mixin triangle-left($width, $height, $color) {
@@ -263,6 +263,21 @@
     left:0;
     display:block;
     border-left:$width solid $color;
+    border-top:($height / 2) solid transparent;
+    border-bottom:($height / 2) solid transparent;
+}
+
+/**
+ * Triangle right
+ * Note: Must be used on a :before/:after
+ **/
+@mixin triangle-right($width, $height, $color) {
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    display:block;
+    border-right:$width solid $color;
     border-top:($height / 2) solid transparent;
     border-bottom:($height / 2) solid transparent;
 }

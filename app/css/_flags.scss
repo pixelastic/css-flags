@@ -44,6 +44,15 @@
 }
 // American Samoa
 .flag-asm {
+  @include incomplete();
+  background:#000066;
+  &:before {
+    @include triangle-right($width, $height, #BD1021);
+  }
+  &:after {
+    @include triangle-right($width * 0.9, $height * 0.9, white);
+    top:$height * 0.05;
+  }
 }
 // Andorra
 .flag-and {
@@ -352,6 +361,11 @@
 }
 // Eritrea
 .flag-eri {
+  @include incomplete();
+  @include rows-2(#12AD2B, #4189DD);
+  &:before {
+    @include triangle-left($width, $height, #EA0437);
+  }
 }
 // Estonia
 .flag-est {
