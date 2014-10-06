@@ -430,13 +430,32 @@
  * From that, we can construct our flag. But we need to be sure to make our
  * math with unitless values.
  **/
-@mixin congo() {
+@mixin flag-cog() {
   $triangle-hypotenuse:round(sqrt(($_height * $_height) * 2)); /* 1 */
   $triangle-length:round($triangle-hypotenuse / 2 * 1px); /* 2 */
   $bar-length: $hypotenuse - (2 * $triangle-length);
-  background-image:linear-gradient(135deg, #009543 $triangle-length, transparent $triangle-length),
-                   linear-gradient(135deg, #FBDE4A ($triangle-length + $bar-length), transparent ($triangle-length + $bar-length)),
+
+  $a-size:$triangle-length;
+  $b-size:$a-size + $bar-length;
+  background-image:linear-gradient(135deg, #009543 $a-size, transparent $a-size),
+                   linear-gradient(135deg, #FBDE4A $b-size, transparent $b-size),
                    linear-gradient(135deg, #DC241F 100%, transparent 100%);
 }
 
+@mixin flag-tto() {
+  $triangle-hypotenuse:round(sqrt(($_height * $_height) * 2));
+  $triangle-length:round($triangle-hypotenuse / 2 * 1px);
+  $stripe-length:$width/30;
+  $bar-length: $hypotenuse - (2 * $triangle-length);
+  
+  $a-size:$triangle-length;
+  $b-size:$a-size + $stripe-length;
+  $c-size:$b-size + $bar-length;
+  $d-size:$c-size + $stripe-length;
 
+  background-image:linear-gradient(45deg, #CE1126 $a-size, transparent $a-size),
+                   linear-gradient(45deg, white $b-size, transparent $b-size),
+                   linear-gradient(45deg, black $c-size, transparent $c-size),
+                   linear-gradient(45deg, white $d-size, transparent $d-size),
+                   linear-gradient(45deg, #CE1126 100%, transparent 100%);
+}

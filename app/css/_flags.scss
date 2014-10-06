@@ -275,7 +275,7 @@
 }
 // Congo
 .flag-cog {
-  @include congo()
+  @include flag-cog()
 }
 // Congo, the Democratic Republic of the
 .flag-cod {
@@ -963,6 +963,7 @@
 }
 // Trinidad and Tobago
 .flag-tto {
+  @include flag-tto();
 }
 /**
  * Tunisia
