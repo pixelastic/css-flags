@@ -409,3 +409,34 @@
 }
 
 
+/**
+ * Three diagonal lines, with the borders of the center one going into the
+ * angles.
+ * We'll need a bit of math here.
+ *
+ * - The top left and bottom right parts are triangles.
+ * - They have a right angle
+ * - The center band goes through the flag angles, cutting it in half
+ * - So each triangle have a 45° angle in the corner
+ * - Thus, the last angle is also 45°
+ * - The triangles are isoceles
+ * - We can calculate its hypotenuse (1)
+ *
+ * - Drawing a line from the flag top left angle and the triangle hypothenus we
+ * make two new triangles.
+ * - They are also isoceles (same reasons as above)
+ * - So the line we draw is half the length of the hypotenuse (2)
+ *
+ * From that, we can construct our flag. But we need to be sure to make our
+ * math with unitless values.
+ **/
+@mixin congo() {
+  $triangle-hypotenuse:round(sqrt(($_height * $_height) * 2)); /* 1 */
+  $triangle-length:round($triangle-hypotenuse / 2 * 1px); /* 2 */
+  $bar-length: $hypotenuse - (2 * $triangle-length);
+  background-image:linear-gradient(135deg, #009543 $triangle-length, transparent $triangle-length),
+                   linear-gradient(135deg, #FBDE4A ($triangle-length + $bar-length), transparent ($triangle-length + $bar-length)),
+                   linear-gradient(135deg, #DC241F 100%, transparent 100%);
+}
+
+

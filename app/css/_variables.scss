@@ -6,16 +6,23 @@ $width:220px;
 $height:160px;
 
 // Syntactic sugar to get ratio
-$h2: $height/2;
-$h3: $height/3;
-$h4: $height/4;
-$h5: $height/5;
-$h6: $height/6;
-$h11: $height/11;
-$h13: $height/13;
+$h2: round($height/2);
+$h3: round($height/3);
+$h4: round($height/4);
+$h5: round($height/5);
+$h6: round($height/6);
+$h11: round($height/11);
+$h13: round($height/13);
 
-$w2: $width/2;
-$w3: $width/3;
-$w4: $width/4;
-$w5: $width/5;
-$w6: $width/6;
+$w2: round($width/2);
+$w3: round($width/3);
+$w4: round($width/4);
+$w5: round($width/5);
+$w6: round($width/6);
+
+// Unitless dimensions, for math
+$_width:strip-units($width);
+$_height:strip-units($height);
+
+// More math variables
+$hypotenuse:round(sqrt($_height * $_height + $_width * $_width) * 1px);
