@@ -785,6 +785,11 @@
 }
 // Palau
 .flag-plw {
+  background:#4AADD6;
+  &:before {
+    @include circle($width/2.5, #FFDE00);
+    left:45%;
+  }
 }
 // Palestine, State of
 .flag-pse {
