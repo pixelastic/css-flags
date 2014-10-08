@@ -433,6 +433,15 @@
 }
 // Greenland
 .flag-grl {
+  @include rows-2(white, #D00C33);
+  &:before {
+    @include circle(2 * $h3, blue);
+    left:38%;
+    border-top:$h3 solid #D00C33;
+    border-bottom:$h3 solid white;
+    height:0;
+  }
+
 }
 // Grenada
 .flag-grd {
