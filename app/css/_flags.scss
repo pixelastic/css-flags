@@ -561,8 +561,23 @@
 // Kiribati
 .flag-kir {
 }
-// Korea, Democratic People's Republic of
+// Korea (North)
 .flag-prk {
+  background-color:#ED1C27;
+  background-image:h-stripe(#024FA2, 12 * $h72, 0px),
+                   h-stripe(white, 2 * $h72, 12 * $h72),
+                   h-stripe(white, 2 * $h72, 58 * $h72),
+                   h-stripe(#024FA2, 12 * $h72, 60 * $h72);
+  &:before {
+    @include circle(32 * $h72, white);
+    left:33%;
+    content:"★";
+    color:#ED1C27;
+    text-align:center;
+    line-height:28 * $h72;
+    font-size:5em;
+  }
+
 }
 // Korea, Republic of
 .flag-kor {
