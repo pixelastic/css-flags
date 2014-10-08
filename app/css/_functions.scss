@@ -14,3 +14,25 @@
     @return $test; 
   }
 }
+
+// Horizontal stripe
+// Note: Must be used in a background-image
+@function h-stripe($color, $height, $top) {
+  @return linear-gradient(180deg, 
+                          transparent, transparent $top,
+                          $color $top, $color ($top + $height),
+                          transparent ($top + $height), transparent 100%
+                          );
+}
+
+// Vertical stripe
+// Note: Must be used in a background-image;
+@function v-stripe($color, $width, $left) {
+  @return linear-gradient(90deg, 
+                          transparent, transparent $left,
+                          $color $left, $color ($left + $width),
+                          transparent ($left + $width), transparent 100%
+                          );
+}
+
+

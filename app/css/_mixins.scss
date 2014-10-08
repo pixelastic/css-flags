@@ -1,4 +1,14 @@
 /* MIXINS */
+/**
+ * Notes :
+ * Started with borders for France.
+ * Then discovered box-shadow inset, to do as many horizontal/vertical lines as
+ * needed.
+ * Not possible to overlap. So, we use after/before.
+ * But hey, linear-gradient.
+ * Des triangles sinon.
+ *
+ **/
 
 
 /**
@@ -49,71 +59,27 @@
 /**
  * Nordic cross, slightly on the left.
  * Eg. Sweden, Norway or Finland.
- *
- * Making three horizontal stripes with box-shadow, and a vertical one with
- * :before
- *
- * 1. Background
- * 2. Cross
  **/
 @mixin nordic-cross($background, $cross) {
   $x: $width / 7;
   $y: $height / 5;
-  box-shadow:inset 0px (2 * $y) 0px $background, /* 1 */
-             inset 0px (3 * $y) 0px 0px $cross, /* 2 */
-             inset 0px (5 * $y) 0px 0px $background; /* 1 */
-  &:before {
-    content:"";
-    position:absolute;
-    display:block;
-    background:$cross; /* 2 */
-    width: $y; /* 2 */
-    height:$height; /* 2 */
-    top:0; /* 2 */
-    left: (2 * $x); /* 2 */
-  }
+  background-color:$background;
+  background-image:h-stripe($cross, $y, 2 * $y),
+                   v-stripe($cross, $x, 2 * $x);
 }
 /**
  * Nordic cross with borders.
- *
- * We set a background color and will the define the cross by positioning
- * 4 squares in the 4 angles, each composed of a filled box-shadow and 3 border
- * box-shadow.
+ * Eg. Norway, Iceland.
  **/
-@mixin nordic-cross-border($background-color, $cross-color, $border-color) {
+@mixin nordic-cross-border($background, $cross, $border) {
   $x: $width / 22;
-  background:$cross-color;
-  overflow:hidden;
-  &:before {
-    content:"";
-    position:absolute;
-    top:0;
-    right:0;
-    width:(12 * $x);
-    height:(6 * $x);
-    background:$background-color;
-    box-shadow:0px $x 0px $border-color,  /* Bottom */
-               -$x 0px 0px $border-color, /* Left */
-               -$x $x 0px $border-color, /* Bottom-left corner */
-
-               /* Bottom right */
-               0px (10 * $x) 0px $background-color, /* Background */
-               0px (9 * $x) 0px $border-color, /* Top */
-               -$x (10 * $x) 0px $border-color, /* Left */
-               -$x (9 * $x) 0px $border-color, /* Top-left corner */
-
-               /* Top left */
-               (-16 * $x) 0px 0px $background-color, /* Background */
-               (-16 * $x) $x 0px $border-color, /* Bottom */
-               (-15 * $x) 0px 0px $border-color, /* Right */
-               (-15 * $x) $x 0px $border-color, /* Bottom-right corner */
-
-               /* Bottom left */
-               (-16 * $x) (10 * $x) 0px $background-color, /* Background */
-               (-16 * $x) (9 * $x) 0px $border-color, /* Top */
-               (-15 * $x) (10 * $x) 0px $border-color, /* Right */
-               (-15 * $x) (9 * $x) 0px $border-color; /* Top-right corner */
-  }
+  $y: $height / 16;
+  
+  background-color:$background;
+  background-image:h-stripe($cross, 2 * $y, 7 * $y),
+                   v-stripe($cross, 2 * $x, 7 * $x),
+                   h-stripe($border, 4 * $y, 6 * $y),
+                   v-stripe($border, 4 * $x, 6 * $x);
 }
 
 /**
@@ -410,6 +376,7 @@
 
 
 /**
+ * Congo
  * Three diagonal lines, with the borders of the center one going into the
  * angles.
  * We'll need a bit of math here.
@@ -442,6 +409,9 @@
                    linear-gradient(135deg, #DC241F 100%, transparent 100%);
 }
 
+/**
+ *  Trinidad and Tobago
+ **/
 @mixin flag-tto() {
   $triangle-hypotenuse:round(sqrt(($_height * $_height) * 2));
   $triangle-length:round($triangle-hypotenuse / 2 * 1px);
