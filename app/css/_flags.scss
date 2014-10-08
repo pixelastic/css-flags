@@ -441,7 +441,6 @@
     border-bottom:$h3 solid white;
     height:0;
   }
-
 }
 // Grenada
 .flag-grd {
@@ -574,8 +573,15 @@
 // Kyrgyzstan
 .flag-kgz {
 }
-// Lao People's Democratic Republic
+// Laos
 .flag-lao {
+  box-shadow:inset 0px $h4 0px #CE1126,
+             inset 0px (3 * $h4) 0px #002868,
+             inset 0px (4 * $h4) 0px #CE1126;
+  &:before {
+    @include circle($h4 * 1.6, white);
+  }
+
 }
 // Latvia
 .flag-lva {
@@ -735,6 +741,10 @@
 }
 // Niger
 .flag-ner {
+  @include rows-3(#E05206, white, #0DB02B);
+  &:before {
+    @include circle($h3 * 0.8, #E05200);
+  }
 }
 // Nigeria
 .flag-nga {
