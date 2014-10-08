@@ -67,9 +67,6 @@
 // Anguilla
 .flag-aia {
 }
-// Antarctica
-.flag-ata {
-}
 // Antigua and Barbuda
 .flag-atg {
 }
@@ -523,6 +520,10 @@
 }
 // Japan
 .flag-jpn {
+  background:white;
+  &:before {
+   @include circle($height * 3 / 5, #BC002D);
+  }
 }
 // Jersey
 .flag-jey {
