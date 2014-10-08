@@ -104,6 +104,11 @@
 }
 // Bangladesh
 .flag-bgd {
+  background:#01796F;
+  &:before {
+    @include circle($width/2.5, #E11837);
+    left:45%;
+  }
 }
 // Barbados
 .flag-brb {
