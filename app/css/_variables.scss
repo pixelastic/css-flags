@@ -25,5 +25,10 @@ $w6: round($width/6);
 $_width:strip-units($width);
 $_height:strip-units($height);
 
+
+$_diagonal: sqrt($_width * $_width + $_height * $_height);
+$diagonal:round($_diagonal * 1px);
+
 // More math variables
 $hypotenuse:round(sqrt($_height * $_height + $_width * $_width) * 1px);
+

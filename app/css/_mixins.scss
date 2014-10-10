@@ -376,6 +376,21 @@
 
 
 /**
+ * Union Jack
+ * Flag of the UK, will also be used on a lot of commonwealth countries
+ **/
+@mixin union-jack() {
+  $x: $width / 60;
+  $y: $height / 30;
+
+  background-color:#00247D;
+  background-image:                   
+                   v-stripe(white, 10 * $x, 25 * $x),
+                   h-stripe(white, 10 * $y, 10 * $y);
+}
+
+
+/**
  * Congo
  * Three diagonal lines, with the borders of the center one going into the
  * angles.

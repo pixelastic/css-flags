@@ -1074,6 +1074,7 @@
 }
 // United Kingdom
 .flag-gbr {
+  @include union-jack();
 }
 // United States
 .flag-usa {

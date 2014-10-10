@@ -1,6 +1,7 @@
 module.exports = {
   options: {
-    style: 'expanded'
+    style: 'expanded',
+    require: './sass_math.rb'
   },
   build: {
     files: [{
