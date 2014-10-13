@@ -317,10 +317,6 @@
     @include triangle-left($w2, $height, #11457E);
   }
 }
-// Denmark
-.flag-dnk {
-  @include nordic-cross(#C60C30, white);
-}
 // Djibouti
 .flag-dji {
   @include rows-2(#6AB2E7, #12AD2B);
@@ -376,10 +372,6 @@
 }
 // Fiji
 .flag-fji {
-}
-// Finland
-.flag-fin {
-  @include nordic-cross(white, #003580);
 }
 // France
 .flag-fra {
@@ -485,10 +477,6 @@
 // Hungary
 .flag-hun {
   @include rows-3(#CD2A3E, white, #436F4D);
-}
-// Iceland
-.flag-isl {
-  @include nordic-cross-border(#003897, #D72828, white);
 }
 // India
 .flag-ind {
@@ -951,10 +939,6 @@
 }
 // Swaziland
 .flag-swz {
-}
-// Sweden
-.flag-swe {
-  @include nordic-cross(#006AA7, #FECC00);
 }
 // Switzerland
 .flag-che {

@@ -246,8 +246,10 @@
   @include ratio(2/3);
 };
 // Denmark
+// http://www.crwflags.com/fotw/flags/dk.html
 .flag-dnk {
-  @include ratio(2/3);
+  @include ratio(28/37);
+  @include nordic-cross(#C60C30, white, 4 * $w37, 12 * $w37);
 };
 // Djibouti
 .flag-dji {
@@ -304,8 +306,10 @@
   @include ratio(2/3);
 };
 // Finland
+// http://www.crwflags.com/fotw/flags/fi.html
 .flag-fin {
-  @include ratio(2/3);
+  @include ratio(11/18);
+  @include nordic-cross(white, #003580, 3 * $w18, 5 * $w18);
 };
 // France
 .flag-fra {
@@ -867,8 +871,10 @@
   @include ratio(2/3);
 };
 // Sweden
+// http://www.crwflags.com/fotw/flags/se.html
 .flag-swe {
-  @include ratio(2/3);
+  @include ratio(10/16);
+  @include nordic-cross(#006AA7, #FECC00, 2 * $w16, 5 * $w16);
 };
 // Switzerland
 .flag-che {
