@@ -56,6 +56,29 @@
                    v-stripe($cross-color, $cross-width, $cross-offset);
 }
 
+// Centered star
+@mixin centered-star($color) {
+  @include centered-symbol("★", $color);
+}
+
+// Centered symbol
+@mixin centered-symbol($symbol, $color) {
+  @include symbol($symbol, $color);
+  display:block;
+  height:$height;
+  width:$width;
+  font-size:4em;
+  line-height:$height;
+  text-align:center;
+}
+
+// Symbol
+@mixin symbol($symbol, $color) {
+  content:$symbol;
+  color:$color;
+  position:absolute;
+}
+
 // 
 // /**
 //  * Star and crescent : ☪
@@ -142,11 +165,6 @@
 //   }
 // }
 // 
-// @mixin symbol($symbol, $color) {
-//   content:$symbol;
-//   color:$color;
-//   position:absolute;
-// }
 // 
 // 
 // /**
@@ -166,20 +184,6 @@
 // }
 // 
 // 
-// /**
-//  * Horizontally and vertically centered symbol.
-//  * Note: Must be used on a :before/:after element
-//  * Eg. Algeria, Cameroon, Senegal
-//  **/
-// @mixin centered-symbol($symbol, $color) {
-//   @include symbol($symbol, $color);
-//   display:block;
-//   height:$height;
-//   width:$width;
-//   font-size:4em;
-//   line-height:$height;
-//   text-align:center;
-// }
 // 
 // /**
 //  * Symbol in top left corner inside a square

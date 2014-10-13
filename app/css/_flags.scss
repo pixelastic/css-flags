@@ -90,8 +90,12 @@
   @include ratio(2/3);
 };
 // Belgium
+// http://www.crwflags.com/fotw/flags/be.html
+// Note: The official state proportions are 13:15, but the flag is usually
+// using 2:3
 .flag-bel {
   @include ratio(2/3);
+  @include three-columns(black, #FFE936, #FF0F21);
 };
 // Belize
 .flag-blz {
@@ -158,8 +162,15 @@
   @include ratio(2/3);
 };
 // Cameroon
+// http://www.crwflags.com/fotw/flags/cm.html
+// http://en.wikipedia.org/wiki/Flag_of_Cameroon
+// Note: There is no official information on the size of the star
 .flag-cmr {
   @include ratio(2/3);
+  @include three-columns(#007A5E, #CE1126, #FCD116);
+  &:before {
+    @include centered-star(#FCD116);
+  }
 };
 // Canada
 .flag-can {
@@ -795,8 +806,13 @@
   @include ratio(2/3);
 };
 // Senegal
+// http://en.wikipedia.org/wiki/Flag_of_Senegal
 .flag-sen {
   @include ratio(2/3);
+  @include three-columns(#00853F, #FDEF42, #E31B23);
+  &:before {
+    @include centered-star(#00853F);
+  }
 };
 // Serbia
 .flag-srb {

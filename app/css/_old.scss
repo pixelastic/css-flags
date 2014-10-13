@@ -110,10 +110,6 @@
 // Belarus
 .flag-blr {
 }
-// Belgium
-.flag-bel {
-  @include columns-3(black, #FAE042, #ED2939);
-}
 // Belize
 .flag-blz {
 }
@@ -163,13 +159,6 @@
 }
 // Cambodia
 .flag-khm {
-}
-// Cameroon
-.flag-cmr {
-  @include columns-3(#007A5E, #CE1126, #FCD116);
-  &:before {
-    @include centered-symbol("★", #FCD116)
-  }
 }
 // Canada
 .flag-can {
