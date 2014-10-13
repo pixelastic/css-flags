@@ -51,7 +51,7 @@
 // Andorra
 .flag-and {
   @include incomplete();
-  @include columns-3(#0018A8, #FEDF00, #D0103A);
+  @include three-columns(#0018A8, #FEDF00, #D0103A);
 }
 // Angola
 .flag-ago {
@@ -172,10 +172,6 @@
 // Central African Republic
 .flag-caf {
 }
-// Chad
-.flag-tcd {
-  @include columns-3(#002664, #FECB00, #C60C30);
-}
 // Chile
 .flag-chl {
   box-shadow:inset 0px $h2 0px white,
@@ -271,10 +267,6 @@
 // Costa Rica
 .flag-cri {
 }
-// Côte d'Ivoire
-.flag-civ {
-  @include columns-3(#F77F00, white, #009E60);
-}
 // Croatia
 .flag-hrv {
 }
@@ -362,10 +354,6 @@
 // Fiji
 .flag-fji {
 }
-// France
-.flag-fra {
-  @include columns-3(#002395, white, #ED2939);
-}
 // French Guiana
 .flag-guf {
 }
@@ -428,10 +416,6 @@
 // Guernsey
 .flag-ggy {
 }
-// Guinea
-.flag-gin {
-  @include columns-3(#CE1126, #FCD116, #009460);
-}
 // Guinea-Bissau
 .flag-gnb {
 }
@@ -480,19 +464,11 @@
 // Iraq
 .flag-irq {
 }
-// Ireland
-.flag-irl {
-  @include columns-3(#009B48, white, #FF7900);
-}
 // Isle of Man
 .flag-imn {
 }
 // Israel
 .flag-isr {
-}
-// Italy
-.flag-ita {
-  @include columns-3(#009246, white, #CE2B37);
 }
 // Jamaica
 .flag-jam {
@@ -623,10 +599,6 @@
 // Maldives
 .flag-mdv {
 }
-// Mali
-.flag-mli {
-  @include columns-3(#14B53A, #FCD116, #CE1126);
-}
 // Malta
 .flag-mlt {
 }
@@ -651,18 +623,8 @@
 // Mayotte
 .flag-myt {
 }
-// Mexico
-.flag-mex {
-  @include incomplete();
-  @include columns-3(#006847, white, #CE1126);
-}
 // Micronesia, Federated States of
 .flag-fsm {
-}
-// Moldova, Republic of
-.flag-mda {
-  @include incomplete();
-  @include columns-3(#0046AE, #FFD200, #CC092F);
 }
 // Monaco
 .flag-mco {
@@ -805,10 +767,6 @@
 // Réunion
 .flag-reu {
 }
-// Romania
-.flag-rou {
-  @include columns-3(#002B7F, #FCD116, #CE1126);
-}
 // Russian Federation
 .flag-rus {
   @include rows-3(white, #0039A6, #D52B1E);
@@ -861,7 +819,7 @@
 }
 // Senegal
 .flag-sen {
-  @include columns-3(#00853F, #FDEF42, #E31B23);
+  @include three-columns(#00853F, #FDEF42, #E31B23);
   &:before {
     @include centered-symbol("★", #00853F)
   }

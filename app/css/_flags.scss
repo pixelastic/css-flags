@@ -176,6 +176,12 @@
 .flag-can {
   @include ratio(2/3);
 };
+// Canary Islands
+.flag-ic {
+  @include incomplete();
+  @include ratio(2/3);
+  @include three-columns(white, #0768A9, #FFCC00);
+};
 // Cape Verde
 .flag-cpv {
   @include ratio(2/3);
@@ -191,6 +197,7 @@
 // Chad
 .flag-tcd {
   @include ratio(2/3);
+  @include three-columns(#002664, #FECB00, #C60C30);
 };
 // Chile
 .flag-chl {
@@ -233,8 +240,10 @@
   @include ratio(2/3);
 };
 // Côte d'Ivoire
+// http://en.wikipedia.org/wiki/Flag_of_Ivory_Coast
 .flag-civ {
   @include ratio(2/3);
+  @include three-columns(#F77F00, white, #009E60);
 };
 // Croatia
 .flag-hrv {
@@ -323,8 +332,10 @@
   @include nordic-cross(white, #003580, 3 * $w18, 5 * $w18);
 };
 // France
+// http://en.wikipedia.org/wiki/Flag_of_France
 .flag-fra {
   @include ratio(2/3);
+  @include three-columns(#002395, white, #ED2939);
 };
 // French Guiana
 .flag-guf {
@@ -391,8 +402,10 @@
   @include ratio(2/3);
 };
 // Guinea
+// http://en.wikipedia.org/wiki/Flag_of_Guinea
 .flag-gin {
   @include ratio(2/3);
+  @include three-columns(#CE1126, #FCD116, #009460);
 };
 // Guinea-Bissau
 .flag-gnb {
@@ -449,8 +462,10 @@
   @include ratio(2/3);
 };
 // Ireland
+// http://en.wikipedia.org/wiki/Flag_of_Ireland
 .flag-irl {
-  @include ratio(2/3);
+  @include ratio(1/2);
+  @include three-columns(#009B48, white, #FF7900);
 };
 // Isle of Man
 .flag-imn {
@@ -461,8 +476,10 @@
   @include ratio(2/3);
 };
 // Italy
+// http://it.wikipedia.org/wiki/Bandiera_d%27Italia
 .flag-ita {
   @include ratio(2/3);
+  @include three-columns(#009246, white, #CE2B37);
 };
 // Jamaica
 .flag-jam {
@@ -569,8 +586,11 @@
   @include ratio(2/3);
 };
 // Mali
+// http://en.wikipedia.org/wiki/Flag_of_Mali
 .flag-mli {
+  @include incomplete();
   @include ratio(2/3);
+  @include three-columns(#14B53A, #FCD116, #CE1126);
 };
 // Malta
 .flag-mlt {
@@ -597,16 +617,23 @@
   @include ratio(2/3);
 };
 // Mexico
+// http://en.wikipedia.org/wiki/Flag_of_Mexico
 .flag-mex {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(4/7);
+  @include three-columns(#006847, white, #CE1126);
 };
 // Micronesia, Federated States of
 .flag-fsm {
   @include ratio(2/3);
 };
 // Moldova, Republic of
+// http://en.wikipedia.org/wiki/Flag_of_Moldova
+// http://www.crwflags.com/fotw/flags/md.html
 .flag-mda {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include three-columns(#0046AE, #FFD200, #CC092F);
 };
 // Monaco
 .flag-mco {
@@ -750,8 +777,10 @@
   @include ratio(2/3);
 };
 // Romania
+// http://en.wikipedia.org/wiki/Flag_of_Romania
 .flag-rou {
   @include ratio(2/3);
+  @include three-columns(#002B7F, #FCD116, #CE1126);
 };
 // Russian Federation
 .flag-rus {
