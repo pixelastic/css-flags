@@ -17,8 +17,12 @@
 @mixin set-syntactic-sugar($width, $height) {
   $w3:$width/3 !global;
   $w22:$width/22 !global;
+  $w25:$width/25 !global;
+  $w52:$width/52 !global;
 
   $h16:$height/16 !global;
+  $h18:$height/18 !global;
+  $h34:$height/34 !global;
   
 }
 

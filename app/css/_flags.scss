@@ -8,11 +8,10 @@
   @include three-columns(black, #BF0000, #009900);
 };
 // Åland Islands
-// Note: Could not find any information on the flag proportions, so I used
-// those of Norway
+// http://www.crwflags.com/fotw/flags/ax.html
 .flag-ala {
-  @include ratio(16/22);
-  @include nordic-cross-border(#0053A5, #FFCE00, #D21034, 4 * $w22, 2 * $w22, 6 * $w22);
+  @include ratio(34/52);
+  @include nordic-cross-border(#0053A5, #FFCE00, #D21034, 10 * $w52, 4 * $w52, 16 * $w52);
 };
 // Albania
 .flag-alb {
@@ -295,7 +294,7 @@
   @include ratio(2/3);
 };
 // Faroe Islands
-// Note: Could not find exact proportions, so used Norway as a reference
+// http://www.crwflags.com/fotw/flags/fo.html
 .flag-fro {
   @include ratio(16/22);
   @include nordic-cross-border(white, #0065BD, #ED2939, 4 * $w22, 2 * $w22, 6 * $w22);
@@ -413,9 +412,11 @@
   @include ratio(2/3);
 };
 // Iceland
+// http://commons.wikimedia.org/wiki/File:Flag_of_Iceland_(with_dimensions).svg
 .flag-isl {
-  @include ratio(2/3);
-};
+  @include ratio(18/25);
+  @include nordic-cross-border(#003897, white, #D72828, 4 * $w25, 2 * $w25, 7 * $w25);
+}
 // India
 .flag-ind {
   @include ratio(2/3);
