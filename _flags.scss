@@ -1,18 +1,10 @@
-.flag {
-  position:relative;
-}
 // Afghanistan
 .flag-afg {
   @include ratio(2/3);
-  @include incomplete();
-  @include three-columns(black, #BF0000, #009900);
 };
 // Åland Islands
-// Note: Could not find any information on the flag proportions, so I used
-// those of Norway
 .flag-ala {
-  @include ratio(16/22);
-  @include nordic-cross-border(#0053A5, #FFCE00, #D21034, 4 * $w22, 2 * $w22, 6 * $w22);
+  @include ratio(2/3);
 };
 // Albania
 .flag-alb {
@@ -668,8 +660,7 @@
 };
 // Norway
 .flag-nor {
-  @include ratio(16/22);
-  @include nordic-cross-border(#ED2939, white, #002664, 4 * $w22, 2 * $w22, 6 * $w22);
+  @include ratio(2/3);
 };
 // Oman
 .flag-omn {

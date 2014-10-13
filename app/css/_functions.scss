@@ -1,22 +1,10 @@
-// Removes unit from a value
-@function strip-units($value) {
-    @return $value / ($value * 0 + 1);
-}
-
-// Square root
-@function sqrt($value, $test: $value/2, $error-range: .001) {
-  $squared-test:$test * $test;
-
-  @if $value - $squared-test > $error-range or $squared-test - $value > $error-range {
-    @return sqrt($value, ($test + $value/$test)/2, $error-range);
-  }
-  @else { 
-    @return $test; 
-  }
-}
-
+/**
+ * Stripes
+ *
+ * Stripes are the base element of most of the flags. 
+ * We'll display them using background-image and linear-gradient.
+ **/
 // Stripe
-// Note: Must be used in a background-image;
 @function stripe($angle, $color, $size, $distance) {
   @return linear-gradient($angle, 
                           transparent, transparent $distance,
@@ -25,16 +13,40 @@
                           );
 }
 // Horizontal stripe
-// Note: Must be used in a background-image
 @function h-stripe($color, $height, $top) {
   @return stripe(180deg, $color, $height, $top);
 }
 
 // Vertical stripe
-// Note: Must be used in a background-image;
 @function v-stripe($color, $width, $left) {
   @return stripe(90deg, $color, $width, $left);
 }
 
 
 
+
+
+// // Removes unit from a value
+//
+//
+//
+//
+// @function strip-units($value) {
+//     @return $value / ($value * 0 + 1);
+// }
+// 
+// // Square root
+// @function sqrt($value, $test: $value/2, $error-range: .001) {
+//   $squared-test:$test * $test;
+// 
+//   @if $value - $squared-test > $error-range or $squared-test - $value > $error-range {
+//     @return sqrt($value, ($test + $value/$test)/2, $error-range);
+//   }
+//   @else { 
+//     @return $test; 
+//   }
+// }
+// 
+// 
+// 
+// 
