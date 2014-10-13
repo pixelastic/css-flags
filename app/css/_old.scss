@@ -9,10 +9,6 @@
 
 
 
-// Åland Islands
-.flag-ala {
-  @include nordic-cross-border(#0053A5, #D21034, #FFCE00);
-}
 // Albania
 .flag-alb {
   @include incomplete();
@@ -377,10 +373,6 @@
 }
 // Falkland Islands (Malvinas)
 .flag-flk {
-}
-// Faroe Islands
-.flag-fro {
-  @include nordic-cross-border(white, #ED2939, #0065BD);
 }
 // Fiji
 .flag-fji {

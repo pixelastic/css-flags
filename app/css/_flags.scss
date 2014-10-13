@@ -295,9 +295,11 @@
   @include ratio(2/3);
 };
 // Faroe Islands
+// Note: Could not find exact proportions, so used Norway as a reference
 .flag-fro {
-  @include ratio(2/3);
-};
+  @include ratio(16/22);
+  @include nordic-cross-border(white, #0065BD, #ED2939, 4 * $w22, 2 * $w22, 6 * $w22);
+}
 // Fiji
 .flag-fji {
   @include ratio(2/3);
