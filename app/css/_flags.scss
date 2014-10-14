@@ -26,8 +26,11 @@
   @include ratio(2/3);
 };
 // Andorra
+// http://en.wikipedia.org/wiki/Flag_of_Andorra
 .flag-and {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(7/10);
+  @include columns(#0018A8, 8 * $w25, #FEDF00, 9 * $w25, #D0103A, 8 * $w25);
 };
 // Angola
 .flag-ago {
@@ -173,8 +176,11 @@
   }
 };
 // Canada
+// http://en.wikipedia.org/wiki/Flag_of_Canada
 .flag-can {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include columns(#FF0000, $w4, white, $w2, #FF0000, $w4);
 };
 // Canary Islands
 .flag-ic {
@@ -704,8 +710,11 @@
   @include ratio(2/3);
 };
 // Norfolk Island
+// http://en.wikipedia.org/wiki/Flag_of_Norfolk_Island
 .flag-nfk {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include columns(#007934, 7 * $w23, white, 9 * $w23, #007934, 7 * $w23);
 };
 // Northern Mariana Islands
 .flag-mnp {
@@ -815,8 +824,11 @@
   @include ratio(2/3);
 };
 // Saint Vincent and the Grenadines
+// http://en.wikipedia.org/wiki/Flag_of_Saint_Vincent_and_the_Grenadines
 .flag-vct {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include columns(#0072C6, $w4, #FCD116, $w2, #009E60, $w4);
 };
 // Samoa
 .flag-wsm {

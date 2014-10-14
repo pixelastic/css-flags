@@ -15,6 +15,7 @@
 
 // Expose global values as syntactic sugar
 @mixin set-syntactic-sugar($width, $height) {
+  $h7:$height/7 !global;
   $h10:$height/10 !global;
   $h11:$height/11 !global;
   $h16:$height/16 !global;
@@ -24,9 +25,12 @@
 
   $w2:$width/2 !global;
   $w3:$width/3 !global;
+  $w4:$width/4 !global;
+  $w10:$width/10 !global;
   $w16:$width/16 !global;
   $w18:$width/18 !global;
   $w22:$width/22 !global;
+  $w23:$width/23 !global;
   $w25:$width/25 !global;
   $w37:$width/37 !global;
   $w52:$width/52 !global;
@@ -34,9 +38,26 @@
 
 // Three equal columns
 @mixin three-columns($left, $center, $right) {
-  background-image:v-stripe($left, $w3, 0),
-                   v-stripe($center, $w3, $w3),
-                   v-stripe($right, $w3, 2 * $w3);
+  @include columns($left, $w3, $center, $w3, $right, $w3);
+}
+
+// Columns
+@mixin columns($args...) {
+  // Defaul values
+  $_offset:0px;
+  $_color:transparent;
+  $_result: ();
+
+  @for $_i from 1 to length($args)+1 {
+    // Only interested in even numbers
+    @if ($_i % 2 == 0) {
+      $_color: nth($args, $_i - 1);
+      $_width: nth($args, $_i);
+      $_result: append($_result, v-stripe($_color, $_width, $_offset), comma);
+      $_offset: $_offset + $_width;
+    }
+  }
+  background-image:$_result;
 }
 
 // Nordic cross with borders (eg. Norway, Iceland)

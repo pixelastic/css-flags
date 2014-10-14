@@ -48,11 +48,6 @@
     top:$height * 0.05;
   }
 }
-// Andorra
-.flag-and {
-  @include incomplete();
-  @include three-columns(#0018A8, #FEDF00, #D0103A);
-}
 // Angola
 .flag-ago {
   @include incomplete();
