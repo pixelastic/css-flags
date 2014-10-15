@@ -26,6 +26,11 @@
   $w2:$width/2 !global;
   $w3:$width/3 !global;
   $w4:$width/4 !global;
+  $w5:$width/5 !global;
+  $w6:$width/6 !global;
+  $w7:$width/7 !global;
+  $w8:$width/8 !global;
+  $w9:$width/9 !global;
   $w10:$width/10 !global;
   $w16:$width/16 !global;
   $w18:$width/18 !global;
@@ -101,6 +106,15 @@
   content:$symbol;
   color:$color;
   position:absolute;
+}
+
+// Losange
+@mixin losange($width, $color) {
+    display:block;
+    width:$width;
+    height:$width;
+    background-color:$color;
+    transform:scaleX(.5) rotate(45deg);
 }
 
 // 

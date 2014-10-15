@@ -1,5 +1,6 @@
 .flag {
   position:relative;
+  margin:0 auto;
 }
 // Afghanistan
 .flag-afg {
@@ -598,7 +599,6 @@
 // Mali
 // http://en.wikipedia.org/wiki/Flag_of_Mali
 .flag-mli {
-  @include incomplete();
   @include ratio(2/3);
   @include three-columns(#14B53A, #FCD116, #CE1126);
 };
@@ -830,11 +830,20 @@
 };
 // Saint Vincent and the Grenadines
 // http://en.wikipedia.org/wiki/Flag_of_Saint_Vincent_and_the_Grenadines
-// ♦
 .flag-vct {
-  @include incomplete();
   @include ratio(1/2);
   @include columns(#0072C6, $w4, #FCD116, $w2, #009E60, $w4);
+  &:before {
+    @include losange($w8, #009E60);
+    position:absolute;
+    content:"";
+    top:50%;
+    left:50%;
+    margin-top:$w8 / 2;
+    margin-left:-$w8 / 2;
+    box-shadow:(-$w8 - 5px) 0px 0px #009E60, 
+                0px (-$w8 - 5px) 0px #009E60;
+  }
 };
 // Samoa
 .flag-wsm {
