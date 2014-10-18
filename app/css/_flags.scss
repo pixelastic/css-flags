@@ -178,12 +178,13 @@
 };
 // Canada
 // http://en.wikipedia.org/wiki/Flag_of_Canada
-// MAPLE LEAF as UTF8
-// : http://www.fileformat.info/info/unicode/char/1f341/index.htm
 .flag-can {
-  @include incomplete();
   @include ratio(1/2);
   @include columns(#FF0000, $w4, white, $w2, #FF0000, $w4);
+  &:before {
+    @include centered-symbol($UTF8_MAPLE, #FF0000);
+    font-size:5em;
+  }
 };
 // Canary Islands
 .flag-ic {

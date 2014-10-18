@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.0//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg fill-opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" color-rendering="auto" color-interpolation="auto" stroke="black" text-rendering="auto" stroke-linecap="square" stroke-miterlimit="10" stroke-opacity="1" shape-rendering="auto" fill="black" stroke-dasharray="none" font-weight="normal" stroke-width="1" xmlns="http://www.w3.org/2000/svg" font-family="&apos;Dialog&apos;" font-style="normal" stroke-linejoin="miter" font-size="12" stroke-dashoffset="0" image-rendering="auto">
+  <!--Unicode Character 'MAPLE LEAF' (U+1F341)-->
+  <defs id="genericDefs" />
+  <g>
+    <g>
+      <path d="M259.0312 206.1562 L198 259.5938 L202.5 277.5938 L142.0312 271.9688 L144.8438 334.6875 L126.2812 334.6875 L129.0938 272.5312 L68.0625 277.5938 L72.5625 259.5938 L11.5312 206.1562 Q16.5938 203.2031 26.4375 197.0156 L16.7344 155.8125 Q50.7656 162.5625 51.1875 162.5625 Q52.4531 162.5625 61.4531 144.4219 L96.0469 177.4688 L85.7812 107.8594 L107.0156 117 L135 75.375 L163.5469 117 L184.7812 107.8594 L174.375 177.4688 L209.1094 144.4219 Q219.375 162.7031 219.9375 162.5625 L254.3906 155.8125 L244.125 197.0156 Q249.0469 200.25 259.0312 206.1562 Z" stroke="none" />
+    </g>
+  </g>
+</svg>
