@@ -178,6 +178,8 @@
 };
 // Canada
 // http://en.wikipedia.org/wiki/Flag_of_Canada
+// MAPLE LEAF as UTF8
+// : http://www.fileformat.info/info/unicode/char/1f341/index.htm
 .flag-can {
   @include incomplete();
   @include ratio(1/2);
@@ -303,6 +305,13 @@
 // El Salvador
 .flag-slv {
   @include ratio(2/3);
+};
+// England
+.flag-eng {
+  @include ratio(30/50);
+  background-color:white;
+  background-image:v-stripe(#CF142B, 6 * $w50, 22 * $w50),
+                   h-stripe(#CD142B, 6 * $w50, 12 * $w50);
 };
 // Equatorial Guinea
 .flag-gnq {
