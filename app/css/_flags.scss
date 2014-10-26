@@ -24,8 +24,22 @@
   }
 };
 // Algeria
+// http://www.crwflags.com/fotw/flags/dz.html
 .flag-dza {
   @include ratio(2/3);
+  @include two-columns(#006233, white);
+  &:before {
+    @include circle(8 * $w30, transparent);
+    @include position(6 * $w30, 12 * $w30);
+    box-shadow:-($w30 + 1)  0px 0px $w30 #D21034; 
+  }
+  &:after {
+    @include symbol($UTF8_BLACK_STAR, #D21034); 
+    font-size:5 * $w30;
+    top:7.5 * $w30 - 3px;
+    left:15 * $w30 - 3px;
+    transform:rotate(15deg);
+  }
 };
 // American Samoa
 .flag-asm {

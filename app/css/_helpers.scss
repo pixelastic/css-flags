@@ -38,6 +38,7 @@
   $w22:$width/22 !global;
   $w23:$width/23 !global;
   $w25:$width/25 !global;
+  $w30:$width/30 !global;
   $w32:$width/32 !global;
   $w37:$width/37 !global;
   $w50:$width/50 !global;
@@ -46,6 +47,10 @@
 }
 
 // Three equal columns
+@mixin two-columns($left, $right) {
+  @include columns($left, $w2, $right, $w2);
+}
+
 @mixin three-columns($left, $center, $right) {
   @include columns($left, $w3, $center, $w3, $right, $w3);
 }
@@ -143,6 +148,23 @@
     height:$width;
     background-color:$color;
     transform:scaleX(.5) rotate(45deg);
+}
+
+// Circle
+@mixin circle($width, $color) {
+  display:block;
+  width:$width;
+  height:$width;
+  border-radius:50%;
+  background-color:$color;
+}
+
+// Position
+@mixin position($top, $left) {
+  content:"";
+  position:absolute;
+  top:$top;
+  left:$left;
 }
 
 // 
