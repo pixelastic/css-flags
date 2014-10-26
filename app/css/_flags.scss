@@ -16,7 +16,12 @@
 };
 // Albania
 .flag-alb {
-  @include ratio(2/3);
+  @include ratio(5/7);
+  background:#E41E20;
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_ALB, black);
+    font-size:2 * $h3;
+  }
 };
 // Algeria
 .flag-dza {
