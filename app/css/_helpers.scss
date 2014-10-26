@@ -15,6 +15,7 @@
 
 // Expose global values as syntactic sugar
 @mixin set-syntactic-sugar($width, $height) {
+  $h3:$height/3 !global;
   $h7:$height/7 !global;
   $h10:$height/10 !global;
   $h11:$height/11 !global;
@@ -68,6 +69,31 @@
   background-image:$_result;
 }
 
+// Three equal lines
+@mixin three-lines($top, $center, $bottom) {
+  @include lines($top, $h3, $center, $h3, $bottom, $h3);
+}
+
+// Lines
+@mixin lines($args...) {
+  // Defaul values
+  $_offset:0px;
+  $_color:transparent;
+  $_result: ();
+
+  @for $_i from 1 to length($args)+1 {
+    // Only interested in even numbers
+    @if ($_i % 2 == 0) {
+      $_color: nth($args, $_i - 1);
+      $_height: nth($args, $_i);
+      $_result: append($_result, h-stripe($_color, $_height, $_offset), comma);
+      $_offset: $_offset + $_height;
+    }
+  }
+  background-image:$_result;
+}
+
+
 // Nordic cross with borders (eg. Norway, Iceland)
 @mixin nordic-cross-border($background-color, $cross-color, $inner-color, $cross-width, $inner-width, $cross-offset) {
   background-color:$background-color;
@@ -88,7 +114,7 @@
 
 // Centered star
 @mixin centered-star($color) {
-  @include centered-symbol("★", $color);
+  @include centered-symbol($UTF8_BLACK_STAR, $color);
 }
 
 // Centered symbol

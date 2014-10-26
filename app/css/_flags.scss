@@ -182,7 +182,7 @@
   @include ratio(1/2);
   @include columns(#FF0000, $w4, white, $w2, #FF0000, $w4);
   &:before {
-    @include centered-symbol($UTF8_MAPLE, #FF0000);
+    @include centered-symbol($UTF8_MAPLE_LEAF, #FF0000);
     font-size:5em;
   }
 };
@@ -679,9 +679,14 @@
 .flag-moz {
   @include ratio(2/3);
 };
-// Myanmar
+// Myanmar / Burma
 .flag-mmr {
   @include ratio(2/3);
+  @include three-lines(#FECB00, #34B233, #EA2839);
+  &:before {
+    @include centered-star(white);
+    font-size: 2 * $h3;
+  }
 };
 // Namibia
 .flag-nam {

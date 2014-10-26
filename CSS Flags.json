@@ -1,0 +1,101 @@
+{
+	"metadata": {
+		"name": "CSS Flags",
+		"lastOpened": 1414360965105,
+		"created": 1413620842672
+	},
+	"iconSets": [
+		{
+			"selection": [
+				{
+					"order": 4,
+					"id": 2,
+					"prevSize": 32,
+					"code": 9733,
+					"name": "U2605_BLACK_STAR",
+					"tempChar": "",
+					"ligatures": ""
+				},
+				{
+					"order": 5,
+					"id": 1,
+					"prevSize": 32,
+					"code": 127809,
+					"name": "1F341_MAPLE_LEAF",
+					"tempChar": "",
+					"ligatures": ""
+				}
+			],
+			"id": 0,
+			"metadata": {
+				"name": "Untitled Set"
+			},
+			"height": 1024,
+			"prevSize": 32,
+			"icons": [
+				{
+					"id": 2,
+					"paths": [
+						"M877.682 1021.937l-329.566-1015.419-329.566 1015.419 863.997-627.956h-1068.862z"
+					],
+					"attrs": [
+						{
+							"opacity": 1,
+							"visibility": false
+						}
+					],
+					"width": 1087,
+					"grid": 32,
+					"tags": [
+						"U2605_BLACK_STAR"
+					]
+				},
+				{
+					"id": 1,
+					"paths": [
+						"M79.757 501.126l228.801 200.339-16.868 67.478 226.701-21.085-10.547 235.132h69.594l-10.547-233.021 228.801 18.983-16.868-67.478 228.801-200.339q-18.983-11.071-55.882-34.265l36.376-154.468q-127.579 25.305-129.167 25.305-4.741 0-38.487-68.012l-129.693 123.893 38.487-260.959-79.608 34.265-104.91-156.046-107.023 156.046-79.608-34.265 39.012 260.959-130.22-123.893q-38.487 68.537-40.589 68.012l-129.167-25.305 38.487 154.468q-18.45 12.127-55.882 34.265z"
+					],
+					"attrs": [
+						{
+							"opacity": 1,
+							"visibility": false
+						}
+					],
+					"grid": 32,
+					"tags": [
+						"F341_MAPLE_LEAF"
+					],
+					"width": 1088
+				}
+			],
+			"invisible": false
+		}
+	],
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"showSVGs": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon"
+			},
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"resetPoint": 58880
+		},
+		"imagePref": {
+			"prefix": "icon-"
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"search": "",
+		"gridSize": 16,
+		"showGrid": true,
+		"showQuickUse2": true
+	},
+	"externalSets": []
+}
