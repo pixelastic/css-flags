@@ -7,28 +7,6 @@
 
 
 
-// Algeria
-/**
- * Two large borders to make the two columns. And an UTF-8 symbol vertically
- * and horizontally centered
- **/
-.flag-dza {
-  border-left:($width / 2) solid #006233;
-  border-right:($width /2) solid white;
-  &:before {
-    content: "☪";
-    color: #D21034;
-    position: absolute;
-    display: block;
-    top: 0px;
-    left: -($width / 2);
-    width:$width;
-    height: $height;
-    line-height: $height;
-    text-align: center;
-    font-size: 7em;
-  }
-}
 // American Samoa
 .flag-asm {
   @include incomplete();
@@ -642,14 +620,6 @@
 }
 // Mozambique
 .flag-moz {
-}
-// Myanmar
-.flag-mmr {
-  @include rows-3(#FECB00, #34B233, #EA2839);
-  &:before {
-    @include centered-symbol("★", white);
-    font-size:9em;
-  }
 }
 // Namibia
 .flag-nam {
