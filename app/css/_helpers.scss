@@ -5,6 +5,11 @@
   }
 }
 
+// Removes units
+@function _($value) {
+    @return $value / ($value * 0 + 1);
+}
+
 // Define flag ratio
 @mixin ratio($ratio:1) {
   $height:round($width * $ratio) !global;

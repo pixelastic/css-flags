@@ -4,16 +4,19 @@ module Sass::Script::Functions
 
   module CustomMath
 
+    # Converts radian to degrees
     def deg(number)
       Sass::Script::Number.new(number.value * 180 / Math::PI);
     end
     Sass::Script::Functions.declare :deg, [:number]
 
+    # Convert degrees to radians
     def rad(number)
       Sass::Script::Number.new(number.value * Math::PI / 180);
     end
     Sass::Script::Functions.declare :rad, [:number]
 
+    # Square root
     def sqrt(number)
       Sass::Script::Number.new(Math.sqrt(number.value))
     end

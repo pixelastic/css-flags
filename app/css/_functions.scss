@@ -22,31 +22,3 @@
   @return stripe(90deg, $color, $width, $left);
 }
 
-
-@function _($value) {
-    @return $value / ($value * 0 + 1);
-}
-
-
-
-// // Removes unit from a value
-//
-//
-//
-//
-// 
-// // Square root
-// @function sqrt($value, $test: $value/2, $error-range: .001) {
-//   $squared-test:$test * $test;
-// 
-//   @if $value - $squared-test > $error-range or $squared-test - $value > $error-range {
-//     @return sqrt($value, ($test + $value/$test)/2, $error-range);
-//   }
-//   @else { 
-//     @return $test; 
-//   }
-// }
-// 
-// 
-// 
-// 
