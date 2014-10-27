@@ -64,8 +64,15 @@
   @include columns(#0018A8, 8 * $w25, #FEDF00, 9 * $w25, #D0103A, 8 * $w25);
 };
 // Angola
+// http://www.crwflags.com/fotw/flags/ao.html
+// http://en.wikipedia.org/wiki/Flag_of_Angola
 .flag-ago {
   @include ratio(2/3);
+  @include two-lines(#CE1126, #000000);
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_AGO, #D21034); 
+    font-size:2 * $h3;
+  }
 };
 // Anguilla
 .flag-aia {

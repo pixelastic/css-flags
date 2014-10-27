@@ -81,6 +81,11 @@
   background-image:$_result;
 }
 
+// Two equal lines
+@mixin two-lines($top, $bottom) {
+  @include lines($top, $h2, $bottom, $h2);
+}
+
 // Three equal lines
 @mixin three-lines($top, $center, $bottom) {
   @include lines($top, $h3, $center, $h3, $bottom, $h3);
