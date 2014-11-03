@@ -4,17 +4,11 @@ module Sass::Script::Functions
 
   module CustomMath
 
-    # Converts radian to degrees
-    def deg(number)
-      Sass::Script::Number.new(number.value * 180 / Math::PI);
+    # Hypotenuse
+    def hypotenuse(a, b)
+      value = Math.sqrt(a.value * a.value + b.value * b.value)
+      Sass::Script::Number.new(value, a.numerator_units, a.denominator_units)
     end
-    Sass::Script::Functions.declare :deg, [:number]
-
-    # Convert degrees to radians
-    def rad(number)
-      Sass::Script::Number.new(number.value * Math::PI / 180);
-    end
-    Sass::Script::Functions.declare :rad, [:number]
 
     # Square root
     def sqrt(number)
@@ -22,51 +16,63 @@ module Sass::Script::Functions
     end
     Sass::Script::Functions.declare :sqrt, []
 
-    def pi()
-      Sass::Script::Number.new(Math::PI)
+    # These methods will expect a value in degrees and output a float
+    def cos(number)
+      Sass::Script::Number.new(Math.cos(deg_to_rad(number.value)))
     end
-    Sass::Script::Functions.declare :pi, []
 
     def sin(number)
-      trig(:sin, number)
+      Sass::Script::Number.new(Math.sin(deg_to_rad(number.value)))
     end
-    Sass::Script::Functions.declare :sin, [:number]
-
-    def asin(number)
-      trig(:asin, number)
-    end
-    Sass::Script::Functions.declare :asin, [:number]
-
-    def cos(number)
-      trig(:cos, number)
-    end
-    Sass::Script::Functions.declare :cos, [:number]
-
-    def acos(number)
-      trig(:acos, number)
-    end
-    Sass::Script::Functions.declare :acos, [:number]
 
     def tan(number)
-      trig(:tan, number)
+      Sass::Script::Number.new(Math.tan(deg_to_rad(number.value)))
     end
+
+    Sass::Script::Functions.declare :cos, [:number]
+    Sass::Script::Functions.declare :sin, [:number]
     Sass::Script::Functions.declare :tan, [:number]
 
-    def atan(number)
-      trig(:atan, number)
+    # These methods will expect a float as input and will output a value in
+    # degrees
+    def acos(number)
+      sass_deg(rad_to_deg(Math.acos(number.value)))
     end
+
+    def asin(number)
+      sass_deg(rad_to_deg(Math.asin(number.value)))
+    end
+
+    def atan(number)
+      sass_deg(rad_to_deg(Math.atan(number.value)))
+    end
+
+    Sass::Script::Functions.declare :acos, [:number]
+    Sass::Script::Functions.declare :asin, [:number]
     Sass::Script::Functions.declare :atan, [:number]
 
 
     private
 
-    def trig(operation, number)
-      if number.numerator_units == ['deg'] && number.denominator_units == []
-        Sass::Script::Number.new(Math.send(operation, Math::PI * number.value / 180))
-      else
-        Sass::Script::Number.new(Math.send(operation, number.value), number.numerator_units, number.denominator_units)
-      end
+    # Converts a value in radian to degrees
+    def rad_to_deg(value)
+      value * 180 / Math::PI
     end
+    
+    # Converts a value in degress to radian
+    def deg_to_rad(value)
+      value * Math::PI / 180;
+    end
+
+    # Cast a value to Sass deg
+    def sass_deg(value)
+      Sass::Script::Number.new(value, 'deg', 'deg')
+    end
+
+    # def pi()
+    #   Sass::Script::Number.new(Math::PI)
+    # end
+    # Sass::Script::Functions.declare :pi, []
 
   end
 

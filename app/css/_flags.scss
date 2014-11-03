@@ -47,9 +47,9 @@
   @include incomplete();
   @include ratio(1/2);
 
-  $hypotenuse: sqrt(_($width) * _($width) + _($h2) * _($h2));
-  $alpha:round(90 - deg(asin(_($width) / $hypotenuse)));
-  $distance:$h2 * cos(rad($alpha));
+  $hypotenuse: hypotenuse($width, $h2);
+  $alpha:round(90 - asin($width / $hypotenuse));
+  $distance:$h2 * cos($alpha);
   background-color:white;
   background-image:linear-gradient(#{180 - $alpha}deg, #000066 $distance, transparent $distance),
                    linear-gradient(#{$alpha}deg, #000066 $distance, transparent $distance),
@@ -67,10 +67,11 @@
 // http://www.crwflags.com/fotw/flags/ao.html
 // http://en.wikipedia.org/wiki/Flag_of_Angola
 .flag-ago {
+  @include incomplete();
   @include ratio(2/3);
   @include two-lines(#CE1126, #000000);
   &:before {
-    @include centered-symbol($UTF8_COUNTRY_AGO, #D21034); 
+    @include centered-symbol($UTF8_COUNTRY_AGO, #F9D616); 
     font-size:2 * $h3;
   }
 };
@@ -1091,7 +1092,8 @@
 };
 // United Kingdom
 .flag-gbr {
-  @include ratio(2/3);
+  @include ratio(1/2);
+  @include union-jack();
 };
 // United States
 // ★

@@ -29,6 +29,7 @@
   $h18:$height/18 !global;
   $h20:$height/20 !global;
   $h28:$height/28 !global;
+  $h30:$height/30 !global;
   $h34:$height/34 !global;
 
   $w2:$width/2 !global;
@@ -52,6 +53,7 @@
   $w52:$width/52 !global;
   $w110:$width/110 !global;
 }
+
 
 // Three equal columns
 @mixin two-columns($left, $right) {
@@ -127,6 +129,31 @@
   background-image:
                    h-stripe($cross-color, $cross-width, ($height - $cross-width) / 2),
                    v-stripe($cross-color, $cross-width, $cross-offset);
+}
+
+// Union Jack
+@mixin union-jack() {
+  $alpha:toa($height, $width); // Bottom right angle
+  $distance: sin($alpha) * $width; // Distance to diagonal
+  background:
+                   /* St George */
+                   v-stripe(#CC0000, 6 * $h30, 27 * $h30),
+                   h-stripe(#CC0000, 6 * $h30, 12 * $h30),
+                   v-stripe(white, 10 * $h30, 25 * $h30),
+                   h-stripe(white, 10 * $h30, 10 * $h30),
+  
+                   /* St Patrick */
+                   stripe(#{$alpha}deg, #CC0000, 2 * $h30, $distance - 2 * $h30) 0px 0px/#{$w2} $w2 no-repeat, 
+                   stripe(#{$alpha}deg, #CC0000, 2 * $h30, $distance) $w2 #{$h2}/#{$w2} $w2 no-repeat, 
+                   stripe(#{180 - $alpha}deg, #CC0000, 2 * $h30, $distance) 0px 0px/#{$w2} $w2 no-repeat, 
+                   stripe(#{180 - $alpha}deg, #CC0000, 2 * $h30, $distance - 2 * $h30) $w2 #{-$h2}/#{$w2} $w2 no-repeat, 
+
+                   /* St Andrew */
+                   stripe(#{$alpha}deg, white, 6 * $h30, $distance - 3 * $h30), 
+                   stripe(#{180 - $alpha}deg, white, 6 * $h30, $distance - 3 * $h30),
+
+                   /* Background color */
+                   #00247D;
 }
 
 // Centered star

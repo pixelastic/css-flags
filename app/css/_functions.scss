@@ -22,3 +22,7 @@
   @return stripe(90deg, $color, $width, $left);
 }
 
+// TOA
+@function toa($A, $O) {
+  @return atan(_($A) / _($O))
+}
