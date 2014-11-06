@@ -120,8 +120,11 @@
   @include ratio(2/3);
 };
 // Bangladesh
+// http://en.wikipedia.org/wiki/Flag_of_Bangladesh
 .flag-bgd {
-  @include ratio(2/3);
+  @include ratio(6/10);
+  background:circle(#E11837, 2 * $w10, 4.5 * $w10, $height / 2),
+             #01796F
 };
 // Barbados
 .flag-brb {

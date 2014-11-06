@@ -22,6 +22,11 @@
   @return stripe(90deg, $color, $width, $left);
 }
 
+// Circle
+@function circle($color, $size, $left, $top) {
+  @return radial-gradient($left $top, circle, $color $size, transparent 0px),
+}
+
 // TOA
 @function toa($A, $O) {
   @return atan(_($A) / _($O))
