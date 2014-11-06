@@ -965,8 +965,14 @@
   @include ratio(2/3);
 };
 // Somalia
+// http://en.wikipedia.org/wiki/Flag_of_Somalia
 .flag-som {
   @include ratio(2/3);
+  background:#4189DD;
+  &:before {
+    @include centered-star(white);
+    font-size: $h3;
+  }
 };
 // South Africa
 .flag-zaf {
