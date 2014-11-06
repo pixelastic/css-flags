@@ -426,8 +426,14 @@
   @include ratio(2/3);
 };
 // Ghana
+// http://en.wikipedia.org/wiki/Flag_of_Ghana
 .flag-gha {
   @include ratio(2/3);
+  @include three-lines(#CE1126, #FCD116, #006B3F);
+  &:before {
+    @include centered-star(black);
+    font-size: $h3;
+  }
 };
 // Gibraltar
 .flag-gib {
