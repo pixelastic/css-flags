@@ -1,3 +1,9 @@
+/*
+ * Notes:
+ * RGB/HEXA/PANTONE Converter : http://rgb.to/
+ * Flag informations : http://www.vexilla-mundi.com/
+ *                     http://www.crwflags.com/fotw/flags/
+ */
 .flag {
   position:relative;
   margin:0 auto;
@@ -204,8 +210,12 @@
   @include ratio(2/3);
 };
 // Cambodia
+// http://www.vexilla-mundi.com/cambodia_flag.html
 .flag-khm {
+  @include incomplete();
   @include ratio(2/3);
+  @include lines(#002f6c, $h4, #d50032, $h2, #002f6c, $h4);
+
 };
 // Cameroon
 // http://www.crwflags.com/fotw/flags/cm.html
@@ -916,8 +926,12 @@
   @include ratio(2/3);
 };
 // San Marino
+// http://en.wikipedia.org/wiki/Flag_of_San_Marino
+// http://www.vexilla-mundi.com/san_marino_flag.html
 .flag-smr {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(3/4);
+  @include two-lines(white, #62b5e5);
 };
 // Sao Tome and Principe
 .flag-stp {
