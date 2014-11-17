@@ -299,8 +299,10 @@
   @include ratio(2/3);
 };
 // Costa Rica
+// http://en.wikipedia.org/wiki/Flag_of_Costa_Rica
 .flag-cri {
-  @include ratio(2/3);
+  @include ratio(3/5);
+  @include lines(#002B7F, $h6, white, $h6, #CE1126, $h3, white, $h6, #002B7F, $h6);
 };
 // Côte d'Ivoire
 // http://en.wikipedia.org/wiki/Flag_of_Ivory_Coast
