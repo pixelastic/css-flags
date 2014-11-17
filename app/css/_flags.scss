@@ -356,8 +356,11 @@
   @include ratio(2/3);
 };
 // El Salvador
+// http://en.wikipedia.org/wiki/Flag_of_El_Salvador
 .flag-slv {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(189/335);
+  @include three-lines(#0047AB, white, #0047AB);
 };
 // England
 .flag-eng {
