@@ -22,6 +22,7 @@
 @mixin set-syntactic-sugar($width, $height) {
   $h2:$height/2 !global;
   $h3:$height/3 !global;
+  $h4:$height/4 !global;
   $h7:$height/7 !global;
   $h10:$height/10 !global;
   $h11:$height/11 !global;

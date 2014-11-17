@@ -990,7 +990,9 @@
 };
 // Spain
 .flag-esp {
+  @include incomplete();
   @include ratio(2/3);
+  @include lines(#AA151B, $h4, #F1BF00, $h2, #AA151B, $h4);
 };
 // Sri Lanka
 .flag-lka {
