@@ -1078,8 +1078,11 @@
   @include ratio(2/3);
 };
 // Thailand
+// http://en.wikipedia.org/wiki/Flag_of_Thailand
+// http://www.crwflags.com/fotw/flags/th.html
 .flag-tha {
   @include ratio(2/3);
+  @include lines(#ef3340, $h6, white, $h6, #00205b, $h3, white, $h6, #ef3340, $h6);
 };
 // Timor-Leste
 .flag-tls {
