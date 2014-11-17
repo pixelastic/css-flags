@@ -106,6 +106,7 @@
 // Austria
 .flag-aut {
   @include ratio(2/3);
+  @include three-lines(red, white, red);
 };
 // Azerbaijan
 .flag-aze {
