@@ -1029,8 +1029,15 @@
   @include ratio(2/3);
 };
 // Suriname
+// http://www.crwflags.com/fotw/flags/sr.html
+// http://www.vexilla-mundi.com/suriname_flag.html
 .flag-sur {
   @include ratio(2/3);
+  @include lines(#007a33, 4 * $h20, white, 2 * $h20, #c8102e, 8 * $h20, white, 2 * $h20, #007a33, 4 * $h20);
+  &:before {
+    @include centered-star(#ffcd00);
+    font-size: (8 * $h20) * 95.5/100;
+  }
 };
 // Svalbard and Jan Mayen
 .flag-sjm {
