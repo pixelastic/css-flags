@@ -1079,8 +1079,12 @@
   @include ratio(2/3);
 };
 // Tajikistan
+// http://www.crwflags.com/fotw/flags/tj.html
+// http://www.vexilla-mundi.com/tajikistan_flag.html
 .flag-tjk {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include lines(#e40046, 2 * $h7, white, 3 * $h7, #009639, 2 * $h7);
 };
 // Tanzania, United Republic of
 .flag-tza {
