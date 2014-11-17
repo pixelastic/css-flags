@@ -840,7 +840,9 @@
 };
 // Portugal
 .flag-prt {
+  @include incomplete();
   @include ratio(2/3);
+  @include columns(#FF0000, 2 * $w5, #006600, 3 * $w5);
 };
 // Puerto Rico
 .flag-pri {
