@@ -889,8 +889,11 @@
   @include ratio(2/3);
 };
 // Rwanda
+// http://www.crwflags.com/fotw/flags/rw.html
 .flag-rwa {
+  @include incomplete();
   @include ratio(2/3);
+  @include lines(#00a3e0, $h2, #f7b500, $h4, #006f3d, $h4);
 };
 // Saint Barthélemy
 .flag-blm {
