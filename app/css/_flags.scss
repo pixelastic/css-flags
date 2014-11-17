@@ -2,7 +2,7 @@
  * Notes:
  * RGB/HEXA/PANTONE Converter : http://rgb.to/
  * Flag informations : http://www.vexilla-mundi.com/
- *                     http://www.crwflags.com/fotw/flags/
+ *                     http://www.crwflags.com/fotw/flags/country.html
  */
 .flag {
   position:relative;
@@ -772,8 +772,13 @@
   @include ratio(2/3);
 };
 // Nicaragua
+// http://en.wikipedia.org/wiki/Flag_of_Nicaragua
+// http://www.vexilla-mundi.com/nicaragua_flag.html
 .flag-nic {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(3/5);
+  @include three-lines(#005eb8, white, #005eb8);
+
 };
 // Niger
 .flag-ner {
