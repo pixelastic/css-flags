@@ -430,8 +430,10 @@
   @include ratio(2/3);
 };
 // Gambia
+// http://www.crwflags.com/fotw/flags/gm.html
 .flag-gmb {
   @include ratio(2/3);
+  @include lines(#ef3340, 6 * $h18, white, $h18, #003da5, 4 * $h18, white, $h18, #009639, 6 * $h18);
 };
 // Georgia
 .flag-geo {
