@@ -869,8 +869,11 @@
   @include ratio(2/3);
 };
 // Poland
+// http://en.wikipedia.org/wiki/Flag_of_Poland
+// http://www.crwflags.com/fotw/flags/pl.html#colors
 .flag-pol {
-  @include ratio(2/3);
+  @include ratio(5/8);
+  @include two-lines(white, #d22630);
 };
 // Portugal
 .flag-prt {
