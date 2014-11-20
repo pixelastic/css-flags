@@ -543,8 +543,10 @@
   @include ratio(2/3);
 };
 // Indonesia
+// http://en.wikipedia.org/wiki/Flag_of_Indonesia
 .flag-idn {
   @include ratio(2/3);
+  @include two-lines(#c8102e, white);
 };
 // Iran, Islamic Republic of
 .flag-irn {
@@ -729,8 +731,11 @@
   @include three-columns(#0046AE, #FFD200, #CC092F);
 };
 // Monaco
+// http://en.wikipedia.org/wiki/Flag_of_Monaco
+// http://www.crwflags.com/fotw/flags/mc.html
 .flag-mco {
-  @include ratio(2/3);
+  @include ratio(4/5);
+  @include two-lines(#c8102e, white);
 };
 // Mongolia
 .flag-mng {
