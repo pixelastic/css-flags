@@ -79,8 +79,12 @@
   }
 };
 // Anguilla
+// http://en.wikipedia.org/wiki/Flag_of_Anguilla
+// http://www.vexilla-mundi.com/anguilla_flag.html
 .flag-aia {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack(#00247D);
 };
 // Antarctica
 .flag-ata {
@@ -1179,7 +1183,7 @@
 // United Kingdom
 .flag-gbr {
   @include ratio(1/2);
-  @include union-jack();
+  @include union-jack($height, $width);
 };
 // United States
 // ★

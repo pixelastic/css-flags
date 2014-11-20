@@ -136,7 +136,10 @@
 }
 
 // Union Jack
-@mixin union-jack() {
+@mixin union-jack($height, $width) {
+  $h30: $height/30;
+  $h2: $height/2;
+  $w2: $width/2;
   $alpha:toa($height, $width); // Bottom right angle
   $distance: sin($alpha) * $width; // Distance to diagonal
   background:
@@ -158,6 +161,21 @@
 
                    /* Background color */
                    #00247D;
+}
+
+// Union Jack in the canton
+@mixin canton-union-jack($background) {
+  background-color:$background;
+  &:before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    width:$w2;
+    height:$h2;
+    @include union-jack($h2, $w2);
+  }
 }
 
 // Centered star
