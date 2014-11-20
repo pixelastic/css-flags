@@ -160,26 +160,26 @@
 
 // Centered star
 @mixin centered-star($color) {
-  @include centered-symbol($UTF8_BLACK_STAR, $color);
+  @include centered-symbol($UTF8_BLACK_STAR, $color, $h3);
 }
 
 // Centered symbol
-@mixin centered-symbol($symbol, $color) {
-  @include symbol($symbol, $color);
+@mixin centered-symbol($symbol, $color, $size) {
+  @include symbol($symbol, $color, $size);
   display:block;
   height:$height;
   width:$width;
-  font-size:4em;
   line-height:$height;
   text-align:center;
 }
 
 // Symbol
-@mixin symbol($symbol, $color) {
+@mixin symbol($symbol, $color, $size) {
   content:$symbol;
   color:$color;
   position:absolute;
   font-family: Symbols;
+  font-size:$size;
 }
 
 // Losange
