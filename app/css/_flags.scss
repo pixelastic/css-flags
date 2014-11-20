@@ -1162,8 +1162,10 @@
   @include ratio(2/3);
 };
 // Ukraine
+// http://en.wikipedia.org/wiki/Flag_of_Ukraine
 .flag-ukr {
   @include ratio(2/3);
+  @include two-lines(#0057b8, #ffd700);
 };
 // United Arab Emirates
 .flag-are {
