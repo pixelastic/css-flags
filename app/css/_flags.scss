@@ -625,8 +625,10 @@
   @include ratio(2/3);
 };
 // Latvia
+// http://en.wikipedia.org/wiki/Flag_of_Latvia
 .flag-lva {
-  @include ratio(2/3);
+  @include ratio(1/2);
+  @include lines(#9E1B34, 2 * $h5, white, $h5, #9E1B34, 2 * $h5);
 };
 // Lebanon
 .flag-lbn {
