@@ -4,6 +4,14 @@
     color:red;
   }
 }
+// Hide lesser countries
+@mixin secondary() {
+  opacity:.3;
+  display:none;
+  & + strong {
+    display:none;
+ }
+}
 
 // Removes units
 @function _($value) {

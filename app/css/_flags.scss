@@ -48,6 +48,7 @@
 // American Samoa
 // http://en.wikipedia.org/wiki/Flag_of_American_Samoa
 .flag-asm {
+  @include secondary();
   @include incomplete();
   @include ratio(1/2);
 
@@ -82,16 +83,19 @@
 // http://en.wikipedia.org/wiki/Flag_of_Anguilla
 // http://www.vexilla-mundi.com/anguilla_flag.html
 .flag-aia {
+  @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
 };
 // Antarctica
 .flag-ata {
+  @include secondary();
   @include ratio(2/3);
 };
 // Antigua and Barbuda
 .flag-atg {
+  @include secondary();
   @include ratio(2/3);
 };
 // Argentina
@@ -104,6 +108,7 @@
 };
 // Aruba
 .flag-abw {
+  @include secondary();
   @include ratio(2/3);
 };
 // Australia
@@ -127,6 +132,7 @@
 };
 // Bahamas
 .flag-bhs {
+  @include secondary();
   @include ratio(2/3);
 };
 // Bahrain
@@ -142,6 +148,7 @@
 };
 // Barbados
 .flag-brb {
+  @include secondary();
   @include ratio(2/3);
 };
 // Belarus
@@ -171,6 +178,7 @@
 };
 // Bermuda
 .flag-bmu {
+  @include secondary();
   @include ratio(2/3);
 };
 // Bhutan
@@ -183,6 +191,7 @@
 };
 // Bonaire, Sint Eustatius and Saba
 .flag-bes {
+  @include secondary();
   @include ratio(2/3);
 };
 // Bosnia and Herzegovina
@@ -198,6 +207,7 @@
 };
 // Bouvet Island
 .flag-bvt {
+  @include secondary();
   @include ratio(2/3);
 };
 // Brazil
@@ -206,6 +216,7 @@
 };
 // British Indian Ocean Territory
 .flag-iot {
+  @include secondary();
   @include ratio(2/3);
 };
 // Brunei Darussalam
@@ -260,6 +271,7 @@
 };
 // Canary Islands
 .flag-ic {
+  @include secondary();
   @include incomplete();
   @include ratio(2/3);
   @include three-columns(white, #0768A9, #FFCC00);
@@ -295,10 +307,12 @@
 };
 // Christmas Island
 .flag-cxr {
+  @include secondary();
   @include ratio(2/3);
 };
 // Cocos (Keeling) Islands
 .flag-cck {
+  @include secondary();
   @include ratio(2/3);
 };
 // Colombia
@@ -320,6 +334,7 @@
 // Cook Islands
 // http://en.wikipedia.org/wiki/Flag_of_the_Cook_Islands
 .flag-cok {
+  @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
@@ -347,6 +362,7 @@
 };
 // Curaçao
 .flag-cuw {
+  @include secondary();
   @include ratio(2/3);
 };
 // Cyprus
@@ -369,10 +385,12 @@
 };
 // Dominica
 .flag-dma {
+  @include secondary();
   @include ratio(2/3);
 };
 // Dominican Republic
 .flag-dom {
+  @include secondary();
   @include ratio(2/3);
 };
 // Ecuador
@@ -416,6 +434,7 @@
 // Falkland Islands (Malvinas)
 // http://en.wikipedia.org/wiki/Flag_of_the_Falkland_Islands
 .flag-flk {
+  @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
@@ -428,6 +447,7 @@
 }
 // Fiji
 .flag-fji {
+  @include secondary();
   @include ratio(2/3);
 };
 // Finland
@@ -448,10 +468,12 @@
 };
 // French Polynesia
 .flag-pyf {
+  @include secondary();
   @include ratio(2/3);
 };
 // French Southern Territories
 .flag-atf {
+  @include secondary();
   @include ratio(2/3);
 };
 // Gabon
@@ -497,14 +519,17 @@
 };
 // Grenada
 .flag-grd {
+  @include secondary();
   @include ratio(2/3);
 };
 // Guadeloupe
 .flag-glp {
+  @include secondary();
   @include ratio(2/3);
 };
 // Guam
 .flag-gum {
+  @include secondary();
   @include ratio(2/3);
 };
 // Guatemala
@@ -513,6 +538,7 @@
 };
 // Guernsey
 .flag-ggy {
+  @include secondary();
   @include ratio(2/3);
 };
 // Guinea
@@ -535,10 +561,12 @@
 };
 // Heard Island and McDonald Islands
 .flag-hmd {
+  @include secondary();
   @include ratio(2/3);
 };
 // Holy See (Vatican City State)
 .flag-vat {
+  @include secondary();
   @include ratio(2/3);
 };
 // Honduras
@@ -586,6 +614,7 @@
 };
 // Isle of Man
 .flag-imn {
+  @include secondary();
   @include ratio(2/3);
 };
 // Israel
@@ -608,6 +637,7 @@
 };
 // Jersey
 .flag-jey {
+  @include secondary();
   @include ratio(2/3);
 };
 // Jordan
@@ -624,6 +654,7 @@
 };
 // Kiribati
 .flag-kir {
+  @include secondary();
   @include ratio(2/3);
 };
 // Korea, Democratic People's Republic of
@@ -717,10 +748,12 @@
 };
 // Marshall Islands
 .flag-mhl {
+  @include secondary();
   @include ratio(2/3);
 };
 // Martinique
 .flag-mtq {
+  @include secondary();
   @include ratio(2/3);
 };
 // Mauritania
@@ -729,10 +762,12 @@
 };
 // Mauritius
 .flag-mus {
+  @include secondary();
   @include ratio(2/3);
 };
 // Mayotte
 .flag-myt {
+  @include secondary();
   @include ratio(2/3);
 };
 // Mexico
@@ -744,6 +779,7 @@
 };
 // Micronesia, Federated States of
 .flag-fsm {
+  @include secondary();
   @include ratio(2/3);
 };
 // Moldova, Republic of
@@ -772,6 +808,7 @@
 // Montserrat
 // http://en.wikipedia.org/wiki/Flag_of_Montserrat
 .flag-msr {
+  @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
@@ -799,6 +836,7 @@
 };
 // Nauru
 .flag-nru {
+  @include secondary();
   @include ratio(2/3);
 };
 // Nepal
@@ -811,6 +849,7 @@
 };
 // New Caledonia
 .flag-ncl {
+  @include secondary();
   @include ratio(2/3);
 };
 // New Zealand
@@ -839,6 +878,7 @@
 };
 // Niue
 .flag-niu {
+  @include secondary();
   @include ratio(2/3);
 };
 // Norfolk Island
@@ -850,6 +890,7 @@
 };
 // Northern Mariana Islands
 .flag-mnp {
+  @include secondary();
   @include ratio(2/3);
 };
 // Norway
@@ -868,6 +909,7 @@
 };
 // Palau
 .flag-plw {
+  @include secondary();
   @include ratio(2/3);
 };
 // Palestine, State of
@@ -897,6 +939,7 @@
 // Pitcairn
 // http://en.wikipedia.org/wiki/Flag_and_coat_of_arms_of_the_Pitcairn_Islands
 .flag-pcn {
+  @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
@@ -916,6 +959,7 @@
 };
 // Puerto Rico
 .flag-pri {
+  @include secondary();
   @include ratio(2/3);
 };
 // Qatar
@@ -924,6 +968,7 @@
 };
 // Réunion
 .flag-reu {
+  @include secondary();
   @include ratio(2/3);
 };
 // Romania
@@ -945,11 +990,13 @@
 };
 // Saint Barthélemy
 .flag-blm {
+  @include secondary();
   @include ratio(2/3);
 };
 // Saint Helena
 // http://en.wikipedia.org/wiki/Flag_of_Saint_Helena
 .flag-sh-sh {
+  @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
@@ -957,6 +1004,7 @@
 // Ascension
 // http://en.wikipedia.org/wiki/Ascension_Island
 .flag-sh-ac {
+  @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
@@ -964,29 +1012,35 @@
 // Tristan da Cunha
 // http://en.wikipedia.org/wiki/Tristan_da_Cunha
 .flag-sh-ta {
+  @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
 };
 // Saint Kitts and Nevis
 .flag-kna {
+  @include secondary();
   @include ratio(2/3);
 };
 // Saint Lucia
 .flag-lca {
+  @include secondary();
   @include ratio(2/3);
 };
 // Saint Martin (French part)
 .flag-maf {
+  @include secondary();
   @include ratio(2/3);
 };
 // Saint Pierre and Miquelon
 .flag-spm {
+  @include secondary();
   @include ratio(2/3);
 };
 // Saint Vincent and the Grenadines
 // http://en.wikipedia.org/wiki/Flag_of_Saint_Vincent_and_the_Grenadines
 .flag-vct {
+  @include secondary();
   @include ratio(1/2);
   @include columns(#0072C6, $w4, #FCD116, $w2, #009E60, $w4);
   &:before {
@@ -1003,12 +1057,14 @@
 };
 // Samoa
 .flag-wsm {
+  @include secondary();
   @include ratio(2/3);
 };
 // San Marino
 // http://en.wikipedia.org/wiki/Flag_of_San_Marino
 // http://www.vexilla-mundi.com/san_marino_flag.html
 .flag-smr {
+  @include secondary();
   @include incomplete();
   @include ratio(3/4);
   @include two-lines(white, #62b5e5);
@@ -1048,6 +1104,7 @@
 };
 // Sint Maarten (Dutch part)
 .flag-sxm {
+  @include secondary();
   @include ratio(2/3);
 };
 // Slovakia
@@ -1060,6 +1117,7 @@
 };
 // Solomon Islands
 .flag-slb {
+  @include secondary();
   @include ratio(2/3);
 };
 // Somalia
@@ -1079,6 +1137,7 @@
 // South Georgia and the South Sandwich Islands
 // http://en.wikipedia.org/wiki/Flag_of_South_Georgia_and_the_South_Sandwich_Islands
 .flag-sgs {
+  @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
@@ -1114,6 +1173,7 @@
 };
 // Svalbard and Jan Mayen
 .flag-sjm {
+  @include secondary();
   @include ratio(2/3);
 };
 // Swaziland
@@ -1178,10 +1238,12 @@
 };
 // Tokelau
 .flag-tkl {
+  @include secondary();
   @include ratio(2/3);
 };
 // Tonga
 .flag-ton {
+  @include secondary();
   @include ratio(2/3);
 };
 // Trinidad and Tobago
@@ -1205,12 +1267,14 @@
 // Turks and Caicos Islands
 // http://en.wikipedia.org/wiki/Flag_of_the_Turks_and_Caicos_Islands
 .flag-tca {
+  @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
 };
 // Tuvalu
 .flag-tuv {
+  @include secondary();
   @include ratio(2/3);
 };
 // Uganda
@@ -1239,6 +1303,7 @@
 };
 // United States Minor Outlying Islands
 .flag-umi {
+  @include secondary();
   @include ratio(2/3);
 };
 // Uruguay
@@ -1251,6 +1316,7 @@
 };
 // Vanuatu
 .flag-vut {
+  @include secondary();
   @include ratio(2/3);
 };
 // Venezuela, Bolivarian Republic of
@@ -1265,16 +1331,19 @@
 // Virgin Islands, British
 // http://en.wikipedia.org/wiki/Flag_of_the_British_Virgin_Islands
 .flag-vgb {
+  @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
 };
 // Virgin Islands, U.S.
 .flag-vir {
+  @include secondary();
   @include ratio(2/3);
 };
 // Wallis and Futuna
 .flag-wlf {
+  @include secondary();
   @include ratio(2/3);
 };
 // Western Sahara
