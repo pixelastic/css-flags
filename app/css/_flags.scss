@@ -180,8 +180,11 @@
   @include ratio(2/3);
 };
 // Botswana
+// http://en.wikipedia.org/wiki/Flag_of_Botswana
+// http://www.vexilla-mundi.com/botswana_flag.html
 .flag-bwa {
   @include ratio(2/3);
+  @include lines(#6cace4, 9 * $h24, white, $h24, black, 4 * $h24, white, $h24, #6cace4, 9 * $h24);
 };
 // Bouvet Island
 .flag-bvt {
