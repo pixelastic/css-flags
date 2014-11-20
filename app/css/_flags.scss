@@ -151,8 +151,13 @@
   @include ratio(2/3);
 };
 // Benin
+// http://en.wikipedia.org/wiki/Flag_of_Benin
+// http://www.vexilla-mundi.com/benin_flag.html
 .flag-ben {
   @include ratio(2/3);
+  background: v-stripe(#00b140, $w3, 0),
+              h-stripe(#c8102e, $h2, 0),
+              h-stripe(#fdda24, $h2, $h2);
 };
 // Bermuda
 .flag-bmu {
