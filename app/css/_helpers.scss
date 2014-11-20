@@ -159,12 +159,12 @@
 }
 
 // Centered star
-@mixin centered-star($color) {
-  @include centered-symbol($UTF8_BLACK_STAR, $color, $h3);
+@mixin centered-star($color, $size:$h3) {
+  @include centered-symbol($UTF8_BLACK_STAR, $color, $size);
 }
 
 // Centered symbol
-@mixin centered-symbol($symbol, $color, $size) {
+@mixin centered-symbol($symbol, $color, $size:$h3) {
   @include symbol($symbol, $color, $size);
   display:block;
   height:$height;

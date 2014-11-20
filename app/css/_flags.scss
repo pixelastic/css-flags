@@ -204,8 +204,14 @@
   @include ratio(2/3);
 };
 // Burkina Faso
+// http://en.wikipedia.org/wiki/Flag_of_Burkina_Faso
+// http://www.vexilla-mundi.com/burkina_faso_flag.html
 .flag-bfa {
   @include ratio(2/3);
+  @include two-lines(#ef3340, #009639);
+  &:before {
+    @include centered-star(#ffcd00, $h3);
+  }
 };
 // Burundi
 .flag-bdi {
