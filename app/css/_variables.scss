@@ -3,47 +3,13 @@ $width:220px;
 $height:round($width * 2/3);
 @include set-syntactic-sugar($width, $height);
 
-
 // Special UTF-8
 $UTF8_MAPLE_LEAF:"\1F341";
 $UTF8_BLACK_STAR:"\2605";
 $UTF8_COUNTRY_ALB:"\e600";
 $UTF8_COUNTRY_AGO:"\e601";
 
+// Colors
+$COLOR_UK_BLUE:#002664;
+$COLOR_UK_RED:#C60C30;
 
-
-
-// /* VARIABLES */
-// // $unit: 10px;
-// 
-// // Base flag dimensions
-// $width:220px;
-// $height:160px;
-// 
-// // Syntactic sugar to get ratio
-// // $h2: round($height/2);
-// // $h3: round($height/3);
-// // $h4: round($height/4);
-// // $h5: round($height/5);
-// // $h6: round($height/6);
-// // $h11: $height/11;
-// // $h13: round($height/13);
-// // $h72: $height/72;
-// // 
-// // $w2: round($width/2);
-// // $w3: round($width/3);
-// // $w4: round($width/4);
-// // $w5: round($width/5);
-// // $w6: round($width/6);
-// 
-// // Unitless dimensions, for math
-// $_width:strip-units($width);
-// $_height:strip-units($height);
-// 
-// 
-// $_diagonal: sqrt($_width * $_width + $_height * $_height);
-// $diagonal:round($_diagonal * 1px);
-// 
-// // More math variables
-// $hypotenuse:round(sqrt($_height * $_height + $_width * $_width) * 1px);
-// 

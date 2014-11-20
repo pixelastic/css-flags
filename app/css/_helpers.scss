@@ -136,35 +136,36 @@
 }
 
 // Union Jack
+// http://commons.wikimedia.org/wiki/Commons:Pantone_color_chart/British_flag_colours
 @mixin union-jack($height, $width) {
-  $h30: $height/30;
-  $h2: $height/2;
-  $w2: $width/2;
+  $UJ_h30: $height/30;
+  $UJ_h2: $height/2;
+  $UJ_w2: $width/2;
   $alpha:toa($height, $width); // Bottom right angle
   $distance: sin($alpha) * $width; // Distance to diagonal
   background:
                    /* St George */
-                   v-stripe(#CC0000, 6 * $h30, 27 * $h30),
-                   h-stripe(#CC0000, 6 * $h30, 12 * $h30),
-                   v-stripe(white, 10 * $h30, 25 * $h30),
-                   h-stripe(white, 10 * $h30, 10 * $h30),
+                   v-stripe($COLOR_UK_RED, 6 * $UJ_h30, 27 * $UJ_h30),
+                   h-stripe($COLOR_UK_RED, 6 * $UJ_h30, 12 * $UJ_h30),
+                   v-stripe(white, 10 * $UJ_h30, 25 * $UJ_h30),
+                   h-stripe(white, 10 * $UJ_h30, 10 * $UJ_h30),
   
                    /* St Patrick */
-                   stripe(#{$alpha}deg, #CC0000, 2 * $h30, $distance - 2 * $h30) 0px 0px/#{$w2} $w2 no-repeat, 
-                   stripe(#{$alpha}deg, #CC0000, 2 * $h30, $distance) $w2 #{$h2}/#{$w2} $w2 no-repeat, 
-                   stripe(#{180 - $alpha}deg, #CC0000, 2 * $h30, $distance) 0px 0px/#{$w2} $w2 no-repeat, 
-                   stripe(#{180 - $alpha}deg, #CC0000, 2 * $h30, $distance - 2 * $h30) $w2 #{-$h2}/#{$w2} $w2 no-repeat, 
+                   stripe(#{$alpha}deg, $COLOR_UK_RED, 2 * $UJ_h30, $distance - 2 * $UJ_h30) 0px 0px/#{$UJ_w2} $UJ_w2 no-repeat, 
+                   stripe(#{$alpha}deg, $COLOR_UK_RED, 2 * $UJ_h30, $distance) $UJ_w2 #{$UJ_h2}/#{$UJ_w2} $UJ_w2 no-repeat, 
+                   stripe(#{180 - $alpha}deg, $COLOR_UK_RED, 2 * $UJ_h30, $distance) 0px 0px/#{$UJ_w2} $UJ_w2 no-repeat, 
+                   stripe(#{180 - $alpha}deg, $COLOR_UK_RED, 2 * $UJ_h30, $distance - 2 * $UJ_h30) $UJ_w2 #{-$UJ_h2}/#{$UJ_w2} $UJ_w2 no-repeat, 
 
                    /* St Andrew */
-                   stripe(#{$alpha}deg, white, 6 * $h30, $distance - 3 * $h30), 
-                   stripe(#{180 - $alpha}deg, white, 6 * $h30, $distance - 3 * $h30),
+                   stripe(#{$alpha}deg, white, 6 * $UJ_h30, $distance - 3 * $UJ_h30), 
+                   stripe(#{180 - $alpha}deg, white, 6 * $UJ_h30, $distance - 3 * $UJ_h30),
 
                    /* Background color */
-                   #00247D;
+                   $COLOR_UK_BLUE;
 }
 
 // Union Jack in the canton
-@mixin canton-union-jack($background) {
+@mixin canton-union-jack($background:$COLOR_UK_BLUE) {
   background-color:$background;
   &:before {
     content:"";

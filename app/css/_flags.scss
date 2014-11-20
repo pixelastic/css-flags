@@ -84,7 +84,7 @@
 .flag-aia {
   @include incomplete();
   @include ratio(1/2);
-  @include canton-union-jack(#00247D);
+  @include canton-union-jack();
 };
 // Antarctica
 .flag-ata {
@@ -107,8 +107,14 @@
   @include ratio(2/3);
 };
 // Australia
+// http://en.wikipedia.org/wiki/Flag_of_Australia
+// http://commons.wikimedia.org/wiki/File_talk:Flag_of_Australia.svg
+// http://commons.wikimedia.org/wiki/Commons:Pantone_color_chart/British_flag_colours
+// Note: Australia official background color is #002B7F, but UK one is #00247D
 .flag-aus {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack(#002664);
 };
 // Austria
 .flag-aut {
@@ -263,8 +269,11 @@
   @include ratio(2/3);
 };
 // Cayman Islands
+// http://en.wikipedia.org/wiki/Flag_of_the_Cayman_Islands
 .flag-cym {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack();
 };
 // Central African Republic
 .flag-caf {
@@ -309,8 +318,11 @@
   @include ratio(2/3);
 };
 // Cook Islands
+// http://en.wikipedia.org/wiki/Flag_of_the_Cook_Islands
 .flag-cok {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack();
 };
 // Costa Rica
 // http://en.wikipedia.org/wiki/Flag_of_Costa_Rica
@@ -402,8 +414,11 @@
   @include ratio(2/3);
 };
 // Falkland Islands (Malvinas)
+// http://en.wikipedia.org/wiki/Flag_of_the_Falkland_Islands
 .flag-flk {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack();
 };
 // Faroe Islands
 // http://www.crwflags.com/fotw/flags/fo.html
@@ -755,8 +770,11 @@
   @include ratio(2/3);
 };
 // Montserrat
+// http://en.wikipedia.org/wiki/Flag_of_Montserrat
 .flag-msr {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack();
 };
 // Morocco
 .flag-mar {
@@ -796,8 +814,11 @@
   @include ratio(2/3);
 };
 // New Zealand
+// http://en.wikipedia.org/wiki/Flag_of_New_Zealand
 .flag-nzl {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack();
 };
 // Nicaragua
 // http://en.wikipedia.org/wiki/Flag_of_Nicaragua
@@ -874,8 +895,11 @@
   @include ratio(2/3);
 };
 // Pitcairn
+// http://en.wikipedia.org/wiki/Flag_and_coat_of_arms_of_the_Pitcairn_Islands
 .flag-pcn {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack();
 };
 // Poland
 // http://en.wikipedia.org/wiki/Flag_of_Poland
@@ -923,9 +947,26 @@
 .flag-blm {
   @include ratio(2/3);
 };
-// Saint Helena, Ascension and Tristan da Cunha
-.flag-shn {
-  @include ratio(2/3);
+// Saint Helena
+// http://en.wikipedia.org/wiki/Flag_of_Saint_Helena
+.flag-sh-sh {
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack();
+};
+// Ascension
+// http://en.wikipedia.org/wiki/Ascension_Island
+.flag-sh-ac {
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack();
+};
+// Tristan da Cunha
+// http://en.wikipedia.org/wiki/Tristan_da_Cunha
+.flag-sh-ta {
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack();
 };
 // Saint Kitts and Nevis
 .flag-kna {
@@ -1036,8 +1077,11 @@
   @include ratio(2/3);
 };
 // South Georgia and the South Sandwich Islands
+// http://en.wikipedia.org/wiki/Flag_of_South_Georgia_and_the_South_Sandwich_Islands
 .flag-sgs {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack();
 };
 // South Sudan
 .flag-ssd {
@@ -1159,8 +1203,11 @@
   @include ratio(2/3);
 };
 // Turks and Caicos Islands
+// http://en.wikipedia.org/wiki/Flag_of_the_Turks_and_Caicos_Islands
 .flag-tca {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack();
 };
 // Tuvalu
 .flag-tuv {
@@ -1216,8 +1263,11 @@
   @include ratio(2/3);
 };
 // Virgin Islands, British
+// http://en.wikipedia.org/wiki/Flag_of_the_British_Virgin_Islands
 .flag-vgb {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include canton-union-jack();
 };
 // Virgin Islands, U.S.
 .flag-vir {
