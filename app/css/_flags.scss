@@ -106,8 +106,10 @@
   @include three-lines(#75AADB, white, #75AADB);
 };
 // Armenia
+// http://en.wikipedia.org/wiki/Flag_of_Armenia
 .flag-arm {
-  @include ratio(2/3);
+  @include ratio(1/2);
+  @include three-lines(#D90012, #0033A0, #F2A800);
 };
 // Aruba
 .flag-abw {
