@@ -195,8 +195,10 @@
   @include ratio(2/3);
 };
 // Bolivia, Plurinational State of
+// http://en.wikipedia.org/wiki/Flag_of_Bolivia
 .flag-bol {
-  @include ratio(2/3);
+  @include ratio(15/22);
+  @include three-lines(#D52B1E, #FCD116, #007934);
 };
 // Bonaire, Sint Eustatius and Saba
 .flag-bes {
@@ -363,9 +365,12 @@
   @include three-columns(#F77F00, white, #009E60);
 };
 // Croatia
+// http://en.wikipedia.org/wiki/Flag_of_Croatia
 // ☗
 .flag-hrv {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include three-lines(red,white,#171796);
 };
 // Cuba
 .flag-cub {
@@ -409,8 +414,10 @@
   @include ratio(2/3);
 };
 // Egypt
+// http://en.wikipedia.org/wiki/Flag_of_Egypt
 .flag-egy {
   @include ratio(2/3);
+  @include three-lines(#c8102e, white, black);
 };
 // El Salvador
 // http://en.wikipedia.org/wiki/Flag_of_El_Salvador
@@ -435,12 +442,17 @@
   @include ratio(2/3);
 };
 // Estonia
+// http://en.wikipedia.org/wiki/Flag_of_Estonia
 .flag-est {
-  @include ratio(2/3);
+  @include ratio(7/11);
+  @include three-lines(#0072ce, black, white);
 };
 // Ethiopia
+// http://en.wikipedia.org/wiki/Flag_of_Ethiopia
 .flag-eth {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include three-lines(#009a44, #fedd00, #ef3340);
 };
 // Falkland Islands (Malvinas)
 // http://en.wikipedia.org/wiki/Flag_of_the_Falkland_Islands
@@ -488,8 +500,11 @@
   @include ratio(2/3);
 };
 // Gabon
+// http://en.wikipedia.org/wiki/Flag_of_Gabon
+// http://www.vexilla-mundi.com/gabon_flag.html
 .flag-gab {
   @include ratio(2/3);
+  @include three-lines(#009a44, #ffcd00, #0072ce);
 };
 // Gambia
 // http://www.crwflags.com/fotw/flags/gm.html
