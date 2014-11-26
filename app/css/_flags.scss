@@ -132,8 +132,12 @@
   @include three-lines(red, white, red);
 };
 // Azerbaijan
+// http://en.wikipedia.org/wiki/Flag_of_Azerbaijan
 .flag-aze {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include three-lines(#0097c3, #e00034, #00ae65);
+
 };
 // Bahamas
 .flag-bhs {
@@ -229,8 +233,10 @@
   @include ratio(2/3);
 };
 // Bulgaria
+// http://en.wikipedia.org/wiki/Flag_of_Bulgaria
 .flag-bgr {
-  @include ratio(2/3);
+  @include ratio(3/5);
+  @include three-lines(white, #00966E, #D62612);
 };
 // Burkina Faso
 // http://en.wikipedia.org/wiki/Flag_of_Burkina_Faso
