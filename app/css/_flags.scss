@@ -99,8 +99,11 @@
   @include ratio(2/3);
 };
 // Argentina
+// http://en.wikipedia.org/wiki/Flag_of_Argentina
 .flag-arg {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(9/14);
+  @include three-lines(#75AADB, white, #75AADB);
 };
 // Armenia
 .flag-arm {
