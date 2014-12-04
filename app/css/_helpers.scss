@@ -34,8 +34,10 @@
   $h5:$height/5 !global;
   $h6:$height/6 !global;
   $h7:$height/7 !global;
+  $h8:$height/8 !global;
   $h10:$height/10 !global;
   $h11:$height/11 !global;
+  $h12:$height/12 !global;
   $h16:$height/16 !global;
   $h18:$height/18 !global;
   $h20:$height/20 !global;
@@ -53,6 +55,7 @@
   $w8:$width/8 !global;
   $w9:$width/9 !global;
   $w10:$width/10 !global;
+  $w12:$width/12 !global;
   $w16:$width/16 !global;
   $w18:$width/18 !global;
   $w22:$width/22 !global;
@@ -211,13 +214,33 @@
   font-size:$size;
 }
 
-// Losange
-@mixin losange($width, $color) {
-    display:block;
-    width:$width;
-    height:$width;
-    background-color:$color;
-    transform:scaleX(.5) rotate(45deg);
+/**
+ * Losange
+ * We define the actual height and width we want, but we will draw a square
+ * rotated 45deg.
+ * 1. Actual width/height of the square
+ * 2. We rotate the square to make it a losange
+ * 3. We scale its height
+ * 4. We translate it slightly to make its edges align with 0,0
+ * 5. Setting font-size so box-shadow can easily be set with em
+ **/
+@mixin losange($height, $width, $color) {
+  $side: sqrt($width * $width / 2) * 1px; /* 1 */
+  $ratio: $height/$width; /* 3 */
+  $offsetX: ($width - $side) / 2; /* 4 */
+  $offsetY: ($height - $side) / 2; /* 4 */
+  content:"";
+  position:absolute;
+  display:block;
+  width:$side; /* 1 */
+  height:$side; /* 1 */
+  font-size:$side; /* 5 */
+  background-color:$color;
+  transform:
+            translateX($offsetX)  /* 4 */
+            translateY($offsetY)  /* 4 */
+            scaleY($ratio) /* 3 */
+            rotate(45deg); /* 2 */
 }
 
 // Circle
