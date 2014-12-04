@@ -999,8 +999,24 @@
   @include ratio(2/3);
 };
 // Qatar
+// http://en.wikipedia.org/wiki/Flag_of_Qatar
+// http://www.crwflags.com/fotw/flags/qa.html
+// http://blog.iloveqatar.net/2012/07/qatars-national-color-pantone-222c-qatar-red/
 .flag-qat {
-  @include ratio(2/3);
+  @include ratio(11/28);
+  @include columns(white, 8 * $w28, #691a40, 20 * $w28);
+  &:before {
+    @include losange($h9, 4 * $w28, white);
+    left:6 * $w28;
+    box-shadow:1em 1em 0px white,
+               2em 2em 0px white,
+               3em 3em 0px white,
+               4em 4em 0px white,
+               5em 5em 0px white,
+               6em 6em 0px white,
+               7em 7em 0px white,
+               8em 8em 0px white;
+  }
 };
 // Réunion
 .flag-reu {
