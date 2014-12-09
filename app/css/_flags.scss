@@ -216,8 +216,28 @@
   @include ratio(2/3);
 };
 // Bosnia and Herzegovina
+// http://en.wikipedia.org/wiki/Flag_of_Bosnia_and_Herzegovina
+// http://www.crwflags.com/fotw/flags/ba.html#con
 .flag-bih {
-  @include ratio(2/3);
+  @include ratio(1/2);
+  overflow:hidden;
+  $dist:hypotenuse($height, $height);
+  $star_size:1.6 * $h10; // Should be 1.9 according to specs
+  $star_spacing:$dist/11;
+  background:linear-gradient(45deg, transparent, transparent $dist, #ffcd00 $dist) (5.3 * $w20) 0px / #{$height} #{$width} no-repeat #001489;
+  &:before {
+    @include symbol($UTF8_BLACK_STAR, white, $star_size);
+    bottom:-0.8 * $h10;
+    left:12.5 * $w20;
+    text-shadow:(-$star_spacing) (-$star_spacing) 0px white,
+                (-2 * $star_spacing) (-2 * $star_spacing) 0px white,
+                (-3 * $star_spacing) (-3 * $star_spacing) 0px white,
+                (-4 * $star_spacing) (-4 * $star_spacing) 0px white,
+                (-5 * $star_spacing) (-5 * $star_spacing) 0px white,
+                (-6 * $star_spacing) (-6 * $star_spacing) 0px white,
+                (-7 * $star_spacing) (-7 * $star_spacing) 0px white,
+                (-8 * $star_spacing) (-8 * $star_spacing) 0px white;
+  }
 };
 // Botswana
 // http://en.wikipedia.org/wiki/Flag_of_Botswana
