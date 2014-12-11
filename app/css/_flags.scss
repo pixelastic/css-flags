@@ -171,8 +171,11 @@
   @include ratio(2/3);
 };
 // Belarus
+// http://en.wikipedia.org/wiki/Flag_of_Belarus
 .flag-blr {
-  @include ratio(2/3);
+  @include incomplete();
+  @include ratio(1/2);
+  @include lines(#C8313E, 2 * $h3, #4AA657, $h3);
 };
 // Belgium
 // http://www.crwflags.com/fotw/flags/be.html
