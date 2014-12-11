@@ -423,7 +423,7 @@
 // http://www.crwflags.com/fotw/flags/dk.html
 .flag-dnk {
   @include ratio(28/37);
-  @include nordic-cross(#C60C30, white, 4 * $w37, 12 * $w37);
+  @include nordic-cross(#D81E05, white, 4 * $w37, 12 * $w37);
 };
 // Djibouti
 .flag-dji {
@@ -570,8 +570,21 @@
   @include ratio(2/3);
 };
 // Greenland
+// http://en.wikipedia.org/wiki/Flag_of_Greenland
+// http://www.crwflags.com/fotw/flags/gl.html
 .flag-grl {
   @include ratio(2/3);
+  @include two-lines(white, #D81E05);
+  &:before {
+    content:"";
+    position:absolute;
+    top:2 * $h12;
+    left:3 * $h12;
+    width:8 * $h12;
+    border-top:4 * $h12 solid #D81E05;
+    border-bottom:4 * $h12 solid white;
+    border-radius:50%;
+  }
 };
 // Grenada
 .flag-grd {
