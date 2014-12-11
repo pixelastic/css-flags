@@ -186,8 +186,18 @@
   @include three-columns(black, #FFE936, #FF0F21);
 };
 // Belize
+// http://en.wikipedia.org/wiki/Flag_of_Belize
+// http://www.crwflags.com/fotw/flags/bz.html
 .flag-blz {
+  @include incomplete();
   @include ratio(2/3);
+  background-image:
+                   circle(white, 3 * $h10, $w2, $h2),
+                   h-stripe(#c8102e, $h10, 0),
+                   h-stripe(#002f6C, 8 * $h10, $h10),
+                   h-stripe(#c8102e, $h10, 9 * $h10);
+
+
 };
 // Benin
 // http://en.wikipedia.org/wiki/Flag_of_Benin

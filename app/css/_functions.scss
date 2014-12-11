@@ -23,8 +23,9 @@
 }
 
 // Circle
+// Note: We add 1px to help in the aliasing
 @function circle($color, $size, $left, $top) {
-  @return radial-gradient($left $top, circle, $color $size, transparent 0px),
+  @return radial-gradient($left $top, circle, $color $size, transparent ($size+1px)),
 }
 
 // TOA
