@@ -214,8 +214,13 @@
   @include ratio(2/3);
 };
 // Bhutan
+// http://en.wikipedia.org/wiki/Flag_of_Bhutan
 .flag-btn {
+  @include incomplete();
   @include ratio(2/3);
+  $alpha:toa($height, $width); // Bottom right angle
+  $distance: sin($alpha) * $width; // Distance to diagonal
+  background:stripe(#{180 - $alpha}deg, #FFCC33, $distance, 0) #FF4E12;
 };
 // Bolivia, Plurinational State of
 // http://en.wikipedia.org/wiki/Flag_of_Bolivia

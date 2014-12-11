@@ -12,12 +12,12 @@
                           transparent ($distance + $size), transparent 100%
                           );
 }
-// Horizontal stripe
+// Horizontal stripe (from left to right)
 @function h-stripe($color, $height, $top) {
   @return stripe(180deg, $color, $height, $top);
 }
 
-// Vertical stripe
+// Vertical stripe (from top to bottom)
 @function v-stripe($color, $width, $left) {
   @return stripe(90deg, $color, $width, $left);
 }
@@ -29,6 +29,6 @@
 }
 
 // TOA
-@function toa($A, $O) {
-  @return atan(_($A) / _($O))
+@function toa($O, $A) {
+  @return atan(_($O) / _($A))
 }
