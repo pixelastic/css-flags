@@ -1,20 +1,6 @@
-# build
-/dist/*
-
-# dependencies
-/node_modules
+/app/css/bourbon
 /bower_components
+/dist
+/node_modules
+/tmp
 /vendors
-
-
-# various junk
-.ds_store
-._*
-thumbs.db
-.cache
-.project
-.settings
-.tmproj
-.idea
-
-
