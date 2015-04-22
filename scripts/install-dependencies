@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+bower install
+
+echo "Installing bourbon"
+gem install bourbon
+bourbon install --path app/css
+
+echo "Installing neat"
+gem install neat
+cd ./app/css
+neat install
+
+echo "Installing bitters"
+gem install bitters
+cd ./app/css
+bitters install

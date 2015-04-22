@@ -7,15 +7,8 @@ module.exports = function(grunt) {
   var Helpers = require('./grunt_tasks/helpers'); // Grunt helpers file, make it easier to load config
   var config = Helpers.defaultConfig;
   var _ = grunt.util._;
-  var sharedConfig = {
-    config: {
-      app: './app',
-      tmp: './tmp',
-      dist: './dist'
-    }
-  };
 
-  config = _.extend(config, sharedConfig, Helpers.loadConfig('./grunt_tasks/options/'));
+  config = _.extend(config, Helpers.loadConfig('./grunt_tasks/options/'));
   grunt.initConfig(config); // load all configs, from the folder './grunt_tasks/options'
   grunt.loadTasks('grunt_tasks'); // load all tasks, from the folder './grunt_tasks'
 

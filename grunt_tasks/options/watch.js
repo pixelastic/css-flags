@@ -1,6 +1,6 @@
 module.exports = {
   css: {
-    files: ['<%= config.app %>/css/*.scss'],
+    files: ['app/css/flags/*.scss'],
     tasks: [
       'sass:build',
       'autoprefixer:build'
@@ -10,7 +10,7 @@ module.exports = {
     }
   },
   html: {
-    files: ['<%= config.app %>/index.html'],
+    files: ['app/index.html'],
     tasks: [
       'rsync:build'
     ],

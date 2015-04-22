@@ -8,7 +8,7 @@ module.exports = {
     options: {
       port: 9400,
       livereload: true,
-      base: '<%= config.dist %>'
+      base: 'dist'
     }
   }
 };

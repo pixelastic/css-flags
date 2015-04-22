@@ -16,20 +16,20 @@
     "npm": "1.3.11"
   },
   "scripts": {
-    "install-dependencies": "bower install && gem install bitters && bourbon install --path app/css"
+    "install-dependencies": "./scripts/install-dependencies"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "matchdep": "~0.3.0",
-    "time-grunt": "~0.4.0",
-    "glob": "~4.0.4",
-    "grunt-newer": "~0.7.0",
-    "grunt-contrib-sass": "~0.8.1",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-connect": "~0.8.0",
-    "grunt-autoprefixer": "~1.0.1",
-    "grunt-rsync": "~0.6.2",
-    "grunt-mkdir": "~0.1.2"
+    "glob": "4.0.4",
+    "grunt": "0.4.5",
+    "grunt-autoprefixer": "1.0.1",
+    "grunt-contrib-connect": "0.8.0",
+    "grunt-contrib-sass": "0.8.1",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-mkdir": "0.1.2",
+    "grunt-newer": "0.7.0",
+    "grunt-rsync": "0.6.2",
+    "matchdep": "0.3.0",
+    "time-grunt": "0.4.0"
   },
   "dependencies": {}
 }

@@ -1,14 +1,14 @@
 module.exports = {
   options: {
     style: 'expanded',
-    require: './sass_math.rb'
+    require: 'app/css/flags/sass_math.rb'
   },
   build: {
     files: [{
       expand: true,
-      cwd: '<%= config.app %>/css',
+      cwd: 'app/css/flags/css',
       src: '*.scss',
-      dest: '<%= config.dist %>',
+      dest: 'dist',
       ext: '.css'
     }]
   }

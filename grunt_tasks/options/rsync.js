@@ -6,8 +6,8 @@ module.exports = {
   },
   build: {
     options: {
-      src: '<%= config.app %>/**',
-      dest: '<%= config.dist %>',
+      src: 'app/**',
+      dest: 'dist',
       exclude: ['css/']
     }
   }
