@@ -3,6 +3,6 @@
   "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
-    "normalize": "~1.0.4"
+    "normalize": "1.0.4"
   }
 }

@@ -2,9 +2,11 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 @import 'base/base';
- 
+// Normalize
+@import '../bower_components/normalize/normalize.min.js';
+
 // App 
-@import '_layout'
+@import '_layout';
  
 // Flags
 @import 'flags/_functions';

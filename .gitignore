@@ -1,6 +1,4 @@
-/app/css/bitters
-/app/css/bourbon
-/app/css/neat
+/app/css/vendors
 /bower_components
 /dist
 /node_modules

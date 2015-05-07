@@ -1,17 +1,22 @@
 #!/usr/bin/env bash
 
 bower install
+cd ./app/css/vendors
 
 echo "Installing bourbon"
-gem install bourbon
-bourbon install --path app/css
+if ! which bourbon &>/dev/null; then
+  gem install bourbon
+fi
+bourbon install
 
 echo "Installing neat"
-gem install neat
-cd ./app/css
+if ! which neat &>/dev/null; then
+  gem install neat
+fi
 neat install
 
 echo "Installing bitters"
-gem install bitters
-cd ./app/css
+if ! which bitters &>/dev/null; then
+  gem install bitters
+fi
 bitters install

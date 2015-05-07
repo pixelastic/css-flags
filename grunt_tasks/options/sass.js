@@ -7,8 +7,8 @@ module.exports = {
     files: [{
       expand: true,
       cwd: 'app/css/',
-      src: '*.scss',
-      dest: 'dist',
+      src: 'index.scss',
+      dest: 'tmp/css',
       ext: '.css'
     }]
   }

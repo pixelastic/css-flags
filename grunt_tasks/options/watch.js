@@ -1,10 +1,17 @@
 module.exports = {
-  css: {
-    files: ['app/css/flags/*.scss'],
+  options: {
+    livereload: false
+  },
+  scssToCss: {
+    files: ['app/css/**/*.scss'],
     tasks: [
       'sass:build',
       'autoprefixer:build'
-    ],
+    ]
+  },
+  cssLivereload: {
+    files: ['dist/main.css'],
+    tasks: [],
     options: {
       livereload: true
     }
@@ -12,7 +19,7 @@ module.exports = {
   html: {
     files: ['app/index.html'],
     tasks: [
-      'rsync:build'
+      'rsync:buildHTML'
     ],
     options: {
       livereload: true
