@@ -1,17 +1,18 @@
-// Bourbon framework
-@import 'bourbon/bourbon';
-@import 'neat/neat';
-@import 'base/base';
 // Normalize
-@import '../bower_components/normalize/normalize.min.js';
+@import '../../bower_components/normalize-css/normalize';
+
+// Bourbon framework
+@import 'vendors/bourbon/bourbon';
+@import 'vendors/neat/neat';
+@import 'vendors/base/base';
 
 // App 
 @import '_layout';
  
 // Flags
 @import 'flags/_functions';
-// @import 'flags/_helpers';
-// @import 'flags/_variables';
-// @import 'flags/_mixins';
-// @import 'flags/_fonts';
-// @import 'flags/_flags';
+@import 'flags/_helpers';
+@import 'flags/_variables';
+@import 'flags/_mixins';
+@import 'flags/_fonts';
+@import 'flags/_flags';

@@ -4,24 +4,24 @@
  * Flag informations : http://www.vexilla-mundi.com/
  *                     http://www.crwflags.com/fotw/flags/country.html
  */
-.flag {
+.c-flag {
   position:relative;
   margin:0 auto;
 }
 // Afghanistan
-.flag-afg {
+.c-flag__afg {
   @include ratio(2/3);
   @include incomplete();
   @include three-columns(black, #BF0000, #009900);
 };
 // Åland Islands
 // http://www.crwflags.com/fotw/flags/ax.html
-.flag-ala {
+.c-flag__ala {
   @include ratio(34/52);
   @include nordic-cross-border(#0053A5, #FFCE00, #D21034, 10 * $w52, 4 * $w52, 16 * $w52);
 };
 // Albania
-.flag-alb {
+.c-flag__alb {
   @include ratio(5/7);
   background:#E41E20;
   &:before {
@@ -30,7 +30,7 @@
 };
 // Algeria
 // http://www.crwflags.com/fotw/flags/dz.html
-.flag-dza {
+.c-flag__dza {
   @include ratio(2/3);
   @include two-columns(#006233, white);
   &:before {
@@ -47,7 +47,7 @@
 };
 // American Samoa
 // http://en.wikipedia.org/wiki/Flag_of_American_Samoa
-.flag-asm {
+.c-flag__asm {
   @include secondary();
   @include incomplete();
   @include ratio(1/2);
@@ -63,7 +63,7 @@
 };
 // Andorra
 // http://en.wikipedia.org/wiki/Flag_of_Andorra
-.flag-and {
+.c-flag__and {
   @include incomplete();
   @include ratio(7/10);
   @include columns(#0018A8, 8 * $w25, #FEDF00, 9 * $w25, #D0103A, 8 * $w25);
@@ -71,7 +71,7 @@
 // Angola
 // http://www.crwflags.com/fotw/flags/ao.html
 // http://en.wikipedia.org/wiki/Flag_of_Angola
-.flag-ago {
+.c-flag__ago {
   @include incomplete();
   @include ratio(2/3);
   @include two-lines(#CE1126, #000000);
@@ -82,37 +82,37 @@
 // Anguilla
 // http://en.wikipedia.org/wiki/Flag_of_Anguilla
 // http://www.vexilla-mundi.com/anguilla_flag.html
-.flag-aia {
+.c-flag__aia {
   @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
 };
 // Antarctica
-.flag-ata {
+.c-flag__ata {
   @include secondary();
   @include ratio(2/3);
 };
 // Antigua and Barbuda
-.flag-atg {
+.c-flag__atg {
   @include secondary();
   @include ratio(2/3);
 };
 // Argentina
 // http://en.wikipedia.org/wiki/Flag_of_Argentina
-.flag-arg {
+.c-flag__arg {
   @include incomplete();
   @include ratio(9/14);
   @include three-lines(#75AADB, white, #75AADB);
 };
 // Armenia
 // http://en.wikipedia.org/wiki/Flag_of_Armenia
-.flag-arm {
+.c-flag__arm {
   @include ratio(1/2);
   @include three-lines(#D90012, #0033A0, #F2A800);
 };
 // Aruba
-.flag-abw {
+.c-flag__abw {
   @include secondary();
   @include ratio(2/3);
 };
@@ -121,32 +121,32 @@
 // http://commons.wikimedia.org/wiki/File_talk:Flag_of_Australia.svg
 // http://commons.wikimedia.org/wiki/Commons:Pantone_color_chart/British_flag_colours
 // Note: Australia official background color is #002B7F, but UK one is #00247D
-.flag-aus {
+.c-flag__aus {
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack(#002664);
 };
 // Austria
-.flag-aut {
+.c-flag__aut {
   @include ratio(2/3);
   @include three-lines(red, white, red);
 };
 // Azerbaijan
 // http://en.wikipedia.org/wiki/Flag_of_Azerbaijan
-.flag-aze {
+.c-flag__aze {
   @include incomplete();
   @include ratio(1/2);
   @include three-lines(#0097c3, #e00034, #00ae65);
 
 };
 // Bahamas
-.flag-bhs {
+.c-flag__bhs {
   @include secondary();
   @include ratio(2/3);
 };
 // Bahrain
 // http://en.wikipedia.org/wiki/Flag_of_Bahrain
-.flag-bhr {
+.c-flag__bhr {
   @include ratio(3/5);
   @include columns(white, 2.5 * $w10, #c8102e, 7.5 * $w10);
   &:before {
@@ -160,19 +160,19 @@
 };
 // Bangladesh
 // http://en.wikipedia.org/wiki/Flag_of_Bangladesh
-.flag-bgd {
+.c-flag__bgd {
   @include ratio(6/10);
   background:circle(#E11837, 2 * $w10, 4.5 * $w10, $height / 2),
              #01796F
 };
 // Barbados
-.flag-brb {
+.c-flag__brb {
   @include secondary();
   @include ratio(2/3);
 };
 // Belarus
 // http://en.wikipedia.org/wiki/Flag_of_Belarus
-.flag-blr {
+.c-flag__blr {
   @include incomplete();
   @include ratio(1/2);
   @include lines(#C8313E, 2 * $h3, #4AA657, $h3);
@@ -181,14 +181,14 @@
 // http://www.crwflags.com/fotw/flags/be.html
 // Note: The official state proportions are 13:15, but the flag is usually
 // using 2:3
-.flag-bel {
+.c-flag__bel {
   @include ratio(2/3);
   @include three-columns(black, #FFE936, #FF0F21);
 };
 // Belize
 // http://en.wikipedia.org/wiki/Flag_of_Belize
 // http://www.crwflags.com/fotw/flags/bz.html
-.flag-blz {
+.c-flag__blz {
   @include incomplete();
   @include ratio(2/3);
   background-image:
@@ -202,20 +202,20 @@
 // Benin
 // http://en.wikipedia.org/wiki/Flag_of_Benin
 // http://www.vexilla-mundi.com/benin_flag.html
-.flag-ben {
+.c-flag__ben {
   @include ratio(2/3);
   background: v-stripe(#00b140, $w3, 0),
               h-stripe(#c8102e, $h2, 0),
               h-stripe(#fdda24, $h2, $h2);
 };
 // Bermuda
-.flag-bmu {
+.c-flag__bmu {
   @include secondary();
   @include ratio(2/3);
 };
 // Bhutan
 // http://en.wikipedia.org/wiki/Flag_of_Bhutan
-.flag-btn {
+.c-flag__btn {
   @include incomplete();
   @include ratio(2/3);
   $alpha:toa($height, $width); // Bottom right angle
@@ -224,19 +224,19 @@
 };
 // Bolivia, Plurinational State of
 // http://en.wikipedia.org/wiki/Flag_of_Bolivia
-.flag-bol {
+.c-flag__bol {
   @include ratio(15/22);
   @include three-lines(#D52B1E, #FCD116, #007934);
 };
 // Bonaire, Sint Eustatius and Saba
-.flag-bes {
+.c-flag__bes {
   @include secondary();
   @include ratio(2/3);
 };
 // Bosnia and Herzegovina
 // http://en.wikipedia.org/wiki/Flag_of_Bosnia_and_Herzegovina
 // http://www.crwflags.com/fotw/flags/ba.html#con
-.flag-bih {
+.c-flag__bih {
   @include ratio(1/2);
   overflow:hidden;
   $dist:hypotenuse($height, $height);
@@ -260,38 +260,38 @@
 // Botswana
 // http://en.wikipedia.org/wiki/Flag_of_Botswana
 // http://www.vexilla-mundi.com/botswana_flag.html
-.flag-bwa {
+.c-flag__bwa {
   @include ratio(2/3);
   @include lines(#6cace4, 9 * $h24, white, $h24, black, 4 * $h24, white, $h24, #6cace4, 9 * $h24);
 };
 // Bouvet Island
-.flag-bvt {
+.c-flag__bvt {
   @include secondary();
   @include ratio(2/3);
 };
 // Brazil
-.flag-bra {
+.c-flag__bra {
   @include ratio(2/3);
 };
 // British Indian Ocean Territory
-.flag-iot {
+.c-flag__iot {
   @include secondary();
   @include ratio(2/3);
 };
 // Brunei Darussalam
-.flag-brn {
+.c-flag__brn {
   @include ratio(2/3);
 };
 // Bulgaria
 // http://en.wikipedia.org/wiki/Flag_of_Bulgaria
-.flag-bgr {
+.c-flag__bgr {
   @include ratio(3/5);
   @include three-lines(white, #00966E, #D62612);
 };
 // Burkina Faso
 // http://en.wikipedia.org/wiki/Flag_of_Burkina_Faso
 // http://www.vexilla-mundi.com/burkina_faso_flag.html
-.flag-bfa {
+.c-flag__bfa {
   @include ratio(2/3);
   @include two-lines(#ef3340, #009639);
   &:before {
@@ -299,12 +299,12 @@
   }
 };
 // Burundi
-.flag-bdi {
+.c-flag__bdi {
   @include ratio(2/3);
 };
 // Cambodia
 // http://www.vexilla-mundi.com/cambodia_flag.html
-.flag-khm {
+.c-flag__khm {
   @include incomplete();
   @include ratio(2/3);
   @include lines(#002f6c, $h4, #d50032, $h2, #002f6c, $h4);
@@ -314,7 +314,7 @@
 // http://www.crwflags.com/fotw/flags/cm.html
 // http://en.wikipedia.org/wiki/Flag_of_Cameroon
 // Note: There is no official information on the size of the star
-.flag-cmr {
+.c-flag__cmr {
   @include ratio(2/3);
   @include three-columns(#007A5E, #CE1126, #FCD116);
   &:before {
@@ -323,7 +323,7 @@
 };
 // Canada
 // http://en.wikipedia.org/wiki/Flag_of_Canada
-.flag-can {
+.c-flag__can {
   @include ratio(1/2);
   @include columns(#FF0000, $w4, white, $w2, #FF0000, $w4);
   &:before {
@@ -331,70 +331,70 @@
   }
 };
 // Canary Islands
-.flag-ic {
+.c-flag__ic {
   @include secondary();
   @include incomplete();
   @include ratio(2/3);
   @include three-columns(white, #0768A9, #FFCC00);
 };
 // Cape Verde
-.flag-cpv {
+.c-flag__cpv {
   @include ratio(2/3);
 };
 // Cayman Islands
 // http://en.wikipedia.org/wiki/Flag_of_the_Cayman_Islands
-.flag-cym {
+.c-flag__cym {
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
 };
 // Central African Republic
-.flag-caf {
+.c-flag__caf {
   @include ratio(2/3);
 };
 // Chad
-.flag-tcd {
+.c-flag__tcd {
   @include ratio(2/3);
   @include three-columns(#002664, #FECB00, #C60C30);
 };
 // Chile
 // ★
-.flag-chl {
+.c-flag__chl {
   @include ratio(2/3);
 };
 // China
-.flag-chn {
+.c-flag__chn {
   @include ratio(2/3);
 };
 // Christmas Island
-.flag-cxr {
+.c-flag__cxr {
   @include secondary();
   @include ratio(2/3);
 };
 // Cocos (Keeling) Islands
-.flag-cck {
+.c-flag__cck {
   @include secondary();
   @include ratio(2/3);
 };
 // Colombia
-.flag-col {
+.c-flag__col {
   @include ratio(2/3);
 };
 // Comoros
-.flag-com {
+.c-flag__com {
   @include ratio(2/3);
 };
 // Congo
-.flag-cog {
+.c-flag__cog {
   @include ratio(2/3);
 };
 // Congo, the Democratic Republic of the
-.flag-cod {
+.c-flag__cod {
   @include ratio(2/3);
 };
 // Cook Islands
 // http://en.wikipedia.org/wiki/Flag_of_the_Cook_Islands
-.flag-cok {
+.c-flag__cok {
   @include secondary();
   @include incomplete();
   @include ratio(1/2);
@@ -402,109 +402,109 @@
 };
 // Costa Rica
 // http://en.wikipedia.org/wiki/Flag_of_Costa_Rica
-.flag-cri {
+.c-flag__cri {
   @include ratio(3/5);
   @include lines(#002B7F, $h6, white, $h6, #CE1126, $h3, white, $h6, #002B7F, $h6);
 };
 // Côte d'Ivoire
 // http://en.wikipedia.org/wiki/Flag_of_Ivory_Coast
-.flag-civ {
+.c-flag__civ {
   @include ratio(2/3);
   @include three-columns(#F77F00, white, #009E60);
 };
 // Croatia
 // http://en.wikipedia.org/wiki/Flag_of_Croatia
 // ☗
-.flag-hrv {
+.c-flag__hrv {
   @include incomplete();
   @include ratio(1/2);
   @include three-lines(red,white,#171796);
 };
 // Cuba
-.flag-cub {
+.c-flag__cub {
   @include ratio(2/3);
 };
 // Curaçao
-.flag-cuw {
+.c-flag__cuw {
   @include secondary();
   @include ratio(2/3);
 };
 // Cyprus
-.flag-cyp {
+.c-flag__cyp {
   @include ratio(2/3);
 };
 // Czech Republic
-.flag-cze {
+.c-flag__cze {
   @include ratio(2/3);
 };
 // Denmark
 // http://www.crwflags.com/fotw/flags/dk.html
-.flag-dnk {
+.c-flag__dnk {
   @include ratio(28/37);
   @include nordic-cross(#D81E05, white, 4 * $w37, 12 * $w37);
 };
 // Djibouti
-.flag-dji {
+.c-flag__dji {
   @include ratio(2/3);
 };
 // Dominica
-.flag-dma {
+.c-flag__dma {
   @include secondary();
   @include ratio(2/3);
 };
 // Dominican Republic
-.flag-dom {
+.c-flag__dom {
   @include secondary();
   @include ratio(2/3);
 };
 // Ecuador
-.flag-ecu {
+.c-flag__ecu {
   @include ratio(2/3);
 };
 // Egypt
 // http://en.wikipedia.org/wiki/Flag_of_Egypt
-.flag-egy {
+.c-flag__egy {
   @include ratio(2/3);
   @include three-lines(#c8102e, white, black);
 };
 // El Salvador
 // http://en.wikipedia.org/wiki/Flag_of_El_Salvador
-.flag-slv {
+.c-flag__slv {
   @include incomplete();
   @include ratio(189/335);
   @include three-lines(#0047AB, white, #0047AB);
 };
 // England
-.flag-eng {
+.c-flag__eng {
   @include ratio(30/50);
   background-color:white;
   background-image:v-stripe(#CF142B, 6 * $w50, 22 * $w50),
                    h-stripe(#CD142B, 6 * $w50, 12 * $w50);
 };
 // Equatorial Guinea
-.flag-gnq {
+.c-flag__gnq {
   @include ratio(2/3);
 };
 // Eritrea
-.flag-eri {
+.c-flag__eri {
   @include ratio(2/3);
 };
 // Estonia
 // http://en.wikipedia.org/wiki/Flag_of_Estonia
-.flag-est {
+.c-flag__est {
   @include ratio(7/11);
   @include three-lines(#0072ce, black, white);
 };
 // Ethiopia
 // http://en.wikipedia.org/wiki/Flag_of_Ethiopia
-.flag-eth {
+.c-flag__eth {
   @include incomplete();
   @include ratio(1/2);
   @include three-lines(#009a44, #fedd00, #ef3340);
 };
 // Falkland Islands (Malvinas)
 // http://en.wikipedia.org/wiki/Flag_of_the_Falkland_Islands
-.flag-flk {
+.c-flag__flk {
   @include secondary();
   @include incomplete();
   @include ratio(1/2);
@@ -512,66 +512,66 @@
 };
 // Faroe Islands
 // http://www.crwflags.com/fotw/flags/fo.html
-.flag-fro {
+.c-flag__fro {
   @include ratio(16/22);
   @include nordic-cross-border(white, #0065BD, #ED2939, 4 * $w22, 2 * $w22, 6 * $w22);
 }
 // Fiji
-.flag-fji {
+.c-flag__fji {
   @include secondary();
   @include ratio(2/3);
 };
 // Finland
 // http://www.crwflags.com/fotw/flags/fi.html
-.flag-fin {
+.c-flag__fin {
   @include ratio(11/18);
   @include nordic-cross(white, #003580, 3 * $w18, 5 * $w18);
 };
 // France
 // http://en.wikipedia.org/wiki/Flag_of_France
-.flag-fra {
+.c-flag__fra {
   @include ratio(2/3);
   @include three-columns(#002395, white, #ED2939);
 };
 // French Guiana
-.flag-guf {
+.c-flag__guf {
   @include ratio(2/3);
 };
 // French Polynesia
-.flag-pyf {
+.c-flag__pyf {
   @include secondary();
   @include ratio(2/3);
 };
 // French Southern Territories
-.flag-atf {
+.c-flag__atf {
   @include secondary();
   @include ratio(2/3);
 };
 // Gabon
 // http://en.wikipedia.org/wiki/Flag_of_Gabon
 // http://www.vexilla-mundi.com/gabon_flag.html
-.flag-gab {
+.c-flag__gab {
   @include ratio(2/3);
   @include three-lines(#009a44, #ffcd00, #0072ce);
 };
 // Gambia
 // http://www.crwflags.com/fotw/flags/gm.html
-.flag-gmb {
+.c-flag__gmb {
   @include ratio(2/3);
   @include lines(#ef3340, 6 * $h18, white, $h18, #003da5, 4 * $h18, white, $h18, #009639, 6 * $h18);
 };
 // Georgia
-.flag-geo {
+.c-flag__geo {
   @include ratio(2/3);
 };
 // Germany
-.flag-deu {
+.c-flag__deu {
   @include ratio(3/5);
   @include three-lines(#000000, #FF0000, #FFCC00);
 };
 // Ghana
 // http://en.wikipedia.org/wiki/Flag_of_Ghana
-.flag-gha {
+.c-flag__gha {
   @include ratio(2/3);
   @include three-lines(#CE1126, #FCD116, #006B3F);
   &:before {
@@ -580,17 +580,17 @@
   }
 };
 // Gibraltar
-.flag-gib {
+.c-flag__gib {
   @include ratio(2/3);
 };
 // Greece
-.flag-grc {
+.c-flag__grc {
   @include ratio(2/3);
 };
 // Greenland
 // http://en.wikipedia.org/wiki/Flag_of_Greenland
 // http://www.crwflags.com/fotw/flags/gl.html
-.flag-grl {
+.c-flag__grl {
   @include ratio(2/3);
   @include two-lines(white, #D81E05);
   &:before {
@@ -605,274 +605,274 @@
   }
 };
 // Grenada
-.flag-grd {
+.c-flag__grd {
   @include secondary();
   @include ratio(2/3);
 };
 // Guadeloupe
-.flag-glp {
+.c-flag__glp {
   @include secondary();
   @include ratio(2/3);
 };
 // Guam
-.flag-gum {
+.c-flag__gum {
   @include secondary();
   @include ratio(2/3);
 };
 // Guatemala
-.flag-gtm {
+.c-flag__gtm {
   @include ratio(2/3);
 };
 // Guernsey
-.flag-ggy {
+.c-flag__ggy {
   @include secondary();
   @include ratio(2/3);
 };
 // Guinea
 // http://en.wikipedia.org/wiki/Flag_of_Guinea
-.flag-gin {
+.c-flag__gin {
   @include ratio(2/3);
   @include three-columns(#CE1126, #FCD116, #009460);
 };
 // Guinea-Bissau
-.flag-gnb {
+.c-flag__gnb {
   @include ratio(2/3);
 };
 // Guyana
-.flag-guy {
+.c-flag__guy {
   @include ratio(2/3);
 };
 // Haiti
-.flag-hti {
+.c-flag__hti {
   @include ratio(2/3);
 };
 // Heard Island and McDonald Islands
-.flag-hmd {
+.c-flag__hmd {
   @include secondary();
   @include ratio(2/3);
 };
 // Holy See (Vatican City State)
-.flag-vat {
+.c-flag__vat {
   @include secondary();
   @include ratio(2/3);
 };
 // Honduras
-.flag-hnd {
+.c-flag__hnd {
   @include ratio(2/3);
 };
 // Hong Kong
-.flag-hkg {
+.c-flag__hkg {
   @include ratio(2/3);
 };
 // Hungary
-.flag-hun {
+.c-flag__hun {
   @include ratio(2/3);
 };
 // Iceland
 // http://commons.wikimedia.org/wiki/File:Flag_of_Iceland_(with_dimensions).svg
-.flag-isl {
+.c-flag__isl {
   @include ratio(18/25);
   @include nordic-cross-border(#003897, white, #D72828, 4 * $w25, 2 * $w25, 7 * $w25);
 }
 // India
 // ⚙
-.flag-ind {
+.c-flag__ind {
   @include ratio(2/3);
 };
 // Indonesia
 // http://en.wikipedia.org/wiki/Flag_of_Indonesia
-.flag-idn {
+.c-flag__idn {
   @include ratio(2/3);
   @include two-lines(#c8102e, white);
 };
 // Iran, Islamic Republic of
-.flag-irn {
+.c-flag__irn {
   @include ratio(2/3);
 };
 // Iraq
-.flag-irq {
+.c-flag__irq {
   @include ratio(2/3);
 };
 // Ireland
 // http://en.wikipedia.org/wiki/Flag_of_Ireland
-.flag-irl {
+.c-flag__irl {
   @include ratio(1/2);
   @include three-columns(#009B48, white, #FF7900);
 };
 // Isle of Man
-.flag-imn {
+.c-flag__imn {
   @include secondary();
   @include ratio(2/3);
 };
 // Israel
-.flag-isr {
+.c-flag__isr {
   @include ratio(2/3);
 };
 // Italy
 // http://it.wikipedia.org/wiki/Bandiera_d%27Italia
-.flag-ita {
+.c-flag__ita {
   @include ratio(2/3);
   @include three-columns(#009246, white, #CE2B37);
 };
 // Jamaica
-.flag-jam {
+.c-flag__jam {
   @include ratio(2/3);
 };
 // Japan
-.flag-jpn {
+.c-flag__jpn {
   @include ratio(2/3);
 };
 // Jersey
-.flag-jey {
+.c-flag__jey {
   @include secondary();
   @include ratio(2/3);
 };
 // Jordan
-.flag-jor {
+.c-flag__jor {
   @include ratio(2/3);
 };
 // Kazakhstan
-.flag-kaz {
+.c-flag__kaz {
   @include ratio(2/3);
 };
 // Kenya
-.flag-ken {
+.c-flag__ken {
   @include ratio(2/3);
 };
 // Kiribati
-.flag-kir {
+.c-flag__kir {
   @include secondary();
   @include ratio(2/3);
 };
 // Korea, Democratic People's Republic of
-.flag-prk {
+.c-flag__prk {
   @include ratio(2/3);
 };
 // Korea, Republic of
-.flag-kor {
+.c-flag__kor {
   @include ratio(2/3);
 };
 // Kuwait
-.flag-kwt {
+.c-flag__kwt {
   @include ratio(2/3);
 };
 // Kyrgyzstan
-.flag-kgz {
+.c-flag__kgz {
   @include ratio(2/3);
 };
 // Lao People's Democratic Republic
-.flag-lao {
+.c-flag__lao {
   @include ratio(2/3);
 };
 // Latvia
 // http://en.wikipedia.org/wiki/Flag_of_Latvia
-.flag-lva {
+.c-flag__lva {
   @include ratio(1/2);
   @include lines(#9E1B34, 2 * $h5, white, $h5, #9E1B34, 2 * $h5);
 };
 // Lebanon
-.flag-lbn {
+.c-flag__lbn {
   @include ratio(2/3);
 };
 // Lesotho
-.flag-lso {
+.c-flag__lso {
   @include ratio(2/3);
 };
 // Liberia
 // ★
-.flag-lbr {
+.c-flag__lbr {
   @include ratio(2/3);
 };
 // Libya
-.flag-lby {
+.c-flag__lby {
   @include ratio(2/3);
 };
 // Liechtenstein
-.flag-lie {
+.c-flag__lie {
   @include ratio(2/3);
 };
 // Lithuania
-.flag-ltu {
+.c-flag__ltu {
   @include ratio(2/3);
 };
 // Luxembourg
-.flag-lux {
+.c-flag__lux {
   @include ratio(2/3);
 };
 // Macao
-.flag-mac {
+.c-flag__mac {
   @include ratio(2/3);
 };
 // Macedonia, the former Yugoslav Republic of
-.flag-mkd {
+.c-flag__mkd {
   @include ratio(2/3);
 };
 // Madagascar
-.flag-mdg {
+.c-flag__mdg {
   @include ratio(2/3);
 };
 // Malawi
-.flag-mwi {
+.c-flag__mwi {
   @include ratio(2/3);
 };
 // Malaysia
-.flag-mys {
+.c-flag__mys {
   @include ratio(2/3);
 };
 // Maldives
-.flag-mdv {
+.c-flag__mdv {
   @include ratio(2/3);
 };
 // Mali
 // http://en.wikipedia.org/wiki/Flag_of_Mali
-.flag-mli {
+.c-flag__mli {
   @include ratio(2/3);
   @include three-columns(#14B53A, #FCD116, #CE1126);
 };
 // Malta
-.flag-mlt {
+.c-flag__mlt {
   @include ratio(2/3);
 };
 // Marshall Islands
-.flag-mhl {
+.c-flag__mhl {
   @include secondary();
   @include ratio(2/3);
 };
 // Martinique
-.flag-mtq {
+.c-flag__mtq {
   @include secondary();
   @include ratio(2/3);
 };
 // Mauritania
-.flag-mrt {
+.c-flag__mrt {
   @include ratio(2/3);
 };
 // Mauritius
-.flag-mus {
+.c-flag__mus {
   @include secondary();
   @include ratio(2/3);
 };
 // Mayotte
-.flag-myt {
+.c-flag__myt {
   @include secondary();
   @include ratio(2/3);
 };
 // Mexico
 // http://en.wikipedia.org/wiki/Flag_of_Mexico
-.flag-mex {
+.c-flag__mex {
   @include incomplete();
   @include ratio(4/7);
   @include three-columns(#006847, white, #CE1126);
 };
 // Micronesia, Federated States of
-.flag-fsm {
+.c-flag__fsm {
   @include secondary();
   @include ratio(2/3);
 };
 // Moldova, Republic of
 // http://en.wikipedia.org/wiki/Flag_of_Moldova
 // http://www.crwflags.com/fotw/flags/md.html
-.flag-mda {
+.c-flag__mda {
   @include incomplete();
   @include ratio(1/2);
   @include three-columns(#0046AE, #FFD200, #CC092F);
@@ -880,36 +880,36 @@
 // Monaco
 // http://en.wikipedia.org/wiki/Flag_of_Monaco
 // http://www.crwflags.com/fotw/flags/mc.html
-.flag-mco {
+.c-flag__mco {
   @include ratio(4/5);
   @include two-lines(#c8102e, white);
 };
 // Mongolia
-.flag-mng {
+.c-flag__mng {
   @include ratio(2/3);
 };
 // Montenegro
-.flag-mne {
+.c-flag__mne {
   @include ratio(2/3);
 };
 // Montserrat
 // http://en.wikipedia.org/wiki/Flag_of_Montserrat
-.flag-msr {
+.c-flag__msr {
   @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
 };
 // Morocco
-.flag-mar {
+.c-flag__mar {
   @include ratio(2/3);
 };
 // Mozambique
-.flag-moz {
+.c-flag__moz {
   @include ratio(2/3);
 };
 // Myanmar / Burma
-.flag-mmr {
+.c-flag__mmr {
   @include ratio(2/3);
   @include three-lines(#FECB00, #34B233, #EA2839);
   &:before {
@@ -918,30 +918,30 @@
   }
 };
 // Namibia
-.flag-nam {
+.c-flag__nam {
   @include ratio(2/3);
 };
 // Nauru
-.flag-nru {
+.c-flag__nru {
   @include secondary();
   @include ratio(2/3);
 };
 // Nepal
-.flag-npl {
+.c-flag__npl {
   @include ratio(2/3);
 };
 // Netherlands
-.flag-nld {
+.c-flag__nld {
   @include ratio(2/3);
 };
 // New Caledonia
-.flag-ncl {
+.c-flag__ncl {
   @include secondary();
   @include ratio(2/3);
 };
 // New Zealand
 // http://en.wikipedia.org/wiki/Flag_of_New_Zealand
-.flag-nzl {
+.c-flag__nzl {
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
@@ -949,83 +949,83 @@
 // Nicaragua
 // http://en.wikipedia.org/wiki/Flag_of_Nicaragua
 // http://www.vexilla-mundi.com/nicaragua_flag.html
-.flag-nic {
+.c-flag__nic {
   @include incomplete();
   @include ratio(3/5);
   @include three-lines(#005eb8, white, #005eb8);
 
 };
 // Niger
-.flag-ner {
+.c-flag__ner {
   @include ratio(2/3);
 };
 // Nigeria
-.flag-nga {
+.c-flag__nga {
   @include ratio(2/3);
 };
 // Niue
-.flag-niu {
+.c-flag__niu {
   @include secondary();
   @include ratio(2/3);
 };
 // Norfolk Island
 // http://en.wikipedia.org/wiki/Flag_of_Norfolk_Island
-.flag-nfk {
+.c-flag__nfk {
   @include incomplete();
   @include ratio(1/2);
   @include columns(#007934, 7 * $w23, white, 9 * $w23, #007934, 7 * $w23);
 };
 // Northern Mariana Islands
-.flag-mnp {
+.c-flag__mnp {
   @include secondary();
   @include ratio(2/3);
 };
 // Norway
-.flag-nor {
+.c-flag__nor {
   @include ratio(16/22);
   @include nordic-cross-border(#ED2939, white, #002664, 4 * $w22, 2 * $w22, 6 * $w22);
 };
 // Oman
-.flag-omn {
+.c-flag__omn {
   @include ratio(2/3);
 };
 // Pakistan
 // ☪
-.flag-pak {
+.c-flag__pak {
   @include ratio(2/3);
 };
 // Palau
-.flag-plw {
+.c-flag__plw {
   @include secondary();
   @include ratio(2/3);
 };
 // Palestine, State of
-.flag-pse {
+.c-flag__pse {
   @include ratio(2/3);
 };
 // Panama
-.flag-pan {
+.c-flag__pan {
   @include ratio(2/3);
 };
 // Papua New Guinea
-.flag-png {
+.c-flag__png {
   @include ratio(2/3);
 };
 // Paraguay
-.flag-pry {
+.c-flag__pry {
   @include ratio(2/3);
 };
 // Peru
-.flag-per {
+.c-flag__per {
   @include ratio(2/3);
 };
 // Philippines
-.flag-phl {
+.c-flag__phl {
   @include ratio(2/3);
 };
 // Pitcairn
 // http://en.wikipedia.org/wiki/Flag_and_coat_of_arms_of_the_Pitcairn_Islands
-.flag-pcn {
+.c-flag__pcn {
   @include secondary();
   @include incomplete();
   @include ratio(1/2);
@@ -1034,18 +1034,18 @@
 // Poland
 // http://en.wikipedia.org/wiki/Flag_of_Poland
 // http://www.crwflags.com/fotw/flags/pl.html#colors
-.flag-pol {
+.c-flag__pol {
   @include ratio(5/8);
   @include two-lines(white, #d22630);
 };
 // Portugal
-.flag-prt {
+.c-flag__prt {
   @include incomplete();
   @include ratio(2/3);
   @include columns(#FF0000, 2 * $w5, #006600, 3 * $w5);
 };
 // Puerto Rico
-.flag-pri {
+.c-flag__pri {
   @include secondary();
   @include ratio(2/3);
 };
@@ -1053,7 +1053,7 @@
 // http://en.wikipedia.org/wiki/Flag_of_Qatar
 // http://www.crwflags.com/fotw/flags/qa.html
 // http://blog.iloveqatar.net/2012/07/qatars-national-color-pantone-222c-qatar-red/
-.flag-qat {
+.c-flag__qat {
   @include ratio(11/28);
   @include columns(white, 8 * $w28, #691a40, 20 * $w28);
   &:before {
@@ -1070,35 +1070,35 @@
   }
 };
 // Réunion
-.flag-reu {
+.c-flag__reu {
   @include secondary();
   @include ratio(2/3);
 };
 // Romania
 // http://en.wikipedia.org/wiki/Flag_of_Romania
-.flag-rou {
+.c-flag__rou {
   @include ratio(2/3);
   @include three-columns(#002B7F, #FCD116, #CE1126);
 };
 // Russian Federation
-.flag-rus {
+.c-flag__rus {
   @include ratio(2/3);
 };
 // Rwanda
 // http://www.crwflags.com/fotw/flags/rw.html
-.flag-rwa {
+.c-flag__rwa {
   @include incomplete();
   @include ratio(2/3);
   @include lines(#00a3e0, $h2, #f7b500, $h4, #006f3d, $h4);
 };
 // Saint Barthélemy
-.flag-blm {
+.c-flag__blm {
   @include secondary();
   @include ratio(2/3);
 };
 // Saint Helena
 // http://en.wikipedia.org/wiki/Flag_of_Saint_Helena
-.flag-sh-sh {
+.c-flag__sh-sh {
   @include secondary();
   @include incomplete();
   @include ratio(1/2);
@@ -1106,7 +1106,7 @@
 };
 // Ascension
 // http://en.wikipedia.org/wiki/Ascension_Island
-.flag-sh-ac {
+.c-flag__sh-ac {
   @include secondary();
   @include incomplete();
   @include ratio(1/2);
@@ -1114,36 +1114,36 @@
 };
 // Tristan da Cunha
 // http://en.wikipedia.org/wiki/Tristan_da_Cunha
-.flag-sh-ta {
+.c-flag__sh-ta {
   @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
 };
 // Saint Kitts and Nevis
-.flag-kna {
+.c-flag__kna {
   @include secondary();
   @include ratio(2/3);
 };
 // Saint Lucia
-.flag-lca {
+.c-flag__lca {
   @include secondary();
   @include ratio(2/3);
 };
 // Saint Martin (French part)
-.flag-maf {
+.c-flag__maf {
   @include secondary();
   @include ratio(2/3);
 };
 // Saint Pierre and Miquelon
-.flag-spm {
+.c-flag__spm {
   @include secondary();
   @include ratio(2/3);
 };
 // Saint Vincent and the Grenadines
 // http://en.wikipedia.org/wiki/Flag_of_Saint_Vincent_and_the_Grenadines
 // http://www.vexilla-mundi.com/saint_vincent_and_the_grenadines_flag.html
-.flag-vct {
+.c-flag__vct {
   @include ratio(1/2);
   @include columns(#0072C6, $w4, #FCD116, $w2, #009E60, $w4);
   &:before {
@@ -1155,30 +1155,30 @@
   }
 };
 // Samoa
-.flag-wsm {
+.c-flag__wsm {
   @include secondary();
   @include ratio(2/3);
 };
 // San Marino
 // http://en.wikipedia.org/wiki/Flag_of_San_Marino
 // http://www.vexilla-mundi.com/san_marino_flag.html
-.flag-smr {
+.c-flag__smr {
   @include secondary();
   @include incomplete();
   @include ratio(3/4);
   @include two-lines(white, #62b5e5);
 };
 // Sao Tome and Principe
-.flag-stp {
+.c-flag__stp {
   @include ratio(2/3);
 };
 // Saudi Arabia
-.flag-sau {
+.c-flag__sau {
   @include ratio(2/3);
 };
 // Senegal
 // http://en.wikipedia.org/wiki/Flag_of_Senegal
-.flag-sen {
+.c-flag__sen {
   @include ratio(2/3);
   @include three-columns(#00853F, #FDEF42, #E31B23);
   &:before {
@@ -1186,42 +1186,42 @@
   }
 };
 // Serbia
-.flag-srb {
+.c-flag__srb {
   @include ratio(2/3);
 };
 // Seychelles
-.flag-syc {
+.c-flag__syc {
   @include ratio(2/3);
 };
 // Sierra Leone
-.flag-sle {
+.c-flag__sle {
   @include ratio(2/3);
 };
 // Singapore
-.flag-sgp {
+.c-flag__sgp {
   @include ratio(2/3);
 };
 // Sint Maarten (Dutch part)
-.flag-sxm {
+.c-flag__sxm {
   @include secondary();
   @include ratio(2/3);
 };
 // Slovakia
-.flag-svk {
+.c-flag__svk {
   @include ratio(2/3);
 };
 // Slovenia
-.flag-svn {
+.c-flag__svn {
   @include ratio(2/3);
 };
 // Solomon Islands
-.flag-slb {
+.c-flag__slb {
   @include secondary();
   @include ratio(2/3);
 };
 // Somalia
 // http://en.wikipedia.org/wiki/Flag_of_Somalia
-.flag-som {
+.c-flag__som {
   @include ratio(2/3);
   background:#4189DD;
   &:before {
@@ -1230,39 +1230,39 @@
   }
 };
 // South Africa
-.flag-zaf {
+.c-flag__zaf {
   @include ratio(2/3);
 };
 // South Georgia and the South Sandwich Islands
 // http://en.wikipedia.org/wiki/Flag_of_South_Georgia_and_the_South_Sandwich_Islands
-.flag-sgs {
+.c-flag__sgs {
   @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
 };
 // South Sudan
-.flag-ssd {
+.c-flag__ssd {
   @include ratio(2/3);
 };
 // Spain
-.flag-esp {
+.c-flag__esp {
   @include incomplete();
   @include ratio(2/3);
   @include lines(#AA151B, $h4, #F1BF00, $h2, #AA151B, $h4);
 };
 // Sri Lanka
-.flag-lka {
+.c-flag__lka {
   @include ratio(2/3);
 };
 // Sudan
-.flag-sdn {
+.c-flag__sdn {
   @include ratio(2/3);
 };
 // Suriname
 // http://www.crwflags.com/fotw/flags/sr.html
 // http://www.vexilla-mundi.com/suriname_flag.html
-.flag-sur {
+.c-flag__sur {
   @include ratio(2/3);
   @include lines(#007a33, 4 * $h20, white, 2 * $h20, #c8102e, 8 * $h20, white, 2 * $h20, #007a33, 4 * $h20);
   &:before {
@@ -1271,17 +1271,17 @@
   }
 };
 // Svalbard and Jan Mayen
-.flag-sjm {
+.c-flag__sjm {
   @include secondary();
   @include ratio(2/3);
 };
 // Swaziland
-.flag-swz {
+.c-flag__swz {
   @include ratio(2/3);
 };
 // Sweden
 // http://www.crwflags.com/fotw/flags/se.html
-.flag-swe {
+.c-flag__swe {
   @include ratio(10/16);
   @include nordic-cross(#006AA7, #FECC00, 2 * $w16, 5 * $w16);
 };
@@ -1289,7 +1289,7 @@
 // http://www.crwflags.com/fotw/flags/ch.html#col
 // 1. Stripes around to "cut" the cross
 // 2. White cross
-.flag-che {
+.c-flag__che {
   @include ratio(1);
   background-color:#FF0000;
   background-image:h-stripe(#FF0000, 15 * $w110, 0px),       /* 1 */ 
@@ -1301,163 +1301,163 @@
                    v-stripe(white, 24 * $w110, 43 * $w110); /* 2 */
 };
 // Syrian Arab Republic
-.flag-syr {
+.c-flag__syr {
   @include ratio(2/3);
 };
 // Taiwan, Province of China
-.flag-twn {
+.c-flag__twn {
   @include ratio(2/3);
 };
 // Tajikistan
 // http://www.crwflags.com/fotw/flags/tj.html
 // http://www.vexilla-mundi.com/tajikistan_flag.html
-.flag-tjk {
+.c-flag__tjk {
   @include incomplete();
   @include ratio(1/2);
   @include lines(#e40046, 2 * $h7, white, 3 * $h7, #009639, 2 * $h7);
 };
 // Tanzania, United Republic of
-.flag-tza {
+.c-flag__tza {
   @include ratio(2/3);
 };
 // Thailand
 // http://en.wikipedia.org/wiki/Flag_of_Thailand
 // http://www.crwflags.com/fotw/flags/th.html
-.flag-tha {
+.c-flag__tha {
   @include ratio(2/3);
   @include lines(#ef3340, $h6, white, $h6, #00205b, $h3, white, $h6, #ef3340, $h6);
 };
 // Timor-Leste
-.flag-tls {
+.c-flag__tls {
   @include ratio(2/3);
 };
 // Togo
-.flag-tgo {
+.c-flag__tgo {
   @include ratio(2/3);
 };
 // Tokelau
-.flag-tkl {
+.c-flag__tkl {
   @include secondary();
   @include ratio(2/3);
 };
 // Tonga
-.flag-ton {
+.c-flag__ton {
   @include secondary();
   @include ratio(2/3);
 };
 // Trinidad and Tobago
-.flag-tto {
+.c-flag__tto {
   @include ratio(2/3);
 };
 // Tunisia
 // ☪
-.flag-tun {
+.c-flag__tun {
   @include ratio(2/3);
 };
 // Turkey
 // ☪
-.flag-tur {
+.c-flag__tur {
   @include ratio(2/3);
 };
 // Turkmenistan
-.flag-tkm {
+.c-flag__tkm {
   @include ratio(2/3);
 };
 // Turks and Caicos Islands
 // http://en.wikipedia.org/wiki/Flag_of_the_Turks_and_Caicos_Islands
-.flag-tca {
+.c-flag__tca {
   @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
 };
 // Tuvalu
-.flag-tuv {
+.c-flag__tuv {
   @include secondary();
   @include ratio(2/3);
 };
 // Uganda
-.flag-uga {
+.c-flag__uga {
   @include ratio(2/3);
 };
 // Ukraine
 // http://en.wikipedia.org/wiki/Flag_of_Ukraine
-.flag-ukr {
+.c-flag__ukr {
   @include ratio(2/3);
   @include two-lines(#0057b8, #ffd700);
 };
 // United Arab Emirates
-.flag-are {
+.c-flag__are {
   @include ratio(2/3);
 };
 // United Kingdom
-.flag-gbr {
+.c-flag__gbr {
   @include ratio(1/2);
   @include union-jack($height, $width);
 };
 // United States
 // ★
-.flag-usa {
+.c-flag__usa {
   @include ratio(2/3);
 };
 // United States Minor Outlying Islands
-.flag-umi {
+.c-flag__umi {
   @include secondary();
   @include ratio(2/3);
 };
 // Uruguay
-.flag-ury {
+.c-flag__ury {
   @include ratio(2/3);
 };
 // Uzbekistan
-.flag-uzb {
+.c-flag__uzb {
   @include ratio(2/3);
 };
 // Vanuatu
-.flag-vut {
+.c-flag__vut {
   @include secondary();
   @include ratio(2/3);
 };
 // Venezuela, Bolivarian Republic of
-.flag-ven {
+.c-flag__ven {
   @include ratio(2/3);
 };
 // Viet Nam
 // ★
-.flag-vnm {
+.c-flag__vnm {
   @include ratio(2/3);
 };
 // Virgin Islands, British
 // http://en.wikipedia.org/wiki/Flag_of_the_British_Virgin_Islands
-.flag-vgb {
+.c-flag__vgb {
   @include secondary();
   @include incomplete();
   @include ratio(1/2);
   @include canton-union-jack();
 };
 // Virgin Islands, U.S.
-.flag-vir {
+.c-flag__vir {
   @include secondary();
   @include ratio(2/3);
 };
 // Wallis and Futuna
-.flag-wlf {
+.c-flag__wlf {
   @include secondary();
   @include ratio(2/3);
 };
 // Western Sahara
-.flag-esh {
+.c-flag__esh {
   @include ratio(2/3);
 };
 // Yemen
-.flag-yem {
+.c-flag__yem {
   @include ratio(2/3);
 };
 // Zambia
-.flag-zmb {
+.c-flag__zmb {
   @include ratio(2/3);
 };
 // Zimbabwe
-.flag-zwe {
+.c-flag__zwe {
   @include ratio(2/3);
 };
