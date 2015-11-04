@@ -34,10 +34,16 @@ $card-image-hover-color: gainsboro;
 }
 
 .c-flaglist--showcase {
+  display: table;
+  width: 100%;
   overflow: hidden;
   height: 200px;
   max-height: 200px;
   background-color: $card-image-hover-color;
+}
+.c-flaglist--showcase-inner {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .c-flaglist--name {
