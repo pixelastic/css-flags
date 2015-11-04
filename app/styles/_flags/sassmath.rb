@@ -1,5 +1,4 @@
 require 'sass'
-
 module Sass::Script::Functions
 
   module CustomMath
