@@ -1,0 +1,5 @@
+// Saint Martin (French part)
+// http://www.crwflags.com/fotw/flags/mf.html
+@mixin flag-maf() {
+  @include ratio(2 / 3);
+};

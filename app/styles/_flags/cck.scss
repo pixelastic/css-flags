@@ -1,0 +1,5 @@
+// Cocos (Keeling) Islands
+// http://www.crwflags.com/fotw/flags/cc.html
+@mixin flag-cck() {
+  @include ratio(2 / 3);
+};

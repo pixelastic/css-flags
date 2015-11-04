@@ -1,0 +1,5 @@
+// Heard Island and McDonald Islands
+// http://www.crwflags.com/fotw/flags/hm.html
+@mixin flag-hmd() {
+  @include ratio(2 / 3);
+};

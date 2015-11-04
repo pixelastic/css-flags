@@ -1,0 +1,5 @@
+// Hong Kong
+// http://www.crwflags.com/fotw/flags/hk.html
+@mixin flag-hkg() {
+  @include ratio(2 / 3);
+};
