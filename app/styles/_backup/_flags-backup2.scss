@@ -241,13 +241,6 @@
 //                 (-8 * $star_spacing) (-8 * $star_spacing) 0px white;
 //   }
 // };
-// // Botswana
-// // http://en.wikipedia.org/wiki/Flag_of_Botswana
-// // http://www.vexilla-mundi.com/botswana_flag.html
-// .c-flag__bwa {
-//   @include ratio(2/3);
-//   @include lines(#6cace4, 9 * $h24, white, $h24, black, 4 * $h24, white, $h24, #6cace4, 9 * $h24);
-// };
 // // Bouvet Island
 // .c-flag__bvt {
 //   @include secondary();
@@ -360,10 +353,6 @@
 //   @include secondary();
 //   @include ratio(2/3);
 // };
-// // Colombia
-// .c-flag__col {
-//   @include ratio(2/3);
-// };
 // // Comoros
 // .c-flag__com {
 //   @include ratio(2/3);
@@ -383,12 +372,6 @@
 //   @include incomplete();
 //   @include ratio(1/2);
 //   @include canton-union-jack();
-// };
-// // Costa Rica
-// // http://en.wikipedia.org/wiki/Flag_of_Costa_Rica
-// .c-flag__cri {
-//   @include ratio(3/5);
-//   @include lines(#002B7F, $h6, white, $h6, #CE1126, $h3, white, $h6, #002B7F, $h6);
 // };
 // // Côte d'Ivoire
 // // http://en.wikipedia.org/wiki/Flag_of_Ivory_Coast
@@ -496,12 +479,6 @@
 // .c-flag__fji {
 //   @include secondary();
 //   @include ratio(2/3);
-// };
-// // France
-// // http://en.wikipedia.org/wiki/Flag_of_France
-// .c-flag__fra {
-//   @include ratio(2/3);
-//   @include three-columns(#002395, white, #ED2939);
 // };
 // // French Guiana
 // .c-flag__guf {
@@ -722,12 +699,6 @@
 // // Lao People's Democratic Republic
 // .c-flag__lao {
 //   @include ratio(2/3);
-// };
-// // Latvia
-// // http://en.wikipedia.org/wiki/Flag_of_Latvia
-// .c-flag__lva {
-//   @include ratio(1/2);
-//   @include lines(#9E1B34, 2 * $h5, white, $h5, #9E1B34, 2 * $h5);
 // };
 // // Lebanon
 // .c-flag__lbn {
@@ -967,10 +938,6 @@
 // };
 // // Paraguay
 // .c-flag__pry {
-//   @include ratio(2/3);
-// };
-// // Peru
-// .c-flag__per {
 //   @include ratio(2/3);
 // };
 // // Philippines

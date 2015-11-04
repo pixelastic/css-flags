@@ -1,5 +1,11 @@
 // Chad
 // http://www.crwflags.com/fotw/flags/td.html
+// https://en.wikipedia.org/wiki/Flag_of_Chad
 @mixin flag-tcd() {
   @include ratio(2 / 3);
+  $left: #002664;
+  $center: #FCD116;
+  $right: #CE1126;
+
+  @include three-columns($left, $center, $right);
 };

@@ -1,5 +1,11 @@
 // Guinea
 // http://www.crwflags.com/fotw/flags/gn.html
+// https://en.wikipedia.org/wiki/Flag_of_Guinea
 @mixin flag-gin() {
   @include ratio(2 / 3);
+  $left: #CE1126;
+  $center: #FCD116;
+  $right: #009460;
+
+  @include three-columns($left, $center, $right);
 };

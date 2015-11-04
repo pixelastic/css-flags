@@ -2,4 +2,9 @@
 // http://www.crwflags.com/fotw/flags/it.html
 @mixin flag-ita() {
   @include ratio(2 / 3);
+  $left: #009246;
+  $center: #FFF;
+  $right: #CE2B37;
+
+  @include three-columns($left, $center, $right);
 };

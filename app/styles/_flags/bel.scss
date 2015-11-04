@@ -1,5 +1,11 @@
 // Belgium
 // http://www.crwflags.com/fotw/flags/be.html
+// https://en.wikipedia.org/wiki/Flag_of_Belgium
 @mixin flag-bel() {
-  @include ratio(2 / 3);
+  @include ratio(13 / 15);
+  $left: #000;
+  $center: #FFE936;
+  $right: #FF0F21;
+
+  @include three-columns($left, $center, $right);
 };

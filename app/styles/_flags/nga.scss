@@ -1,5 +1,11 @@
 // Nigeria
 // http://www.crwflags.com/fotw/flags/ng.html
+// https://en.wikipedia.org/wiki/Flag_of_Nigeria
 @mixin flag-nga() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $left: #008753;
+  $center: #FFF;
+  $right: #008753;
+
+  @include three-columns($left, $center, $right);
 };

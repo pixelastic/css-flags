@@ -1,5 +1,19 @@
 // Colombia
 // http://www.crwflags.com/fotw/flags/co.html
+// https://en.wikipedia.org/wiki/Flag_of_Colombia
 @mixin flag-col() {
   @include ratio(2 / 3);
+  $top-color: #FCD116;
+  $top-height: 2 * $h4;
+  $center-color: #003893;
+  $center-height: $h4;
+  $bottom-color: #CE1126;
+  $bottom-height: $h4;
+
+  @include lines($top-color,
+                 $top-height,
+                 $center-color,
+                 $center-height,
+                 $bottom-color,
+                 $bottom-height);
 };

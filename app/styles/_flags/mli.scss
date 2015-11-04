@@ -1,5 +1,11 @@
 // Mali
 // http://www.crwflags.com/fotw/flags/ml.html
+// https://en.wikipedia.org/wiki/Flag_of_Mali
 @mixin flag-mli() {
   @include ratio(2 / 3);
+  $left: #14B53A;
+  $center: #FCD116;
+  $right: #CE1126;
+
+  @include three-columns($left, $center, $right);
 };

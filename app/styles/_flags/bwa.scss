@@ -1,5 +1,23 @@
 // Botswana
 // http://www.crwflags.com/fotw/flags/bw.html
+// https://en.wikipedia.org/wiki/Flag_of_Botswana
 @mixin flag-bwa() {
   @include ratio(2 / 3);
+  $blue-color: #6CACE4;
+  $blue-height: 9 * $h24;
+  $white-color: #FFF;
+  $white-height: $h24;
+  $black-color: #000;
+  $black-height: 4 * $h24;
+
+  @include lines($blue-color,
+                 $blue-height,
+                 $white-color,
+                 $white-height,
+                 $black-color,
+                 $black-height,
+                 $white-color,
+                 $white-height,
+                 $blue-color,
+                 $blue-height)
 };

@@ -1,5 +1,11 @@
 // Romania
 // http://www.crwflags.com/fotw/flags/ro.html
+// https://en.wikipedia.org/wiki/Flag_of_Romania
 @mixin flag-rou() {
   @include ratio(2 / 3);
+  $left: #002B7F;
+  $center: #FCD116;
+  $right: #CE1126;
+
+  @include three-columns($left, $center, $right);
 };

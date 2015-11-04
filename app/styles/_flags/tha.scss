@@ -1,5 +1,24 @@
 // Thailand
 // http://www.crwflags.com/fotw/flags/th.html
+//
+// Note: This is the same as Costa Rica, but with red and blue reversed
 @mixin flag-tha() {
   @include ratio(2 / 3);
+  $red-color: #ED1C24;
+  $red-height: $h6;
+  $white-color: #FFF;
+  $white-height: $h6;
+  $blue-color: #241D4F;
+  $blue-height: $h3;
+
+  @include lines($red-color,
+                 $red-height,
+                 $white-color,
+                 $white-height,
+                 $blue-color,
+                 $blue-height,
+                 $white-color,
+                 $white-height,
+                 $red-color,
+                 $red-height);
 };

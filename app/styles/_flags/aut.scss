@@ -1,5 +1,12 @@
 // Austria
 // http://www.crwflags.com/fotw/flags/at.html
+// https://en.wikipedia.org/wiki/Flag_of_Austria
+// https://commons.wikimedia.org/wiki/File:Flag_of_Austria.svg
 @mixin flag-aut() {
   @include ratio(2 / 3);
+  $top: #ed2939;
+  $center: #FFF;;
+  $bottom: #ed2939;
+
+  @include three-lines($top, $center, $bottom);
 };

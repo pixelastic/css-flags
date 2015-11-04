@@ -1,5 +1,11 @@
 // France
 // http://www.crwflags.com/fotw/flags/fr.html
+// https://en.wikipedia.org/wiki/Flag_of_France
 @mixin flag-fra() {
   @include ratio(2 / 3);
+  $left: #002395;
+  $center: #FFF;
+  $right: #ED2939;
+
+  @include three-columns($left, $center, $right);
 };

@@ -1,5 +1,25 @@
 // Costa Rica
 // http://www.crwflags.com/fotw/flags/cr.html
+// https://en.wikipedia.org/wiki/Flag_of_Costa_Rica
+//
+// Note: This is the same as Thailand, but with red and blue reversed
 @mixin flag-cri() {
-  @include ratio(2 / 3);
+  @include ratio(3/5);
+  $blue-color: #002B7F;
+  $blue-height: $h6;
+  $white-color: #FFF;
+  $white-height: $h6;
+  $red-color: #CE1126;
+  $red-height: $h3;
+
+  @include lines($blue-color,
+                 $blue-height,
+                 $white-color,
+                 $white-height,
+                 $red-color,
+                 $red-height,
+                 $white-color,
+                 $white-height,
+                 $blue-color,
+                 $blue-height);
 };
