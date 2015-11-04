@@ -1,10 +1,10 @@
 // Normalize
-// @import '_vendors/normalize/normalize';
-// // Bourbon, Neat, Bitters
-// @import '_vendors/bourbon/bourbon';
-// @import 'grid-settings';
-// @import '_vendors/neat/neat';
-// @import '_vendors/base/base';
+@import '_vendors/normalize/normalize';
+// Bourbon, Neat, Bitters
+@import '_vendors/bourbon/bourbon';
+@import 'grid-settings';
+@import '_vendors/neat/neat';
+@import '_vendors/base/base';
 // 
 // // Flags
 @import '_helpers/helper';
@@ -18,6 +18,13 @@
 @import '_flags/swe';
 @import '_flags/dnk';
 @import '_flags/main';
+
+@import '_layout/variables';
+@import '_layout/layout';
+@import '_layout/objects';
+@import '_layout/header';
+@import '_layout/searchbar';
+@import '_layout/flaglist';
 
 
 // @import '_flags/functions';

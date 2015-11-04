@@ -1,0 +1,29 @@
+$searchbar-width: 550px;
+$searchbar-icon-width: 30px;
+$searchbar-input-width: $searchbar-width - $searchbar-icon-width;
+
+.c-searchbar {
+  display: none;
+  border-bottom: 3px solid blue;
+  float: right;
+  height: 30px;
+  margin-right: 150px;
+  margin-top: 20px;
+  width: $searchbar-width;
+  // I should not have to make this selector that precise, but Bourbon is adding
+  // very precise input selectors that I need to overwrite
+  .c-searchbar--input {
+    background: transparent;
+    border: transparent;
+    box-shadow: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: $searchbar-input-width;
+    &:focus {
+      border: 0;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
