@@ -1,5 +1,15 @@
 // Ghana
 // http://www.crwflags.com/fotw/flags/gh.html
+// https://en.wikipedia.org/wiki/Flag_of_Ghana
 @mixin flag-gha() {
   @include ratio(2 / 3);
+  $top: #CE1126;
+  $center: #FCD116;
+  $bottom: #006B3F;
+  $star: #000;
+
+  @include three-lines($top, $center, $bottom);
+  &:before {
+    @include centered-star($star);
+  }
 };

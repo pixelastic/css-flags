@@ -2,4 +2,16 @@
 // http://www.crwflags.com/fotw/flags/ma.html
 @mixin flag-mar() {
   @include ratio(2 / 3);
+  $bg: #C1272D;
+  $star-symbol: "⛤";
+  $star-color: #006233;
+  // Note: The char seems to be slightly misplaced to the top. We try to
+  // arrange that with magic numbers
+  $magic-negative-offset-top: 20px;
+
+  background-color: $bg;
+  &:before {
+    @include centered-symbol($star-symbol, $star-color);
+    line-height: $height - $magic-negative-offset-top;
+  }
 };
