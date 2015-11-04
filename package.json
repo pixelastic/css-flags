@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "brunch build",
-    "serve": "./scripts/serve",
+    "serve": "brunch watch",
     "postinstall": "./scripts/postinstall"
   },
   "devDependencies": {
