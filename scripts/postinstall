@@ -1,22 +1,21 @@
 #!/usr/bin/env bash
+base_dir=$(pwd)
 
-bower install
-cd ./app/css/vendors
+# Install Ruby dependencies
+bundle install
 
-echo "Installing bourbon"
-if ! which bourbon &>/dev/null; then
-  gem install bourbon
-fi
-bourbon install
+css_vendors=./app/styles/_vendors
+mkdir -p $css_vendors
 
-echo "Installing neat"
-if ! which neat &>/dev/null; then
-  gem install neat
-fi
-neat install
+# Init Bourbon, Neat and Bitters
+cd $css_vendors
+bundle exec bourbon install
+bundle exec neat install
+bundle exec bitters install
 
-echo "Installing bitters"
-if ! which bitters &>/dev/null; then
-  gem install bitters
-fi
-bitters install
+# Make normalize.css importable
+cd "$base_dir"
+
+mkdir -p $css_vendors/normalize && \
+cp ./node_modules/normalize.css/normalize.css $css_vendors/normalize/normalize.scss && \
+echo "Add normalize to scss vendors"

@@ -1,6 +1,5 @@
-/app/css/vendors
-/bower_components
-/dist
-/node_modules
-/tmp
-/vendors
+node_modules
+npm-debug.log
+tmp
+public
+app/styles/_vendors
