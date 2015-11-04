@@ -1,20 +1,21 @@
 // Norway
 // http://www.crwflags.com/fotw/flags/no.html
-$nor-bg: #ED2939;
-$nor-border-color: #FFF;
-$nor-inner-color: #002664;
-$nor-cross-width: 4 * $w22;
-$nor-inner-width: 2 * $w22;
-$nor-cross-offset: 6 * $w22;
 
 @mixin flag-nor() {
   @include ratio(16 / 22);
+  $bg: #ED2939;
+  $border-color: #FFF;
+  $inner-color: #002664;
+  $cross-width: 4 * $w22;
+  $inner-width: 2 * $w22;
+  $cross-offset: 6 * $w22;
+
   @include nordic-cross-border(
-    $nor-bg,
-    $nor-border-color,
-    $nor-inner-color,
-    $nor-cross-width,
-    $nor-inner-width,
-    $nor-cross-offset
+    $bg,
+    $border-color,
+    $inner-color,
+    $cross-width,
+    $inner-width,
+    $cross-offset
   );
 };

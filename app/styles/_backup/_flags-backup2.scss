@@ -496,22 +496,10 @@
 //   @include ratio(1/2);
 //   @include canton-union-jack();
 // };
-// // Faroe Islands
-// // http://www.crwflags.com/fotw/flags/fo.html
-// .c-flag__fro {
-//   @include ratio(16/22);
-//   @include nordic-cross-border(white, #0065BD, #ED2939, 4 * $w22, 2 * $w22, 6 * $w22);
-// }
 // // Fiji
 // .c-flag__fji {
 //   @include secondary();
 //   @include ratio(2/3);
-// };
-// // Finland
-// // http://www.crwflags.com/fotw/flags/fi.html
-// .c-flag__fin {
-//   @include ratio(11/18);
-//   @include nordic-cross(white, #003580, 3 * $w18, 5 * $w18);
 // };
 // // France
 // // http://en.wikipedia.org/wiki/Flag_of_France
@@ -654,12 +642,6 @@
 // .c-flag__hun {
 //   @include ratio(2/3);
 // };
-// // Iceland
-// // http://commons.wikimedia.org/wiki/File:Flag_of_Iceland_(with_dimensions).svg
-// .c-flag__isl {
-//   @include ratio(18/25);
-//   @include nordic-cross-border(#003897, white, #D72828, 4 * $w25, 2 * $w25, 7 * $w25);
-// }
 // // India
 // // ⚙
 // .c-flag__ind {
@@ -965,11 +947,6 @@
 // .c-flag__mnp {
 //   @include secondary();
 //   @include ratio(2/3);
-// };
-// // Norway
-// .c-flag__nor {
-//   @include ratio(16/22);
-//   @include nordic-cross-border(#ED2939, white, #002664, 4 * $w22, 2 * $w22, 6 * $w22);
 // };
 // // Oman
 // .c-flag__omn {

@@ -1,10 +1,11 @@
 // Denmark
 // http://www.crwflags.com/fotw/flags/dk.html
-$dnk-bg: #D81E05;
-$dnk-cross: #FFF;
-$dnk-cross-width: 4 * $w37;
-$dnk-cross-offset: 12 * $w37;
 @mixin flag-dnk() {
   @include ratio(28 / 37);
-  @include nordic-cross($dnk-bg, $dnk-cross, $dnk-cross-width, $dnk-cross-offset);
+  $bg: #D81E05;
+  $cross: #FFF;
+  $cross-width: 4 * $w37;
+  $cross-offset: 12 * $w37;
+
+  @include nordic-cross($bg, $cross, $cross-width, $cross-offset);
 };
