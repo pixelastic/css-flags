@@ -5,7 +5,7 @@ module.exports = config:
   plugins:
     sass:
       mode: 'ruby'
-      options: ['-r/home/tim/local/www/projects/css-flags/app/styles/_flags/sassmath.rb']
+      options: ['-r./app/styles/_helpers/geometry_helper.rb']
   server:
       run: yes
       port: 4001
