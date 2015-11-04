@@ -1,5 +1,11 @@
 // Finland
 // http://www.crwflags.com/fotw/flags/fi.html
+$fin-bg: #FFF;
+$fin-cross: #003580;
+$fin-cross-width: 3 * $w18;
+$fin-cross-offset: 5 * $w18;
+
 @mixin flag-fin() {
-  @include ratio(2 / 3);
+  @include ratio(11 / 18);
+  @include nordic-cross($fin-bg, $fin-cross, $fin-cross-width, $fin-cross-offset);
 };
