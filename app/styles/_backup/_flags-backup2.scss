@@ -4,10 +4,6 @@
 //   @include incomplete();
 //   @include three-columns(black, #BF0000, #009900);
 // };
-// Åland Islands
-.c-flag__ala {
-  @include flag-ala();
-};
 // // Albania
 // .c-flag__alb {
 //   @include ratio(5/7);

@@ -420,10 +420,6 @@
 // India
 .flag-ind {
 }
-// Indonesia
-.flag-idn {
-  @include rows-2(#CE1126, white);
-}
 // Iran, Islamic Republic of
 .flag-irn {
 }
@@ -596,10 +592,6 @@
 // Micronesia, Federated States of
 .flag-fsm {
 }
-// Monaco
-.flag-mco {
-  @include rows-2(#CE1126, white);
-}
 // Mongolia
 .flag-mng {
 }
@@ -712,10 +704,6 @@
 }
 // Pitcairn
 .flag-pcn {
-}
-// Poland
-.flag-pol {
-  @include rows-2(white, #DC143C);
 }
 // Portugal
 .flag-prt {
@@ -947,10 +935,6 @@
   &:before {
     @include circle($h3, white);
   }
-}
-// Ukraine
-.flag-ukr {
-  @include rows-2(#005BBB, #FFD500);
 }
 // United Arab Emirates
 .flag-are {

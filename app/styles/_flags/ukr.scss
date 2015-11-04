@@ -2,4 +2,8 @@
 // http://www.crwflags.com/fotw/flags/ua.html
 @mixin flag-ukr() {
   @include ratio(2 / 3);
+  $top: #005BBB;
+  $bottom: #FFD500;
+
+  @include two-lines($top, $bottom);
 };

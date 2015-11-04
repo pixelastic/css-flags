@@ -1,5 +1,14 @@
 // Monaco
 // http://www.crwflags.com/fotw/flags/mc.html
+// https://en.wikipedia.org/wiki/Flag_of_Monaco
+// https://upload.wikimedia.org/wikipedia/commons/e/ea/Flag_of_Monaco.svg
+//
+// Note: Except for the ratio, this is the exact same flag as Indonesia
+// Note: I used the color used in the SVG from the Wikipedia
 @mixin flag-mco() {
-  @include ratio(2 / 3);
+  @include ratio(4 / 5);
+  $top: #CE1126;
+  $bottom: #FFF;
+
+  @include two-lines($top, $bottom);
 };
