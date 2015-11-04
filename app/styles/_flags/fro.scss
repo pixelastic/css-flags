@@ -1,5 +1,20 @@
 // Faroe Islands
 // http://www.crwflags.com/fotw/flags/fo.html
+$fro-bg: #FFF;
+$fro-border-color: #0065BD;
+$fro-inner-color: #ED2939;
+$fro-cross-width: 4 * $w22;
+$fro-inner-width: 2 * $w22;
+$fro-cross-offset: 6 * $w22;
+
 @mixin flag-fro() {
-  @include ratio(2 / 3);
+  @include ratio(34 / 52);
+  @include nordic-cross-border(
+    $fro-bg,
+    $fro-border-color,
+    $fro-inner-color,
+    $fro-cross-width,
+    $fro-inner-width,
+    $fro-cross-offset
+  );
 };

@@ -1,5 +1,21 @@
 // Iceland
 // http://www.crwflags.com/fotw/flags/is.html
+// http://commons.wikimedia.org/wiki/File:Flag_of_Iceland_(with_dimensions).svg
+$isl-bg: #003897;
+$isl-border-color: #FFF;
+$isl-inner-color: #D72828;
+$isl-cross-width: 4 * $w25;
+$isl-inner-width: 2 * $w25;
+$isl-cross-offset: 7 * $w25;
+
 @mixin flag-isl() {
-  @include ratio(2 / 3);
+  @include ratio(18 / 25);
+  @include nordic-cross-border(
+    $isl-bg,
+    $isl-border-color,
+    $isl-inner-color,
+    $isl-cross-width,
+    $isl-inner-width,
+    $isl-cross-offset
+  );
 };
