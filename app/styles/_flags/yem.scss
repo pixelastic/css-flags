@@ -1,5 +1,14 @@
 // Yemen
 // http://www.crwflags.com/fotw/flags/ye.html
+// https://en.wikipedia.org/wiki/Flag_of_Yemen
+// https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Yemen.svg
+//
+// Note: I used the colors from the Wikipedia SVG
 @mixin flag-yem() {
   @include ratio(2 / 3);
+  $top: #CE1126;
+  $center: #FFF;
+  $bottom: #000;
+
+  @include three-lines($top, $center, $bottom);
 };

@@ -1,5 +1,14 @@
 // Hungary
 // http://www.crwflags.com/fotw/flags/hu.html
+// https://en.wikipedia.org/wiki/Flag_of_Hungary
+// https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg
+//
+// Note: I used colors from the Wikipedia SVG
 @mixin flag-hun() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $top: #CD2A3E;
+  $center: #FFF;
+  $bottom: #436F4D;
+
+  @include three-lines($top, $center, $bottom);
 };

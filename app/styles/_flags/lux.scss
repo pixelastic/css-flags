@@ -1,5 +1,13 @@
 // Luxembourg
 // http://www.crwflags.com/fotw/flags/lu.html
+// https://en.wikipedia.org/wiki/Flag_of_Luxembourg
+//
+// Note: I used the colors from the Wikipedia SVG
 @mixin flag-lux() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $top: #ed2939;
+  $center: #FFF;
+  $bottom: #00A1DE;
+
+  @include three-lines($top, $center, $bottom);
 };

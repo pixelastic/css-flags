@@ -1,5 +1,14 @@
 // Bolivia (Plurinational State of)
 // http://www.crwflags.com/fotw/flags/bo.html
+// https://en.wikipedia.org/wiki/Flag_of_Bolivia
+//
+// Incomplete: Is missing the Wiphala, the bird in the center of the flag
 @mixin flag-bol() {
-  @include ratio(2 / 3);
+  @include wip();
+  @include ratio(15 / 22);
+  $top: #D52B1E;
+  $center: #F9E300;
+  $bottom: #007934;
+
+  @include three-lines($top, $center, $bottom);
 };

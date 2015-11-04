@@ -1,5 +1,11 @@
 // Bulgaria
 // http://www.crwflags.com/fotw/flags/bg.html
+// https://en.wikipedia.org/wiki/Flag_of_Bulgaria
 @mixin flag-bgr() {
-  @include ratio(2 / 3);
+  @include ratio(3 / 5);
+  $top: #FFF;
+  $center: #00966E;
+  $bottom: #D62612;
+
+  @include three-lines($top, $center, $bottom);
 };

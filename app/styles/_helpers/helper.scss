@@ -63,3 +63,10 @@
   $w110:$width/110 !global;
 }
 
+// Mark some flags as incomplete
+@mixin wip() {
+  &:hover {
+    outline: 150px solid rgba(255, 206, 0, .8)
+  }
+}
+

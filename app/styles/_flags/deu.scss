@@ -1,5 +1,11 @@
 // Germany
 // http://www.crwflags.com/fotw/flags/de.html
+// https://en.wikipedia.org/wiki/Flag_of_Germany
 @mixin flag-deu() {
-  @include ratio(2 / 3);
+  @include ratio(3 / 5);
+  $top: #000;
+  $center: #FF0000;
+  $bottom: #FFCC00;
+
+  @include three-lines($top, $center, $bottom);
 };

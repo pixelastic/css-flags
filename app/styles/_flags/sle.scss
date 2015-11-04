@@ -1,5 +1,14 @@
 // Sierra Leone
 // http://www.crwflags.com/fotw/flags/sl.html
+// https://en.wikipedia.org/wiki/Flag_of_Sierra_Leone
+// https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Sierra_Leone.svg
+//
+// Note: I used the colors from the Wikipedia SVG
 @mixin flag-sle() {
   @include ratio(2 / 3);
+  $top: #1EB53A;
+  $center: #FFF;
+  $bottom: #0072C6;
+
+  @include three-lines($top, $center, $bottom);
 };

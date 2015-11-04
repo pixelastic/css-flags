@@ -1,5 +1,10 @@
 // Lithuania
 // http://www.crwflags.com/fotw/flags/lt.html
 @mixin flag-ltu() {
-  @include ratio(2 / 3);
+  @include ratio(3 / 5);
+  $top: #fdb913;
+  $center: #006a44;
+  $bottom: #c1272d;
+
+  @include three-lines($top, $center, $bottom);
 };
