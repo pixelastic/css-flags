@@ -1,15 +1,17 @@
-// Default flag dimensions, 2:3 ratio
-$width:220px;
-$height:round($width * 2/3);
+// Default flag dimensions, 2: 3 ratio
+$width: 220px;
+$height: round($width * 2 / 3);
 @include set-syntactic-sugar($width, $height);
 
 // Special UTF-8
-$UTF8_MAPLE_LEAF:"\1F341";
-$UTF8_BLACK_STAR:"\2605";
-$UTF8_COUNTRY_ALB:"\e600";
-$UTF8_COUNTRY_AGO:"\e601";
+$UTF8_MAPLE_LEAF: '\1F341';
+$UTF8_BLACK_STAR: '\2605';
+$UTF8_COUNTRY_ALB: '\e600';
+$UTF8_COUNTRY_AGO: '\e601';
 
 // Colors
-$COLOR_UK_BLUE:#002664;
-$COLOR_UK_RED:#C60C30;
+$COLOR_UK_BLUE: #002664;
+$COLOR_UK_RED: #C60C30;
 
+// Z_index
+$ZINDEX_HEADER: 100;

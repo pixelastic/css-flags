@@ -6,13 +6,13 @@
 @import 'vendors/neat/neat';
 @import 'vendors/base/base';
 
-// App 
-@import '_layout';
- 
 // Flags
-@import 'flags/_functions';
-@import 'flags/_helpers';
-@import 'flags/_variables';
-@import 'flags/_mixins';
-@import 'flags/_fonts';
-@import 'flags/_flags';
+@import 'flags/functions';
+@import 'flags/helpers';
+@import 'flags/variables';
+@import 'flags/mixins';
+@import 'flags/fonts';
+@import 'flags/flags';
+
+// App
+@import 'layout';
