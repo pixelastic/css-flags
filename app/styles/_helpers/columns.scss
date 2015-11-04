@@ -1,0 +1,40 @@
+// Two columns of equal width
+// @args left: Color of left column
+// @args right: Color of right column
+@mixin two-columns($left, $right) {
+  @include columns($left, $w2, $right, $w2);
+}
+
+// Three columns of equal width
+// @args left: Color of left column
+// @args center: Color of center column
+// @args right: Color of right column
+@mixin three-columns($left, $center, $right) {
+  @include columns($left, $w3, $center, $w3, $right, $w3);
+}
+
+// Create several columns of various width and colors
+// @args[0]: Color of the first column
+// @args[1]: Width of the first column
+// @args[2]: Color of the second column
+// @args[3]: Width of the second column
+// ...
+// @args[(n-1)*2]: Color of the nth column
+// @args[(n-1)*2 + 1]: Width of the nth column
+@mixin columns($args...) {
+  // Default values
+  $_offset:0;
+  $_color:transparent;
+  $_result: ();
+
+  @for $_i from 1 to length($args) + 1 {
+    // Only interested in even numbers
+    @if ($_i % 2 == 0) {
+      $_color: nth($args, $_i - 1);
+      $_width: nth($args, $_i);
+      $_result: append($_result, v-stripe($_color, $_width, $_offset), comma);
+      $_offset: $_offset + $_width;
+    }
+  }
+  background-image: $_result;
+}

@@ -1,0 +1,30 @@
+// Creates a Nordic Cross with two colors
+// Eg. Denmark or Sweden
+// @args background-color: Main background color
+// @args cross-color: Main cross color
+// @args cross-width: Width of the cross
+// @args cross-offset: Distance from the left border
+// Note: Even if they look alike, not all Nordic cross put the vertical bar of
+// the cross at the same offset
+@mixin nordic-cross($background-color, $cross-color, $cross-width, $cross-offset) {
+  background-color: $background-color;
+  background-image: h-stripe($cross-color, $cross-width, ($height - $cross-width) / 2),
+                    v-stripe($cross-color, $cross-width, $cross-offset);
+}
+
+// Creates a Nordic Cross with borders
+// Eg. Finland or Norway
+// @args background-color: Main background color
+// @args border-color: Color of the cross borders
+// @args inner-color: Color of the inside of the cross
+// @args cross-width: Total width of the cross
+// @args inner-width: Inner width of the cross
+// @args cross-offset: Distance from the left border
+@mixin nordic-cross-border($background-color, $border-color, $inner-color, $cross-width, $inner-width, $cross-offset) {
+  background-color: $background-color;
+  background-image: h-stripe($inner-color, $inner-width, ($height - $inner-width) / 2),
+                    v-stripe($inner-color, $inner-width, $cross-offset),
+                    h-stripe($border-color, $cross-width, ($height - $cross-width) / 2),
+                    v-stripe($border-color, $cross-width, $cross-offset - ($cross-width - $inner-width) / 2);
+}
+

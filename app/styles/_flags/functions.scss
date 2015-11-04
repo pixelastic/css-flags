@@ -1,33 +1,3 @@
-/**
- * Stripes
- *
- * Stripes are the base element of most of the flags. 
- * We'll display them using background-image and linear-gradient.
- **/
-// Stripe
-@function stripe($angle, $color, $size, $distance) {
-  @return linear-gradient($angle, 
-                          transparent, transparent $distance,
-                          $color $distance, $color ($distance + $size),
-                          transparent ($distance + $size), transparent 100%
-                          );
-}
-// Horizontal stripe (from left to right)
-@function h-stripe($color, $height, $top) {
-  @return stripe(180deg, $color, $height, $top);
-}
-
-// Vertical stripe (from top to bottom)
-@function v-stripe($color, $width, $left) {
-  @return stripe(90deg, $color, $width, $left);
-}
-
-// Circle
-// Note: We add 1px to help in the aliasing
-@function circle($color, $size, $left, $top) {
-  @return radial-gradient($left $top, circle, $color $size, transparent ($size+1px)),
-}
-
 // TOA
 @function toa($O, $A) {
   @return atan(_($O) / _($A))

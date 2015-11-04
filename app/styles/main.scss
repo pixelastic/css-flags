@@ -7,12 +7,24 @@
 // @import '_vendors/base/base';
 // 
 // // Flags
-@import '_flags/functions';
-@import '_flags/helpers';
-@import '_flags/variables';
-@import '_flags/mixins';
-@import '_flags/fonts';
-@import '_flags/flags';
+@import '_helpers/helper';
+@import '_helpers/variables';
+@import '_helpers/stripes';
+@import '_helpers/lines';
+@import '_helpers/columns';
+
+@import '_helpers/nordic_cross';
+
+@import '_flags/swe';
+@import '_flags/dnk';
+@import '_flags/main';
+
+
+// @import '_flags/functions';
+// @import '_flags/helpers';
+// @import '_flags/mixins';
+// @import '_flags/fonts';
+// @import '_flags/flags';
 // 
 // // App
 // // @import 'layout';

@@ -1,0 +1,11 @@
+// Sweden
+// http://www.crwflags.com/fotw/flags/se.html
+$swe-bg: #006AA7;
+$swe-cross: #FECC00;
+$swe-cross-width: 2 * $w16;
+$swe-cross-offset: 5 * $w16;
+
+@mixin flag-swe() {
+  @include ratio(10 / 16);
+  @include nordic-cross($swe-bg, $swe-cross, $swe-cross-width, $swe-cross-offset);
+};

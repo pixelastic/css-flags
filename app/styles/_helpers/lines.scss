@@ -1,0 +1,41 @@
+// Two lines of equal height
+// @args top: Color of top line
+// @args bottom: Color of bottom line
+@mixin two-lines($top, $bottom) {
+  @include lines($top, $h2, $bottom, $h2);
+}
+
+// Three lines of equal height
+// @args top: Color of top line
+// @args center: Color of center line
+// @args bottom: Color of bottom line
+@mixin three-lines($top, $center, $bottom) {
+  @include lines($top, $h3, $center, $h3, $bottom, $h3);
+}
+
+// Create several lines of various height and colors
+// @args[0]: Color of the first line
+// @args[1]: Height of the first line
+// @args[2]: Color of the second line
+// @args[3]: Height of the second line
+// ...
+// @args[(n-1)*2]: Color of the nth line
+// @args[(n-1)*2 + 1]: Width of the nth line
+@mixin lines($args...) {
+  // Default values
+  $_offset:0;
+  $_color:transparent;
+  $_result: ();
+
+  @for $_i from 1 to length($args) + 1 {
+    // Only interested in even numbers
+    @if ($_i % 2 == 0) {
+      $_color: nth($args, $_i - 1);
+      $_height: nth($args, $_i);
+      $_result: append($_result, h-stripe($_color, $_height, $_offset), comma);
+      $_offset: $_offset + $_height;
+    }
+  }
+  background-image: $_result;
+}
+

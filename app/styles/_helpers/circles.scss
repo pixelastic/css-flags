@@ -1,0 +1,13 @@
+// Draw a circle
+// @args color: Color to fill the circle
+// @args size: Radius of the circle
+// @args left: Distance from left of flag
+// @args top: Distance from top of flag
+@function circle($color, $size, $left, $top) {
+  // Note: We add 1px to help in the aliasing
+  @return radial-gradient($left $top,
+                          circle,
+                          $color $size,
+                          transparent ($size + 1px)
+                        )
+}
