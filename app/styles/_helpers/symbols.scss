@@ -11,11 +11,8 @@
 // @args size: Size of the symbol
 @mixin centered-symbol($symbol, $color, $size:$h3) {
   @include symbol($symbol, $color, $size);
-  display:block;
-  height:$height;
-  width:$width;
-  line-height:$height;
-  text-align:center;
+  top: (($height - $size) / 2);
+  left: (($width - $size) / 2);
 }
 
 // Symbol
@@ -23,11 +20,14 @@
 // @args color: Color of the symbol
 // @args size: Size of the symbol
 @mixin symbol($symbol, $color, $size) {
-  content:$symbol;
   color:$color;
-  position:absolute;
+  content:$symbol;
   font-family: Symbols;
-  font-size:$size;
+  font-size: $size;
+  height: $size;
+  line-height: $size;
+  position:absolute;
+  width: $size;
 }
 
 // Star
@@ -35,9 +35,5 @@
 // @args size: Size of the symbol
 @mixin star($color, $size:$h3) {
   @include symbol($UTF8_BLACK_STAR, $color, $size);
-  font-size: $size;
-  line-height: $size;
-  height: $size;
-  // overflow:hidden;
 }
 

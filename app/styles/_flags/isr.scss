@@ -1,5 +1,30 @@
 // Israel
 // http://www.crwflags.com/fotw/flags/il.html
+// http://www.vexilla-mundi.com/israel_flag.html
 @mixin flag-isr() {
-  @include ratio(2 / 3);
+  @include ratio(8 / 11);
+  $unit: $h32;
+  $border-color: #FFF;
+  $border-height: 3 * $unit;
+  $blue-color: #0038b8;
+  $blue-height: 5 * $unit;
+  $center-color: #FFF;
+  $center-height: 16 * $unit;
+  $star-symbol: $UTF8_STAR_OF_DAVID;
+  $star-color: $blue-color;
+  $star-size: 14 * $unit;
+
+  @include lines($border-color,
+                 $border-height,
+                 $blue-color,
+                 $blue-height,
+                 $center-color,
+                 $center-height,
+                 $blue-color,
+                 $blue-height,
+                 $border-color,
+                 $border-height);
+  &:before {
+    @include centered-symbol($star-symbol, $star-color, $star-size);
+  }
 };

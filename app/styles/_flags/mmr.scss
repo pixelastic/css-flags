@@ -1,16 +1,18 @@
 // Myanmar
 // http://www.crwflags.com/fotw/flags/mm.html
+// http://www.vexilla-mundi.com/myanmar_flag.html
 @mixin flag-mmr() {
   @include ratio(2 / 3);
+  $unit: $h12;
   $top: #FECB00;
   $center: #34B233;
   $bottom: #EA2839;
   $star: #FFF;
-  $star-size: 2 * $h3;
+  $star-size: 8 * $unit;
+
 
   @include three-lines($top, $center, $bottom);
   &:before {
-    @include centered-star($star);
-    font-size: $star-size;
+    @include centered-star($star, $star-size);
   }
 };

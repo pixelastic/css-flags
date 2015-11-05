@@ -2,4 +2,14 @@
 // http://www.crwflags.com/fotw/flags/bf.html
 @mixin flag-bfa() {
   @include ratio(2 / 3);
+  $unit: $h12;
+  $top: #EF3340;
+  $bottom: #009639;
+  $star: #FFCD00;
+  $star-size: 4 * $h12;
+
+  @include two-lines($top, $bottom);
+  &:before {
+    @include centered-star($star, $star-size);
+  }
 };

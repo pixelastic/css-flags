@@ -1,15 +1,16 @@
 // Viet Nam
 // http://www.crwflags.com/fotw/flags/vn.html
 // https://en.wikipedia.org/wiki/Flag_of_Vietnam
+// http://www.vexilla-mundi.com/vietnam_flag.html
 @mixin flag-vnm() {
   @include ratio(2 / 3);
+  $unit: $h20;
   $bg: #E21C1C;
   $star: #FFFF00;
-  $star-size: 2 * $w5;
+  $star-size: 12 * $unit;
 
   background-color: $bg;
   &:before {
-    @include centered-star($star);
-    font-size: 13 * $h27;
+    @include centered-star($star, $star-size);
   }
 };
