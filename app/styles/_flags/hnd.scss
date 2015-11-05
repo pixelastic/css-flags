@@ -1,5 +1,26 @@
 // Honduras
 // http://www.crwflags.com/fotw/flags/hn.html
+// https://en.wikipedia.org/wiki/Flag_of_Honduras
+// https://flagspot.net/flags/hn.html
 @mixin flag-hnd() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h36;
+  $top: #0073CF;
+  $center: #FFF;;
+  $bottom: #0073CF;
+  $star: #0073CF;
+  $star-size: 4 * $unit;
+  $top-offset-top: 16 * $unit;
+  $top-offset-left: 34 * $unit;
+
+  @include three-lines($top, $center, $bottom);
+  &:before {
+    @include star($star, $star-size);
+    top: $top-offset-top;
+    left: $top-offset-left;
+    text-shadow:(12 * $unit) (3 * $unit) 0px $star,
+                (12 * $unit) (-3 * $unit) 0px $star,
+                (-12 * $unit) (3 * $unit) 0px $star,
+                (-12 * $unit) (-3 * $unit) 0px $star;
+  }
 };

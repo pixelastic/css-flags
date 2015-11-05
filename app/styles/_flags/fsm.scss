@@ -18,8 +18,8 @@
     @include star($star, $star-size);
     top: $top-offset-top;
     left: $top-offset-left;
-    text-shadow:(-6 * $unit) (6 * $unit) 0px white,
-                (6 * $unit) (6 * $unit) 0px white,
-                (0) (12 * $unit) 0px white;
+    text-shadow:(-6 * $unit) (6 * $unit) 0px $star,
+                (6 * $unit) (6 * $unit) 0px $star,
+                (0) (12 * $unit) 0px $star;
   }
 };
