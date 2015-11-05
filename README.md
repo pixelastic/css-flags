@@ -4,7 +4,7 @@
 
 ```sh
 npm install
-npm run install-dependencies
+npm run serve
 ```
 
 ## Sources

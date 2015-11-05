@@ -2,4 +2,15 @@
 // http://www.crwflags.com/fotw/flags/mm.html
 @mixin flag-mmr() {
   @include ratio(2 / 3);
+  $top: #FECB00;
+  $center: #34B233;
+  $bottom: #EA2839;
+  $star: #FFF;
+  $star-size: 2 * $h3;
+
+  @include three-lines($top, $center, $bottom);
+  &:before {
+    @include centered-star($star);
+    font-size: $star-size;
+  }
 };

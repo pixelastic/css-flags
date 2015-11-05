@@ -1,5 +1,15 @@
 // Somalia
 // http://www.crwflags.com/fotw/flags/so.html
+// https://commons.wikimedia.org/wiki/File:Flag_of_Somalia_(construction).jpg
 @mixin flag-som() {
   @include ratio(2 / 3);
+  $bg: #4189DD;
+  $star: #FFF;
+  $star-size: 13 * $h27;
+
+  background-color: $bg;
+  &:before {
+    @include centered-star($star);
+    font-size: 13 * $h27;
+  }
 };

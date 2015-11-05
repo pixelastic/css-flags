@@ -1,5 +1,25 @@
 // Micronesia (Federated States of)
 // http://www.crwflags.com/fotw/flags/fm.html
+// https://en.wikipedia.org/wiki/Flag_of_the_Federated_States_of_Micronesia
+// http://www.vexilla-mundi.com/micronesia_flag.html
+//
+// Note: On the real flag, stars are slightly rotated
 @mixin flag-fsm() {
-  @include ratio(2 / 3);
+  @include ratio(10 / 19);
+  $unit: $h20;
+  $bg: #75B2DD;
+  $star: #FFF;
+  $star-size: 4 * $unit;
+  $top-offset-top: 2 * $unit;
+  $top-offset-left: 17 * $unit;
+
+  background-color: $bg;
+  &:before {
+    @include star($star, $star-size);
+    top: $top-offset-top;
+    left: $top-offset-left;
+    text-shadow:(-6 * $unit) (6 * $unit) 0px white,
+                (6 * $unit) (6 * $unit) 0px white,
+                (0) (12 * $unit) 0px white;
+  }
 };

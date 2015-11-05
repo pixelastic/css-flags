@@ -30,3 +30,14 @@
   font-size:$size;
 }
 
+// Star
+// @args color: Color of the symbol
+// @args size: Size of the symbol
+@mixin star($color, $size:$h3) {
+  @include symbol($UTF8_BLACK_STAR, $color, $size);
+  font-size: $size;
+  line-height: $size;
+  height: $size;
+  // overflow:hidden;
+}
+

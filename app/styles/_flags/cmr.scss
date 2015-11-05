@@ -1,5 +1,16 @@
 // Cameroon
 // http://www.crwflags.com/fotw/flags/cm.html
+// http://en.wikipedia.org/wiki/Flag_of_Cameroon
+// Note: There is no official information on the size of the star
 @mixin flag-cmr() {
   @include ratio(2 / 3);
+  $left: #007A5E;
+  $center: #CE1126;
+  $right: #FCD116;
+  $star: $right;
+
+  @include three-columns($left, $center, $right);
+  &:before {
+    @include centered-star($star);
+  }
 };
