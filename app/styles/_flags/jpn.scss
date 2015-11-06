@@ -1,5 +1,13 @@
 // Japan
 // http://www.crwflags.com/fotw/flags/jp.html
+// http://www.vexilla-mundi.com/japan_flag.html
 @mixin flag-jpn() {
   @include ratio(2 / 3);
+  $unit: $h20;
+  $bg: #FFF;
+  $circle: #BC002D;
+  $circle-size: 12 * $unit;
+  
+  background-color: $bg;
+  @include centered-circle($circle, $circle-size);
 };

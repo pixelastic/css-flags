@@ -1,5 +1,16 @@
 // Bangladesh
 // http://www.crwflags.com/fotw/flags/bd.html
+// https://en.wikipedia.org/wiki/Flag_of_Bangladesh
+// http://www.vexilla-mundi.com/bangladesh_flag.html
 @mixin flag-bgd() {
-  @include ratio(2 / 3);
+  @include ratio(3 / 5);
+  $unit: $h12;
+  $bg: #01796F;
+  $circle: #E11837;
+  $circle-size: 8 * $unit;
+  $circle-offset-left: 9 * $unit;
+  $circle-offset-top: $h2;
+  
+  background-color: $bg;
+  @include circle($circle, $circle-size, $circle-offset-left, $circle-offset-top);
 };
