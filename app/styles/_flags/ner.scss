@@ -1,5 +1,15 @@
 // Niger
 // http://www.crwflags.com/fotw/flags/ne.html
+// http://www.vexilla-mundi.com/niger_flag.html
 @mixin flag-ner() {
-  @include ratio(2 / 3);
+  @include ratio(6 / 7);
+  $unit: $h12;
+  $top: #E05206;
+  $center: #FFF;
+  $bottom: #0DB02B;
+  $circle-color: $top;
+  $circle-size: 2 * $unit;
+
+  background-image: centered-circle($circle-color, $circle-size),
+                    three-lines($top, $center, $bottom);
 };

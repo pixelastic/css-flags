@@ -1,5 +1,39 @@
 // Korea (Democratic People's Republic of)
 // http://www.crwflags.com/fotw/flags/kp.html
+// http://www.vexilla-mundi.com/north_korea_flag.html
 @mixin flag-prk() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h144;
+  $blue-color: #024FA2;
+  $blue-height: 24 * $unit;
+  $white-color: #FFF;
+  $white-height: 4 * $unit;
+  $red-color: #ED1C27;
+  $red-height: 88 * $unit;
+  $circle-color: $white-color;
+  $circle-size: 64 * $unit;
+  $offset-left-circle: 96 * $unit;
+  $offset-top-circle: 72 * $unit;
+  // Note: As we're playing with really small fractions of a flag here ($h144!)
+  // I had to adjust the position of the star slightly to compensate for the
+  // rounding errors
+  $star-color: $red-color;
+  $star-size: 58 * $unit;
+  $offset-left-star: 94 * $unit;
+  $offset-top-star: 70 * $unit;
+
+  background-image: circle($circle-color, $circle-size, $offset-left-circle, $offset-top-circle),
+                    lines($blue-color,
+                          $blue-height,
+                          $white-color,
+                          $white-height,
+                          $red-color,
+                          $red-height,
+                          $white-color,
+                          $white-height,
+                          $blue-color,
+                          $blue-height);
+  &:before {
+    @include star($star-color, $star-size, $offset-left-star, $offset-top-star);
+  }
 };

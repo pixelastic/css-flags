@@ -1,25 +1,10 @@
-// Centered star
-// @args color: Color of the star
-// @args size: Size of the star (default to 1/3 of height)
-@mixin centered-star($color, $size:$h3) {
-  @include centered-symbol($UTF8_BLACK_STAR, $color, $size);
-}
-
-// Centered symbol
-// @args symbol: UTF-8 char to center
-// @args color: Color of the symbol
-// @args size: Size of the symbol
-@mixin centered-symbol($symbol, $color, $size:$h3) {
-  @include symbol($symbol, $color, $size);
-  top: (($height - $size) / 2);
-  left: (($width - $size) / 2);
-}
-
 // Symbol
 // @args symbol: UTF-8 char to center
 // @args color: Color of the symbol
 // @args size: Size of the symbol
-@mixin symbol($symbol, $color, $size) {
+// @args left: Left offset for center of symbol
+// @args top: Top offset for center of symbol
+@mixin symbol($symbol, $color, $size, $left:0, $top:0) {
   color:$color;
   content:$symbol;
   font-family: Symbols;
@@ -28,12 +13,25 @@
   line-height: $size;
   position:absolute;
   width: $size;
+  top: $top - $size / 2;
+  left: $left - $size / 2;
 }
-
+// Centered symbol
+// @args symbol: UTF-8 char to center
+// @args color: Color of the symbol
+// @args size: Size of the symbol
+@mixin centered-symbol($symbol, $color, $size:$h3) {
+  @include symbol($symbol, $color, $size, $w2, $h2);
+}
 // Star
 // @args color: Color of the symbol
 // @args size: Size of the symbol
-@mixin star($color, $size:$h3) {
-  @include symbol($UTF8_BLACK_STAR, $color, $size);
+@mixin star($color, $size:$h3, $left:0, $top:0) {
+  @include symbol($UTF8_BLACK_STAR, $color, $size, $left, $top);
 }
-
+// Centered star
+// @args color: Color of the star
+// @args size: Size of the star (default to 1/3 of height)
+@mixin centered-star($color, $size:$h3) {
+  @include centered-symbol($UTF8_BLACK_STAR, $color, $size);
+}

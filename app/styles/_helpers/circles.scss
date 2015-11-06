@@ -1,4 +1,4 @@
-// Returns the radial-gradient to Draw a circle
+// Returns the radial-gradient to draw a circle
 // @args color: Color to fill the circle
 // @args size: Diameter of the circle
 // @args left: Distance from left of flag
@@ -11,6 +11,9 @@
                           transparent ($radius + 1)
                         );
 }
+@mixin circle($color, $size, $left, $top) {
+  background-image: circle($color, $size, $left, $top);
+}
 
 // Returns the radial-gradient to centered circle
 // @args color: Color to fill the circle
@@ -18,22 +21,6 @@
 @function centered-circle($color, $size) {
   @return circle($color, $size, $w2, $h2);
 }
-
-
-
-
-// Draw a circle
-// @args color: Color to fill the circle
-// @args size: Diameter of the circle
-// @args left: Distance from left of flag
-// @args top: Distance from top of flag
-@mixin circle($color, $size, $left, $top) {
-  background-image: circle($color, $size, $left, $top);
-}
-// Draw a centered circle
-// @args color: Color to fill the circle
-// @args size: Diameter of the circle
 @mixin centered-circle($color, $size) {
  background-image: centered-circle($color, $size);
 }
-

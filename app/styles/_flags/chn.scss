@@ -6,22 +6,18 @@
   $bg: #de2910;
   $star: #FDDA24;
   $star-size: 6 * $unit;
-  $star-offset-top: 2 * $unit;
-  $star-offset-left: 2 * $unit;
+  $star-offset-top: 5 * $unit;
+  $star-offset-left: 5 * $unit;
   $star-size-small: 2 * $unit;
-  $star-offset-top-small: 1 * $unit;
-  $star-offset-left-small: 9 * $unit;
+  $star-offset-top-small: 2 * $unit;
+  $star-offset-left-small: 10 * $unit;
 
   background-color: $bg;
   &:before {
-    @include star($star, $star-size);
-    top: $star-offset-top;
-    left: $star-offset-left;
+    @include star($star, $star-size, $star-offset-left, $star-offset-top);
   }
   &:after {
-    @include star($star, $star-size-small);
-    top: $star-offset-top-small;
-    left: $star-offset-left-small;
+    @include star($star, $star-size-small, $star-offset-left-small, $star-offset-top-small);
     text-shadow:(2 * $unit) (2 * $unit) 0px $star,
                 (2 * $unit) (5 * $unit) 0px $star,
                 (0) (7 * $unit) 0px $star;

@@ -1,40 +1,50 @@
-// Two columns of equal width
-// @args left: Color of left column
-// @args right: Color of right column
-@mixin two-columns($left, $right) {
-  @include columns($left, $w2, $right, $w2);
-}
-
-// Three columns of equal width
-// @args left: Color of left column
-// @args center: Color of center column
-// @args right: Color of right column
-@mixin three-columns($left, $center, $right) {
-  @include columns($left, $w3, $center, $w3, $right, $w3);
-}
-
-// Create several columns of various width and colors
+// Create several columns of various width
 // @args[0]: Color of the first column
-// @args[1]: Width of the first column
+// @args[1]: width of the first column
 // @args[2]: Color of the second column
-// @args[3]: Width of the second column
+// @args[3]: width of the second column
 // ...
 // @args[(n-1)*2]: Color of the nth column
 // @args[(n-1)*2 + 1]: Width of the nth column
-@mixin columns($args...) {
+@function columns($args...) {
   // Default values
-  $_offset:0;
-  $_color:transparent;
-  $_result: ();
+  $offset:0;
+  $color:transparent;
+  $result: ();
 
-  @for $_i from 1 to length($args) + 1 {
+  @for $i from 1 to length($args) + 1 {
     // Only interested in even numbers
-    @if ($_i % 2 == 0) {
-      $_color: nth($args, $_i - 1);
-      $_width: nth($args, $_i);
-      $_result: append($_result, v-stripe($_color, $_width, $_offset), comma);
-      $_offset: $_offset + $_width;
+    @if ($i % 2 == 0) {
+      $color: nth($args, $i - 1);
+      $width: nth($args, $i);
+      $result: append($result, v-stripe($color, $width, $offset), comma);
+      $offset: $offset + $width;
     }
   }
-  background-image: $_result;
+  @return $result;
+}
+@mixin columns($args...) {
+  background-image: columns($args...);
+}
+
+
+// Two columns of equal width
+// @args top: Color of top column
+// @args bottom: Color of bottom column
+@function two-columns($top, $bottom) {
+  @return columns($top, $w2, $bottom, $w2);
+}
+@mixin two-columns($top, $bottom) {
+  background-image: two-columns($top, $bottom);
+}
+
+// Three columns of equal width
+// @args top: Color of top column
+// @args center: Color of center column
+// @args bottom: Color of bottom column
+@function three-columns($top, $center, $bottom) {
+  @return columns($top, $w3, $center, $w3, $bottom, $w3);
+}
+@mixin three-columns($top, $center, $bottom) {
+  background-image: three-columns($top, $center, $bottom);
 }

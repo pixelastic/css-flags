@@ -1,5 +1,22 @@
 // Lao People's Democratic Republic
 // http://www.crwflags.com/fotw/flags/la.html
+// https://en.wikipedia.org/wiki/Flag_of_Laos
+// http://www.vexilla-mundi.com/laos_flag.html
 @mixin flag-lao() {
   @include ratio(2 / 3);
+  $unit: $h20;
+  $border-color: #CE1126;
+  $border-height: 5 * $unit;
+  $center-color: #002869;
+  $center-height: 10 * $unit;
+  $circle-color: #FFF;
+  $circle-size: 8 * $unit;
+
+  background-image: centered-circle($circle-color, $circle-size),
+                    lines($border-color,
+                          $border-height,
+                          $center-color,
+                          $center-height,
+                          $border-color,
+                          $border-height);
 };
