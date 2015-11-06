@@ -2,4 +2,28 @@
 // http://www.crwflags.com/fotw/flags/cn.html
 @mixin flag-chn() {
   @include ratio(2 / 3);
+  $unit: $h20;
+  $bg: #de2910;
+  $star: #FDDA24;
+  $star-size: 6 * $unit;
+  $star-offset-top: 2 * $unit;
+  $star-offset-left: 2 * $unit;
+  $star-size-small: 2 * $unit;
+  $star-offset-top-small: 1 * $unit;
+  $star-offset-left-small: 9 * $unit;
+
+  background-color: $bg;
+  &:before {
+    @include star($star, $star-size);
+    top: $star-offset-top;
+    left: $star-offset-left;
+  }
+  &:after {
+    @include star($star, $star-size-small);
+    top: $star-offset-top-small;
+    left: $star-offset-left-small;
+    text-shadow:(2 * $unit) (2 * $unit) 0px $star,
+                (2 * $unit) (5 * $unit) 0px $star,
+                (0) (7 * $unit) 0px $star;
+  }
 };
