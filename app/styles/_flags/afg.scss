@@ -2,4 +2,18 @@
 // http://www.crwflags.com/fotw/flags/af.html
 @mixin flag-afg() {
   @include ratio(2 / 3);
+  $unit: $h144;
+  $left: #000;
+  $center: #BF0000;
+  $right: #009900;
+  $symbol: $UTF8_COUNTRY_AFG;
+  $symbol-color: #FFF;
+  // Note: Technically, the width and height of the symbol are slighly different
+  // I chose to use the same, though
+  $symbol-size: 84 * $unit;
+
+  @include three-columns($left, $center, $right);
+  &:before {
+    @include centered-symbol($symbol, $symbol-color, $symbol-size);
+  }
 };
