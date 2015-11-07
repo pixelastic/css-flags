@@ -1,5 +1,50 @@
 // Algeria
 // http://www.crwflags.com/fotw/flags/dz.html
+// http://www.vexilla-mundi.com/algeria_flag.html
 @mixin flag-dza() {
   @include ratio(2 / 3);
+  $unit: $h120;
+  $left: #006233;
+  $right: #FFF;
+  $crescent-back-color: #d21034;
+  $crescent-back-size: 60 * $unit;
+
+  $crescent-front-size: 48 * $unit;
+  $crescent-front-left-color: $left;
+  $crescent-front-left-size: 17 * $unit;
+  $crescent-front-right-color: $right;
+  // We slightly make it bigger than on the construction sheet to really create
+  // a crescent effect
+  $crescent-front-right-size: 33 * $unit; 
+  $crescent-front-top: 60 * $unit;
+  $crescent-front-left: 97 * $unit;
+
+  $star-color: $crescent-back-color;
+  $star-size: 30 * $unit;
+  $star-left: 103 * $unit;
+  $star-top: 60 * $unit;
+
+  background-image: 
+                    centered-circle($crescent-back-color, $crescent-back-size),
+                    two-columns($left, $right);
+  
+  // We're doing a bicolor circle using borders, and putting it on top of the
+  // red circle in background
+  &:before {
+    content: "";
+    height: $crescent-front-size;
+    width:0;
+    border-top: none;
+    border-bottom: none;
+    border-left: $crescent-front-left-size solid $crescent-front-left-color;
+    border-right: $crescent-front-right-size solid $crescent-front-right-color;
+    position:absolute;
+    top: $crescent-front-top - $crescent-front-size / 2;
+    left: $crescent-front-left - $crescent-front-size / 2;
+    border-radius: 50%;
+  }
+  &:after {
+    @include star($star-color, $star-size, $star-left, $star-top);
+    transform: rotate(90deg);
+  }
 };
