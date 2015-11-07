@@ -33,6 +33,11 @@ $card-image-hover-color: gainsboro;
   position: relative;
 }
 
+// Flags that I cannot do right now
+.c-flaglist--item__hard {
+  display: none;
+}
+
 .c-flaglist--showcase {
   display: table;
   width: 100%;
