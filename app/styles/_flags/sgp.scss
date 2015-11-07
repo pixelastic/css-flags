@@ -1,5 +1,48 @@
 // Singapore
 // http://www.crwflags.com/fotw/flags/sg.html
+// http://www.vexilla-mundi.com/singapore_flag.html
+// https://en.wikipedia.org/wiki/Pentagon
 @mixin flag-sgp() {
   @include ratio(2 / 3);
+  $unit: $h2880;
+  $top: #ed2939;
+  $bottom: #FFF;
+  $crescent-front-color: $top;
+  $crescent-front-size: 1160 * $unit;
+  $crescent-front-left: 1200 * $unit;
+  $crescent-front-top: 720 * $unit;
+  $crescent-back-color: $bottom;
+  $crescent-back-size: 1060 * $unit;
+  $crescent-back-left: 910 * $unit;
+  $crescent-back-top: 720 * $unit;
+  $star: $bottom;
+  $star-size: 256 * $unit;
+  $star-left: 1200 * $unit;
+  $star-top: 416 * $unit;
+  // Note: Angles of an hexagon inscribed in a circle are 108°, and angles
+  // around the center are 72°. 
+  // We'll number the stars clockwise, starting from the origin at 12 being
+  // $star-0
+  $star-radius: 304 * $unit;
+  $star-1-left: $star-radius * sin(72);
+  $star-1-top: $star-1-left / tan(54); 
+  $star-2-top-offset: (sin(54) * _($star-radius));
+  $star-2-top: $star-radius + $star-2-top-offset;
+  $star-2-left: ($star-2-top-offset + 0px) / tan(54);
+  $star-3-top: $star-2-top;
+  $star-3-left: -$star-2-left;
+  $star-4-left: -$star-1-left;
+  $star-4-top: $star-1-top; 
+
+  background-image: circle($crescent-front-color, $crescent-front-size, $crescent-front-left, $crescent-front-top),
+                    circle($crescent-back-color, $crescent-back-size, $crescent-back-left, $crescent-back-top),
+                    two-lines($top, $bottom);
+  &:before {
+    @include star($star, $star-size, $star-left, $star-top);
+    text-shadow:
+                ($star-1-left) ($star-1-top) 0px $star,
+                ($star-2-left) ($star-2-top) 0px $star,
+                ($star-3-left) ($star-3-top) 0px $star,
+                ($star-4-left) ($star-4-top) 0px $star;
+  }
 };

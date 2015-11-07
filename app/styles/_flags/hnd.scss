@@ -16,8 +16,6 @@
   @include three-lines($top, $center, $bottom);
   &:before {
     @include centered-star($star, $star-size);
-    // top: $top-offset-top;
-    // left: $top-offset-left;
     text-shadow:(12 * $unit) (3 * $unit) 0px $star,
                 (12 * $unit) (-3 * $unit) 0px $star,
                 (-12 * $unit) (3 * $unit) 0px $star,
