@@ -1,5 +1,30 @@
 // Azerbaijan
 // http://www.crwflags.com/fotw/flags/az.html
+// http://www.vexilla-mundi.com/azerbaijan_flag.html
 @mixin flag-aze() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h120;
+  $top: #00B5E2;
+  $center: #EF3340;
+  $bottom: #509E2F;
+  $crescent-color: #FFF;
+  $circle-front-color: $center;
+  $circle-front-size: 30 * $unit;
+  $circle-back-color: $crescent-color;
+  $circle-back-size: 36 * $unit;
+  $circle-back-left: 114 * $unit;
+  $circle-back-top: $h2;
+  $star-symbol: $UTF8_HEAVY_EIGHT_POINTED_RECTILINEAR_BLACK_STAR;
+  $star-color: $crescent-color;
+  $star-size: 30 * $unit;
+  $star-left: 134 * $unit;
+  $star-top: $h2;
+
+  background-image: 
+                    centered-circle($circle-front-color, $circle-front-size),
+                    circle($circle-back-color, $circle-back-size, $circle-back-left, $circle-back-top),
+                    three-lines($top, $center, $bottom);
+  &:before {
+    @include symbol($star-symbol, $star-color, $star-size, $star-left, $star-top);
+  }
 };
