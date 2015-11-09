@@ -37,6 +37,10 @@ $card-image-hover-color: gainsboro;
 .c-flaglist--item__hard {
   display: none;
 }
+// Flags I've never heard of
+.c-flaglist--item__unknown {
+  display: none;
+}
 
 .c-flaglist--showcase {
   display: table;
