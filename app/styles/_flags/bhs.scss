@@ -1,5 +1,16 @@
 // Bahamas
 // http://www.crwflags.com/fotw/flags/bs.html
 @mixin flag-bhs() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h6;
+  $top: #00a9ce;
+  $center: #fdda24;
+  $bottom: $top;
+  $triangle: #000;
+  $triangle-width: sqrt(27) * $unit;
+
+  @include three-lines($top, $center, $bottom);
+  &:before {
+    @include triangle($triangle, $triangle-width);
+  }
 };

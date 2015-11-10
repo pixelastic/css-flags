@@ -1,0 +1,27 @@
+// Creates a triangle by setting borders on an element
+// By default, triangles are pointing right, with full height
+// @args color: Color to fill the triangle
+// @args width: Diam
+@mixin triangle($color, $size) {
+  @include triangle-right($color, $size);
+}
+
+// Creates a triangle, pointing right
+// @args color: Color of the triangle
+// @args width: Width of the triangle
+// @args height: Height of the triangle
+// @args left: Left offset of the triangle
+// @args top: Top offset of the triangle
+@mixin triangle-right($color, $_width, $_height:$height, $left:0, $top:0) {
+  content: "";
+  display: block;
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: 0;
+  height: 0;
+  border-top:($_height / 2) solid transparent;
+  border-bottom:($_height / 2) solid transparent;
+  border-right: none;
+  border-left: $_width solid $color;
+}

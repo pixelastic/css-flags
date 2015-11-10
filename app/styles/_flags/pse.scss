@@ -1,5 +1,17 @@
 // Palestine, State of
 // http://www.crwflags.com/fotw/flags/ps.html
+// http://www.vexilla-mundi.com/palestine_flag.html
 @mixin flag-pse() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h6;
+  $top: #000;
+  $center: #FFF;
+  $bottom: #007a33;
+  $triangle: #c8102e;
+  $triangle-width: 3 * $unit;
+
+  @include three-lines($top, $center, $bottom);
+  &:before {
+    @include triangle($triangle, $triangle-width);
+  }
 };
