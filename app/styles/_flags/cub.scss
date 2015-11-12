@@ -1,5 +1,34 @@
 // Cuba
 // http://www.crwflags.com/fotw/flags/cu.html
 @mixin flag-cub() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h30;
+  $blue: #00205b;
+  $white: #FFF;
+  $stripe-height: 6 * $unit;
+
+  $triangle: #c8102e;
+  $triangle-hypotenuse: 30 * $unit;
+  $triangle-side: 15 * $unit;
+  $triangle-width: sqrt($triangle-hypotenuse * $triangle-hypotenuse - $triangle-side * $triangle-side) * 1px;
+
+  $star-symbol: $UTF8_BLACK_STAR;
+  $star-color: $white;
+  $star-size: 10 * $unit;
+  $star-left: tan(30) * $h2;
+  $star-top: $h2;
+  
+  @include lines(
+                  $blue, $stripe-height,
+                  $white, $stripe-height,
+                  $blue, $stripe-height,
+                  $white, $stripe-height,
+                  $blue, $stripe-height
+                );
+  &:before {
+    @include triangle($triangle, $triangle-width);
+  }
+  &:after {
+    @include symbol($star-symbol, $star-color, $star-size, $star-left, $star-top);
+  }
 };
