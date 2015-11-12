@@ -1,5 +1,17 @@
 // South Sudan
 // http://www.crwflags.com/fotw/flags/ss.html
+// http://www.vexilla-mundi.com/sudan_flag.html
 @mixin flag-ssd() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h6;
+  $top: #C8102E;
+  $center: #FFF;
+  $bottom: #000;
+  $triangle: #007a33;
+  $triangle-width: 4 * $unit;
+
+  @include three-lines($top, $center, $bottom);
+  &:before {
+    @include triangle($triangle, $triangle-width);
+  }
 };
