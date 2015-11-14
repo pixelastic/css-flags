@@ -1,5 +1,24 @@
 // Djibouti
 // http://www.crwflags.com/fotw/flags/dj.html
 @mixin flag-dji() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h30;
+  $blue: #6AB2E7;
+  $white: #FFF;
+  $green: #12AD2B;
+  $red: #D7141A;
+  $triangle-width: sqrt(30 * 30 - 15 * 15) * $unit;
+
+  $star-symbol: $UTF8_BLACK_STAR;
+  $star-size: 10 * $unit;
+  $star-left: $triangle-width / 3;
+  $star-top: $h2;
+
+  @include two-lines($blue, $green);
+  &:before {
+    @include triangle($white, $triangle-width);
+  }
+  &:after {
+    @include symbol($star-symbol, $red, $star-size, $star-left, $star-top);
+  }
 };
