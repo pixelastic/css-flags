@@ -1,5 +1,51 @@
 // Timor-Leste
 // http://www.crwflags.com/fotw/flags/tl.html
 @mixin flag-tls() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h6;
+  $black: #000;
+  $white: #FFF;
+  $red: #da291c;
+  $yellow: #ffc72c;
+
+  // Yellow stripes to paint a black triangle
+  // Alpha: top left yellow angle
+  $y-alpha: (90 - atan(4 / 3)) * 1deg;
+  $y-alpha-prime: $y-alpha + 90deg;
+  $y-alpha-distance: sin($y-alpha-prime) * $height;
+  // Beta: bottom left yellow angle
+  $y-beta: -$y-alpha - 180deg;
+  $y-beta-distance: $y-alpha-distance;
+
+  // Red stripes to paint a yellow triangle
+  // Alpha: top left red angle
+  $r-alpha: atan(3 / 6) * 1deg;
+  $r-alpha-distance: sin($r-alpha) * $width;
+  // Beta: bottom left red angle
+  $r-beta: -$r-alpha - 180deg;
+  $r-beta-distance: $r-alpha-distance;
+  
+
+
+  // Note: We need two triangles and a star. As our triangle and star mixins
+  // each requires their own before/after, we need to find another way.
+  // We will paint the triangles using successive diagonal stripes in order to
+  // hide part of the background and give the illusion of triangles
+  background-color: $black;
+  background-image: 
+                    stripe($r-alpha, $red, $height, $r-alpha-distance),
+                    stripe($r-beta, $red, $height, $r-beta-distance),
+                    stripe($y-alpha, $yellow, $width, $y-alpha-distance),
+                    stripe($y-beta, $yellow, $height, $y-beta-distance);
+
+  $star-symbol: $UTF8_BLACK_STAR;
+  $star-size: 2 * $unit;
+  $star-left: (4 * $unit) / 3;
+  $star-top: $h2;
+  $star-rotate: -20deg;
+
+  &:before {
+    @include symbol($star-symbol, $white, $star-size, $star-left, $star-top);
+    transform: rotate($star-rotate);
+  }
 };

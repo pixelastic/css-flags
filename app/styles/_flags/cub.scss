@@ -15,7 +15,7 @@
   $star-symbol: $UTF8_BLACK_STAR;
   $star-color: $white;
   $star-size: 10 * $unit;
-  $star-left: tan(30) * $h2;
+  $star-left: $triangle-width / 3;
   $star-top: $h2;
   
   @include lines(

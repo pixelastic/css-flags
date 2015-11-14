@@ -1,5 +1,16 @@
 // Czech Republic
 // http://www.crwflags.com/fotw/flags/cz.html
+// http://www.vexilla-mundi.com/czech_republic_flag.html
 @mixin flag-cze() {
   @include ratio(2 / 3);
+  $unit: $h4;
+  $blue: #004b87;
+  $white: #FFF;
+  $red: #e4002b;
+  $triangle-width: 3 * $unit;
+
+  @include two-lines($white, $red);
+  &:before {
+    @include triangle($blue, $triangle-width);
+  }
 };

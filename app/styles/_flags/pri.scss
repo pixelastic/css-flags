@@ -1,5 +1,36 @@
 // Puerto Rico
 // http://www.crwflags.com/fotw/flags/pr.html
+// http://www.vexilla-mundi.com/puerto_rico_flag.html
 @mixin flag-pri() {
   @include ratio(2 / 3);
+  $unit: $h30;
+  $blue: #012169;
+  $white: #FFF;
+  $red: #ba0c2f;
+  $stripe-height: 6 * $unit;
+
+  $triangle: $blue;
+  $triangle-hypotenuse: 30 * $unit;
+  $triangle-side: 15 * $unit;
+  $triangle-width: sqrt($triangle-hypotenuse * $triangle-hypotenuse - $triangle-side * $triangle-side) * 1px;
+
+  $star-symbol: $UTF8_BLACK_STAR;
+  $star-color: $white;
+  $star-size: 10 * $unit;
+  $star-left: $triangle-width / 3;
+  $star-top: $h2;
+  
+  @include lines(
+                  $red, $stripe-height,
+                  $white, $stripe-height,
+                  $red, $stripe-height,
+                  $white, $stripe-height,
+                  $red, $stripe-height
+                );
+  &:before {
+    @include triangle($triangle, $triangle-width);
+  }
+  &:after {
+    @include symbol($star-symbol, $star-color, $star-size, $star-left, $star-top);
+  }
 };

@@ -1,5 +1,34 @@
 // Sao Tome and Principe
 // http://www.crwflags.com/fotw/flags/st.html
+// http://www.vexilla-mundi.com/sao_tome_and_principe_flag.html
 @mixin flag-stp() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h14;
+  $green: #43b02a;
+  $yellow: #ffcd00;
+  $red: #c8102e;
+  $black: #000;
+
+  $green-stripe-height: 4 * $unit;
+  $yellow-stripe-height: 6 * $unit;
+  $triangle-width: 7 * $unit;
+
+  $star-symbol: $UTF8_BLACK_STAR;
+  $star-size: 4 * $unit;
+  $star-left: 14 * $unit;
+  $star-top: $h2;
+
+  @include lines(
+                  $green, $green-stripe-height,
+                  $yellow, $yellow-stripe-height,
+                  $green, $green-stripe-height
+                );
+  &:before {
+    @include triangle($red, $triangle-width);
+  }
+  &:after {
+    @include symbol($star-symbol, $black, $star-size, $star-left, $star-top);
+    text-shadow: (7 * $unit) 0px 0px $black;
+
+  }
 };

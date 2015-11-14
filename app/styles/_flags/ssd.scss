@@ -1,5 +1,40 @@
 // South Sudan
 // http://www.crwflags.com/fotw/flags/ss.html
 @mixin flag-ssd() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h60;
+  $black: #000;
+  $white: #FFF;
+  $red: #be3a34;
+  $green: #006747;
+  $blue: #0033a0;
+  $yellow: #ffcd00;
+
+  $stripe-height: 18 * $unit;
+  $border-height: 3 * $unit;
+
+  $triangle-hypotenuse: 60 * $unit;
+  $triangle-side: 30 * $unit;
+  $triangle-width: sqrt($triangle-hypotenuse * $triangle-hypotenuse - $triangle-side * $triangle-side) * 1px;
+
+  $star-symbol: $UTF8_BLACK_STAR;
+  $star-size: 20 * $unit;
+  $star-left: $triangle-width / 3;
+  $star-top: $h2;
+  $star-rotate: -20deg;
+  
+  @include lines(
+                  $black, $stripe-height,
+                  $white, $border-height,
+                  $red, $stripe-height,
+                  $white, $border-height,
+                  $green, $stripe-height
+                );
+  &:before {
+    @include triangle($blue, $triangle-width);
+  }
+  &:after {
+    @include symbol($star-symbol, $yellow, $star-size, $star-left, $star-top);
+    transform: rotate($star-rotate);
+  }
 };
