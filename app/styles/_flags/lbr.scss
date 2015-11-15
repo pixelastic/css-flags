@@ -1,5 +1,37 @@
 // Liberia
 // http://www.crwflags.com/fotw/flags/lr.html
+// http://www.vexilla-mundi.com/liberia_flag.html
 @mixin flag-lbr() {
-  @include ratio(2 / 3);
+  @include ratio(10 / 19);
+  $unit: $h110;
+  $white: #FFF;
+  $red: #d50032;
+  $blue: #0c2340;
+  $stripe-height: 10 * $unit;
+  $square-size: 50 * $unit;
+  $star-size: 30 * $unit;
+  $star-top: 25 * $unit;
+  $star-left: 25 * $unit;
+
+
+  background-image: 
+                    // Red and white stripes on the bottom
+                    h-stripe($white, $stripe-height, 5 * $stripe-height),
+                    h-stripe($red,   $stripe-height, 6 * $stripe-height),
+                    h-stripe($white, $stripe-height, 7 * $stripe-height),
+                    h-stripe($red,   $stripe-height, 8 * $stripe-height),
+                    h-stripe($white, $stripe-height, 9 * $stripe-height),
+                    h-stripe($red,   $stripe-height, 10 * $stripe-height),
+                    // Blue stripe
+                    v-stripe($blue,  $square-size),
+                    // Red and white stripes on the left
+                    h-stripe($red,   $stripe-height, 0),
+                    h-stripe($white, $stripe-height, 1 * $stripe-height),
+                    h-stripe($red,   $stripe-height, 2 * $stripe-height),
+                    h-stripe($white, $stripe-height, 3 * $stripe-height),
+                    h-stripe($red,   $stripe-height, 4 * $stripe-height)
+                  ;
+  &:before {
+    @include star($white, $star-size, $star-left, $star-top);
+  }
 };

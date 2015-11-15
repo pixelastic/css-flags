@@ -5,6 +5,10 @@
 // @args left: Left offset for center of symbol
 // @args top: Top offset for center of symbol
 @mixin symbol($symbol, $color, $size, $left:0, $top:0) {
+  $position-top: round($top - $size / 2);
+  $position-left: round($left - $size / 2);
+  $size: round($size);
+
   color:$color;
   content:$symbol;
   font-family: Symbols;
@@ -14,8 +18,8 @@
   text-align: center;
   position:absolute;
   width: $size;
-  top: $top - $size / 2;
-  left: $left - $size / 2;
+  top: $position-top;
+  left: $position-left;
 }
 // Centered symbol
 // @args symbol: UTF-8 char to center

@@ -2,7 +2,7 @@
 // @args color: Color of the stripe
 // @args height: Height of the stripe
 // @args top: Distance from top
-@function h-stripe($color, $height, $top) {
+@function h-stripe($color, $height, $top:0) {
   @return stripe(180deg, $color, $height, $top);
 }
 
@@ -11,7 +11,7 @@
 // @args color: Color of the stripe
 // @args width: Width of the stripe
 // @args left: Distance from left
-@function v-stripe($color, $width, $left) {
+@function v-stripe($color, $width, $left:0) {
   @return stripe(90deg, $color, $width, $left);
 }
 
