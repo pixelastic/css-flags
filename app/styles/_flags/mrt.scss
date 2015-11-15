@@ -2,4 +2,25 @@
 // http://www.crwflags.com/fotw/flags/mr.html
 @mixin flag-mrt() {
   @include ratio(2 / 3);
+  $unit: $h96;
+  $green: #006230;
+  $yellow: #FFC400;
+  $crescent-front-size: 60 * $unit;
+  $crescent-front-left: 72 * $unit;
+  $crescent-front-top: 27 * $unit;
+  $crescent-back-size: 62 * $unit;
+  $crescent-back-left: 72 * $unit;
+  $crescent-back-top: 36 * $unit;
+  $star-size: 24 * $unit;
+  $star-left: 72 * $unit;
+  $star-top: 28 * $unit;
+
+  background-color: $green;
+  background-image:
+                    // Crescent
+                    circle($green, $crescent-front-size, $crescent-front-left, $crescent-front-top),
+                    circle($yellow, $crescent-back-size, $crescent-back-left, $crescent-back-top);
+  &:before {
+    @include star($yellow, $star-size, $star-left, $star-top);
+  }
 };
