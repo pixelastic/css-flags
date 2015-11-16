@@ -21,7 +21,7 @@
 // @args color: Color of the stripe
 // @args size: Width of the stripe
 // @args distance: Distance from the border
-@function stripe($angle, $color, $size, $distance) {
+@function stripe($angle, $color, $size, $distance:0) {
   @return linear-gradient($angle,
                           transparent, transparent $distance,
                           $color $distance, $color ($distance + $size),

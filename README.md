@@ -30,6 +30,22 @@ the page.
 - [Vexilla Mundi][4]
 - [CRW Flags][5]
 - [Icomoon App][6]
+- [png2svg converter][7]
+
+## Getting SVG icons for flags
+
+1. Find the wikipedia svg flag
+2. Download id
+3. Remove all the background parts to only keep the symbol
+4. Change its color to #000;
+5. Convert it to png using svg2png
+6. Crop the whitespace (convert file.png -trip file-output.png)
+7. Edit in editor if need be
+8. Convert online back to svg: http://www.online-convert.com/convert-to-png
+9. Run svgo on the file
+10. Add it to icomoon
+11. Center it in one cell of the grid
+12. Export the font
 
 
 [1]: http://en.wikipedia.org/wiki/List_of_countries_by_style_of_national_flags
@@ -38,3 +54,5 @@ the page.
 [4]: http://www.vexilla-mundi.com/
 [5]: http://www.crwflags.com/fotw/flags/country.html
 [6]: https://icomoon.io/app/#/select
+[7]: http://www.online-convert.com/convert-to-png
+
