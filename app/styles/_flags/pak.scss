@@ -1,5 +1,50 @@
 // Pakistan
 // http://www.crwflags.com/fotw/flags/pk.html
+// http://www.vexilla-mundi.com/pakistan_flag.html
 @mixin flag-pak() {
   @include ratio(2 / 3);
+  $unit: $h240;
+  $green: #006230;
+  $white: #FFF;
+  $stripe-width: 90 * $unit;
+
+  $crescent-back-size: 144 * $unit;
+  $crescent-back-left: 225 * $unit;
+  $crescent-back-top: 120 * $unit;
+
+  // Let's consider the triangle made from the following three parts:
+  // - d: line from center of green square to right border
+  // - c2: line from center of right border to top right corner
+  // - hypo: line from top right corner to center of green square
+  $d: 135 * $unit;
+  $c2: 120 * $unit;
+  // Let's consider alpha the angle between d and hypo
+  $alpha: atan($c2 / $d);
+  // Now that we have the angle, we can calculate all the dimensions of all
+  // triangles that starts with alpha.
+  $h: 24 * $unit;
+  $x1: cos($alpha) * $h; // width of triangle with hypotenuse = h
+  $y1: sin($alpha) * $h; // height of triangle with hypotenuse = h
+  $x2: cos($alpha) * 2 * $h; // width of triangle with hypotenuse = 2 * h
+  $y2: sin($alpha) * 2 * $h; // height of triangle with hypotenuse = 2 * h
+
+  $crescent-front-size: 132 * $unit;
+  $crescent-front-left: $crescent-back-left + $x1;
+  $crescent-front-top: $crescent-back-top - $y1;
+
+  $star-size: 48 * $unit;
+  $star-left: $crescent-back-left + $x2;
+  $star-top: $crescent-back-top - $y2;
+
+  background-color: $green;
+  background-image:
+                    // White stripe
+                    v-stripe($white, $stripe-width),
+                    // Crescent
+                    circle($green, $crescent-front-size, $crescent-front-left, $crescent-front-top),
+                    circle($white, $crescent-back-size, $crescent-back-left, $crescent-back-top);
+  &:before {
+    @include star($white, $star-size, $star-left, $star-top);
+    transform: rotate(45deg);
+  }
 };
