@@ -1,5 +1,48 @@
 // Bosnia and Herzegovina
 // http://www.crwflags.com/fotw/flags/ba.html
+// http://www.vexilla-mundi.com/bosnia_and_herzegovina_flag.html
 @mixin flag-bih() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h200;
+  $blue: #002395;
+  $yellow: #fecb00;
+  $white: #FFF;
+  $triangle-width: 200 * $unit;
+  $triangle-hypotenuse: sqrt($height * $height + $triangle-width * $triangle-width);
+  $blue-stripe-width: 94 * $unit;
+  $blue-stripe-left: 306 * $unit;
+  $star-size: 38 * $unit;
+  $star-left: 87 * $unit;
+  $star-top: 19 * $unit;
+  $star-top-offset: 200 / 7 * $unit;
+  $star-left-offset: 30 * $unit; // 30 here is a magic number
+
+
+  // alpha is the yellow/blue angle
+  $alpha: 45deg;
+  // This is the distance between the bottom left corner and the yellow
+  // hypotenuse
+  $yellow-stripe-dist: sin($alpha) * $blue-stripe-left;
+
+  background-color: $blue;
+  background-image:
+                    // Blue vertical stripe, closing the triangle
+                    v-stripe($blue, $blue-stripe-width, $blue-stripe-left),
+                    // Yellow stripe, forming the triangle
+                    stripe($alpha, $yellow, $width, $yellow-stripe-dist)
+                   ;
+  &:before {
+    @include star($white, $star-size, $star-left, $star-top);
+    overflow: hidden;
+    text-shadow: 
+                (-1 * $star-left-offset) (-1 * $star-top-offset) 0px $white,
+                (1 * $star-left-offset)  (1 * $star-top-offset) 0px $white,
+                (2 * $star-left-offset)  (2 * $star-top-offset) 0px $white,
+                (3 * $star-left-offset)  (3 * $star-top-offset) 0px $white,
+                (4 * $star-left-offset)  (4 * $star-top-offset) 0px $white,
+                (5 * $star-left-offset)  (5 * $star-top-offset) 0px $white,
+                (6 * $star-left-offset)  (6 * $star-top-offset) 0px $white,
+  }
+
+  
 };
