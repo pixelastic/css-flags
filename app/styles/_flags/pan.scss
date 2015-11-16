@@ -1,5 +1,43 @@
 // Panama
 // http://www.crwflags.com/fotw/flags/pa.html
+// http://www.vexilla-mundi.com/panama_flag.html
 @mixin flag-pan() {
   @include ratio(2 / 3);
+  $unit: $h24;
+  $blue: #005293;
+  $red: #d21034;
+  $white: #FFF;
+  $part-width: 18 * $unit;
+  $part-height: 12 * $unit;
+  $star-size: 8 * $unit;
+  $star-top-left: 9 * $unit;
+  $star-top-top: 6 * $unit;
+  $star-bottom-left-offset: 18 * $unit;
+  $star-bottom-top-offset: 12 * $unit;
+
+  background-image:
+                    // Horizontal red stripe on the top
+                    h-stripe($red, $part-height),
+                    // Vertical white on the right
+                    v-stripe($white, $part-width, $part-width),
+                    // Horizontal blue on the bottom
+                    h-stripe($blue, $part-height, $part-height)
+                  ;
+  &:before {
+    // Adding a white quarter in the top left
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $part-width;
+    height: $part-height;
+    background: $white;
+    display: block;
+    content: "";
+  }
+  &:after {
+    @include star($blue, $star-size, $star-top-left, $star-top-top);
+    text-shadow: $star-bottom-left-offset $star-bottom-top-offset 0 $red;
+  }
+
+
 };
