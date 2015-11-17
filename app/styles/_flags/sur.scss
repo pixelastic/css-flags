@@ -1,5 +1,26 @@
 // Suriname
 // http://www.crwflags.com/fotw/flags/sr.html
+// http://www.vexilla-mundi.com/suriname_flag.html
 @mixin flag-sur() {
   @include ratio(2 / 3);
+  $unit: $h20;
+  $green: #007a33;
+  $white: #FFF;
+  $red: #c8102e;
+  $yellow: #ffcd00;
+  $stripe-green-height: 4 * $unit;
+  $stripe-white-height: 2 * $unit;
+  $stripe-red-height: 8 * $unit;
+  $star-size: 8 * $unit;
+
+  @include lines(
+                  $green, $stripe-green-height,
+                  $white, $stripe-white-height,
+                  $red, $stripe-red-height,
+                  $white, $stripe-white-height,
+                  $green, $stripe-green-height
+                );
+  &:before {
+    @include centered-star($yellow, $star-size);
+  }
 };

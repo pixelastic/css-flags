@@ -1,5 +1,25 @@
 // Guinea-Bissau
 // http://www.crwflags.com/fotw/flags/gw.html
 @mixin flag-gnb() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h6;
+  $green: #009639;
+  $red: #c8102e;
+  $yellow: #ffcd00;
+  $black: #000;
+  $stripe-width: 4 * $unit;
+  $stripe-height: 3 * $unit;
+  $star-size: 2 * $unit;
+  $star-left: 2 * $unit;
+  $star-top: 3 * $unit;
+
+  background-image:
+                    // Vertical red stripe
+                    v-stripe($red, $stripe-width),
+                    // Two horizontal stripes
+                    h-stripe($yellow, $stripe-height),
+                    h-stripe($green, $stripe-height, $stripe-height);
+  &:before {
+    @include star($black, $star-size, $star-left, $star-top);
+  }
 };
