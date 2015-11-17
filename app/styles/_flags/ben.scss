@@ -2,4 +2,17 @@
 // http://www.crwflags.com/fotw/flags/bj.html
 @mixin flag-ben() {
   @include ratio(2 / 3);
+  $unit: $h10;
+  $red: #E8112D;
+  $yellow: #FCD116;
+  $green: #008751;
+  $stripe-width: 6 * $unit;
+  $stripe-height: 5 * $unit;
+
+  background-image:
+                    // Vertical green stripe
+                    v-stripe($green, $stripe-width),
+                    // Two horizontal stripes
+                    h-stripe($yellow, $stripe-height),
+                    h-stripe($red, $stripe-height, $stripe-height);
 };

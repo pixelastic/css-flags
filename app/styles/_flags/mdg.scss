@@ -2,4 +2,18 @@
 // http://www.crwflags.com/fotw/flags/mg.html
 @mixin flag-mdg() {
   @include ratio(2 / 3);
+  $unit: $h2;
+  $green: #007E3A;
+  $red: #FC3D32;
+  $white: #FFF;
+  $stripe-width: $unit;
+  $stripe-height: $unit;
+
+  background-image:
+                    // Vertical white stripe
+                    v-stripe($white, $stripe-width),
+                    // Two horizontal stripes
+                    h-stripe($red, $stripe-height),
+                    h-stripe($green, $stripe-height, $stripe-height);
+
 };
