@@ -31,9 +31,9 @@
                     // Yellow stripe, forming the triangle
                     stripe($alpha, $yellow, $width, $yellow-stripe-dist)
                    ;
+  overflow: hidden;
   &:before {
     @include star($white, $star-size, $star-left, $star-top);
-    overflow: hidden;
     text-shadow: 
                 (-1 * $star-left-offset) (-1 * $star-top-offset) 0px $white,
                 (1 * $star-left-offset)  (1 * $star-top-offset) 0px $white,

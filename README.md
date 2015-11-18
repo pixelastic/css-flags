@@ -39,9 +39,9 @@ the page.
 3. Remove all the background parts to only keep the symbol
 4. Change its color to #000;
 5. Convert it to png using svg2png
-6. Crop the whitespace (convert file.png -trip file-output.png)
+6. Crop the whitespace (convert file.png -trim file-output.png)
 7. Edit in editor if need be
-8. Convert online back to svg: http://www.online-convert.com/convert-to-png
+8. Convert online back to svg: http://image.online-convert.com/convert-to-svg
 9. Run svgo on the file
 10. Add it to icomoon
 11. Center it in one cell of the grid
