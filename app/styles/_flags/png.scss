@@ -1,5 +1,63 @@
 // Papua New Guinea
 // http://www.crwflags.com/fotw/flags/pg.html
+// http://www.vexilla-mundi.com/papua_new_guinea_flag.html
 @mixin flag-png() {
-  @include ratio(2 / 3);
+  @include ratio(3 / 4);
+  $unit: $h72;
+  $red: #c8102e;
+  $yellow: #ffcd00;
+  $black: #000;
+  $white: #FFF;
+
+  $bird: $UTF8_COUNTRY_PNG;
+  $bird-size: 32 * $unit;
+  $bird-left: 64 * $unit;
+  $bird-top: 23 * $unit;
+
+  $stripe-angle: atan($width / $height) * 1deg;
+  $stripe-distance: sin($stripe-angle) * $height;
+
+  $stars: $UTF8_BLACK_STAR+$UTF8_BLACK_STAR;
+  $star-size: 10 * $unit;
+  $star-left: 24 * $unit;
+  $star-top: 27 * $unit;
+  $star-size-small: 5 * $unit;
+
+
+  background-color: $red;
+  background-image: 
+                    stripe(90deg - $stripe-angle, $black, $stripe-distance)
+                  ;
+  // To do the two type of stars we'll add two stars in the :before.
+  // We'll style the first one through :first-letter and set the correct size
+  // and text-shadow to duplicate it
+  // The second one we'll hide with the same color as the background and add
+  // text-shadow to place where we want it
+  &:before {
+    @include symbol($stars, $black, $star-size-small, $star-left, $star-top);
+    position: relative; // position: absolute breaks :first-letter
+    text-shadow: 0px (22 * $unit) 0px $white;
+  }
+  // Normal stars
+  &:first-letter {
+    font-size: $star-size;
+    height: $star-size;
+    line-height: $star-size;
+    width: $star-size;
+    color: $white;
+    text-shadow:
+                (-11 * $unit) (13 * $unit) 0px $white,
+                (11 * $unit) (13 * $unit) 0px $white,
+                0px          (33 * $unit) 0px $white
+              ;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+  }
+  // Bird
+  &:after {
+    @include symbol($bird, $yellow, $bird-size, $bird-left, $bird-top);
+  }
+
 };
