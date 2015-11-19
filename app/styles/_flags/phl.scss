@@ -1,5 +1,68 @@
 // Philippines
 // http://www.crwflags.com/fotw/flags/ph.html
+// http://www.vexilla-mundi.com/philippines_flag.html
 @mixin flag-phl() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h90;
+  $blue: #0033a0;
+  $red: #bf0d3e;
+  $yellow: #fed141;
+  $white: #FFF;
+
+  $half-triangle-hypotenuse: 90 * $unit;
+  $half-triangle-small-size: 45 * $unit;
+  $triangle-width: sqrt($half-triangle-hypotenuse * $half-triangle-hypotenuse - $half-triangle-small-size * $half-triangle-small-size) * 1px;
+
+  // Positions of the big star, according to the flag
+  $symbols: $UTF8_BLACK_STAR+$UTF8_BLACK_STAR+"\A"+$UTF8_BLACK_STAR;
+  $star-big-size: 38 * $unit;
+  $star-big-left: $triangle-width * 1 / 3;
+  $star-big-right-from-tip-of-triangle: $triangle-width * 2 / 3;
+  $star-big-top: 45 * $unit;
+
+  // Positions of the small stars, according to the flag
+  $star-small-size: 10 * $unit;
+  $triangle-angle: 30deg;
+  $star-small-distance-from-angle: 14 * $unit;
+  $star-small-distance-short: sin($triangle-angle) * $star-small-distance-from-angle;
+  $star-small-distance-long: cos($triangle-angle) * $star-small-distance-from-angle;
+
+  @include two-lines($blue, $red);
+
+  // &:after {
+  //   // @include triangle($white, $triangle-width);
+  //   // We place the big star inside the triangle. This technique uses negative
+  //   // text-indent, and line-height:0 to position the star.
+  //   // content: $UTF8_COUNTRY_PHL;
+  //   // text-indent: -$star-big-right-from-tip-of-triangle - $star-big-size / 2;
+  //   // line-height: 0;
+  //   // color: $yellow;
+  //   // font-size: $star-big-size;
+  // }
+
+  &:before {
+    // We add three stars, on two lines. By carefully hanlding the :first-letter
+    // and :first-line, I'll be able to style them independently
+    @include symbol($symbols, green, $star-small-size, 0, -$star-small-size / 2);
+    white-space: pre; // Needed for :first-line to apply
+    position: relative; // Needed for :first-letter to apply
+    // but then, no more rotate
+    // Top star
+    // text-shadow: 
+    //             $star-small-distance-short $star-small-distance-long 0px $yellow;
+    transform: rotate(12deg);
+  }
+  &:first-letter {
+    // color: transparent;
+    background: blue;
+    display: block;
+    text-shadow: 
+                50px 30px 0px green;
+  }
+  // &:first-line {
+  //   color: transparent;
+  //   text-shadow: 
+  //               30px 45px 0px red;
+  // }
+  
 };

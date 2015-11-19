@@ -2,6 +2,9 @@
   margin: 0 auto;
   position: relative;
 }
+.c-flag:before, .c-flag:after {
+  font-family: Symbols;
+}
 // Afghanistan
 .c-flag__afg {
   @include flag-afg();
