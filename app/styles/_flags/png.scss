@@ -28,6 +28,7 @@
   background-image: 
                     stripe(90deg - $stripe-angle, $black, $stripe-distance)
                   ;
+
   // To do the two type of stars we'll add two stars in the :before.
   // We'll style the first one through :first-letter and set the correct size
   // and text-shadow to duplicate it

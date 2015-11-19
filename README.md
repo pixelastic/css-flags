@@ -47,6 +47,23 @@ the page.
 11. Center it in one cell of the grid
 12. Export the font
 
+## Techniques
+
+### Invisible text-shadow
+
+Putting a text in a before/after with a transparent color, so we can put it
+anywhere. Then use text-shadow to duplicate the element and position it
+anywhere, even being able to change its color.
+
+### first-letter / first-line
+
+By adding three symbols on two lines in a `content` and then carefully dealing
+with the first-letter/first-line, we can target all three elements individually.
+Each can have its own color/size and can text be text-shadowed to be placed
+anywhere.
+
+Is is not possible to apply any rotation to those element, though.
+
 
 [1]: http://en.wikipedia.org/wiki/List_of_countries_by_style_of_national_flags
 [2]: https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.json
