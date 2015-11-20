@@ -1,5 +1,27 @@
 // Switzerland
 // http://www.crwflags.com/fotw/flags/ch.html
 @mixin flag-che() {
-  @include ratio(2 / 3);
+  @include ratio(1);
+  $unit: $h32;
+  $white: #FFF;
+  $red: #c8102e;
+
+  // We will draw 4 red stripes on each border, then a white cross in the center
+  $border-width: 6 * $unit;
+  $cross-arm-width: 6 * $unit;
+  $cross-arm-length: 7 * $unit;
+  $cross-arm-top: 13 * $unit;
+  $cross-arm-left: 13 * $unit;
+
+  background-color: $red;
+  background-image: 
+                    // 4 red borders
+                    h-stripe($red, $border-width),
+                    v-stripe($red, $border-width, ($width - $border-width)),
+                    h-stripe($red, $border-width, ($height - $border-width)),
+                    v-stripe($red, $border-width),
+                    // White cross
+                    h-stripe($white, $cross-arm-width, $cross-arm-top),
+                    v-stripe($white, $cross-arm-width, $cross-arm-left)
+                  ;
 };

@@ -1,5 +1,35 @@
 // Greece
 // http://www.crwflags.com/fotw/flags/gr.html
+// http://www.vexilla-mundi.com/greece_flag.html
 @mixin flag-grc() {
   @include ratio(2 / 3);
+  $unit: $h18;
+  $blue: #0033a0;
+  $white: #FFF;
+
+  $stripe-size: 2 * $unit;
+  $canton-size: 10 * $unit;
+  $cross-left: 4 * $unit;
+  $cross-top: 4 * $unit;
+
+  background-image: 
+                    h-stripe($blue,  $stripe-size, 0),
+                    h-stripe($white, $stripe-size, 1 * $stripe-size),
+                    h-stripe($blue,  $stripe-size, 2 * $stripe-size),
+                    h-stripe($white, $stripe-size, 3 * $stripe-size),
+                    h-stripe($blue,  $stripe-size, 4 * $stripe-size),
+                    h-stripe($white, $stripe-size, 5 * $stripe-size),
+                    h-stripe($blue,  $stripe-size, 6 * $stripe-size),
+                    h-stripe($white, $stripe-size, 7 * $stripe-size),
+                    h-stripe($blue,  $stripe-size, 8 * $stripe-size),
+                  ;
+
+  &:before {
+    @include square($blue, $canton-size);
+    background-image:
+                      h-stripe($white, $stripe-size, $cross-top),
+                      v-stripe($white, $stripe-size, $cross-left)
+                    ;
+  }
+
 };

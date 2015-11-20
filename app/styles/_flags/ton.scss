@@ -1,5 +1,43 @@
 // Tonga
 // http://www.crwflags.com/fotw/flags/to.html
+// http://www.vexilla-mundi.com/tonga_flag.html
 @mixin flag-ton() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h84;
+  $white: #FFF;
+  $red: #c8102e;
+
+  $canton-border-top: 4 * $unit;
+  $canton-border-bottom: 4 * $unit;
+  $canton-border-left: 18 * $unit;
+  $canton-border-right: 18 * $unit;
+
+  $canton-height: 42 * $unit;
+  $canton-width: 70 * $unit;
+
+  $red-stripe-height: $height - $canton-height;
+  $red-stripe-width: $width - $canton-width;
+
+  $cross-width: 12 * $unit;
+  $cross-top: 15 * $unit;
+  $cross-left: 29 * $unit;
+
+  // We will put a white background and two big red striped to draw the canton
+  // Then in the canton we'll hide white stripes on each border, then draw two
+  // red lines in it to make the cross
+  background-color: $white;
+  background-image:
+                    // Canton
+                    h-stripe($red, $red-stripe-height, $canton-height),
+                    v-stripe($red, $red-stripe-width, $canton-width),
+                    // Borders in canton
+                    h-stripe($white, $canton-border-top),
+                    h-stripe($white, $canton-border-bottom, ($canton-height - $canton-border-bottom)),
+                    v-stripe($white, $canton-border-left),
+                    v-stripe($white, $canton-border-right, ($canton-width - $canton-border-right)),
+                    // Red cross
+                    h-stripe($red, $cross-width, $cross-top),
+                    v-stripe($red, $cross-width, $cross-left)
+                  ;
+
 };

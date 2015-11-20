@@ -1,0 +1,30 @@
+// Scotland
+// https://en.wikipedia.org/wiki/Flag_of_Scotland
+// http://www.vexilla-mundi.com/united_kingdom/scotland_flag.html
+@mixin flag-sct() {
+  @include ratio(4 / 5);
+  $unit: $h36;
+  $blue: #005eb8;
+  $white: #FFF;
+  $cross-padding: 6 * $unit;
+  $cross-width: sqrt($cross-padding * $cross-padding + $cross-padding * $cross-padding);
+
+  // We focus on the bottom left blue triangle (missing the bottom left to top
+  // right stripe)
+  $left-side: $height - $cross-padding;
+  $bottom-side: $width - $cross-padding;
+  // Alpha is the top left angle of the bottom left triangle
+  $alpha: atan($bottom-side / $left-side) * 1deg;
+  // The median from the bottom left corner
+  $cross-distance: sin($alpha) * $left-side;
+
+  $cross-angle: 180deg - 90deg - $alpha;
+
+  background-color: $blue;
+  background-image:
+                    stripe($cross-angle, $white, $cross-width, $cross-distance),
+                    stripe(-$cross-angle, $white, $cross-width, $cross-distance),
+                  ;
+};
+
+

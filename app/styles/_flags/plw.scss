@@ -1,5 +1,16 @@
 // Palau
 // http://www.crwflags.com/fotw/flags/pw.html
+// http://www.vexilla-mundi.com/palau_flag.html
 @mixin flag-plw() {
-  @include ratio(2 / 3);
+  @include ratio(5 / 8);
+  $unit: $h10;
+  $blue: #418fde;
+  $yellow: #f7ea48;
+
+  $circle-size: 6 * $unit;
+  $circle-left: 7 * $unit;
+  $circle-top: $h2;
+  
+  background-color: $blue;
+  @include circle($yellow, $circle-size, $circle-left, $circle-top);
 };

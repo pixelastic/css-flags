@@ -1,0 +1,18 @@
+// England
+// http://www.vexilla-mundi.com/united_kingdom/england_flag.html
+@mixin flag-eng() {
+  @include ratio(3 / 5);
+  $unit: $h30;
+  $red: #c8102e;
+  $white: #FFF;
+  $cross-width: 6 * $unit;
+  $cross-left: 22 * $unit;
+  $cross-top: 12 * $unit;
+
+  background-color: $white;
+  background-image:
+                    h-stripe($red, $cross-width, $cross-top),
+                    v-stripe($red, $cross-width, $cross-left)
+                  ;
+};
+

@@ -273,6 +273,10 @@
 .c-flag__slv {
   @include flag-slv();
 };
+// England
+.c-flag__eng {
+  @include flag-eng();
+};
 // Equatorial Guinea
 .c-flag__gnq {
   @include flag-gnq();
@@ -784,6 +788,10 @@
 // Saudi Arabia
 .c-flag__sau {
   @include flag-sau();
+};
+// Scotland
+.c-flag__sct {
+  @include flag-sct();
 };
 // Senegal
 .c-flag__sen {
