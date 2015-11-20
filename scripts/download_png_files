@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'awesome_print'
+
+# Will download png files of all flags from Vexilla Mundi, to easily compare
+# results
+class DownloadFlags
+  def run
+    `mkdir -p ../pngs`
+    all = JSON.parse(File.open('../flags.json', 'r').read)
+
+    all.each do |country|
+      country_name = country["name"].downcase.gsub(' ', '_').gsub('(', '').gsub(')','').gsub("'", '')
+      # Split after first comma
+      split = country_name.split(",")
+      country_name = split[0]
+
+      alpha3 = country["alpha-3"].downcase
+      url = "http://www.vexilla-mundi.com/#{country_name}/#{country_name}_flag.png"
+      file = File.expand_path("../pngs/#{alpha3}.png")
+
+      `wget #{url} -O #{file}`
+    end
+  end
+end
+DownloadFlags.new.run
+
+
