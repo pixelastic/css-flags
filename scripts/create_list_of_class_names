@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'awesome_print'
+
+class AAA
+  def run
+    all = JSON.parse(File.open('../flagstjson', 'r').read)
+    output = [
+      '.c-flag {',
+      '  margin: 0 auto;',
+      '  position: relative;',
+      '}'
+    ]
+    all.each do |country|
+      code = country['alpha-3'].downcase
+      output += [
+         "// #{country["name"]}",
+         ".c-flag__#{code} {",
+         "  @include flag-#{code}();",
+         "};"
+      ]
+    end
+    File.write('./flags_main.scss', output.join("\n"));
+  end
+end
+AAA.new.run

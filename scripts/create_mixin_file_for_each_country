@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'awesome_print'
+
+class AAA
+  def run
+    `mkdir -p ./flags`
+    all = JSON.parse(File.open('../flags.json', 'r').read)
+
+    all.each do |country|
+      code3 = country['alpha-3'].downcase
+      code2 = country['alpha-2'].downcase
+      output = [
+         "// #{country["name"]}",
+         "// http://www.crwflags.com/fotw/flags/#{code2}.html",
+         "@mixin flag-#{code3}() {",
+         "  @include ratio(2 / 3);",
+         "};"
+      ]
+      File.write("./flags/#{code3}.scss", output.join("\n"));
+    end
+  end
+end
+AAA.new.run
+
