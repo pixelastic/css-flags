@@ -7,7 +7,7 @@ require 'awesome_print'
 # results
 class DownloadFlags
   def run
-    `mkdir -p ../pngs`
+    `mkdir -p ../app/assets/img/flags`
     all = JSON.parse(File.open('../flags.json', 'r').read)
 
     all.each do |country|
@@ -18,7 +18,7 @@ class DownloadFlags
 
       alpha3 = country["alpha-3"].downcase
       url = "http://www.vexilla-mundi.com/#{country_name}/#{country_name}_flag.png"
-      file = File.expand_path("../pngs/#{alpha3}.png")
+      file = File.expand_path("../app/assets/img/flags/#{alpha3}.png")
 
       `wget #{url} -O #{file}`
     end
