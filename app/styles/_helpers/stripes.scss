@@ -28,3 +28,20 @@
                           transparent ($distance + $size), transparent 100%
                           );
 }
+
+// Create a colored stripe, with limited width and height
+// @args angle: Angle (in deg) for the stripe
+// @args color: Color of the stripe
+// @args size: Width of the stripe
+// @args distance: Distance from the border
+// @args width: Width of constraining rectangle
+// @args height: Height of constraining rectangle
+// @args left: Left offset of the stripe
+// @args top: Top offset of the stripe
+@function stripe-constrained($angle, $color, $size, $distance:0, $max_width:100%, $max_height:100%, $left:0, $top:0) {
+  @return linear-gradient($angle,
+                          transparent, transparent $distance,
+                          $color $distance, $color ($distance + $size),
+                          transparent ($distance + $size), transparent 100%
+                          ) $left #{$top}/#{$max_width} $max_height no-repeat
+}
