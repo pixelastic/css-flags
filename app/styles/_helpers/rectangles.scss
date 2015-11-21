@@ -1,0 +1,26 @@
+// Rectangle
+// @args color: Color of the rectangle
+// @args width: Width of the rectangle
+// @args height: Height of the rectangle
+// @args left: Left offset
+// @args top: Top offset
+@mixin rectangle($color, $_width, $_height, $left:0, $top:0) {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: $color;
+  width: $_width;
+  height: $_height;
+  left: $left;
+  top: $top;
+}
+
+// Square
+// @args color: Color of the square
+// @args size: Size of the square
+// @args left: Left offset
+// @args top: Top offset
+@mixin square($color, $size, $left:0, $top:0) {
+  @include rectangle($color, $size, $size, $left, $top);
+}
+

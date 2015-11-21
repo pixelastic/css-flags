@@ -1,5 +1,31 @@
 // Bahrain
 // http://www.crwflags.com/fotw/flags/bh.html
+// http://www.vexilla-mundi.com/bahrain_flag.html
 @mixin flag-bhr() {
-  @include ratio(2 / 3);
+  @include ratio(3 / 5);
+  $unit: $h60;
+  $red: #da291c;
+  $white: #FFF;
+  $triangle-height: 12 * $unit;
+  $triangle-width: 15 * $unit;
+  $white-stripe-width: 25 * $unit;
+
+  background-color: $red;
+  background-image:
+                    v-stripe($white, $white-stripe-width)
+                  ;
+  &:before {
+    @include rectangle($white, $triangle-width, $height, $white-stripe-width - 1px);
+    $triangle-padding: $triangle-height / 2;
+    -webkit-clip-path: polygon(
+                         0px 0px, 
+                         $triangle-width (1 * $triangle-padding), 0px (2 * $triangle-padding),
+                         $triangle-width (3 * $triangle-padding), 0px (4 * $triangle-padding),
+                         $triangle-width (5 * $triangle-padding), 0px (6 * $triangle-padding),
+                         $triangle-width (7 * $triangle-padding), 0px (8 * $triangle-padding),
+                         $triangle-width (9 * $triangle-padding), 0px (10 * $triangle-padding)
+                      );
+
+
+  }
 };

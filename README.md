@@ -64,6 +64,11 @@ anywhere.
 
 Is is not possible to apply any rotation to those element, though.
 
+## TODO
+
+- Add autoprefixer (we have -webkit-clip-path)
+- Add CasperCSS?
+
 
 [1]: http://en.wikipedia.org/wiki/List_of_countries_by_style_of_national_flags
 [2]: https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.json

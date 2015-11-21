@@ -18,10 +18,12 @@
   position: absolute;
   top: $top;
   left: $left;
-  width: 0;
-  height: 0;
-  border-top:($_height / 2) solid transparent;
-  border-bottom:($_height / 2) solid transparent;
-  border-right: none;
-  border-left: $_width solid $color;
+  width: $_width;
+  height: $_height;
+  background-color: $color;
+
+  -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+
+
 }

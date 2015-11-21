@@ -41,16 +41,13 @@
               ;
   }
   // The :after will contain the triangle, as well as the big star. The star is
-  // positionned at the center of the height, but slightly to the left. We
-  // manage to handle that with a negative text-indent. We also use a lower
-  // z-index that the before to put it below the small stars.
+  // positionned at the center of the height, but slightly to the left. We also
+  // use a lower z-index that the before to put it below the small stars.
   &:before {
     @include triangle($white, $triangle-width);
-    // We place the big star inside the triangle. This technique uses negative
-    // text-indent, and line-height:0 to position the star.
     content: $UTF8_COUNTRY_PHL;
-    text-indent: -$star-big-right-from-tip-of-triangle - $star-big-size / 2;
-    line-height: 0;
+    text-indent: $triangle-width / 3 - $star-big-size / 2;
+    line-height: $height;
     color: $yellow;
     font-size: $star-big-size;
   }
