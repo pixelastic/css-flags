@@ -1,5 +1,52 @@
 // Western Sahara
 // http://www.crwflags.com/fotw/flags/eh.html
+// http://www.vexilla-mundi.com/western_sahara_flag.html
+// https://en.wikipedia.org/wiki/Flag_of_Western_Sahara#/media/File:Flag_of_Western_Sahara_dimensions.jpg
+// https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Western_Sahara_dimensions_blueprint.jpg/240px-Flag_of_Western_Sahara_dimensions_blueprint.jpg
 @mixin flag-esh() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h432;
+  $red: #e4002b;
+  $green: #007a33;
+  $white: #FFF;
+  $black: #000;
+  $stripe-height: 144 * $unit;
+  $triangle-width: $w3;
+
+  // To get all the crescent dimensions, we have to use all the available
+  // construction sheet to guess everything because none contains all the data
+  $crescent-back-size: 4 / 5 * $stripe-height;
+  $crescent-unit: $crescent-back-size / 12;
+  $crescent-front-color: $white;
+  $crescent-front-size: 10 * $crescent-unit;
+  $crescent-front-offset-top: $crescent-unit;
+  $crescent-front-offset-left: 3 * $crescent-unit;
+  $crescent-front-left: $w2 + $crescent-front-size / 2;
+  $crescent-front-top: $h2;
+  $crescent-back-left: $crescent-front-left - $crescent-front-offset-left;
+  $crescent-back-top: $h2;
+
+  // $star-color: $symbol-color;
+  $star-size: 10 * $crescent-unit;
+  $star-left: $crescent-back-left + 5.5 * $crescent-unit;
+  $star-top: $h2;
+
+
+
+  background-image:
+                    // Crescent
+                    circle($white, $crescent-front-size, $crescent-front-left, $crescent-front-top),
+                    circle($red, $crescent-back-size, $crescent-back-left, $crescent-back-top),
+                    // Stripes
+                    h-stripe($black, $stripe-height),
+                    h-stripe($white, $stripe-height, $stripe-height),
+                    h-stripe($green, $stripe-height, 2 * $stripe-height)
+                  ;
+  &:before {
+    @include triangle($red, $triangle-width);
+  }
+  &:after {
+    @include star($red, $star-size, $star-left, $star-top);
+    transform: rotate(-20deg);
+  }
 };

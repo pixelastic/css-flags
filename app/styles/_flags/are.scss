@@ -1,5 +1,19 @@
 // United Arab Emirates
 // http://www.crwflags.com/fotw/flags/ae.html
 @mixin flag-are() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h6;
+  $red: #a6192e;
+  $green: #00534c;
+  $white: #FFF;
+  $black: #000;
+  $stripe-height: 2 * $unit;
+  $stripe-width: 3 * $unit;
+
+  background-image:
+                    v-stripe($red, $stripe-width),
+                    h-stripe($green, $stripe-height),
+                    h-stripe($white, $stripe-height, $stripe-height),
+                    h-stripe($black, $stripe-height, 2 * $stripe-height)
+                  ;
 };

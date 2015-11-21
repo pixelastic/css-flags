@@ -2,4 +2,30 @@
 // http://www.crwflags.com/fotw/flags/tg.html
 @mixin flag-tgo() {
   @include ratio(2 / 3);
+  $unit: $h100;
+  $white: #FFF;
+  $green: #00b140;
+  $yellow: #fdda24;
+  $red: #c8102e;
+  $stripe-height: 20 * $unit;
+  $square-size: 60 * $unit;
+  $star-size: 38 * $unit;
+  $star-top: 30 * $unit;
+  $star-left: 30 * $unit;
+
+
+  background-image: 
+                    // Green and yellow stripes on the bottom
+                    h-stripe($yellow, $stripe-height, 3 * $stripe-height),
+                    h-stripe($green,  $stripe-height, 4 * $stripe-height),
+                    // Red stripe
+                    v-stripe($red,  $square-size),
+                    // Green and yellow stripes on the right
+                    h-stripe($green,  $stripe-height, 0),
+                    h-stripe($yellow, $stripe-height, 1 * $stripe-height),
+                    h-stripe($green,  $stripe-height, 2 * $stripe-height),
+                  ;
+  &:before {
+    @include star($white, $star-size, $star-left, $star-top);
+  }
 };
