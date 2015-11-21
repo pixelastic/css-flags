@@ -24,6 +24,56 @@
 
   -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
   clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+// Creates several triangles, on a vertical stripe
+// @args color: Color of the triangles
+// @args number: Number of triangles to display
+// @args width: Width of the triangles
+// @args height: Height of the triangles
+// @args left: Left offset of the stripe
+@function vertical-stripe-of-triangles($color, $number, $_width, $_height, $left:0) {
+  $half-height: $_height / 2;
+  $result: ();
+  @for $i from 1 to $number + 1 {
+    $n1: (2 * $i) - 1;
+    $n2: 2 * $i;
+    $result: append($result, $_width ($n1 * $half-height), comma);
+    $result: append($result, 0px     ($n2 * $half-height), comma);
+  }
+  @return polygon(0px 0px, $result)
+  // @return -webkit-clip-path: polygon(
+  //                        0px 0px, 
+  //                        $triangle-width (1 * $triangle-padding), 0px (2 * $triangle-padding),
+  //                        $triangle-width (3 * $triangle-padding), 0px (4 * $triangle-padding),
+  //                        $triangle-width (5 * $triangle-padding), 0px (6 * $triangle-padding),
+  //                        $triangle-width (7 * $triangle-padding), 0px (8 * $triangle-padding),
+  //                        $triangle-width (9 * $triangle-padding), 0px (10 * $triangle-padding),
+  //                        $triangle-width (11 * $triangle-padding), 0px (12 * $triangle-padding),
+  //                        $triangle-width (13 * $triangle-padding), 0px (14 * $triangle-padding),
+  //                        $triangle-width (15 * $triangle-padding), 0px (16 * $triangle-padding),
+  //                        $triangle-width (17 * $triangle-padding), 0px (18 * $triangle-padding)
+  //                     );
 
 
+  // // Default values
+  // $offset:0;
+  // $color:transparent;
+  // $result: ();
+
+  // @for $i from 1 to length($args) + 1 {
+  //   // Only interested in even numbers
+  //   @if ($i % 2 == 0) {
+  //     $color: nth($args, $i - 1);
+  //     $width: nth($args, $i);
+  //     $result: append($result, v-stripe($color, $width, $offset), comma);
+  //     $offset: $offset + $width;
+  //   }
+  // }
+  // @return $result;
+}
+@mixin vertical-stripe-of-triangles($color, $number, $_width, $_height, $left:0) {
+  @include rectangle($color, $_width, $height, $left);
+  -webkit-clip-path: vertical-stripe-of-triangles($color, $number, $_width, $_height, $left);
+  clip-path: vertical-stripe-of-triangles($color, $number, $_width, $_height, $left);
 }

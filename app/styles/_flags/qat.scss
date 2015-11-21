@@ -15,19 +15,6 @@
                     v-stripe($white, $white-stripe-width)
                   ;
   &:before {
-    @include rectangle($white, $triangle-width, $height, $white-stripe-width - 2px);
-    $triangle-padding: $triangle-height / 2;
-    -webkit-clip-path: polygon(
-                         0px 0px, 
-                         $triangle-width (1 * $triangle-padding), 0px (2 * $triangle-padding),
-                         $triangle-width (3 * $triangle-padding), 0px (4 * $triangle-padding),
-                         $triangle-width (5 * $triangle-padding), 0px (6 * $triangle-padding),
-                         $triangle-width (7 * $triangle-padding), 0px (8 * $triangle-padding),
-                         $triangle-width (9 * $triangle-padding), 0px (10 * $triangle-padding),
-                         $triangle-width (11 * $triangle-padding), 0px (12 * $triangle-padding),
-                         $triangle-width (13 * $triangle-padding), 0px (14 * $triangle-padding),
-                         $triangle-width (15 * $triangle-padding), 0px (16 * $triangle-padding),
-                         $triangle-width (17 * $triangle-padding), 0px (18 * $triangle-padding)
-                      );
+    @include vertical-stripe-of-triangles($white, 9, $triangle-width, $triangle-height, $white-stripe-width - 2px);
   }
 };

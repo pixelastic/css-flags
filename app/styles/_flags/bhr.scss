@@ -14,18 +14,7 @@
   background-image:
                     v-stripe($white, $white-stripe-width)
                   ;
-  &:before {
-    @include rectangle($white, $triangle-width, $height, $white-stripe-width - 1px);
-    $triangle-padding: $triangle-height / 2;
-    -webkit-clip-path: polygon(
-                         0px 0px, 
-                         $triangle-width (1 * $triangle-padding), 0px (2 * $triangle-padding),
-                         $triangle-width (3 * $triangle-padding), 0px (4 * $triangle-padding),
-                         $triangle-width (5 * $triangle-padding), 0px (6 * $triangle-padding),
-                         $triangle-width (7 * $triangle-padding), 0px (8 * $triangle-padding),
-                         $triangle-width (9 * $triangle-padding), 0px (10 * $triangle-padding)
-                      );
-
-
+    &:before {
+      @include vertical-stripe-of-triangles($white, 5, $triangle-width, $triangle-height, $white-stripe-width - 1px);
   }
 };
