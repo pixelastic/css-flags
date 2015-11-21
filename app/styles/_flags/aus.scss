@@ -1,5 +1,104 @@
 // Australia
 // http://www.crwflags.com/fotw/flags/au.html
+// http://www.vexilla-mundi.com/australia_flag.html
 @mixin flag-aus() {
-  @include ratio(2 / 3);
+  // Note: This one was quite hard.
+  // I added the Union-Jack as an :after like usual, but I set a lower z-index
+  // than the before. In the before, I added three symbols, two on the first
+  // line and one on the second line. Using first-letter and first-line I was
+  // able to target each symbol individually. It was needed that I add
+  // white-space: pre and position: relative to make both selector work, though.
+  // I also calculated all the stars positions from coords 0,0. I also add to
+  // calculate all of my pseudo-stars offset coordinates. I then displayed my
+  // stars with invisible ink, but added text-shadow for displaying them where
+  // I wanted. I add to substract the stars offset to the calculated coords.
+  @include ratio(1 / 2);
+  $unit: $h6000;
+  $blue: #012169;
+  $white: #FFF;
+
+  $union-jack-width: 6000 * $unit;
+  $union-jack-height: 3000 * $unit;
+
+  // Three stars, on two lines
+  $stars: $UTF8_STAR_COMMONWEALTH+$UTF8_STAR_COMMONWEALTH+"\A"+$UTF8_BLACK_STAR;
+  $star-commonwealth-big-size: 1800 * $unit;
+  $star-commonwealth-big-left: 3000 * $unit;
+  $star-commonwealth-big-top: $height - 1500 * $unit;
+  $star-commonwealth-small-size: 828 * $unit;
+  $star-commonwealth-small-left1: $union-jack-width + 3000 * $unit;
+  $star-commonwealth-small-top1: 1000 * $unit;
+  $star-commonwealth-small-left2: $star-commonwealth-small-left1 + 1332 * $unit;
+  $star-commonwealth-small-top2: $star-commonwealth-small-top1 + 1220 * $unit;
+  $star-commonwealth-small-left3: $star-commonwealth-small-left1 - 1500 * $unit;
+  $star-commonwealth-small-top3: $height - 3372 * $unit;
+  $star-commonwealth-small-left4: $star-commonwealth-small-left1;
+  $star-commonwealth-small-top4: $height - 1000 * $unit;
+  $star-small-size: 500 * $unit;
+  $star-small-left: $width - 2400 * $unit;
+  $star-small-top: 3252 * $unit;
+
+  background-color: $blue;
+
+  &:after {
+    z-index: 10;
+    @include union-jack-canton($union-jack-width, $union-jack-height, $blue);
+  }
+
+  // We draw all 3 symbols and play with first-letter/first-line to target them
+  &:before {
+    z-index: 20;
+    @include symbol($stars, transparent, $star-small-size);
+    position: relative; // Needed so first-letter works
+    white-space: pre; // Needed so first-line works
+
+    // We put it at coords 0,0 and calculate the offset of the star compared to
+    // 0,0.
+    top: 0;
+    left: 0;
+    $offset-left: -$star-small-size / 2;
+    $offset-top: -$star-commonwealth-big-size - $star-small-size - $star-small-size / 2;
+    $text-shadow-left: $star-small-left + $offset-left;
+    $text-shadow-top: $star-small-top + $offset-top;
+    text-shadow: $text-shadow-left $text-shadow-top 0px $white;
+  }
+  // Small commonwealth stars
+  &:first-line {
+    font-family: Symbols;
+    color: transparent;
+    font-size: $star-commonwealth-small-size;
+    line-height: $star-commonwealth-small-size;
+
+    // Offset from 0,0
+    $offset-left: -$star-commonwealth-big-size / 2 - $star-commonwealth-small-size / 2;
+    $offset-top: -$star-commonwealth-big-size / 2 - $star-commonwealth-small-size / 2;
+    $text-shadow-left1: $star-commonwealth-small-left1 + $offset-left;
+    $text-shadow-top1: $star-commonwealth-small-top1 + $offset-top;
+    $text-shadow-left2: $star-commonwealth-small-left2 + $offset-left;
+    $text-shadow-top2: $star-commonwealth-small-top2 + $offset-top;
+    $text-shadow-left3: $star-commonwealth-small-left3 + $offset-left;
+    $text-shadow-top3: $star-commonwealth-small-top3 + $offset-top;
+    $text-shadow-left4: $star-commonwealth-small-left4 + $offset-left;
+    $text-shadow-top4: $star-commonwealth-small-top4 + $offset-top;
+    text-shadow: 
+                  $text-shadow-left1 $text-shadow-top1 0px $white,
+                  $text-shadow-left2 $text-shadow-top2 0px $white,
+                  $text-shadow-left3 $text-shadow-top3 0px $white,
+                  $text-shadow-left4 $text-shadow-top4 0px $white
+                ;
+  }
+  // Big commonwealth star
+  &:first-letter {
+    font-family: Symbols;
+    color: transparent;
+    font-size: $star-commonwealth-big-size;
+    line-height: $star-commonwealth-big-size;
+
+    // Offset from 0,0
+    $offset-left: -$star-commonwealth-big-size / 2;
+    $offset-top: -$star-commonwealth-big-size / 2;
+    $text-shadow-left: $star-commonwealth-big-left + $offset-left;
+    $text-shadow-top: $star-commonwealth-big-top + $offset-top;
+    text-shadow: $text-shadow-left $text-shadow-top 0px $white;
+  }
 };

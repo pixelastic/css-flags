@@ -42,35 +42,6 @@
     $result: append($result, 0px     ($n2 * $half-height), comma);
   }
   @return polygon(0px 0px, $result)
-  // @return -webkit-clip-path: polygon(
-  //                        0px 0px, 
-  //                        $triangle-width (1 * $triangle-padding), 0px (2 * $triangle-padding),
-  //                        $triangle-width (3 * $triangle-padding), 0px (4 * $triangle-padding),
-  //                        $triangle-width (5 * $triangle-padding), 0px (6 * $triangle-padding),
-  //                        $triangle-width (7 * $triangle-padding), 0px (8 * $triangle-padding),
-  //                        $triangle-width (9 * $triangle-padding), 0px (10 * $triangle-padding),
-  //                        $triangle-width (11 * $triangle-padding), 0px (12 * $triangle-padding),
-  //                        $triangle-width (13 * $triangle-padding), 0px (14 * $triangle-padding),
-  //                        $triangle-width (15 * $triangle-padding), 0px (16 * $triangle-padding),
-  //                        $triangle-width (17 * $triangle-padding), 0px (18 * $triangle-padding)
-  //                     );
-
-
-  // // Default values
-  // $offset:0;
-  // $color:transparent;
-  // $result: ();
-
-  // @for $i from 1 to length($args) + 1 {
-  //   // Only interested in even numbers
-  //   @if ($i % 2 == 0) {
-  //     $color: nth($args, $i - 1);
-  //     $width: nth($args, $i);
-  //     $result: append($result, v-stripe($color, $width, $offset), comma);
-  //     $offset: $offset + $width;
-  //   }
-  // }
-  // @return $result;
 }
 @mixin vertical-stripe-of-triangles($color, $number, $_width, $_height, $left:0) {
   @include rectangle($color, $_width, $height, $left);

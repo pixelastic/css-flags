@@ -1,0 +1,76 @@
+// Generates the needed background to display a Union Jack
+// Note: Not all flags seems to be using the same shade of blue
+// @args width: Width of the Union-Jack
+// @args height: Height of the Union-Jack
+// @args blue: Shade of blue to use
+@function union-jack($_width:$width, $_height:$height, $blue: #012169) {
+  $unit: $_height / 30;
+  $half-width: $_width / 2;
+  $half-height: $_height / 2;
+  $red: #c8102e;
+  $white: #FFF;
+
+  // England (red cross with white borders)
+  $eng-red-size: 6 * $unit;
+  $eng-red-left: 27 * $unit;
+  $eng-red-top: 12 * $unit;
+  $eng-white-size: 10 * $unit;
+  $eng-white-left: 25 * $unit;
+  $eng-white-top: 10 * $unit;
+
+  // Scotland (white diagonal stripes)
+  $sct-size: 6 * $unit;
+  $alpha: atan($_height / $_width) * 1deg;
+  $alpha-reverse: 90deg - $alpha;
+  $sct-padding-big: ($sct-size / 2) / sin($alpha);
+  $sct-padding-small: ($sct-size / 2) / sin($alpha-reverse);
+  $sct-blue-height: $_height - $sct-padding-small;
+  $sct-blue-width: $_width - $sct-padding-big;
+  $sct-blue-alpha: atan($sct-blue-width / $sct-blue-height) * 1deg;
+  $sct-distance: sin($sct-blue-alpha) * $sct-blue-height; 
+
+  // Ireland (red diagonals)
+  $irl-size: 2 * $unit;
+  $irl-padding-big: $irl-size / sin($alpha);
+  $irl-padding-small: $irl-size / sin($alpha-reverse);
+  $irl-blue-height: $_height - $irl-padding-small;
+  $irl-blue-width: $_width - $irl-padding-big;
+  $irl-blue-alpha: atan($irl-blue-width / $irl-blue-height) * 1deg;
+  $irl-distance: sin($irl-blue-alpha) * $irl-blue-height; 
+
+  @return           // England
+                    h-stripe($red, $eng-red-size, $eng-red-top),
+                    v-stripe($red, $eng-red-size, $eng-red-left),
+                    // England white stripes
+                    h-stripe($white, $eng-white-size, $eng-white-top),
+                    v-stripe($white, $eng-white-size, $eng-white-left),
+
+                    // Ireland
+                    stripe-constrained(90deg - $irl-blue-alpha, $red, $irl-size, $irl-distance, $half-width),
+                    stripe-constrained($irl-blue-alpha - 90deg, $red, $irl-size, $irl-distance + $irl-size, $half-width, 100%, $half-width),
+                    stripe-constrained(90deg - $irl-blue-alpha, $red, $irl-size, $irl-distance + $irl-size, $half-width, 100%, $half-width, $half-height),
+                    stripe-constrained($irl-blue-alpha - 90deg, $red, $irl-size, $irl-distance, $half-width, 100%, 0, $half-height),
+
+                    // Scotland
+                    stripe(90deg - $sct-blue-alpha, $white, $sct-size, $sct-distance),
+                    stripe(90deg + $sct-blue-alpha, $white, $sct-size, $sct-distance),
+
+                    // Background
+                    $blue
+                  ;
+}
+@mixin union-jack($_width:$width, $_height:$height, $blue: #012169) {
+  background: union-jack($_width, $_height, $blue);
+}
+
+// Add the Union-Jack as a canton
+@mixin union-jack-canton($_width:$width, $_height:$height, $blue: #012169) {
+  content: "";
+  display: block;
+  position: absolute;
+  width: $_width;
+  height: $_height;
+  left: 0;
+  top: 0;
+  @include union-jack($_width, $_height, $blue);
+}
