@@ -1,5 +1,32 @@
 // Cabo Verde
 // http://www.crwflags.com/fotw/flags/cv.html
+// http://www.vexilla-mundi.com/cape_verde_flag.html
 @mixin flag-cpv() {
-  @include ratio(2 / 3);
+  @include ratio(10 / 17);
+  $unit: $h360;
+  $red: #c8102e;
+  $blue: #003087;
+  $yellow: #ffcd00;
+  $white: #FFF;
+  $stripe-blue-height: 180 * $unit;
+  $stripe-white-height: 30 * $unit;
+  $stripe-red-height: 30 * $unit;
+  $stripe-blue-height-bottom: 90 * $unit;
+  $star-size: 34 * $unit;
+  $circle-size: 190 * $unit;
+  $circle-left: 230 * $unit;
+  $circle-top: $height - 135 * $unit;
+
+  @include lines(
+                  $blue, $stripe-blue-height,
+                  $white, $stripe-white-height,
+                  $red, $stripe-white-height,
+                  $white, $stripe-white-height,
+                  $blue, $stripe-blue-height-bottom
+                );
+
+  &:before {
+    @include symbol($UTF8_BLACK_STAR, transparent, $star-size, $circle-left, $circle-top);
+    text-shadow: symbols-on-a-circle($UTF8_BLACK_STAR, 10, $yellow, $star-size, $circle-size);
+  }
 };

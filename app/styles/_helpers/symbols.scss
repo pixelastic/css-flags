@@ -59,3 +59,25 @@ $UTF8_STAR_OF_DAVID: '\2721';
 @mixin centered-star($color, $size:$h3) {
   @include centered-symbol($UTF8_BLACK_STAR, $color, $size);
 }
+
+
+// Symbols on a circle
+// @args symbol: UTF8 character to display
+// @args number: Number of symbols to display
+// @args color: Color of the stars
+// @args star-size: Size of each star
+// @args circle-size: Size of the circle
+@function symbols-on-a-circle($symbol, $number, $color, $star-size, $circle-size) {
+  $circle-radius: $circle-size / 2;
+  $alpha: 360deg / $number;
+  $result: ();
+  @for $i from 0 to $number {
+    $star-offset-left: sin($i * $alpha) * $circle-radius;
+    $star-offset-top:  cos($i * $alpha) * $circle-radius;
+    $result: append($result, $star-offset-left $star-offset-top 0px $color, comma);
+  }
+  @return $result;
+}
+@mixin symbols-on-a-circle($symbol, $number, $color, $star-size, $circle-size) {
+  text-shadow: symbols-on-a-circle($symbol, $number, $color, $star-size, $circle-size);
+}
