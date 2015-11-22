@@ -1,5 +1,20 @@
 // Canada
 // http://www.crwflags.com/fotw/flags/ca.html
 @mixin flag-can() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h128;
+  $red: #d50032;
+  $white: #FFF;
+  $red-stripe-width: 64 * $unit;
+  $white-stripe-width: 128 * $unit;
+  $leaf-size: 104 * $unit;
+
+  @include columns(
+                    $red,   $red-stripe-width,
+                    $white, $white-stripe-width,
+                    $red,   $red-stripe-width
+                  );
+  &:before {
+    @include centered-symbol($UTF8_MAPLE_LEAF, $red, $leaf-size);
+  }
 };
