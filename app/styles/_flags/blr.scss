@@ -1,5 +1,28 @@
 // Belarus
 // http://www.crwflags.com/fotw/flags/by.html
 @mixin flag-blr() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h315;
+  $red: #da291c;
+  $green: #00af66;
+  $white: #FFF;
+  $stripe-width: 70 * $unit;
+  $red-height: 210 * $unit;
+  $green-height: 105 * $unit;
+
+
+  @include lines(
+                  $red, $red-height,
+                  $green, $green-height
+                );
+
+  &:before {
+    @include symbol($UTF8_COUNTRY_BLR, $red, $height);
+    // Force it to coords 0,0 (otherwise it is centered on the symbol
+    top: 0;
+    left: 0;
+    // Limit to a small white stripe
+    width: $stripe-width;
+    background: $white;
+  }
 };
