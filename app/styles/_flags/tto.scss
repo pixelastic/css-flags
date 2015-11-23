@@ -1,5 +1,25 @@
 // Trinidad and Tobago
 // http://www.crwflags.com/fotw/flags/tt.html
 @mixin flag-tto() {
-  @include ratio(2 / 3);
+  @include ratio(3 / 5);
+  $unit: $h18;
+  $red: #c8102e;
+  $white: #FFF;
+  $black: #000;
+
+  // Source:
+  // http://www.ammanu.edu.jo/wiki1/ja/articles/f/l/a/%E7%94%BB%E5%83%8F~Flag_of_Trinidad_and_Tobago.svg_de28.html
+  $alpha: atan((15 + sqrt(33)) / 24) * 1deg;
+  $white-stripe-size: $unit;
+  $black-stripe-size: 4 * $unit;
+  $red-stripe-size: cos($alpha) * $height;
+
+  @include stripes(
+                    $alpha,
+                    $red,   $red-stripe-size,
+                    $white, $white-stripe-size,
+                    $black, $black-stripe-size,
+                    $white, $white-stripe-size,
+                    $red,   $red-stripe-size
+                  );
 };

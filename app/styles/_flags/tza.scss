@@ -2,4 +2,30 @@
 // http://www.crwflags.com/fotw/flags/tz.html
 @mixin flag-tza() {
   @include ratio(2 / 3);
+  $unit: $h96;
+  $green: #009A3D;
+  $yellow: #FCE700;
+  $blue: #0064BE;
+  $white: #FFF;
+  $black: #000;
+
+  $alpha: atan($width / $height) * 1deg;
+  $yellow-stripe-size: 6 * $unit;
+  $black-stripe-size: 26 * $unit;
+  $half-black-stripe-size: $black-stripe-size / 2;
+
+  $yellow-stripe-padding: $yellow-stripe-size / sin($alpha);
+  $black-stripe-padding: $half-black-stripe-size / sin($alpha);
+  $green-stripe-padding: $height - $black-stripe-padding - $yellow-stripe-padding;
+  $green-stripe-size: sin($alpha) * $green-stripe-padding;
+  $blue-stripe-size: $green-stripe-size;
+
+  @include stripes(
+                    90deg + $alpha,
+                    $green,  $green-stripe-size,
+                    $yellow, $yellow-stripe-size,
+                    $black,  $black-stripe-size,
+                    $yellow, $yellow-stripe-size,
+                    $blue,   $blue-stripe-size
+                  );
 };

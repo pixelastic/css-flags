@@ -1,5 +1,37 @@
 // Congo (Democratic Republic of the)
 // http://www.crwflags.com/fotw/flags/cd.html
+// http://www.vexilla-mundi.com/congo_democratic_republic_flag.html
 @mixin flag-cod() {
-  @include ratio(2 / 3);
+  @include ratio(3 / 4);
+  $unit: $h1500;
+  $blue: #00a3e0;
+  $yellow: #FFEE00;
+  $red: #FD4238;
+
+  $yellow-stripe-size: 37 * $unit;
+  $red-stripe-size: 222 * $unit;
+
+  $blue-padding: $height - $yellow-stripe-size * 2 - $red-stripe-size;
+  $alpha: atan($width / $blue-padding) * 1deg;
+  $blue-stripe-size: sin($alpha) * $blue-padding;
+
+  $star-size: 540 * $unit;
+  $star-left: 360 * $unit;
+  $star-top: 373 * $unit;
+
+
+
+
+  @include stripes(
+                    90 + $alpha,
+                    $blue,   $blue-stripe-size,
+                    $yellow, $yellow-stripe-size,
+                    $red,    $red-stripe-size,
+                    $yellow, $yellow-stripe-size,
+                    $blue,   $blue-stripe-size
+                  );
+
+  &:before {
+    @include symbol($UTF8_BLACK_STAR, $yellow, $star-size, $star-left, $star-top);
+  }
 };

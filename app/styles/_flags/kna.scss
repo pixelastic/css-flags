@@ -1,5 +1,48 @@
 // Saint Kitts and Nevis
 // http://www.crwflags.com/fotw/flags/kn.html
+// http://www.vexilla-mundi.com/saint_kitts_flag.html
 @mixin flag-kna() {
   @include ratio(2 / 3);
+  $unit: $h100;
+  $green: #007a33;
+  $yellow: #FFCB00;
+  $red: #CC0C2F;
+  $white: #FFF;
+  $black: #000;
+
+  $alpha: atan($width / $height) * 1deg;
+  $yellow-stripe-size: 6 * $unit;
+  $black-stripe-size: 30 * $unit;
+  $half-black-stripe-size: $black-stripe-size / 2;
+
+  $yellow-stripe-padding: $yellow-stripe-size / sin($alpha);
+  $black-stripe-padding: $half-black-stripe-size / sin($alpha);
+  $green-stripe-padding: $height - $black-stripe-padding - $yellow-stripe-padding;
+  $green-stripe-size: sin($alpha) * $green-stripe-padding;
+  $red-stripe-size: $green-stripe-size;
+
+  $star-size: 28 * $unit;
+  // Offset calculated from center of flag
+  $star-bottom-offset-left: $w2 - 48 * $unit;
+  $star-bottom-offset-top:  $h2 - 32 * $unit;
+  $star-top-offset-left: $w2 - 45 * $unit;
+  $star-top-offset-top:  $h2 - 30 * $unit;
+
+  @include stripes(
+                    90deg + $alpha,
+                    $green,  $green-stripe-size,
+                    $yellow, $yellow-stripe-size,
+                    $black,  $black-stripe-size,
+                    $yellow, $yellow-stripe-size,
+                    $red,    $red-stripe-size
+                  );
+
+  &:before {
+    @include centered-symbol($UTF8_BLACK_STAR, transparent, $star-size);
+    transform: rotate(-35deg);
+    text-shadow:
+                  -$star-bottom-offset-left 0px 0px $white,
+                  $star-top-offset-left     0px 0px $white
+                ;
+  }
 };

@@ -1,5 +1,30 @@
 // Congo
 // http://www.crwflags.com/fotw/flags/cg.html
+// http://www.vexilla-mundi.com/congo_flag.html
 @mixin flag-cog() {
   @include ratio(2 / 3);
+  $unit: $h2;
+  $green: #009543;
+  $yellow: #FBDE4A;
+  $red: #DC241F;
+
+  $green-padding: 2 * $unit;
+
+  $alpha: atan($green-padding / $height) * 1deg;
+  $green-size: sin($alpha) * $height;
+
+  $green-and-yellow-width: sin($alpha) * $width;
+  $yellow-size: $green-and-yellow-width - $green-size;
+
+  $red-size: $green-size;
+  $red-distance: $green-size + $yellow-size;
+
+  @include stripes(
+                    90 + $alpha,
+                    $green,  $green-size,
+                    $yellow, $yellow-size,
+                    $red,    $red-size
+                  );
+
+
 };

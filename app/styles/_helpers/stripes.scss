@@ -29,6 +29,38 @@
                           );
 }
 
+// Create several stripes of various size
+// @args angle: Angle of the stripes
+// @args[1]: Color of the first stripe
+// @args[2]: Height of the first stripe
+// @args[3]: Color of the second stripe
+// @args[4]: Height of the second stripe
+// ...
+// @args[n*2 - 1]: Color of the nth stripe
+// @args[n*2]: Width of the nth stripe
+@function stripes($angle, $args...) {
+  $result: ();
+  $offset:0;
+
+  @for $i from 1 to length($args) + 1 {
+    // Only interested in even numbers
+    @if ($i % 2 == 0) {
+      $color: nth($args, $i - 1);
+      $size: nth($args, $i);
+      $result: append($result, stripe($angle, $color, $size, $offset), comma);
+      $offset: $offset + $size;
+    }
+  }
+  @return $result;
+}
+@mixin stripes($args...) {
+  background-image: stripes($args...);
+}
+
+
+
+
+
 // Create a colored stripe, with limited width and height
 // @args angle: Angle (in deg) for the stripe
 // @args color: Color of the stripe
