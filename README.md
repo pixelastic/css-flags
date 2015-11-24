@@ -34,18 +34,15 @@ the page.
 
 ## Getting SVG icons for flags
 
-1. Find the wikipedia svg flag
-2. Download id
-3. Remove all the background parts to only keep the symbol
-4. Change its color to #000;
-5. Convert it to png using svg2png
-6. Crop the whitespace (convert file.png -trim file-output.png)
-7. Edit in editor if need be
-8. Convert online back to svg
-9. Run svgo on the file
-10. Add it to icomoon
-11. Center it in one cell of the grid
-12. Export the font
+1. Find the Vexilla Mundi flag page
+2. Find the detail png (Network tab)
+3. Run pngblack to put it in black
+4. Run pngtrim to remove useless whitespace
+5. Online png2svg converter
+6. Upload to icomoon
+7. Center it and scale it
+8. Download resulting svg
+9. Export the font
 
 ## Techniques
 
