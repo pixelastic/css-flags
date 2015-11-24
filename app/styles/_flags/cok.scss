@@ -1,5 +1,28 @@
 // Cook Islands
 // http://www.crwflags.com/fotw/flags/ck.html
+// http://www.vexilla-mundi.com/cook_islands_flag.html
 @mixin flag-cok() {
-  @include ratio(2 / 3);
+  // Note: In the real flag, stars are rotated to face the circle center. Not
+  // here.
+  @include ratio(1 / 2);
+  $unit: $h120;
+  $blue: #00205b;
+  $white: #FFF;
+  $canton-width: 120 * $unit;
+  $canton-height: 60 * $unit;
+  $star-size: 18 * $unit;
+  $circle-size: 88 * $unit;
+  $circle-left: $canton-width + 60 * $unit;
+  $circle-top: 60 * $unit;
+
+  background-color: $blue;
+
+  &:after {
+    @include union-jack-canton($canton-width, $canton-height, $blue);
+  }
+
+  &:before {
+    @include symbols-on-a-circle($UTF8_BLACK_STAR, 15, $white, $star-size, $circle-size, $circle-left, $circle-top);
+    transform: rotate(180deg); // We reverse the circle so we have one single star on top
+  }
 };
