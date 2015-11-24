@@ -12,7 +12,7 @@ $UTF8_COUNTRY_GEO: '\e619 ';
 $UTF8_COUNTRY_ETH: '\e618 ';
 $CHRISTMAS_ISLAND_BIRD: '\e617';
 $CHRISTMAS_ISLAND_ISLE: '\e616';
-$UTF8_BONAIRE_STAR: '\e615';
+$UTF8_STAR_6_POINTS: '\e615';
 $UTF8_BONAIRE_CIRCLE: '\e614';
 $UTF8_COUNTRY_BLR: '\e613';
 $UTF8_STAR_COMMONWEALTH: '\e612';
@@ -77,22 +77,31 @@ $UTF8_STAR_OF_DAVID: '\2721';
 
 
 // Symbols on a circle
-// @args symbol: UTF8 character to display
 // @args number: Number of symbols to display
-// @args color: Color of the stars
-// @args star-size: Size of each star
+// @args color: Color of the symbols
 // @args circle-size: Size of the circle
-@function symbols-on-a-circle($symbol, $number, $color, $star-size, $circle-size) {
+// @args base-offset-left: Offset left to add to every symbol
+// @args base-offset-top: Offset top to add to every symbol
+@function symbols-on-a-circle($number, $color, $circle-size, $base-offset-left:0, $base-offset-top:0) {
   $circle-radius: $circle-size / 2;
   $alpha: 360deg / $number;
   $result: ();
   @for $i from 0 to $number {
-    $star-offset-left: sin($i * $alpha) * $circle-radius;
-    $star-offset-top:  cos($i * $alpha) * $circle-radius;
-    $result: append($result, $star-offset-left $star-offset-top 0px $color, comma);
+    $offset-left: sin($i * $alpha) * $circle-radius + $base-offset-left;
+    $offset-top:  cos($i * $alpha) * $circle-radius + $base-offset-top;
+    $result: append($result, $offset-left $offset-top 0px $color, comma);
   }
   @return $result;
 }
-@mixin symbols-on-a-circle($symbol, $number, $color, $star-size, $circle-size) {
-  text-shadow: symbols-on-a-circle($symbol, $number, $color, $star-size, $circle-size);
+// Symbols on a circle
+// @args symbol: The symbol to display
+// @args number: Number of symbols to display
+// @args color: Color of the symbols
+// @args symbol-size: The size of each symbol
+// @args circle-size: Size of the circle
+// @args left: The left offset of the center of the circle
+// @args top: The top offset of the center of the circle
+@mixin symbols-on-a-circle($symbol, $number, $color, $symbol-size, $circle-size, $left:$w2, $top:$h2) {
+  @include symbol($symbol, transparent, $symbol-size, $left, $top);
+  text-shadow: symbols-on-a-circle($number, $color, $circle-size);
 }

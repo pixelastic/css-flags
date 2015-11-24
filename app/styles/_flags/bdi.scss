@@ -1,5 +1,78 @@
 // Burundi
 // http://www.crwflags.com/fotw/flags/bi.html
+// http://www.vexilla-mundi.com/burundi_flag.html
 @mixin flag-bdi() {
-  @include ratio(2 / 3);
+  @include ratio(3 / 5);
+  $unit: $h1500;
+  $red: #c8102e;
+  $green: #43b02a;
+  $white: #FFF;
+  $stripe-white-size: 200 * $unit;
+  $stripe-white-size-half: $stripe-white-size / 2;
+  $alpha: atan($width / $height) * 1deg;
+  $stripe-white-padding: $stripe-white-size-half / sin($alpha);
+  $stripe-white-distance: sin($alpha) * ($height - $stripe-white-padding);
+  $stripe-red-size: sin($alpha) * $height;
+  $stripe-green-size: $stripe-red-size;
+  $triangle-height: $height - $stripe-white-padding * 2;
+  $triangle-width: (tan($alpha) * $triangle-height / 2);
+
+  $circle-size: 850 * $unit;
+  $stars: $UTF8_STAR_6_POINTS+$UTF8_STAR_6_POINTS;
+  $star-big-size: 200 * $unit;
+  $star-size-difference: 60 * $unit; // This value is guessed, but need to be big enough so we can see the green border
+  $star-small-size: $star-big-size - $star-size-difference;
+  $star-circle-size: 440 * $unit;
+
+  background-image:
+                    // White stripes
+                    stripe(90 + $alpha, $white, $stripe-white-size, $stripe-white-distance),
+                    stripe(90 - $alpha, $white, $stripe-white-size, $stripe-white-distance),
+                    // Bottom, right and top triangles
+                    stripe(90 - $alpha, $red, $stripe-red-size),
+                    stripe($alpha - 90, $green, $stripe-green-size),
+                    stripe($alpha + 90, $red, $stripe-red-size),
+                  ;
+
+  // Left green triangle
+  &:after {
+    // Note: We add a few pixels to compensate on the aliasing
+    @include triangle-right($green, $triangle-width + 4px, $triangle-height + 4px, 0, $stripe-white-padding - 2px);
+    z-index: 10;
+  }
+
+  // We will display two stars, and by using first-letter we'll change the size
+  // and color of one of them. Then, using text-shadow, we'll place them on a
+  // circle
+  &:before {
+    position: relative; // Needed so first-letter works
+    z-index: 20; // Needed so it is above the triangle
+
+    // Set it as a circle in the center
+    background: $white;
+    display: block;
+    width: $circle-size;
+    height: $circle-size;
+    border-radius: 50%;
+    top: $h2 - $circle-size / 2;
+    left: $w2 - $circle-size / 2;
+
+    // Center stars
+    content: $stars;
+    font-size: $star-small-size;
+    line-height: $circle-size;
+    text-indent: $circle-size / 2 - $star-big-size / 2;
+    color: transparent;
+
+    text-shadow: symbols-on-a-circle(3, $red, $star-circle-size, -$star-big-size + $star-size-difference/2, -$star-size-difference/2);
+    // The symbols-on-a-circle was displaying two stars on top and one at the
+    // bottom. We rotate the whole thing
+    transform: rotate(180deg);
+  }
+  &:first-letter {
+    font-family: Symbols;
+    font-size: $star-big-size;
+    color: transparent;
+    text-shadow: symbols-on-a-circle(3, $green, $star-circle-size);
+  }
 };

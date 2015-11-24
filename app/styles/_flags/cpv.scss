@@ -26,7 +26,6 @@
                 );
 
   &:before {
-    @include symbol($UTF8_BLACK_STAR, transparent, $star-size, $circle-left, $circle-top);
-    text-shadow: symbols-on-a-circle($UTF8_BLACK_STAR, 10, $yellow, $star-size, $circle-size);
+    @include symbols-on-a-circle($UTF8_BLACK_STAR, 10, $yellow, $star-size, $circle-size, $circle-left, $circle-top);
   }
 };
