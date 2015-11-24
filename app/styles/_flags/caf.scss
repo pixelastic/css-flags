@@ -1,5 +1,32 @@
 // Central African Republic
 // http://www.crwflags.com/fotw/flags/cf.html
 @mixin flag-caf() {
-  @include ratio(2 / 3);
+  @include ratio(3 / 5);
+  $unit: $h72;
+  $red: #d50032;
+  $blue: #012169;
+  $yellow: #ffd100;
+  $green: #00664f;
+  $white: #FFF;
+
+  $stripe-size: 18 * $unit;
+  $stripe-left: 51 * $unit;
+  $star-size: 16 * $unit;
+  $star-left: 18 * $unit;
+  $star-top: 9 * $unit;
+
+  background-image:
+                    v-stripe($red, $stripe-size, $stripe-left),
+                    lines(
+                          $blue,   $stripe-size,
+                          $white,  $stripe-size,
+                          $green,  $stripe-size,
+                          $yellow, $stripe-size
+                    )
+                  ;
+
+  &:before {
+    @include symbol($UTF8_BLACK_STAR, $yellow, $star-size, $star-left, $star-top);
+  }
+
 };
