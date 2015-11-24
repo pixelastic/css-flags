@@ -1,5 +1,38 @@
 // Bonaire, Sint Eustatius and Saba
 // http://www.crwflags.com/fotw/flags/bq.html
+// http://www.vexilla-mundi.com/bonaire_flag.html
 @mixin flag-bes() {
   @include ratio(2 / 3);
+  $unit: $h720;
+  $yellow: #f3d03e;
+  $red: #c8102e;
+  $blue: #0033a0;
+  $white: #FFF;
+  $black: #000;
+
+  $yellow-stripe-height: 300 * $unit;
+  $yellow-stripe-width: 450 * $unit;
+  $alpha: atan($yellow-stripe-width / $yellow-stripe-height) * 1deg;
+  $yellow-stripe-size: sin($alpha) * $yellow-stripe-height;
+  $blue-stripe-size: sin($alpha) * $height;
+  $white-stripe-size: $blue-stripe-size - $yellow-stripe-size;
+
+  $circle-size: 360 * $unit;
+  $circle-top: 300 * $unit;
+  $circle-left: 300 * $unit;
+  $star-size: 180 * $unit;
+  $star-top: $circle-top;
+  $star-left: $circle-left;
+
+  @include stripes(90 + $alpha,
+                   $yellow, $yellow-stripe-size,
+                   $white,  $white-stripe-size,
+                   $blue,   $blue-stripe-size
+                  );
+  &:before {
+    @include symbol($UTF8_BONAIRE_CIRCLE, $black, $circle-size, $circle-left, $circle-top);
+  }
+  &:after {
+    @include symbol($UTF8_BONAIRE_STAR, $red, $star-size, $star-left, $star-top);
+  }
 };
