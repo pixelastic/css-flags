@@ -1,5 +1,32 @@
 // Curaçao
 // http://www.crwflags.com/fotw/flags/cw.html
+// http://www.vexilla-mundi.com/curacao_flag.html
 @mixin flag-cuw() {
   @include ratio(2 / 3);
+  $unit: $h72;
+  $blue: #012169;
+  $yellow: #fce300;
+  $white: #FFF;
+  $blue-stripe-big-size: 45 * $unit;
+  $blue-stripe-small-size: 18 * $unit;
+  $yellow-stripe-size: 9 * $unit;
+
+  $star-small-size: 12  * $unit;
+  $star-small-left: 12 * $unit;
+  $star-small-top: 12 * $unit;
+  $star-big-size: 16  * $unit;
+  $star-big-left: 24 * $unit;
+  $star-big-top: 24 * $unit;
+
+  @include lines(
+                  $blue, $blue-stripe-big-size,
+                  $yellow, $yellow-stripe-size,
+                  $blue, $blue-stripe-small-size
+                );
+  &:before {
+    @include symbol($UTF8_BLACK_STAR, $white, $star-small-size, $star-small-left, $star-small-top);
+  }
+  &:after {
+    @include symbol($UTF8_BLACK_STAR, $white, $star-big-size, $star-big-left, $star-big-top);
+  }
 };
