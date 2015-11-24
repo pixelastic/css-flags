@@ -2,4 +2,18 @@
 // http://www.crwflags.com/fotw/flags/eg.html
 @mixin flag-egy() {
   @include ratio(2 / 3);
+  $unit: $h12;
+  $red: #c8102e;
+  $white: #FFF;
+  $black: #000;
+  $yellow: #c5a900;
+  $stripe-height: 4 * $unit;
+  $symbol-height: $stripe-height * 0.8;
+
+  @include three-lines($red, $white, $black);
+
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_EGY, $yellow, $symbol-height);
+  }
+
 };
