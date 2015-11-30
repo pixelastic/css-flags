@@ -1,5 +1,47 @@
 // Jamaica
 // http://www.crwflags.com/fotw/flags/jm.html
+// http://www.vexilla-mundi.com/jamaica_flag.html
 @mixin flag-jam() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h12;
+  $green: #00b140;
+  $yellow: #fedb00;
+  $black: #000;
+  $stripe-size: 2 * $unit;
+  $alpha: atan($height / $width) * 1deg;
+  $stripe-padding-big: $stripe-size / 2 / sin($alpha);
+  $stripe-padding-small: sin($alpha) * $stripe-size;
+  $green-width: $width - $stripe-padding-big;
+  $stripe-distance: sin($alpha) * $green-width;
+  $black-height: $height - 2 * $stripe-padding-small;
+  $black-tip-left: tan(90 - $alpha) * $black-height / 2;
+
+  // Note: We set a centered cross in a pseudo element, on a green background.
+  // Then we cut a shape in that element, to let the underlying black background
+  // visible
+  background: $black;
+
+  &:before {
+    @include rectangle($green, $width, $height);
+    background-image: 
+                      stripe($alpha, $yellow, $stripe-size, $stripe-distance),
+                      stripe(-$alpha, $yellow, $stripe-size, $stripe-distance)
+                    ;
+    $polygon: polygon(
+                  0 0,
+                  100% 0,
+                  100% $stripe-padding-small,
+                  ($width - $black-tip-left) 50%,
+                  100% ($height - $stripe-padding-small),
+                  100% 100%,
+                  0 100%,
+                  0 ($height - $stripe-padding-small),
+                  $black-tip-left 50%,
+                  0 $stripe-padding-small
+                );
+    -webkit-clip-path: $polygon;
+    clip-path: $polygon;
+
+  }
+  
 };
