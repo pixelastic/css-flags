@@ -2,4 +2,21 @@
 // http://www.crwflags.com/fotw/flags/tw.html
 @mixin flag-twn() {
   @include ratio(2 / 3);
+  $unit: $height / 160;
+  $red: #fe0000;
+  $blue: #000095;
+  $white: #FFF;
+  $canton-width: 120 * $unit;
+  $canton-height: 80 * $unit;
+  $star-size: 60 * $unit;
+  $star-left: 60 * $unit;
+  $star-top: 40 * $unit;
+
+  background-color: $red;
+  &:before {
+    @include rectangle($blue, $canton-width, $canton-height);
+  }
+  &:after {
+    @include symbol($UTF8_COUNTRY_TWN, $white, $star-size, $star-left, $star-top);
+  }
 };
