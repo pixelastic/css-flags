@@ -1,5 +1,29 @@
 // Kazakhstan
 // http://www.crwflags.com/fotw/flags/kz.html
 @mixin flag-kaz() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $height / 2000;
+  $blue: #00aec7;
+  $yellow: #ffd100;
+  $stripe-width: 240 * $unit;
+  $stripe-height: $height - 220 * $unit;
+  $stripe-left: 120 * $unit;
+  $stripe-top: 110 * $unit;
+  $symbol-width: 1258 * $unit;
+  $symbol-height: 1050 * $unit;
+  $symbol-left: 2180 * $unit;
+
+  background-color: $blue;
+  &:before {
+    @include symbol($KAZAKHSTAN_BIRD, $yellow, $symbol-height);
+    left: $symbol-left - $symbol-width / 2;
+    top: $h2 - $symbol-height / 2;
+    width: $symbol-width;
+  }
+  &:after {
+    @include symbol($KAZAKHSTAN_ORNAMENT, $yellow, $stripe-height);
+    left: $stripe-left;
+    top: $stripe-top;
+    width: $stripe-width;
+  }
 };
