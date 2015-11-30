@@ -1,5 +1,19 @@
 // Kuwait
 // http://www.crwflags.com/fotw/flags/kw.html
 @mixin flag-kwt() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $height / 6;
+  $green: #43b02a;
+  $white: #FFF;
+  $black: #000;
+  $red: #c8102e;
+  $triangle-width: 3 * $unit;
+  $stripe-height: 2 * $unit;
+
+  background: $white;
+  border-top: $stripe-height solid $green;
+  border-bottom: $stripe-height solid $red;
+  border-left: $triangle-width solid $black;
+  border-right: 0;
+
 };
