@@ -1,5 +1,23 @@
 // Lesotho
 // http://www.crwflags.com/fotw/flags/ls.html
+// http://www.vexilla-mundi.com/lesotho_flag.html
 @mixin flag-lso() {
   @include ratio(2 / 3);
+  $unit: $height / 250;
+  $blue: #002595;
+  $white: #FFF;
+  $black: #000;
+  $green: #009a44;
+  $stripe-small-height: 75 * $unit;
+  $stripe-big-height: 100 * $unit;
+  $symbol-size: 92 * $unit;
+
+  @include lines(
+                  $blue, $stripe-small-height,
+                  $white, $stripe-big-height,
+                  $green, $stripe-small-height
+                );
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_LSO, $black, $symbol-size);
+  }
 };

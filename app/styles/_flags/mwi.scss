@@ -1,5 +1,37 @@
 // Malawi
 // http://www.crwflags.com/fotw/flags/mw.html
+// http://www.vexilla-mundi.com/malawi_flag.html
+// Note: I was unable to do the correct math calculation in the circle to get
+// the symbol width, height and position, so I based everything on the circle
+// radius. In the end the symbol is not perfectly positionned
 @mixin flag-mwi() {
   @include ratio(2 / 3);
+  $unit: $height / 600;
+  $black: #000;
+  $red: #c8102e;
+  $green: #009639;
+  $symbol-width: 408 * $unit; // This is an approximate
+
+  // Those are names taken from Vexilla Mundi
+  $A: 450 * $unit;
+  $C: 185 * $unit;
+  $D: 372 * $unit;
+  $E: 204 * $unit;
+  $between-C-and-D: $height - $C - $D;
+  $top-to-circle-center: $C + $between-C-and-D;
+  $symbol-height: $E - $between-C-and-D;
+  $symbol-top: $top-to-circle-center - $E;
+  $symbol-left: $A - $E;
+
+
+
+  @include three-lines($black, $red, $green);
+
+  &:before {
+    @include symbol($UTF8_COUNTRY_MWI, $red, $symbol-width);
+    height: $symbol-height;
+    top: $symbol-top;
+    left: $symbol-left;
+
+  }
 };
