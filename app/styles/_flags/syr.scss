@@ -1,5 +1,22 @@
 // Syrian Arab Republic
 // http://www.crwflags.com/fotw/flags/sy.html
+// http://www.vexilla-mundi.com/syria_flag.html
 @mixin flag-syr() {
   @include ratio(2 / 3);
+  $unit: $h12;
+  $green: #009a44;
+  $red: #c8102e;
+  $black: #000;
+  $white: #FFF;
+  $symbol-size: 2 * $unit;
+  $symbol-offset-left: 3 * $unit;
+
+  @include three-lines($red, $white, $black);
+  &:before {
+    @include centered-symbol($UTF8_BLACK_STAR, transparent, $symbol-size);
+    text-shadow:
+                (-$symbol-offset-left) 0px 0px $green,
+                ($symbol-offset-left) 0px 0px $green
+              ;
+  }
 };
