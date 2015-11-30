@@ -1,5 +1,24 @@
 // Lebanon
 // http://www.crwflags.com/fotw/flags/lb.html
+// http://www.vexilla-mundi.com/lebanon_flag.html
 @mixin flag-lbn() {
   @include ratio(2 / 3);
+  $unit: $height / 4;
+  $red: #FD4238;
+  $green: #009A3D;
+  $white: #FFF;
+  $stripe-small-height: $unit;
+  $stripe-big-height: 2 * $unit;
+  $symbol-size: 2 * $unit;
+
+  @include lines(
+                  $red, $stripe-small-height,
+                  $white, $stripe-big-height,
+                  $red, $stripe-small-height
+                );
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_LBN, $green, $symbol-size);
+  }
+
+                    
 };
