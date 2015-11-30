@@ -1,5 +1,24 @@
 // Guernsey
 // http://www.crwflags.com/fotw/flags/gg.html
+// http://www.vexilla-mundi.com/guernsey_flag.html
 @mixin flag-ggy() {
   @include ratio(2 / 3);
+  $unit: $h24;
+  $red: #e4002b;
+  $yellow: #fedb00;
+  $white: #FFF;
+  $stripe-size: 6 * $unit;
+  $stripe-left: 15 * $unit;
+  $stripe-top: 9 * $unit;
+  $cross-size: 18 * $unit;
+  
+  background-color: $white;
+  background-image:
+                    v-stripe($red, $stripe-size, $stripe-left),
+                    h-stripe($red, $stripe-size, $stripe-top)
+                  ;
+
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_GGY, $yellow, $cross-size);
+  }
 };

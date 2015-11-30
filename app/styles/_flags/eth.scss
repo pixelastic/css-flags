@@ -1,5 +1,22 @@
 // Ethiopia
 // http://www.crwflags.com/fotw/flags/et.html
+// http://www.vexilla-mundi.com/ethiopia_flag.html
 @mixin flag-eth() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h60;
+  $red: #F42938;
+  $yellow: #FBE300;
+  $green: #009A4A;
+  $blue: #0046AE;
+  $circle-size: 40 * $unit;
+  $symbol-size: 32 * $unit;
+
+  background-image:
+                    centered-circle($blue, $circle-size),
+                    three-lines($green, $yellow, $red)
+  ;
+
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_ETH, $yellow, $symbol-size);
+  }
 };

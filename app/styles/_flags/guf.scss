@@ -1,5 +1,21 @@
 // French Guiana
 // http://www.crwflags.com/fotw/flags/gf.html
+// http://www.vexilla-mundi.com/french_guiana_flag.html
 @mixin flag-guf() {
   @include ratio(2 / 3);
+  $unit: $h12;
+  $green: #00843d;
+  $yellow: #FBE300;
+  $red: #c8102e;
+  $alpha: atan($height / $width) * 1deg;
+  $stripe-size: sin($alpha) * $width;
+  $symbol-size: 4 * $unit;
+
+  background-image: stripes($alpha,
+                           $yellow, $stripe-size,
+                           $green, $stripe-size
+                          );
+  &:before {
+    @include centered-star($red, $symbol-size);
+  }
 };

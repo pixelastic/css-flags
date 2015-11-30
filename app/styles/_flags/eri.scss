@@ -1,5 +1,28 @@
 // Eritrea
 // http://www.crwflags.com/fotw/flags/er.html
+// http://www.vexilla-mundi.com/eritrea_flag.html
 @mixin flag-eri() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h4;
+  $red: #e4002b;
+  $green: #43b02a;
+  $blue: #418fde;
+  $yellow: #ffc72c;
+
+  $alpha: atan($h2 / $width) * 1deg;
+  $stripe-size: sin($alpha) * $width;
+  $symbol-size: 2 * $unit;
+  $symbol-left: 2 * $unit;
+  $symbol-top: 2 * $unit;
+
+
+  background-color: $red;
+  background-image:
+                    stripe(-$alpha, $blue, $stripe-size),
+                    stripe(180 + $alpha, $green, $stripe-size)
+                  ;
+  &:before {
+    @include symbol($UTF8_COUNTRY_ERI, $yellow, $symbol-size, $symbol-left, $symbol-top);
+  }
+
 };

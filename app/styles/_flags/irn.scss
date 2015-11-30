@@ -1,5 +1,32 @@
 // Iran (Islamic Republic of)
 // http://www.crwflags.com/fotw/flags/ir.html
+// http://www.vexilla-mundi.com/iran_flag.html
 @mixin flag-irn() {
-  @include ratio(2 / 3);
+  @include ratio(4 / 7);
+  $unit: $height / 504;
+  $stripe-size: 168 * $unit;
+  $green: #009639;
+  $red: #c8102e;
+  $white: #FFF;
+  $line-symbols: $IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE;
+  $line-symbol-height: 28 * $unit;
+  $line-symbol-width: $width / 11;
+  $line-symbol-top: $height - 140 * $unit - $line-symbol-width;
+  $symbol-size: 112 * $unit;
+
+  @include three-lines($green, $white, $red);
+  &:before {
+    @include centered-symbol($IRAN_SYMBOL, $red, $symbol-size);
+  }
+  &:after {
+    content: $line-symbols;
+    color: $white;
+    display: block;
+    position: absolute;
+    top: $line-symbol-top;
+    left:0;
+    right: 0;
+    font-size: $line-symbol-width;
+    text-shadow: 0px (-$stripe-size - $line-symbol-height) 0px $white;
+  }
 };

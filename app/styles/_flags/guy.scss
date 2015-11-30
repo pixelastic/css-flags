@@ -1,5 +1,48 @@
 // Guyana
 // http://www.crwflags.com/fotw/flags/gy.html
+// http://www.vexilla-mundi.com/guyana_flag.html
+// Note: ^ the dimensions in this one are wrong
+// https://books.google.fr/books?id=N4rTCQAAQBAJ&pg=PA190&lpg=PA190&dq=guyana+flag+dimensions&source=bl&ots=xc1BXvpQdr&sig=0mcEn4LmayZBO-50mcZceGJ-I4g&hl=en&sa=X&ved=0ahUKEwj1g9fTm6_JAhUJuhoKHVB4BW0Q6AEIRjAI#v=onepage&q=guyana%20flag%20dimensions&f=false
+// Note: ^ This one says that the black and red triangle tip is at 4/9 of the
+// length
 @mixin flag-guy() {
-  @include ratio(2 / 3);
+  @include ratio(3 / 5);
+  $unit: $h30; // This is guessing, we have no real data here...
+  $red: #CC0C2F;
+  $yellow: #FFD900;
+  $green: #00AE42;
+  $white: #FFF;
+  $black: #000;
+
+  // Alpha is the green angle
+  $alpha: atan($h2 / $width) * 1deg;
+  $green-size: sin($alpha) * $width;
+
+  $white-padding: $unit;
+  $white-distance: $green-size;
+  $white-size: $white-padding / sin(90 - $alpha);
+
+  $triangle-width: 4 / 9 * $width;
+  $beta: 90 - atan($triangle-width / $h2) * 1deg;
+  $black-padding: $white-padding;
+  $black-size: $black-padding / sin(90 - $beta);
+  $black-distance: sin($beta) * $triangle-width;
+
+  background-color: $yellow;
+  background-image:
+                    // Green
+                    stripe(-$alpha, $green, $green-size),
+                    stripe(180 + $alpha, $green, $green-size),
+                    // // White
+                    stripe(-$alpha, $white, $white-padding, $white-distance),
+                    stripe(180 + $alpha, $white, $white-size, $white-distance),
+                  ;
+
+  &:before {
+    @include triangle($red, $triangle-width);
+    background-image:
+                      stripe(-$beta, $black, $black-size, $black-distance),
+                      stripe(180 + $beta, $black, $black-size, $black-distance)
+                    ;
+  }
 };

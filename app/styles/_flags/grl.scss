@@ -1,5 +1,30 @@
 // Greenland
 // http://www.crwflags.com/fotw/flags/gl.html
+// http://www.vexilla-mundi.com/greenland_flag.html
 @mixin flag-grl() {
   @include ratio(2 / 3);
+  $unit: $h12;
+  $red: #e4002b;
+  $white: #FFF;
+  $circle-size: 8 * $unit;
+  $circle-radius: $circle-size / 2;
+  $circle-left: 7 * $unit;
+  $circle-top: 6 * $unit;
+
+  @include two-lines($white, $red);
+  
+  // We're doing the bicolor circle using borders and border-radius
+  &:before {
+    content: "";
+    width: $circle-size;
+    height:0;
+    border-radius: 50%;
+    border-top: $circle-radius solid $red;
+    border-bottom: $circle-radius solid $white;
+    border-left: none;
+    border-right: none;
+    position:absolute;
+    top: $h2 - $circle-radius;
+    left: $circle-left - $circle-radius;
+  }
 };

@@ -13,10 +13,11 @@
   $star-symbol: $UTF8_HEAVY_EIGHT_POINTED_RECTILINEAR_BLACK_STAR;
   $star-color: $center;
   $star-size: 6 * $unit;
-  // Note: I'm not sure of the calculation here. I'm not sure of the top angle
-  // radius
-  $star-left: tan(90/4) * $h2;
   $star-top: $h2;
+  // Alpha is the red triangle angle, top left corner
+  $alpha: atan($width / $height) * 1deg;
+  $beta: $alpha / 2;
+  $star-left: tan($beta) * $h2;
 
   @include three-lines($top, $center, $bottom);
   &:before {

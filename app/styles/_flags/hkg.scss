@@ -1,5 +1,16 @@
 // Hong Kong
 // http://www.crwflags.com/fotw/flags/hk.html
+// https://en.wikipedia.org/wiki/Flag_of_Hong_Kong
+// http://www.vexilla-mundi.com/china/hong_kong_flag.html
 @mixin flag-hkg() {
   @include ratio(2 / 3);
+  $unit: $h60;
+  $red: #c8102e;
+  $white: #FFF;
+  $symbol-size: 36 * $unit;
+
+  background-color: $red;
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_HKG, $white, $symbol-size);
+  }
 };

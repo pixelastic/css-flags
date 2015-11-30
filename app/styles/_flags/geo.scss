@@ -1,5 +1,32 @@
 // Georgia
 // http://www.crwflags.com/fotw/flags/ge.html
+// http://www.vexilla-mundi.com/georgia_flag.html
 @mixin flag-geo() {
   @include ratio(2 / 3);
+  $unit: $h200;
+  $red: #e4002b;
+  $white: #FFF;
+  $stripe-size: 40 * $unit;
+  $stripe-left: 130 * $unit;
+  $stripe-top: 80 * $unit;
+  $cross-size: 35 * $unit;
+  $cross-left: 65 * $unit;
+  $cross-top: 40 * $unit;
+  
+  background-color: $white;
+  background-image:
+                    v-stripe($red, $stripe-size, $stripe-left),
+                    h-stripe($red, $stripe-size, $stripe-top)
+                  ;
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_GEO, transparent, $cross-size);
+    text-shadow:
+                 ($w2 - $cross-left) ($h2 - $cross-top) 0px $red,
+                 ($w2 - $cross-left) (-$h2 + $cross-top) 0px $red,
+                 (-$w2 + $cross-left) ($h2 - $cross-top) 0px $red,
+                 (-$w2 + $cross-left) (-$h2 + $cross-top) 0px $red
+                ;
+  }
+
+
 };
