@@ -1,5 +1,16 @@
 // Kyrgyzstan
 // http://www.crwflags.com/fotw/flags/kg.html
+// http://www.vexilla-mundi.com/kyrgyzstan_flag.html
 @mixin flag-kgz() {
-  @include ratio(2 / 3);
+  @include ratio(3 / 5);
+  $unit: $height / 3000;
+  // The Vexilla Mundi instructions indicates only 900 but this seems to small
+  $symbol-size: 1800 * $unit; 
+  $red: #e4002b;
+  $yellow: #ffd100;
+
+  background-color: $red;
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_KGZ, $yellow, $symbol-size);
+  }
 };
