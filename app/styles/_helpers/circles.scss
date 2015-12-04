@@ -24,3 +24,20 @@
 @mixin centered-circle($color, $size) {
  background-image: centered-circle($color, $size);
 }
+
+
+// Create a colored circle, with limited width and height
+// @args color: Color to fill the circle
+// @args size: Diameter of the circle
+// @args left: Distance from left of flag
+// @args top: Distance from top of flag
+// @args max_width: Width of constraining rectangle
+// @args max_height: Height of constraining rectangle
+@function circle-constrained($color, $diameter, $left, $top, $max_width:100%, $max_height:100%) {
+  $radius: $diameter / 2;
+  @return radial-gradient(circle at $left $top,
+                          $color $radius,
+                          transparent ($radius + 1)
+                        ) $left #{$top}/#{$max_width} $max_height no-repeat
+}
+

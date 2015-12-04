@@ -66,8 +66,8 @@
 // @args color: Color of the stripe
 // @args size: Width of the stripe
 // @args distance: Distance from the border
-// @args width: Width of constraining rectangle
-// @args height: Height of constraining rectangle
+// @args max_width: Width of constraining rectangle
+// @args max_height: Height of constraining rectangle
 // @args left: Left offset of the stripe
 // @args top: Top offset of the stripe
 @function stripe-constrained($angle, $color, $size, $distance:0, $max_width:100%, $max_height:100%, $left:0, $top:0) {

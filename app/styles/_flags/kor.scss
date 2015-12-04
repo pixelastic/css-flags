@@ -1,5 +1,72 @@
 // Korea (Republic of)
 // http://www.crwflags.com/fotw/flags/kr.html
+// https://en.wikipedia.org/wiki/Flag_of_South_Korea
 @mixin flag-kor() {
   @include ratio(2 / 3);
+  $unit: $height / 2;
+  $red: #C60C30;
+  $blue: #003478;
+  $white: #FFF;
+  $black: #000;
+  $circle-size: $unit;
+  $circle-radius: $circle-size / 2;
+  $circle-left: $w2;
+  $circle-top: $h2;
+  $red-circle-size: $unit / 2;
+  $red-circle-left: $red-circle-size / 2;
+  $red-circle-top: $circle-radius;
+  $blue-circle-size: $unit / 2;
+  $blue-circle-left: $circle-radius + $blue-circle-size / 2;
+  $blue-circle-top: $circle-radius;
+
+  // Alpha is the diagonal angle
+  $alpha: atan($height / $width) * 1deg;
+
+  // We get the distance between the corner and the first symbol, along the
+  // diagonal
+  $hypotenuse: sqrt($width * $width + $height * $height);
+  $half-hypotenuse: $hypotenuse / 2;
+  $circle-to-symbol-distance: $unit / 4;
+  $symbol-height: $unit / 3;
+  $symbol-to-corner-distance: $half-hypotenuse - $circle-radius - $circle-to-symbol-distance - $symbol-height;
+
+  // We calculate the top and left offset by creating triangles of the missing
+  // space
+  $symbol-width: $unit / 2;
+  $half-symbol-width: $symbol-width / 2;
+  $symbol-corner-hypotenuse: sqrt($half-symbol-width * $half-symbol-width + $symbol-to-corner-distance * $symbol-to-corner-distance);
+  $symbol-corner-angle: atan($half-symbol-width / $symbol-to-corner-distance) * 1deg;
+
+  $top-to-symbol-rectangle: sin($alpha - $symbol-corner-angle) * $symbol-corner-hypotenuse;
+  $left-to-symbol-rectangle: sin(90deg - $alpha - $symbol-corner-angle) * $symbol-corner-hypotenuse;
+
+  $symbol-rectangle-width: $width - $left-to-symbol-rectangle * 2;
+  $symbol-rectangle-height: $height - $top-to-symbol-rectangle;
+
+  background-color: $white;
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_KOR, $black, $symbol-rectangle-width);
+    top: $h2 - $symbol-rectangle-height / 2;
+    height: $symbol-rectangle-height;
+    line-height: $symbol-rectangle-height;
+  }
+  &:after {
+    content: "";
+    position:absolute;
+    top: $h2 - $circle-radius;
+    left: $w2 - $circle-radius;
+    border-radius: 50%;
+    width: $circle-size;
+    height: $circle-size;
+    background-image:
+                      // Small circles
+                      circle($red, $red-circle-size, $red-circle-left, $red-circle-top),
+                      circle($blue, $blue-circle-size, $blue-circle-left, $blue-circle-top),
+                      // Red and blue stripes
+                      h-stripe($red, $circle-radius, 0),
+                      h-stripe($blue, $circle-radius, $circle-radius)
+                     ;
+    transform: rotate($alpha);
+  }
+
 };
