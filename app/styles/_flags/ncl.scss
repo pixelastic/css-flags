@@ -1,5 +1,26 @@
 // New Caledonia
 // http://www.crwflags.com/fotw/flags/nc.html
 @mixin flag-ncl() {
-  @include ratio(2 / 3);
+  @include ratio(2 / 3); // Not sure...
+  $unit: $height / 6;
+  $blue: #0033a0;
+  $red: #F42938;
+  $green: #009a44;
+  $yellow: #fce300;
+  $black: #000;
+  $circle-size: 4 * $unit;
+  $circle-left: 3 * $unit;
+  $circle-top: 3 * $unit;
+  $symbol-size: 4 * $unit;
+  $symbol-left: $circle-left;
+  $symbol-top: $circle-top;
+
+  background-image:
+                    circle($yellow, $circle-size, $circle-left, $circle-top),
+                    three-lines($blue, $red, $green)
+                  ;
+  &:before {
+    @include symbol($UTF8_COUNTRY_NCL, $black, $symbol-size, $symbol-left, $symbol-top);
+  }
+
 };
