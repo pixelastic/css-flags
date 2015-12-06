@@ -2,4 +2,31 @@
 // http://www.crwflags.com/fotw/flags/mq.html
 @mixin flag-mtq() {
   @include ratio(2 / 3);
+  $unit: $width / 18;
+  $blue: #0077c8;
+  $white: #FFF;
+
+  $stripe-size: 2 * $unit;
+  $stripe-left: 8 * $unit;
+  $stripe-top: 5 * $unit;
+  $symbol-size: 4 * $unit;
+  $symbol-offset-left: 5 * $unit;
+  $symbol-offset-top: 3.5 * $unit;
+  
+  background-color: $blue;
+  background-image:
+                    v-stripe($white, $stripe-size, $stripe-left),
+                    h-stripe($white, $stripe-size, $stripe-top)
+                  ;
+
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_MTQ, transparent, $symbol-size);
+    text-shadow:
+                (-$symbol-offset-left) (-$symbol-offset-top) 0px $white,
+                ($symbol-offset-left) (-$symbol-offset-top) 0px $white,
+                ($symbol-offset-left) ($symbol-offset-top) 0px $white,
+                (-$symbol-offset-left) ($symbol-offset-top) 0px $white
+                ;
+  }
+
 };
