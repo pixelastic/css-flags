@@ -1,5 +1,20 @@
 // Norfolk Island
 // http://www.crwflags.com/fotw/flags/nf.html
 @mixin flag-nfk() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $height / 92;
+  $green: #007a33;
+  $white: #FFF;
+  $stripe-small-size: 56 * $unit;
+  $stripe-big-size: 72 * $unit;
+  $symbol-size: 78 * $unit;
+
+  @include columns(
+                    $green, $stripe-small-size,
+                    $white, $stripe-big-size,
+                    $green, $stripe-small-size
+                  );
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_NFK, $green, $symbol-size);
+  }
 };
