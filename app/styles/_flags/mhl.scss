@@ -1,8 +1,6 @@
 // Marshall Islands
 // http://www.crwflags.com/fotw/flags/mh.html
 // http://www.vexilla-mundi.com/marshall_islands_flag.html
-// Note: I'm not completly satisfied with the way the stripes join at the
-// bottom. I might have messed up something in the distance of the stripes.
 @mixin flag-mhl() {
   @include ratio(10 / 19);
   $unit: $width / 950;
@@ -21,15 +19,15 @@
   // bottom right corner.
   $blue-height: $stripe-blue-height - $bottom-left-space;
   $blue-alpha: atan($width / $blue-height) * 1deg;
-  $blue-size: sin($blue-alpha) * $blue-height + $bottom-left-space;
+  $blue-size: sin($blue-alpha) * $stripe-blue-height;
 
-  $white-height: $blue-height + $stripe-larger-height;
+  $white-height: $stripe-blue-height - (2 * $bottom-left-space) + $stripe-larger-height;
   $white-alpha: atan($width / $white-height) * 1deg;
-  $white-size: sin($white-alpha) * $white-height + $bottom-left-space;
+  $white-size: sin($white-alpha) * ($stripe-blue-height + $stripe-larger-height);
 
-  $orange-height: $white-height + $stripe-larger-height;
+  $orange-height: $stripe-blue-height - (3 * $bottom-left-space) + (2 * $stripe-larger-height);
   $orange-alpha: atan($width / $orange-height) * 1deg;
-  $orange-size: sin($orange-alpha) * $orange-height + $bottom-left-space;
+  $orange-size: sin($orange-alpha) * ($stripe-blue-height + (2 * $stripe-larger-height));
 
 
   $symbol-size: 310 * $unit;
