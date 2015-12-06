@@ -1,5 +1,23 @@
 // Mongolia
 // http://www.crwflags.com/fotw/flags/mn.html
 @mixin flag-mng() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $height / 1200;
+  $red: #F42938;
+  $blue: #407ec9;
+  $yellow: #ffcd00;
+  $symbol-height: 900 * $unit;
+  $symbol-width: 440 * $unit;
+  $symbol-left: 180 * $unit;
+  $symbol-top: 120 * $unit;
+
+  @include three-columns($red, $blue, $red);
+
+  &:before {
+    @include symbol($UTF8_COUNTRY_MNG, $yellow, $symbol-height);
+    width: $symbol-width;
+    left: $symbol-left;
+    top: $symbol-top;
+  }
+
 };

@@ -51,8 +51,8 @@ $UTF8_STAR_OF_DAVID: '\2721';
 // @args left: Left offset for center of symbol
 // @args top: Top offset for center of symbol
 @mixin symbol($symbol, $color, $size, $left:0, $top:0) {
-  $position-top: round($top - $size / 2);
-  $position-left: round($left - $size / 2);
+  $position-top: $top - $size / 2;
+  $position-left: $left - $size / 2;
   $size: round($size);
 
   color:$color;
