@@ -1,5 +1,50 @@
 // Niue
 // http://www.crwflags.com/fotw/flags/nu.html
 @mixin flag-niu() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $height / 60;
+  $yellow: #ffcd00;
+  $blue: #00205b;
+
+  $union-jack-width: 60 * $unit;
+  $union-jack-height: 30 * $unit;
+  $circle-size: 10 * $unit;
+  $circle-left: 30 * $unit;
+  $circle-top: 15 * $unit;
+
+  // I have no real data for this, so this is only an approximate
+  $star-size: 6 * $unit;
+  $star-left-offset: 17.5 * $unit;
+  $star-top-offset: 10 * $unit;
+
+  background-color: $yellow;
+
+  &:after {
+    z-index: 10;
+    content: $UTF8_BLACK_STAR;
+    line-height: $union-jack-height;
+    text-align:center;
+    color: $yellow;
+    display: block;
+    position: absolute;
+    width: $union-jack-width;
+    height: $union-jack-height;
+    left: 0;
+    top: 0;
+    background: 
+                circle($blue, $circle-size, $circle-left, $circle-top),
+                union-jack($union-jack-width, $union-jack-height, $blue)
+                    ;
+  }
+
+  &:before {
+    z-index: 20;
+    @include symbol($UTF8_BLACK_STAR, transparent, $star-size, $circle-left, $circle-top);
+    text-shadow:
+                (0px) (-$star-top-offset) 0px $yellow,
+                $star-left-offset 0px 0px $yellow,
+                0px $star-top-offset 0px $yellow,
+                -$star-left-offset 0px 0px $yellow
+              ;
+  }
 };
