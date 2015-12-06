@@ -1,5 +1,25 @@
 // Nauru
 // http://www.crwflags.com/fotw/flags/nr.html
 @mixin flag-nru() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $width / 48;
+  $blue: #012169;
+  $white: #FFF;
+  $yellow: #ffc72c;
+
+  $blue-stripe-size: 11 * $unit;
+  $yellow-stripe-size: 2 * $unit;
+  $symbol-size: 8 * $unit;
+  $symbol-left: 12 * $unit;
+  $symbol-top: $height - 7 * $unit;
+
+  @include lines(
+                  $blue, $blue-stripe-size,
+                  $yellow, $yellow-stripe-size,
+                  $blue, $blue-stripe-size
+                );
+  &:before {
+    @include symbol($UTF8_COUNTRY_NRU, $white, $symbol-size, $symbol-left, $symbol-top);
+  }
+                  
 };
