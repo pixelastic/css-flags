@@ -1,5 +1,77 @@
 // New Zealand
 // http://www.crwflags.com/fotw/flags/nz.html
+// http://www.vexilla-mundi.com/new_zealand_flag.html
 @mixin flag-nzl() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $height / 120;
+  $blue: #012169;
+  $red: #c8102e;
+  $white: #FFF;
+
+  $union-jack-width: 120 * $unit;
+  $union-jack-height: 60 * $unit;
+
+  // Note: In the real flag, stars have three different sizes. Here, I'll put
+  // them all with the same size.
+  $stars: $UTF8_BLACK_STAR+$UTF8_BLACK_STAR;
+  $star-big: 20 * $unit;
+  $star-small: 14 * $unit;
+  $cross-top: 48 * $unit;
+  $cross-left: $width - 60 * $unit;
+
+  $star-top-top: -24 * $unit;
+  $star-top-left: 0;
+
+  $alpha: 8deg;
+  $star-left-hypotenuse: 28 * $unit;
+  $star-left-top: sin($alpha) * $star-left-hypotenuse; 
+  $star-left-left: -(cos($alpha) * $star-left-hypotenuse);
+
+  $star-right-hypotenuse: 24 * $unit;
+  $star-right-top: -(sin($alpha) * $star-right-hypotenuse);
+  $star-right-left: cos($alpha) * $star-right-hypotenuse;
+
+  $star-bottom-top: 48 * $unit;
+  $star-bottom-left: 0;
+  
+  background-color: $blue;
+
+  &:after {
+    @include union-jack-canton($union-jack-width, $union-jack-height, $blue);
+  }
+
+  &:before {
+    @include symbol($stars, transparent, $star-small);
+    position: relative; // Needed so first-letter works
+    white-space: pre; // Needed so first-line works
+
+    // We put the star at the center of the Southern Cross
+    top: $cross-top - $star-small;
+    left: $cross-left;
+
+    // Note: The way we calculate offset is a bit manual, and I had to add 1px
+    // more for the right and left offsets.
+    $offset-left: ($star-big + $star-small) / 2;
+    $offset-top: (floor($star-big - $star-small)) / 2;
+    text-shadow: 
+                ($star-top-left - $offset-left) ($star-top-top - $offset-top) 0px $red,
+                ($star-left-left - $offset-left) ($star-left-top - $offset-top + 1px) 0px $red,
+                ($star-right-left - $offset-left) ($star-right-top - $offset-top + 1px) 0px $red,
+                ($star-bottom-left - $offset-left) ($star-bottom-top - $offset-top) 0px $red
+              ;
+  }
+  &:first-letter {
+    font-family: Symbols;
+    color: transparent;
+    font-size: $star-big;
+    line-height: $star-big;
+
+    // Offset from 0,0
+    text-shadow: 
+                $star-top-left $star-top-top 0px $white,
+                $star-left-left $star-left-top 0px $white,
+                $star-right-left $star-right-top 0px $white,
+                $star-bottom-left $star-bottom-top 0px $white
+              ;
+  }
 };
