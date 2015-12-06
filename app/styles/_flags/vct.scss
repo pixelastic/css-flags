@@ -1,5 +1,51 @@
 // Saint Vincent and the Grenadines
 // http://www.crwflags.com/fotw/flags/vc.html
+// http://www.vexilla-mundi.com/saint_vincent_and_the_grenadines_flag.html
 @mixin flag-vct() {
   @include ratio(2 / 3);
+  $unit: $height / 48;
+  $yellow: #ffcd00;
+  $green: #009A4A;
+  $blue: #005eb8;
+
+  $stripe-small-width: 18 * $unit;
+  $stripe-big-width: 36 * $unit;
+
+  $losange-width: 8 * $unit;
+  $losange-height: 16 * $unit;
+  $losange-left: 36 * $unit;
+  $losange-top: $height - 14 * $unit;
+  $stripe-yellow-size: 2 * $unit;
+
+  @include columns(
+                    $blue, $stripe-small-width,
+                    $yellow, $stripe-big-width,
+                    $green, $stripe-small-width
+                  );
+
+  &:before {
+    // We first draw a perfect losange by drawing a square
+    $square-side: sqrt($losange-width * $losange-width / 2) * 1px;
+    @include square($green, $square-side, $losange-left, $losange-top);
+
+    // Then we rotate and scale it to make it look like a losange
+    // We also slightly translate it so the center is aligned with 0,0
+    $square-offset: $square-side / 2;
+    $ratio: $losange-height / $losange-width;
+    transform:
+              translateX(-$square-offset)
+              translateY(-$square-offset)
+              scaleY($ratio)
+              rotate(45deg)
+            ;
+
+    // For the other losanges, we add them as box shadow, above and on the left,
+    // and the will be rotated with the losange
+    $losange-offset: $square-side + $stripe-yellow-size;
+    box-shadow:
+                (-$losange-offset) 0px 0px $green,
+                0px (-$losange-offset) 0px $green
+              ;
+  }
+
 };
