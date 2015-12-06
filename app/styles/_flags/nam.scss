@@ -1,5 +1,42 @@
 // Namibia
 // http://www.crwflags.com/fotw/flags/na.html
+// http://www.vexilla-mundi.com/namibia_flag.html
 @mixin flag-nam() {
   @include ratio(2 / 3);
+  $unit: $height / 120;
+  $blue: #003da5;
+  $green: #009a44;
+  $red: #ba0c2f;
+  $white: #FFF;
+  $yellow: #ffc72c;
+
+  $alpha: atan($width / $height) * 1deg;
+  $white-stripe-size: 5 * $unit;
+  $red-stripe-size: 30 * $unit;
+  $half-red-stripe-size: $red-stripe-size / 2;
+
+  $white-stripe-padding: $white-stripe-size / sin($alpha);
+  $red-stripe-padding: $half-red-stripe-size / sin($alpha);
+  $blue-stripe-padding: $height - $white-stripe-padding - $red-stripe-padding;
+  $blue-stripe-size: sin($alpha) * $blue-stripe-padding;
+  $green-stripe-size: $blue-stripe-size;
+
+  $symbol-size: 40 * $unit;
+  $symbol-left: 36 * $unit;
+  $symbol-top: 33 * $unit;
+
+  @include stripes(
+                    90deg + $alpha,
+                    $blue,  $blue-stripe-size,
+                    $white, $white-stripe-size,
+                    $red,   $red-stripe-size,
+                    $white, $white-stripe-size,
+                    $green, $green-stripe-size
+                  );
+
+  &:before {
+    @include symbol($UTF8_COUNTRY_NAM, $white, $symbol-size, $symbol-left, $symbol-top);
+  }
+
+
 };
