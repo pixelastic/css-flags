@@ -1,5 +1,25 @@
 // Rwanda
 // http://www.crwflags.com/fotw/flags/rw.html
+// http://www.vexilla-mundi.com/rwanda_flag.html
 @mixin flag-rwa() {
   @include ratio(2 / 3);
+  $unit: $width / 390;
+  $blue: #0078CB;
+  $yellow: #ffd100;
+  $green: #00794F;
+  $orange: #f2a900;
+  $stripe-big: 130 * $unit;
+  $stripe-small: 65 * $unit;
+  $symbol-size: 84 * $unit;
+  $symbol-left: $width - 70 * $unit;
+  $symbol-top: 66 * $unit;
+
+  @include lines(
+                  $blue, $stripe-big,
+                  $yellow, $stripe-small,
+                  $green, $stripe-small
+                );
+  &:before {
+    @include symbol($UTF8_COUNTRY_RWA, $orange, $symbol-size, $symbol-left, $symbol-top);
+  }
 };
