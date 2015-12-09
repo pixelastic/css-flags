@@ -1,5 +1,15 @@
 // Saudi Arabia
 // http://www.crwflags.com/fotw/flags/sa.html
+// http://www.vexilla-mundi.com/saudi_arabia_flag.html
 @mixin flag-sau() {
   @include ratio(2 / 3);
+  $unit: $height / 32;
+  $green: #009a44;
+  $white: #FFF;
+  $symbol-size: 24 * $unit;
+
+  background-color: $green;
+  &:before {
+    @include centered-symbol($UTF8_COUNTRY_SAU, $white, $symbol-size);
+  }
 };
