@@ -1,5 +1,41 @@
 // Solomon Islands
 // http://www.crwflags.com/fotw/flags/sb.html
+// http://www.vexilla-mundi.com/solomon_islands_flag.html
 @mixin flag-slb() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $height / 100;
+  $blue: #005eb8;
+  $green: #006747;
+  $yellow: #fdda24;
+  $white: #FFF;
+  $alpha: atan($height / $width) * 1deg;
+  $yellow-stripe-size: $height / 10; // Approximate from CRWFlags
+  $yellow-stripe-padding: ($yellow-stripe-size / 2) / sin($alpha);
+  $yellow-stripe-distance: sin($alpha) * ($width - $yellow-stripe-padding);
+
+  $canton-height: 60 * $unit;
+  $canton-width: 70 * $unit;
+  $star-size: 20 * $unit;
+  $star-left: $canton-width / 2;
+  $star-top: $canton-height / 2;
+  $circle-radius: 26 * $unit;
+  $beta: atan($canton-width / $canton-height);
+  $teta: 90deg - $beta;
+  $star-offset-top: sin($teta) * $circle-radius;
+  $star-offset-left: cos($teta) * $circle-radius;
+
+  @include stripes(-$alpha,
+                  $green, $yellow-stripe-distance,
+                  $yellow, $yellow-stripe-size,
+                  $blue, $yellow-stripe-distance
+                  );
+  &:before {
+    @include symbol($UTF8_BLACK_STAR, $white, $star-size, $star-left, $star-top);
+    text-shadow:
+                  (-$star-offset-left) (-$star-offset-top) 0px $white,
+                  ($star-offset-left) (-$star-offset-top) 0px $white,
+                  ($star-offset-left) ($star-offset-top) 0px $white,
+                  (-$star-offset-left) ($star-offset-top) 0px $white
+                ;
+  }
 };
