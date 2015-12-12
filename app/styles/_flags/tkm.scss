@@ -1,5 +1,68 @@
 // Turkmenistan
 // http://www.crwflags.com/fotw/flags/tm.html
+// http://www.vexilla-mundi.com/turkmenistan_flag.html
+// Note:
+// This flag is not finished. I could not find a satisfying way to display the
+// colored stripe. I could use the png2css commandline tool, and play with
+// transform:scale() to put it at the right width, but it is 50.000+ box shadows
+// and weight a few MB, this is not practical.
 @mixin flag-tkm() {
   @include ratio(2 / 3);
+  $unit: $height / 1000;
+  $green: #006747;
+  $red: #a6192e;
+  $yellow: #ff9e1b;
+  $white: #FFF;
+  $black: #000;
+
+  $circle-front-size: 248 * $unit;
+  $circle-front-left: $width - (836 * $unit);
+  $circle-front-top: 206 * $unit;
+  $circle-back-size: 248 * $unit;
+  $circle-back-left: $width - (805 * $unit);
+  $circle-back-top: 225 * $unit;
+
+  $left-green-stripe-width: 180 * $unit;
+  $colored-stripe-width: 270 * $unit;
+  $star-offset-left: $left-green-stripe-width + $colored-stripe-width;
+
+  // We count stars line by line
+  $star-size: 48 * $unit;
+  $Q: 112 * $unit;
+  $R: 64 * $unit;
+  $S: 107 * $unit;
+  $T: 32 * $unit;
+
+  $star1-left: $Q + $R;
+  $star1-top: $S;
+  $star2-left: $Q + (2 * $R);
+  $star2-top: $S + $T;
+  $star3-left: $Q + $R;
+  $star3-top: $S + (2 * $T);
+  $star4-left: $Q;
+  $star4-top: $S + (3 * $T);
+  $star5-left: $Q + $R;
+  $star5-top: $S + (4 * $T);
+
+  background-color: $green;
+  background-image:
+                    circle($green, $circle-front-size, $circle-front-left, $circle-front-top),
+                    circle($white, $circle-back-size, $circle-back-left, $circle-back-top)
+                  ;
+  &:before {
+    @include symbol($UTF8_BLACK_STAR, transparent, $star-size);
+    top: 0;
+    left: $star-offset-left;
+    transform: rotate(180deg);
+    // Because we rotate the initial star, we need to reverse all the
+    // positionning of the shadows
+    text-shadow: 
+                (-$star1-left) (-$star1-top) 0px $white,
+                (-$star2-left) (-$star2-top) 0px $white,
+                (-$star3-left) (-$star3-top) 0px $white,
+                (-$star4-left) (-$star4-top) 0px $white,
+                (-$star5-left) (-$star5-top) 0px $white
+              ;
+
+  }
 };
