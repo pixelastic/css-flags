@@ -1,5 +1,42 @@
 // Saint Lucia
 // http://www.crwflags.com/fotw/flags/lc.html
 @mixin flag-lca() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $height / 200;
+  $blue: #9bcbeb;
+  $yellow: #ffcd00;
+  $black: #000;
+  $white: #FFF;
+
+  $rectangle-width: 144 * $unit;
+  $rectangle-height: 160 * $unit;
+  $rectangle-left: $width / 2 - $rectangle-width / 2;
+  $rectangle-top: 20 * $unit;
+
+  $alpha: atan($rectangle-width / 2 / $rectangle-height) * 1deg;
+  $stripe-blue-size: sin($alpha) * $rectangle-height;
+  $stripe-white-padding: 9 * $unit;
+  $stripe-white-size: sin($alpha) * $stripe-white-padding;
+
+  $yellow-triangle-height: 80 * $unit;
+  $beta: 90deg - atan($yellow-triangle-height / ($rectangle-width / 2)) * 1deg;
+  $stripe-black-size: sin($beta) * $rectangle-height;
+
+  background: $blue;
+  &:before {
+    @include rectangle($yellow, $rectangle-width, $rectangle-height, $rectangle-left, $rectangle-top);
+    background-image:
+                      // Blue stripes to make the main triangle
+                      stripe(90 + $alpha, $blue, $stripe-blue-size),
+                      stripe(-90 - $alpha, $blue, $stripe-blue-size),
+                      // White stripes
+                      stripe(90 + $alpha, $white, $stripe-white-size, $stripe-blue-size),
+                      stripe(-90 - $alpha, $white, $stripe-white-size, $stripe-blue-size),
+                      // Black stripes to make the yellow triangle
+                      stripe(90 + $beta, $black, $stripe-black-size),
+                      stripe(-90 - $beta, $black, $stripe-black-size),
+                    ;
+  }
+
+
 };
