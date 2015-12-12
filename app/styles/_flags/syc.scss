@@ -1,5 +1,40 @@
 // Seychelles
 // http://www.crwflags.com/fotw/flags/sc.html
+// http://www.vexilla-mundi.com/seychelles_flag.html
 @mixin flag-syc() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $height / 3;
+  $blue: #002f6c;
+  $yellow: #fed141;
+  $red: #d22630;
+  $white: #FFF;
+  $green: #007a33;
+
+  $green-height: $unit;
+  $green-alpha: atan($green-height / $width) * 1deg;
+  $green-size: sin($green-alpha) * $width;
+
+  $white-height: 2 * $unit;
+  $white-alpha: atan($white-height / $width) * 1deg;
+  $white-size: sin($white-alpha) * $width;
+
+  $blue-width: 2 * $unit;
+  $blue-alpha: atan($blue-width / $height) * 1deg;
+  $blue-size: sin($blue-alpha) * $height;
+
+  $yellow-width: 4 * $unit;
+  $yellow-alpha: atan($yellow-width / $height) * 1deg;
+  $yellow-size: sin($yellow-alpha) * $height;
+
+  background-color: $red;
+  background-image:
+                    stripe(90 + $blue-alpha, $blue, $blue-size),
+                    stripe(90 + $yellow-alpha, $yellow, $yellow-size),
+                    stripe(-$green-alpha, $green, $green-size),
+                    stripe(-$white-alpha, $white, $white-size)
+                  ;
+
+
+
+
 };
