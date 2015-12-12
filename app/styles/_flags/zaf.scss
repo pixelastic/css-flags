@@ -1,5 +1,65 @@
 // South Africa
 // http://www.crwflags.com/fotw/flags/za.html
+// https://commons.wikimedia.org/wiki/File:South_Africa_flag_construction_sheet.png
+// http://www.vexilla-mundi.com/south_africa_flag.html
 @mixin flag-zaf() {
   @include ratio(2 / 3);
-};
+  $unit: $width / 45;
+  $red: #da291c;
+  $green: #046a38;
+  $blue: #002d72;
+  $black: #000;
+  $white: #FFF;
+  $yellow: #ffb81c;
+
+  $stripe-big: 10 * $unit;
+  $stripe-small: 2 * $unit;
+  $stripe-medium: 6 * $unit;
+
+  $rectangle-width: $width * 52 / 100; // Value obtained from Wikimedia construction sheet
+  $rectangle-height: $height;
+  $alpha: atan($height / $width) * 1deg;
+
+  $white-size: 2 * $unit;
+  $green-size: 6 * $unit;
+  $yellow-size: 2 * $unit;
+
+  $white-padding: $white-size / sin($alpha);
+  $half-green-size: $green-size / 2;
+  $green-padding: $half-green-size / sin($alpha);
+  $blue-triangle-width: $rectangle-width - $white-padding - $green-padding;
+  $blue-size: sin($alpha) * $blue-triangle-width;
+
+  $white-distance: $blue-size;
+  $green-distance: $white-distance + $white-size;
+  $yellow-distance: $green-distance + $green-size;
+  $red-size: $blue-size;
+
+  @include lines(
+                  $red, $stripe-big,
+                  $white, $stripe-small,
+                  $green, $stripe-medium,
+                  $white, $stripe-small,
+                  $blue, $stripe-big
+                );
+  &:before {
+    @include rectangle($black, $rectangle-width, $rectangle-height);
+    background-image:
+                      // bottom blue stripe
+                      stripe(-$alpha, $blue, $blue-size),
+                      // top red stripe
+                      stripe(180 + $alpha, $red, $red-size),
+                      // white stripes
+                      stripe(-$alpha, $white, $white-size, $white-distance),
+                      stripe(180 + $alpha, $white, $white-size, $white-distance),
+                      // green stripes
+                      stripe(-$alpha, $green, $green-size, $green-distance),
+                      stripe(180 + $alpha, $green, $green-size, $green-distance),
+                      // yellow stripes
+                      stripe(-$alpha, $yellow, $yellow-size, $yellow-distance),
+                      stripe(180 + $alpha, $yellow, $yellow-size, $yellow-distance),
+                    ;
+
+
+  }
+}

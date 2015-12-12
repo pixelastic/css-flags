@@ -61,6 +61,11 @@ anywhere.
 
 Is is not possible to apply any rotation to those element, though.
 
+## Tools
+
+- pantone2hex
+- img2svg
+
 ## TODO
 
 - Add autoprefixer (we have -webkit-clip-path)
