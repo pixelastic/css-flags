@@ -2,4 +2,27 @@
 // http://www.crwflags.com/fotw/flags/tr.html
 @mixin flag-tur() {
   @include ratio(2 / 3);
+  $unit: $height / 240;
+  $red: #c8102e;
+  $white: #FFF;
+  $circle-front-size: 96 * $unit;
+  $circle-front-left: 135 * $unit;
+  $circle-front-top: 120 * $unit;
+  $circle-back-size: 120 * $unit;
+  $circle-back-left: 120 * $unit;
+  $circle-back-top: 120 * $unit;
+  $star-size: 60 * $unit;
+  $star-left: $circle-front-left - ($circle-front-size / 2) + (80 * $unit) + ($star-size / 2);
+  $star-top: 120 * $unit;
+  $star-rotate: -20deg;
+
+  background-color: $red;
+  background-image:
+                    circle($red, $circle-front-size, $circle-front-left, $circle-front-top),
+                    circle($white, $circle-back-size, $circle-back-left, $circle-back-top)
+                  ;
+  &:before {
+    @include symbol($UTF8_BLACK_STAR, $white, $star-size, $star-left, $star-top);
+    transform: rotate($star-rotate);
+  }
 };
