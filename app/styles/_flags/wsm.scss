@@ -1,5 +1,92 @@
 // Samoa
 // http://www.crwflags.com/fotw/flags/ws.html
 @mixin flag-wsm() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $height / 144;
+  $red: #c8102e;
+  $blue: #012169;
+  $white: #FFF;
+
+  $stripe-height: 72 * $unit;
+  $stripe-width: 144 * $unit;
+  $canton-height: $height - $stripe-height;
+  $canton-width: $width - $stripe-width;
+
+  // We'll count stars from top, and clockwise
+  // In the real flag, there are 4 different size of stars, here we'll only use
+  // 3
+  $stars: $UTF8_BLACK_STAR+$UTF8_BLACK_STAR+"\A"+$UTF8_BLACK_STAR;
+  $star-normal-size: 16 * $unit;
+  $star-small-size: 10 * $unit;
+  $star-big-size: 20 * $unit;
+  $star1-left: 64 * $unit + $star-normal-size / 2;
+  $star1-top: 3 * $unit + $star-normal-size / 2;
+
+  $star2-left: 87 * $unit + $star-normal-size / 2;
+  $star2-top: 18 * $unit + $star-normal-size / 2;
+
+  $star3-left: 85 * $unit + $star-small-size / 2;
+  $star3-top: 36 * $unit + $star-small-size / 2;
+
+  $star4-left: 62 * $unit + $star-big-size / 2;
+  $star4-top: 49 * $unit + $star-big-size / 2;
+
+  $star5-left: 42 * $unit + $star-normal-size / 2;
+  $star5-top: 21 * $unit + $star-normal-size / 2;
+
+
+  background-color: $blue;
+  background-image:
+                    v-stripe($red, $stripe-width, $canton-width),
+                    h-stripe($red, $stripe-height, $canton-height)
+                  ;
+
+  &:before {
+    z-index: 20;
+    @include symbol($stars, transparent, $star-normal-size);
+    position: relative; // Needed so first-letter works
+    white-space: pre; // Needed so first-line works
+    top: 0;
+    left: 0;
+
+    // In practice, this targets the star on the second line, used to display
+    // the three top normal stars
+    $offset-left: -$star-normal-size / 2;
+    $offset-top: -$star-big-size - $star-normal-size;
+    text-shadow: 
+                  ($star1-left + $offset-left) ($star1-top + $offset-top) 0px $white,
+                  ($star2-left + $offset-left) ($star2-top + $offset-top) 0px $white,
+                  ($star5-left + $offset-left) ($star5-top + $offset-top) 0px $white
+                ;
+  }
+  // Right, small, star
+  &:first-line {
+    font-family: Symbols;
+    font-size: $star-small-size;
+    line-height: $star-small-size;
+    color: transparent;
+
+    // Offset from 0,0
+    $offset-left: -$star-big-size - $star-small-size / 2;
+    $offset-top: -($star-big-size - $star-small-size) - $star-small-size / 2;
+    $text-shadow-left: $star3-left + $offset-left;
+    $text-shadow-top: $star3-top + $offset-top;
+    text-shadow: $text-shadow-left $text-shadow-top 0px $white;
+  }
+  // Bottom, big, star
+  &:first-letter {
+    font-family: Symbols;
+    font-size: $star-big-size;
+    line-height: $star-big-size;
+    color: transparent;
+
+    // Offset from 0,0
+    $offset-left: -$star-big-size / 2;
+    $offset-top: -$star-big-size / 2;
+    $text-shadow-left: $star4-left + $offset-left;
+    $text-shadow-top: $star4-top + $offset-top;
+    text-shadow: $text-shadow-left $text-shadow-top 0px $white;
+  }
+
+
 };
