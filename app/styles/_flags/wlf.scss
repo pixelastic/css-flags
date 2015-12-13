@@ -2,4 +2,47 @@
 // http://www.crwflags.com/fotw/flags/wf.html
 @mixin flag-wlf() {
   @include ratio(2 / 3);
+  $unit: $height / 180;
+  $red: #d50032;
+  $white: #FFF;
+  $blue: #003057;
+
+  $french-stripe-width: 30 * $unit;
+  $french-stripe-height: 60 * $unit;
+  $french-border: $unit;
+  $canton-width: (3 * $french-stripe-width) + $french-border;
+  $canton-height: $french-stripe-height + $french-border;
+  $horizontal-stripe: $height - $canton-height;
+  $vertical-stripe: $width - $canton-width;
+
+  background-image:
+                    // Red to create the canton
+                    h-stripe($red, $horizontal-stripe, $canton-height),
+                    v-stripe($red, $vertical-stripe, $canton-width),
+                    // White border
+                    h-stripe($white, $french-border, $french-stripe-height),
+                    v-stripe($white, $french-border, (3 * $french-stripe-width)),
+                    // French flag
+                    v-stripe($blue, $french-stripe-width),
+                    v-stripe($white, $french-stripe-width, $french-stripe-width),
+                    v-stripe($red, $french-stripe-width, (2 * $french-stripe-width))
+                  ;
+
+  $square-size: 60 * $unit;
+  $square-left: $width - (120 * $unit);
+  $square-top: $height - (120 * $unit);
+  $hypotenuse: sqrt($square-size * $square-size * 2);
+  $half-hypotenuse: $hypotenuse / 2;
+  $alpha: atan(1) * 1deg;
+  $square-stripe-size: 12 * $unit;
+  $half-square-stripe-size: $square-stripe-size / 2;
+  $square-stripe-distance: $half-hypotenuse - $half-square-stripe-size;
+
+  &:before {
+    @include square($white, $square-size, $square-left, $square-top);
+    background-image:
+                      stripe($alpha, $red, $square-stripe-size, $square-stripe-distance),
+                      stripe(-$alpha, $red, $square-stripe-size, $square-stripe-distance)
+                    ;
+  }
 };
