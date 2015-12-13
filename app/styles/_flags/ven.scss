@@ -1,5 +1,53 @@
 // Venezuela (Bolivarian Republic of)
 // http://www.crwflags.com/fotw/flags/ve.html
+// http://www.vexilla-mundi.com/venezuela_flag.html
+// Note: In the real flag, stars are slightly tilted along the circle.
 @mixin flag-ven() {
   @include ratio(2 / 3);
+  $unit: $height / 120;
+  $yellow: #ffcd00;
+  $blue: #0039A7; 
+  $red: #c8102e;
+  $white: #FFF;
+
+  @include three-lines($yellow, $blue, $red);
+
+  $circle-left: 90 * $unit;
+  $circle-top: 84 * $unit;
+  $circle-radius: $height - $circle-top;
+  $star-size: 10 * $unit;
+  $alpha: 20deg;
+
+  $star1-top: -(sin($alpha) * $circle-radius);
+  $star1-left: -(cos($alpha) * $circle-radius);
+  $star2-top: -(sin(2 * $alpha) * $circle-radius);
+  $star2-left: -(cos(2 * $alpha) * $circle-radius);
+  $star3-top: -(sin(3 * $alpha) * $circle-radius);
+  $star3-left: -(cos(3 * $alpha) * $circle-radius);
+  $star4-top: -(sin(4 * $alpha) * $circle-radius);
+  $star4-left: -(cos(4 * $alpha) * $circle-radius);
+
+  $star5-top: $star4-top;
+  $star5-left: -($star4-left);
+  $star6-top: $star3-top;
+  $star6-left: -($star3-left);
+  $star7-top: $star2-top;
+  $star7-left: -($star2-left);
+  $star8-top: $star1-top;
+  $star8-left: -($star1-left);
+
+  &:before {
+    @include symbol($UTF8_BLACK_STAR, transparent, $star-size, $circle-left, $circle-top);
+    text-shadow:
+                ($star1-left) ($star1-top) 0px $white,
+                ($star2-left) ($star2-top) 0px $white,
+                ($star3-left) ($star3-top) 0px $white,
+                ($star4-left) ($star4-top) 0px $white,
+                ($star5-left) ($star5-top) 0px $white,
+                ($star6-left) ($star6-top) 0px $white,
+                ($star7-left) ($star7-top) 0px $white,
+                ($star8-left) ($star8-top) 0px $white
+              ;
+  }
+
 };
