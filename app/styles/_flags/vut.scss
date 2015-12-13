@@ -1,5 +1,61 @@
 // Vanuatu
 // http://www.crwflags.com/fotw/flags/vu.html
 @mixin flag-vut() {
-  @include ratio(2 / 3);
+  @include ratio(19 / 36);
+  $unit: $width / 180;
+  $red: #c8102e;
+  $green: #009a44;
+  $yellow: #ffcd00;
+  $black: #000;
+
+  $red-stripe-height: 39 * $unit;
+  $black-stripe-height: 6 * $unit;
+  $yellow-stripe-height: 5 * $unit;
+  $green-stripe-height: $red-stripe-height;
+
+  $rectangle-width: 84 * $unit;
+  $rectangle-height: $height;
+  $green-triangle-height: 39 * $unit;
+  $alpha: atan($green-triangle-height / $rectangle-width) * 1deg;
+
+  $green-stripe-size: sin($alpha) * $rectangle-width;
+  $red-stripe-size: $green-stripe-size;
+  $black-stripe-distance: $green-stripe-size;
+  $black-stripe-size: $black-stripe-height;
+  $yellow-stripe-distance: $black-stripe-distance + $black-stripe-size;
+  $yellow-stripe-size: $yellow-stripe-height;
+
+  $symbol-size: 29 * $unit;
+  $symbol-left: $rectangle-width / 4; // I have no information on that...
+  $symbol-top: $height / 2;
+
+  @include lines(
+                  $red, $red-stripe-height,
+                  $black, $black-stripe-height,
+                  $yellow, $yellow-stripe-height,
+                  $black, $black-stripe-height,
+                  $green, $green-stripe-height
+                );
+  &:before {
+    @include rectangle($black, $rectangle-width, $rectangle-height);
+    background-image:
+                      // Bottom green stripe
+                      stripe(-$alpha, $green, $green-stripe-size),
+                      // Top red stripe
+                      stripe(180 + $alpha, $red, $red-stripe-size),
+                      // Black stripes
+                      stripe(-$alpha, $black, $black-stripe-size, $black-stripe-distance),
+                      stripe(180 + $alpha, $black, $black-stripe-size, $black-stripe-distance),
+                      // Yellow stripes
+                      stripe(-$alpha, $yellow, $yellow-stripe-size, $yellow-stripe-distance),
+                      stripe(180 + $alpha, $yellow, $yellow-stripe-size, $yellow-stripe-distance)
+                    ;
+  }
+
+  &:after {
+    @include symbol($UTF8_COUNTRY_VUT, $yellow, $symbol-size, $symbol-left, $symbol-top);
+  }
+
+
+
 };
