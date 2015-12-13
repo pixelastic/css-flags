@@ -1,5 +1,49 @@
 // Tuvalu
 // http://www.crwflags.com/fotw/flags/tv.html
 @mixin flag-tuv() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $height / 60;
+  $navy: #012169;
+  $blue: #6cace4;
+  $yellow: #ffcd00;
+
+  $canton-width: 60 * $unit;
+  $canton-height: 30 * $unit;
+
+  $square-size: 5 * $unit;
+  $star-size: 10 * $unit;
+  $offset-left: $canton-width - $star-size / 2;
+  $offset-top: -$star-size / 2;
+
+  
+  background-color: $blue;
+  &:after {
+    @include union-jack-canton($canton-width, $canton-height, $navy);
+    content: $UTF8_BLACK_STAR;
+    font-size: $star-size;
+    line-height: $star-size;
+    color: transparent;
+
+    // Set 0,0 to the top left part of the right squares
+    text-shadow:
+                ($offset-left + 9.5 * $square-size) ($offset-top - -1.5 * $square-size) 0px $yellow,
+                ($offset-left + 10.5 * $square-size) ($offset-top - -5.5 * $square-size) 0px $yellow,
+                ($offset-left + 7.5 * $square-size) ($offset-top - -7.5 * $square-size) 0px $yellow,
+                ($offset-left + 1 * $square-size) ($offset-top - -11 * $square-size) 0px $yellow,
+              ;
+  }
+
+  &:before {
+    $star-left: $canton-width;
+    @include symbol($UTF8_BLACK_STAR, transparent, $star-size, $star-left);
+    transform: rotate(180deg);
+    // Set 0,0 to the top left part of the right squares
+    text-shadow:
+                (-7.5 * $square-size) (-3.5 * $square-size) 0px $yellow,
+                (-5.5 * $square-size) (-4.5 * $square-size) 0px $yellow,
+                (-4 * $square-size) (-8 * $square-size) 0px $yellow,
+                (-4 * $square-size) (-10 * $square-size) 0px $yellow,
+                (-6 * $square-size) (-9.5 * $square-size) 0px $yellow,
+                
+  }
 };
