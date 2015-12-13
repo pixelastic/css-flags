@@ -1,5 +1,57 @@
 // Uzbekistan
 // http://www.crwflags.com/fotw/flags/uz.html
 @mixin flag-uzb() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $width / 1000;
+  $blue: #0092bc;
+  $green: #43b02a;
+  $red: #e03c31;
+  $white: #FFF;
+  $stripe-big: 160 * $unit;
+  $stripe-small: 10 * $unit;
+  $circle-front-size: 100 * $unit;
+  $circle-front-left: 167 * $unit;
+  $circle-front-top: 80 * $unit;
+  $circle-back-size: 120 * $unit;
+  $circle-back-left: 140 * $unit;
+  $circle-back-top: $circle-front-top;
+  $star-size: 24 * $unit;
+  // Bottom left star
+  $star-margin: 48 * $unit;
+  $star-left: $circle-front-left + $star-margin; // No idea, just a guess
+  $star-top: 32 * $unit + 2 * $star-margin;
+
+  background-image:
+                  // Crescent
+                  circle($blue, $circle-front-size, $circle-front-left, $circle-front-top),
+                  circle($white, $circle-back-size, $circle-back-left, $circle-back-top),
+                  // Lines
+                  lines(
+                    $blue, $stripe-big,
+                    $red, $stripe-small,
+                    $white, $stripe-big,
+                    $red, $stripe-small,
+                    $green, $stripe-big
+                  );
+
+  &:before {
+    @include symbol($UTF8_BLACK_STAR, $white, $star-size, $star-left, $star-top);
+    text-shadow:
+                // Bottom row
+                (1 * $star-margin) 0px 0px $white,
+                (2 * $star-margin) 0px 0px $white,
+                (3 * $star-margin) 0px 0px $white,
+                (4 * $star-margin) 0px 0px $white,
+                // Middle row
+                (1 * $star-margin) (-1 * $star-margin) 0px $white,
+                (2 * $star-margin) (-1 * $star-margin) 0px $white,
+                (3 * $star-margin) (-1 * $star-margin) 0px $white,
+                (4 * $star-margin) (-1 * $star-margin) 0px $white,
+                // Top row
+                (2 * $star-margin) (-2 * $star-margin) 0px $white,
+                (3 * $star-margin) (-2 * $star-margin) 0px $white,
+                (4 * $star-margin) (-2 * $star-margin) 0px $white
+              ;
+  }
+
 };
