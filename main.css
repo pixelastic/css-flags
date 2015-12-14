@@ -1,0 +1,3488 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  appearance: none;
+  background-color: #477dca;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+    background-color: #3964a2;
+    color: #fff; }
+  button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+    button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="submit"]:disabled:hover {
+      background-color: #477dca; }
+
+fieldset {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  margin: 0 0 0.75em;
+  padding: 1.5em; }
+
+input,
+label,
+select {
+  display: block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em; }
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.375em; }
+  label.required::after {
+    content: "*"; }
+  label abbr {
+    display: none; }
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
+select[multiple=multiple] {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  transition: border-color 150ms ease;
+  width: 100%; }
+  input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
+  select[multiple=multiple]:hover {
+    border-color: #b1b1b1; }
+  input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
+  select[multiple=multiple]:focus {
+    border-color: #477dca;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+    outline: none; }
+  input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
+  select[multiple=multiple]:disabled {
+    background-color: #f2f2f2;
+    cursor: not-allowed; }
+    input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
+    select[multiple=multiple]:disabled:hover {
+      border: 1px solid #ddd; }
+
+textarea {
+  resize: vertical; }
+
+input[type="search"] {
+  appearance: none; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em; }
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    display: inline-block; }
+
+input[type="file"] {
+  margin-bottom: 0.75em;
+  width: 100%; }
+
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto; }
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+dl {
+  margin-bottom: 0.75em; }
+  dl dt {
+    font-weight: bold;
+    margin-top: 0.75em; }
+  dl dd {
+    margin: 0; }
+
+table {
+  border-collapse: collapse;
+  font-feature-settings: "kern", "liga", "tnum";
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%; }
+
+th {
+  border-bottom: 1px solid #a6a6a6;
+  font-weight: 600;
+  padding: 0.75em 0;
+  text-align: left; }
+
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.75em 0; }
+
+tr,
+td,
+th {
+  vertical-align: middle; }
+
+body {
+  color: #333;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: 1em;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 0.75em; }
+
+p {
+  margin: 0 0 0.75em; }
+
+a {
+  color: #477dca;
+  text-decoration: none;
+  transition: color 150ms ease; }
+  a:active, a:focus, a:hover {
+    color: #355e98; }
+
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.5em 0; }
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
+@font-face {
+  font-family: 'Symbols';
+  src: url("/fonts/Symbols.eot");
+  src: url("/fonts/Symbols.eot?#iefix") format("embedded-opentype"), url("/fonts/Symbols.woff") format("woff"), url("/fonts/Symbols.ttf") format("truetype"), url("/fonts/Symbols.svg#symbols") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.c-flag {
+  margin: 0 auto;
+  position: relative; }
+
+.c-flag:before, .c-flag:after {
+  font-family: Symbols; }
+
+.c-flag__afg {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #000 0, #000 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #BF0000 73.33333px, #BF0000 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #009900 146.66667px, #009900 220px, transparent 220px, transparent 100%); }
+  .c-flag__afg:before {
+    color: #FFF;
+    content: "";
+    font-size: 86px;
+    height: 86px;
+    line-height: 86px;
+    text-align: center;
+    position: absolute;
+    width: 86px;
+    top: 30.625px;
+    left: 67.125px; }
+
+.c-flag__ala {
+  width: 220px;
+  height: 144px;
+  background-color: #0053A5;
+  background-image: linear-gradient(180deg, transparent, transparent 63.53846px, #D21034 63.53846px, #D21034 80.46154px, transparent 80.46154px, transparent 100%), linear-gradient(90deg, transparent, transparent 67.69231px, #D21034 67.69231px, #D21034 84.61538px, transparent 84.61538px, transparent 100%), linear-gradient(180deg, transparent, transparent 50.84615px, #FFCE00 50.84615px, #FFCE00 93.15385px, transparent 93.15385px, transparent 100%), linear-gradient(90deg, transparent, transparent 55px, #FFCE00 55px, #FFCE00 97.30769px, transparent 97.30769px, transparent 100%); }
+
+.c-flag__alb {
+  width: 220px;
+  height: 157px;
+  background-color: #da291c; }
+  .c-flag__alb:before {
+    color: #000;
+    content: "";
+    font-size: 105px;
+    height: 105px;
+    line-height: 105px;
+    text-align: center;
+    position: absolute;
+    width: 105px;
+    top: 26.16667px;
+    left: 57.56667px;
+    width: 94.2px; }
+
+.c-flag__dza {
+  width: 220px;
+  height: 147px;
+  background-image: radial-gradient(circle at 110px 73.5px, #d21034 36.75px, transparent 37.75px), linear-gradient(90deg, transparent, transparent 0, #006233 0, #006233 110px, transparent 110px, transparent 100%), linear-gradient(90deg, transparent, transparent 110px, #FFF 110px, #FFF 220px, transparent 220px, transparent 100%); }
+  .c-flag__dza:before {
+    content: "";
+    height: 58.8px;
+    width: 0;
+    border-top: none;
+    border-bottom: none;
+    border-left: 20.825px solid #006233;
+    border-right: 40.425px solid #FFF;
+    position: absolute;
+    top: 44.1px;
+    left: 89.425px;
+    border-radius: 50%; }
+  .c-flag__dza:after {
+    color: #d21034;
+    content: "★";
+    font-size: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    position: absolute;
+    width: 37px;
+    top: 55.125px;
+    left: 107.8px;
+    transform: rotate(90deg); }
+
+.c-flag__asm {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__and {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__ago {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #CE1126 0, #CE1126 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.5px, #000 73.5px, #000 147px, transparent 147px, transparent 100%); }
+  .c-flag__ago:before {
+    color: #F9D616;
+    content: "";
+    font-size: 79px;
+    height: 79px;
+    line-height: 79px;
+    text-align: center;
+    position: absolute;
+    width: 79px;
+    top: 33.81px;
+    left: 70.31px; }
+
+.c-flag__aia {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__ata {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__atg {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(53.1301deg, transparent, transparent 0, #c8102e 0, #c8102e 88.2px, transparent 88.2px, transparent 100%), linear-gradient(-53.1301deg, transparent, transparent 0, #c8102e 0, #c8102e 88.2px, transparent 88.2px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #000 0, #000 57.52174px, transparent 57.52174px, transparent 100%), linear-gradient(180deg, transparent, transparent 57.52174px, #005eb8 57.52174px, #005eb8 89.47826px, transparent 89.47826px, transparent 100%), linear-gradient(180deg, transparent, transparent 89.47826px, #FFF 89.47826px, #FFF 147px, transparent 147px, transparent 100%); }
+  .c-flag__atg:before {
+    color: #ffcd00;
+    content: "";
+    font-size: 96px;
+    height: 96px;
+    line-height: 96px;
+    text-align: center;
+    position: absolute;
+    width: 96px;
+    top: 9.58696px;
+    left: 62.31522px; }
+
+.c-flag__arg {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__arm {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #D90012 0, #D90012 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #0033A0 36.66667px, #0033A0 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #F2A800 73.33333px, #F2A800 110px, transparent 110px, transparent 100%); }
+
+.c-flag__abw {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__aus {
+  width: 220px;
+  height: 110px;
+  background-color: #012169; }
+  .c-flag__aus:after {
+    z-index: 10;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 110px;
+    height: 55px;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, transparent, transparent 22px, #c8102e 22px, #c8102e 33px, transparent 33px, transparent 100%), linear-gradient(90deg, transparent, transparent 49.5px, #c8102e 49.5px, #c8102e 60.5px, transparent 60.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 18.33333px, #FFF 18.33333px, #FFF 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 45.83333px, #FFF 45.83333px, #FFF 64.16667px, transparent 64.16667px, transparent 100%), linear-gradient(26.56505deg, transparent, transparent 45.52683px, #c8102e 45.52683px, #c8102e 49.1935px, transparent 49.1935px, transparent 100%) 0 0/55px 100% no-repeat, linear-gradient(-26.56505deg, transparent, transparent 49.1935px, #c8102e 49.1935px, #c8102e 52.86016px, transparent 52.86016px, transparent 100%) 55px 0/55px 100% no-repeat, linear-gradient(26.56505deg, transparent, transparent 49.1935px, #c8102e 49.1935px, #c8102e 52.86016px, transparent 52.86016px, transparent 100%) 55px 27.5px/55px 100% no-repeat, linear-gradient(-26.56505deg, transparent, transparent 45.52683px, #c8102e 45.52683px, #c8102e 49.1935px, transparent 49.1935px, transparent 100%) 0 27.5px/55px 100% no-repeat, linear-gradient(26.56505deg, transparent, transparent 43.6935px, #FFF 43.6935px, #FFF 54.6935px, transparent 54.6935px, transparent 100%), linear-gradient(153.43495deg, transparent, transparent 43.6935px, #FFF 43.6935px, #FFF 54.6935px, transparent 54.6935px, transparent 100%), #012169; }
+  .c-flag__aus:before {
+    z-index: 20;
+    color: transparent;
+    content: "\a★";
+    font-size: 9px;
+    height: 9px;
+    line-height: 9px;
+    text-align: center;
+    position: absolute;
+    width: 9px;
+    top: -4.58333px;
+    left: -4.58333px;
+    position: relative;
+    white-space: pre;
+    top: 0;
+    left: 0;
+    text-shadow: 171.41667px 12.87px 0px #FFF; }
+  .c-flag__aus:first-line {
+    font-family: Symbols;
+    color: transparent;
+    font-size: 15.18px;
+    line-height: 15.18px;
+    text-shadow: 140.91px -5.75667px 0px #FFF, 165.33px 16.61px 0px #FFF, 113.41px 24.09px 0px #FFF, 140.91px 67.57667px 0px #FFF; }
+  .c-flag__aus:first-letter {
+    font-family: Symbols;
+    color: transparent;
+    font-size: 33px;
+    line-height: 33px;
+    text-shadow: 38.5px 66px 0px #FFF; }
+
+.c-flag__aut {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #ed2939 0, #ed2939 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #FFF 49px, #FFF 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #ed2939 98px, #ed2939 147px, transparent 147px, transparent 100%); }
+
+.c-flag__aze {
+  width: 220px;
+  height: 110px;
+  background-image: radial-gradient(circle at 110px 55px, #EF3340 13.75px, transparent 14.75px), radial-gradient(circle at 104.5px 55px, #FFF 16.5px, transparent 17.5px), linear-gradient(180deg, transparent, transparent 0, #00B5E2 0, #00B5E2 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #EF3340 36.66667px, #EF3340 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #509E2F 73.33333px, #509E2F 110px, transparent 110px, transparent 100%); }
+  .c-flag__aze:before {
+    color: #FFF;
+    content: "✸";
+    font-size: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    position: absolute;
+    width: 28px;
+    top: 41.25px;
+    left: 109.08333px; }
+
+.c-flag__bhs {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #00a9ce 0, #00a9ce 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #fdda24 36.66667px, #fdda24 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #00a9ce 73.33333px, #00a9ce 110px, transparent 110px, transparent 100%); }
+  .c-flag__bhs:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95.26279px;
+    height: 110px;
+    background-color: #000;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+
+.c-flag__bhr {
+  width: 220px;
+  height: 132px;
+  background-color: #da291c;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #FFF 0, #FFF 55px, transparent 55px, transparent 100%); }
+  .c-flag__bhr:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #FFF;
+    width: 33px;
+    height: 132px;
+    left: 54px;
+    top: 0;
+    -webkit-clip-path: polygon(0px 0px, 33px 13.2px, 0px 26.4px, 33px 39.6px, 0px 52.8px, 33px 66px, 0px 79.2px, 33px 92.4px, 0px 105.6px, 33px 118.8px, 0px 132px);
+    clip-path: polygon(0px 0px, 33px 13.2px, 0px 26.4px, 33px 39.6px, 0px 52.8px, 33px 66px, 0px 79.2px, 33px 92.4px, 0px 105.6px, 33px 118.8px, 0px 132px); }
+
+.c-flag__bgd {
+  width: 220px;
+  height: 132px;
+  background-color: #01796F;
+  background-image: radial-gradient(circle at 99px 66px, #E11837 44px, transparent 45px); }
+
+.c-flag__brb {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #00267f 0, #00267f 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #ffc726 73.33333px, #ffc726 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #00267f 146.66667px, #00267f 220px, transparent 220px, transparent 100%); }
+  .c-flag__brb:before {
+    color: #000;
+    content: "";
+    font-size: 74px;
+    height: 74px;
+    line-height: 74px;
+    text-align: center;
+    position: absolute;
+    width: 74px;
+    top: 36.75px;
+    left: 73.25px; }
+
+.c-flag__blr {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #da291c 0, #da291c 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #00af66 73.33333px, #00af66 110px, transparent 110px, transparent 100%); }
+  .c-flag__blr:before {
+    color: #da291c;
+    content: "";
+    font-size: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    position: absolute;
+    width: 110px;
+    top: -55px;
+    left: -55px;
+    top: 0;
+    left: 0;
+    width: 24.44444px;
+    background: #FFF; }
+
+.c-flag__bel {
+  width: 220px;
+  height: 191px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #000 0, #000 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #FFE936 73.33333px, #FFE936 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #FF0F21 146.66667px, #FF0F21 220px, transparent 220px, transparent 100%); }
+
+.c-flag__blz {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__ben {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #008751 0, #008751 88.2px, transparent 88.2px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #FCD116 0, #FCD116 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.5px, #E8112D 73.5px, #E8112D 147px, transparent 147px, transparent 100%); }
+
+.c-flag__bmu {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__btn {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__bol {
+  width: 220px;
+  height: 150px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #D52B1E 0, #D52B1E 50px, transparent 50px, transparent 100%), linear-gradient(180deg, transparent, transparent 50px, #F9E300 50px, #F9E300 100px, transparent 100px, transparent 100%), linear-gradient(180deg, transparent, transparent 100px, #007934 100px, #007934 150px, transparent 150px, transparent 100%); }
+  .c-flag__bol:hover {
+    outline: 150px solid rgba(255, 206, 0, 0.8); }
+
+.c-flag__bes {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(146.30993deg, transparent, transparent 0, #f3d03e 0, #f3d03e 50.96308px, transparent 50.96308px, transparent 100%), linear-gradient(146.30993deg, transparent, transparent 50.96308px, #FFF 50.96308px, #FFF 122.31139px, transparent 122.31139px, transparent 100%), linear-gradient(146.30993deg, transparent, transparent 122.31139px, #0033a0 122.31139px, #0033a0 244.62279px, transparent 244.62279px, transparent 100%); }
+  .c-flag__bes:before {
+    color: #000;
+    content: "";
+    font-size: 74px;
+    height: 74px;
+    line-height: 74px;
+    text-align: center;
+    position: absolute;
+    width: 74px;
+    top: 24.5px;
+    left: 24.5px; }
+  .c-flag__bes:after {
+    color: #c8102e;
+    content: "";
+    font-size: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    position: absolute;
+    width: 37px;
+    top: 42.875px;
+    left: 42.875px; }
+
+.c-flag__bih {
+  width: 220px;
+  height: 110px;
+  background-color: #002395;
+  background-image: linear-gradient(90deg, transparent, transparent 168.3px, #002395 168.3px, #002395 220px, transparent 220px, transparent 100%), linear-gradient(45deg, transparent, transparent 119.00607px, #fecb00 119.00607px, #fecb00 339.00607px, transparent 339.00607px, transparent 100%);
+  overflow: hidden; }
+  .c-flag__bih:before {
+    color: #FFF;
+    content: "★";
+    font-size: 21px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    position: absolute;
+    width: 21px;
+    top: 0px;
+    left: 37.4px;
+    text-shadow: -16.5px -15.71429px 0px #FFF, 16.5px 15.71429px 0px #FFF, 33px 31.42857px 0px #FFF, 49.5px 47.14286px 0px #FFF, 66px 62.85714px 0px #FFF, 82.5px 78.57143px 0px #FFF, 99px 94.28571px 0px #FFF; }
+
+.c-flag__bwa {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #6CACE4 0, #6CACE4 55.125px, transparent 55.125px, transparent 100%), linear-gradient(180deg, transparent, transparent 55.125px, #FFF 55.125px, #FFF 61.25px, transparent 61.25px, transparent 100%), linear-gradient(180deg, transparent, transparent 61.25px, #000 61.25px, #000 85.75px, transparent 85.75px, transparent 100%), linear-gradient(180deg, transparent, transparent 85.75px, #FFF 85.75px, #FFF 91.875px, transparent 91.875px, transparent 100%), linear-gradient(180deg, transparent, transparent 91.875px, #6CACE4 91.875px, #6CACE4 147px, transparent 147px, transparent 100%); }
+
+.c-flag__bvt {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__bra {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__iot {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__brn {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__bgr {
+  width: 220px;
+  height: 132px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #FFF 0, #FFF 44px, transparent 44px, transparent 100%), linear-gradient(180deg, transparent, transparent 44px, #00966E 44px, #00966E 88px, transparent 88px, transparent 100%), linear-gradient(180deg, transparent, transparent 88px, #D62612 88px, #D62612 132px, transparent 132px, transparent 100%); }
+
+.c-flag__bfa {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #EF3340 0, #EF3340 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.5px, #009639 73.5px, #009639 147px, transparent 147px, transparent 100%); }
+  .c-flag__bfa:before {
+    color: #FFCD00;
+    content: "★";
+    font-size: 49px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    position: absolute;
+    width: 49px;
+    top: 49px;
+    left: 85.5px; }
+
+.c-flag__bdi {
+  width: 220px;
+  height: 132px;
+  background-image: linear-gradient(149.03624deg, transparent, transparent 104.38907px, #FFF 104.38907px, #FFF 121.98907px, transparent 121.98907px, transparent 100%), linear-gradient(30.96376deg, transparent, transparent 104.38907px, #FFF 104.38907px, #FFF 121.98907px, transparent 121.98907px, transparent 100%), linear-gradient(30.96376deg, transparent, transparent 0, #c8102e 0, #c8102e 113.18907px, transparent 113.18907px, transparent 100%), linear-gradient(-30.96376deg, transparent, transparent 0, #43b02a 0, #43b02a 113.18907px, transparent 113.18907px, transparent 100%), linear-gradient(149.03624deg, transparent, transparent 0, #c8102e 0, #c8102e 113.18907px, transparent 113.18907px, transparent 100%); }
+  .c-flag__bdi:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8.26248px;
+    left: 0;
+    width: 96.89587px;
+    height: 115.47505px;
+    background-color: #43b02a;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    z-index: 10; }
+  .c-flag__bdi:before {
+    position: relative;
+    z-index: 20;
+    background: #FFF;
+    display: block;
+    width: 74.8px;
+    height: 74.8px;
+    border-radius: 50%;
+    top: 28.6px;
+    left: 72.6px;
+    content: "";
+    font-size: 12.32px;
+    line-height: 74.8px;
+    text-indent: 28.6px;
+    color: transparent;
+    text-shadow: -14.96px 16.72px 0px #c8102e, 1.80625px -12.32px 0px #c8102e, -31.72625px -12.32px 0px #c8102e;
+    transform: rotate(180deg); }
+  .c-flag__bdi:first-letter {
+    font-family: Symbols;
+    font-size: 17.6px;
+    color: transparent;
+    text-shadow: 0px 19.36px 0px #43b02a, 16.76625px -9.68px 0px #43b02a, -16.76625px -9.68px 0px #43b02a; }
+
+.c-flag__khm {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__cmr {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #007A5E 0, #007A5E 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #CE1126 73.33333px, #CE1126 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #FCD116 146.66667px, #FCD116 220px, transparent 220px, transparent 100%); }
+  .c-flag__cmr:before {
+    color: #FCD116;
+    content: "★";
+    font-size: 49px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    position: absolute;
+    width: 49px;
+    top: 49px;
+    left: 85.5px; }
+
+.c-flag__can {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #d50032 0, #d50032 55px, transparent 55px, transparent 100%), linear-gradient(90deg, transparent, transparent 55px, #FFF 55px, #FFF 165px, transparent 165px, transparent 100%), linear-gradient(90deg, transparent, transparent 165px, #d50032 165px, #d50032 220px, transparent 220px, transparent 100%); }
+  .c-flag__can:before {
+    color: #d50032;
+    content: "🍁";
+    font-size: 89px;
+    height: 89px;
+    line-height: 89px;
+    text-align: center;
+    position: absolute;
+    width: 89px;
+    top: 10.3125px;
+    left: 65.3125px; }
+
+.c-flag__cpv {
+  width: 220px;
+  height: 129px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #003087 0, #003087 64.5px, transparent 64.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 64.5px, #FFF 64.5px, #FFF 75.25px, transparent 75.25px, transparent 100%), linear-gradient(180deg, transparent, transparent 75.25px, #c8102e 75.25px, #c8102e 86px, transparent 86px, transparent 100%), linear-gradient(180deg, transparent, transparent 86px, #FFF 86px, #FFF 96.75px, transparent 96.75px, transparent 100%), linear-gradient(180deg, transparent, transparent 96.75px, #003087 96.75px, #003087 129px, transparent 129px, transparent 100%); }
+  .c-flag__cpv:before {
+    color: transparent;
+    content: "★";
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+    position: absolute;
+    width: 12px;
+    top: 74.53333px;
+    left: 76.325px;
+    text-shadow: 0px 34.04167px 0px #ffcd00, 20.00919px 27.54029px 0px #ffcd00, 32.37555px 10.51945px 0px #ffcd00, 32.37555px -10.51945px 0px #ffcd00, 20.00919px -27.54029px 0px #ffcd00, 0px -34.04167px 0px #ffcd00, -20.00919px -27.54029px 0px #ffcd00, -32.37555px -10.51945px 0px #ffcd00, -32.37555px 10.51945px 0px #ffcd00, -20.00919px 27.54029px 0px #ffcd00; }
+
+.c-flag__cym {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__caf {
+  width: 220px;
+  height: 132px;
+  background-image: linear-gradient(90deg, transparent, transparent 93.5px, #d50032 93.5px, #d50032 126.5px, transparent 126.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #012169 0, #012169 33px, transparent 33px, transparent 100%), linear-gradient(180deg, transparent, transparent 33px, #FFF 33px, #FFF 66px, transparent 66px, transparent 100%), linear-gradient(180deg, transparent, transparent 66px, #00664f 66px, #00664f 99px, transparent 99px, transparent 100%), linear-gradient(180deg, transparent, transparent 99px, #ffd100 99px, #ffd100 132px, transparent 132px, transparent 100%); }
+  .c-flag__caf:before {
+    color: #ffd100;
+    content: "★";
+    font-size: 29px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    position: absolute;
+    width: 29px;
+    top: 1.83333px;
+    left: 18.33333px; }
+
+.c-flag__tcd {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #002664 0, #002664 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #FCD116 73.33333px, #FCD116 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #CE1126 146.66667px, #CE1126 220px, transparent 220px, transparent 100%); }
+
+.c-flag__chl {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 73.5px, #c8102e 73.5px, #c8102e 147px, transparent 147px, transparent 100%), linear-gradient(90deg, transparent, transparent 0, #003087 0, #003087 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #FFF 0, #FFF 73.5px, transparent 73.5px, transparent 100%); }
+  .c-flag__chl:before {
+    color: #FFF;
+    content: "★";
+    font-size: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    position: absolute;
+    width: 37px;
+    top: 18.375px;
+    left: 18.375px; }
+
+.c-flag__chn {
+  width: 220px;
+  height: 147px;
+  background-color: #de2910; }
+  .c-flag__chn:before {
+    color: #FDDA24;
+    content: "★";
+    font-size: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    position: absolute;
+    width: 44px;
+    top: 14.7px;
+    left: 14.7px; }
+  .c-flag__chn:after {
+    color: #FDDA24;
+    content: "★";
+    font-size: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    position: absolute;
+    width: 15px;
+    top: 7.35px;
+    left: 66.15px;
+    text-shadow: 14.7px 14.7px 0px #FDDA24, 14.7px 36.75px 0px #FDDA24, 0 51.45px 0px #FDDA24; }
+
+.c-flag__cxr {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__cck {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__col {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #FCD116 0, #FCD116 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.5px, #003893 73.5px, #003893 110.25px, transparent 110.25px, transparent 100%), linear-gradient(180deg, transparent, transparent 110.25px, #CE1126 110.25px, #CE1126 147px, transparent 147px, transparent 100%); }
+
+.c-flag__com {
+  width: 220px;
+  height: 132px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #FFC61E 0, #FFC61E 33px, transparent 33px, transparent 100%), linear-gradient(180deg, transparent, transparent 33px, #FFF 33px, #FFF 66px, transparent 66px, transparent 100%), linear-gradient(180deg, transparent, transparent 66px, #CE1126 66px, #CE1126 99px, transparent 99px, transparent 100%), linear-gradient(180deg, transparent, transparent 99px, #3A75C4 99px, #3A75C4 132px, transparent 132px, transparent 100%); }
+  .c-flag__com:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 132px;
+    background-color: #3D8E33;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+  .c-flag__com:after {
+    display: block;
+    height: 132px;
+    position: absolute;
+    width: 110px;
+    color: #FFF;
+    content: "★";
+    font-family: Symbols;
+    font-size: 8.8px;
+    padding-left: 39.6px;
+    padding-top: 39.6px;
+    text-shadow: 0px 13.2px 0px #FFF, 0px 26.4px 0px #FFF, 0px 39.6px 0px #FFF;
+    background-image: radial-gradient(circle at 50.6px 66px, #3D8E33 29.7px, transparent 30.7px), radial-gradient(circle at 37.4px 66px, #FFF 29.7px, transparent 30.7px); }
+
+.c-flag__cog {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(135deg, transparent, transparent 0, #009543 0, #009543 103.9447px, transparent 103.9447px, transparent 100%), linear-gradient(135deg, transparent, transparent 103.9447px, #FBDE4A 103.9447px, #FBDE4A 155.56349px, transparent 155.56349px, transparent 100%), linear-gradient(135deg, transparent, transparent 155.56349px, #DC241F 155.56349px, #DC241F 259.50819px, transparent 259.50819px, transparent 100%); }
+
+.c-flag__cod {
+  width: 220px;
+  height: 165px;
+  background-image: linear-gradient(148.95206deg, transparent, transparent 0, #00a3e0 0, #00a3e0 113.46612px, transparent 113.46612px, transparent 100%), linear-gradient(148.95206deg, transparent, transparent 113.46612px, #FFEE00 113.46612px, #FFEE00 117.53612px, transparent 117.53612px, transparent 100%), linear-gradient(148.95206deg, transparent, transparent 117.53612px, #FD4238 117.53612px, #FD4238 141.95612px, transparent 141.95612px, transparent 100%), linear-gradient(148.95206deg, transparent, transparent 141.95612px, #FFEE00 141.95612px, #FFEE00 146.02612px, transparent 146.02612px, transparent 100%), linear-gradient(148.95206deg, transparent, transparent 146.02612px, #00a3e0 146.02612px, #00a3e0 259.49225px, transparent 259.49225px, transparent 100%); }
+  .c-flag__cod:before {
+    color: #FFEE00;
+    content: "★";
+    font-size: 59px;
+    height: 59px;
+    line-height: 59px;
+    text-align: center;
+    position: absolute;
+    width: 59px;
+    top: 11.33px;
+    left: 9.9px; }
+
+.c-flag__cok {
+  width: 220px;
+  height: 110px;
+  background-color: #00205b; }
+  .c-flag__cok:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 110px;
+    height: 55px;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, transparent, transparent 22px, #c8102e 22px, #c8102e 33px, transparent 33px, transparent 100%), linear-gradient(90deg, transparent, transparent 49.5px, #c8102e 49.5px, #c8102e 60.5px, transparent 60.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 18.33333px, #FFF 18.33333px, #FFF 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 45.83333px, #FFF 45.83333px, #FFF 64.16667px, transparent 64.16667px, transparent 100%), linear-gradient(26.56505deg, transparent, transparent 45.52683px, #c8102e 45.52683px, #c8102e 49.1935px, transparent 49.1935px, transparent 100%) 0 0/55px 100% no-repeat, linear-gradient(-26.56505deg, transparent, transparent 49.1935px, #c8102e 49.1935px, #c8102e 52.86016px, transparent 52.86016px, transparent 100%) 55px 0/55px 100% no-repeat, linear-gradient(26.56505deg, transparent, transparent 49.1935px, #c8102e 49.1935px, #c8102e 52.86016px, transparent 52.86016px, transparent 100%) 55px 27.5px/55px 100% no-repeat, linear-gradient(-26.56505deg, transparent, transparent 45.52683px, #c8102e 45.52683px, #c8102e 49.1935px, transparent 49.1935px, transparent 100%) 0 27.5px/55px 100% no-repeat, linear-gradient(26.56505deg, transparent, transparent 43.6935px, #FFF 43.6935px, #FFF 54.6935px, transparent 54.6935px, transparent 100%), linear-gradient(153.43495deg, transparent, transparent 43.6935px, #FFF 43.6935px, #FFF 54.6935px, transparent 54.6935px, transparent 100%), #00205b; }
+  .c-flag__cok:before {
+    color: transparent;
+    content: "★";
+    font-size: 17px;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    position: absolute;
+    width: 17px;
+    top: 46.75px;
+    left: 156.75px;
+    text-shadow: 0px 40.33333px 0px #FFF, 16.40504px 36.84633px 0px #FFF, 29.97351px 26.98827px 0px #FFF, 38.35928px 12.46369px 0px #FFF, 40.11238px -4.21598px 0px #FFF, 34.92969px -20.16667px 0px #FFF, 23.70734px -32.63035px 0px #FFF, 8.38577px -39.45195px 0px #FFF, -8.38577px -39.45195px 0px #FFF, -23.70734px -32.63035px 0px #FFF, -34.92969px -20.16667px 0px #FFF, -40.11238px -4.21598px 0px #FFF, -38.35928px 12.46369px 0px #FFF, -29.97351px 26.98827px 0px #FFF, -16.40504px 36.84633px 0px #FFF;
+    transform: rotate(180deg); }
+
+.c-flag__cri {
+  width: 220px;
+  height: 132px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #002B7F 0, #002B7F 22px, transparent 22px, transparent 100%), linear-gradient(180deg, transparent, transparent 22px, #FFF 22px, #FFF 44px, transparent 44px, transparent 100%), linear-gradient(180deg, transparent, transparent 44px, #CE1126 44px, #CE1126 88px, transparent 88px, transparent 100%), linear-gradient(180deg, transparent, transparent 88px, #FFF 88px, #FFF 110px, transparent 110px, transparent 100%), linear-gradient(180deg, transparent, transparent 110px, #002B7F 110px, #002B7F 132px, transparent 132px, transparent 100%); }
+
+.c-flag__civ {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #F77F00 0, #F77F00 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #FFF 73.33333px, #FFF 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #009E60 146.66667px, #009E60 220px, transparent 220px, transparent 100%); }
+
+.c-flag__hrv {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__cub {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #00205b 0, #00205b 22px, transparent 22px, transparent 100%), linear-gradient(180deg, transparent, transparent 22px, #FFF 22px, #FFF 44px, transparent 44px, transparent 100%), linear-gradient(180deg, transparent, transparent 44px, #00205b 44px, #00205b 66px, transparent 66px, transparent 100%), linear-gradient(180deg, transparent, transparent 66px, #FFF 66px, #FFF 88px, transparent 88px, transparent 100%), linear-gradient(180deg, transparent, transparent 88px, #00205b 88px, #00205b 110px, transparent 110px, transparent 100%); }
+  .c-flag__cub:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95.26279px;
+    height: 110px;
+    background-color: #c8102e;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+  .c-flag__cub:after {
+    color: #FFF;
+    content: "★";
+    font-size: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    position: absolute;
+    width: 37px;
+    top: 36.66667px;
+    left: 13.42093px; }
+
+.c-flag__cuw {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #012169 0, #012169 91.875px, transparent 91.875px, transparent 100%), linear-gradient(180deg, transparent, transparent 91.875px, #fce300 91.875px, #fce300 110.25px, transparent 110.25px, transparent 100%), linear-gradient(180deg, transparent, transparent 110.25px, #012169 110.25px, #012169 147px, transparent 147px, transparent 100%); }
+  .c-flag__cuw:before {
+    color: #FFF;
+    content: "★";
+    font-size: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    position: absolute;
+    width: 25px;
+    top: 12.25px;
+    left: 12.25px; }
+  .c-flag__cuw:after {
+    color: #FFF;
+    content: "★";
+    font-size: 33px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    position: absolute;
+    width: 33px;
+    top: 32.66667px;
+    left: 32.66667px; }
+
+.c-flag__cyp {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__cze {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #FFF 0, #FFF 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.5px, #e4002b 73.5px, #e4002b 147px, transparent 147px, transparent 100%); }
+  .c-flag__cze:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110.25px;
+    height: 147px;
+    background-color: #004b87;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+
+.c-flag__dnk {
+  width: 220px;
+  height: 166px;
+  background-color: #D81E05;
+  background-image: linear-gradient(180deg, transparent, transparent 71.10811px, #FFF 71.10811px, #FFF 94.89189px, transparent 94.89189px, transparent 100%), linear-gradient(90deg, transparent, transparent 71.35135px, #FFF 71.35135px, #FFF 95.13514px, transparent 95.13514px, transparent 100%); }
+
+.c-flag__dji {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #6AB2E7 0, #6AB2E7 55px, transparent 55px, transparent 100%), linear-gradient(180deg, transparent, transparent 55px, #12AD2B 55px, #12AD2B 110px, transparent 110px, transparent 100%); }
+  .c-flag__dji:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95.26279px;
+    height: 110px;
+    background-color: #FFF;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+  .c-flag__dji:after {
+    color: #D7141A;
+    content: "★";
+    font-size: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    position: absolute;
+    width: 37px;
+    top: 36.66667px;
+    left: 13.42093px; }
+
+.c-flag__dma {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__dom {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__ecu {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__egy {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #c8102e 0, #c8102e 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #FFF 49px, #FFF 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #000 98px, #000 147px, transparent 147px, transparent 100%); }
+  .c-flag__egy:before {
+    color: #c5a900;
+    content: "";
+    font-size: 39px;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    position: absolute;
+    width: 39px;
+    top: 53.9px;
+    left: 90.4px; }
+
+.c-flag__slv {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__eng {
+  width: 220px;
+  height: 132px;
+  background-color: #FFF;
+  background-image: linear-gradient(180deg, transparent, transparent 52.8px, #c8102e 52.8px, #c8102e 79.2px, transparent 79.2px, transparent 100%), linear-gradient(90deg, transparent, transparent 96.8px, #c8102e 96.8px, #c8102e 123.2px, transparent 123.2px, transparent 100%); }
+
+.c-flag__gnq {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__eri {
+  width: 220px;
+  height: 110px;
+  background-color: #e4002b;
+  background-image: linear-gradient(-14.03624deg, transparent, transparent 0, #418fde 0, #418fde 53.35784px, transparent 53.35784px, transparent 100%), linear-gradient(194.03624deg, transparent, transparent 0, #43b02a 0, #43b02a 53.35784px, transparent 53.35784px, transparent 100%); }
+  .c-flag__eri:before {
+    color: #ffc72c;
+    content: "";
+    font-size: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    position: absolute;
+    width: 55px;
+    top: 27.5px;
+    left: 27.5px; }
+
+.c-flag__est {
+  width: 220px;
+  height: 140px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #1291FF 0, #1291FF 46.66667px, transparent 46.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 46.66667px, #000 46.66667px, #000 93.33333px, transparent 93.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 93.33333px, #FFF 93.33333px, #FFF 140px, transparent 140px, transparent 100%); }
+
+.c-flag__eth {
+  width: 220px;
+  height: 110px;
+  background-image: radial-gradient(circle at 110px 55px, #0046AE 36.66667px, transparent 37.66667px), linear-gradient(180deg, transparent, transparent 0, #009A4A 0, #009A4A 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #FBE300 36.66667px, #FBE300 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #F42938 73.33333px, #F42938 110px, transparent 110px, transparent 100%); }
+  .c-flag__eth:before {
+    color: #FBE300;
+    content: "";
+    font-size: 59px;
+    height: 59px;
+    line-height: 59px;
+    text-align: center;
+    position: absolute;
+    width: 59px;
+    top: 25.66667px;
+    left: 80.66667px; }
+
+.c-flag__flk {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__fro {
+  width: 220px;
+  height: 144px;
+  background-color: #FFF;
+  background-image: linear-gradient(180deg, transparent, transparent 62px, #ED2939 62px, #ED2939 82px, transparent 82px, transparent 100%), linear-gradient(90deg, transparent, transparent 60px, #ED2939 60px, #ED2939 80px, transparent 80px, transparent 100%), linear-gradient(180deg, transparent, transparent 52px, #0065BD 52px, #0065BD 92px, transparent 92px, transparent 100%), linear-gradient(90deg, transparent, transparent 50px, #0065BD 50px, #0065BD 90px, transparent 90px, transparent 100%); }
+
+.c-flag__fji {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__fin {
+  width: 220px;
+  height: 134px;
+  background-color: #FFF;
+  background-image: linear-gradient(180deg, transparent, transparent 48.66667px, #003580 48.66667px, #003580 85.33333px, transparent 85.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 61.11111px, #003580 61.11111px, #003580 97.77778px, transparent 97.77778px, transparent 100%); }
+
+.c-flag__fra {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #002395 0, #002395 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #FFF 73.33333px, #FFF 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #ED2939 146.66667px, #ED2939 220px, transparent 220px, transparent 100%); }
+
+.c-flag__guf {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(33.75013deg, transparent, transparent 0, #FBE300 0, #FBE300 122.22585px, transparent 122.22585px, transparent 100%), linear-gradient(33.75013deg, transparent, transparent 122.22585px, #00843d 122.22585px, #00843d 244.45171px, transparent 244.45171px, transparent 100%); }
+  .c-flag__guf:before {
+    color: #c8102e;
+    content: "★";
+    font-size: 49px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    position: absolute;
+    width: 49px;
+    top: 49px;
+    left: 85.5px; }
+
+.c-flag__pyf {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__atf {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__gab {
+  width: 220px;
+  height: 165px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #009e60 0, #009e60 55px, transparent 55px, transparent 100%), linear-gradient(180deg, transparent, transparent 55px, #fcd116 55px, #fcd116 110px, transparent 110px, transparent 100%), linear-gradient(180deg, transparent, transparent 110px, #3a75c4 110px, #3a75c4 165px, transparent 165px, transparent 100%); }
+
+.c-flag__gmb {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #EF3340 0, #EF3340 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #FFF 49px, #FFF 57.16667px, transparent 57.16667px, transparent 100%), linear-gradient(180deg, transparent, transparent 57.16667px, #003DA5 57.16667px, #003DA5 89.83333px, transparent 89.83333px, transparent 100%), linear-gradient(180deg, transparent, transparent 89.83333px, #FFF 89.83333px, #FFF 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #009639 98px, #009639 147px, transparent 147px, transparent 100%); }
+
+.c-flag__geo {
+  width: 220px;
+  height: 147px;
+  background-color: #FFF;
+  background-image: linear-gradient(90deg, transparent, transparent 95.55px, #e4002b 95.55px, #e4002b 124.95px, transparent 124.95px, transparent 100%), linear-gradient(180deg, transparent, transparent 58.8px, #e4002b 58.8px, #e4002b 88.2px, transparent 88.2px, transparent 100%); }
+  .c-flag__geo:before {
+    color: transparent;
+    content: "";
+    font-size: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    position: absolute;
+    width: 26px;
+    top: 60.6375px;
+    left: 97.1375px;
+    text-shadow: 62.225px 44.1px 0px #e4002b, 62.225px -44.1px 0px #e4002b, -62.225px 44.1px 0px #e4002b, -62.225px -44.1px 0px #e4002b; }
+
+.c-flag__deu {
+  width: 220px;
+  height: 132px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #000 0, #000 44px, transparent 44px, transparent 100%), linear-gradient(180deg, transparent, transparent 44px, #FF0000 44px, #FF0000 88px, transparent 88px, transparent 100%), linear-gradient(180deg, transparent, transparent 88px, #FFCC00 88px, #FFCC00 132px, transparent 132px, transparent 100%); }
+
+.c-flag__gha {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #CE1126 0, #CE1126 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #FCD116 49px, #FCD116 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #006B3F 98px, #006B3F 147px, transparent 147px, transparent 100%); }
+  .c-flag__gha:before {
+    color: #000;
+    content: "★";
+    font-size: 49px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    position: absolute;
+    width: 49px;
+    top: 49px;
+    left: 85.5px; }
+
+.c-flag__gib {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__grc {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #0033a0 0, #0033a0 16.33333px, transparent 16.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 16.33333px, #FFF 16.33333px, #FFF 32.66667px, transparent 32.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 32.66667px, #0033a0 32.66667px, #0033a0 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #FFF 49px, #FFF 65.33333px, transparent 65.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 65.33333px, #0033a0 65.33333px, #0033a0 81.66667px, transparent 81.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 81.66667px, #FFF 81.66667px, #FFF 98.0px, transparent 98.0px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #0033a0 98px, #0033a0 114.33333px, transparent 114.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 114.33333px, #FFF 114.33333px, #FFF 130.66667px, transparent 130.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 130.66667px, #0033a0 130.66667px, #0033a0 147px, transparent 147px, transparent 100%); }
+  .c-flag__grc:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #0033a0;
+    width: 81.66667px;
+    height: 81.66667px;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(180deg, transparent, transparent 32.66667px, #FFF 32.66667px, #FFF 49px, transparent 49px, transparent 100%), linear-gradient(90deg, transparent, transparent 32.66667px, #FFF 32.66667px, #FFF 49px, transparent 49px, transparent 100%); }
+
+.c-flag__grl {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #FFF 0, #FFF 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.5px, #e4002b 73.5px, #e4002b 147px, transparent 147px, transparent 100%); }
+  .c-flag__grl:before {
+    content: "";
+    width: 98px;
+    height: 0;
+    border-radius: 50%;
+    border-top: 49px solid #e4002b;
+    border-bottom: 49px solid #FFF;
+    border-left: none;
+    border-right: none;
+    position: absolute;
+    top: 24.5px;
+    left: 36.75px; }
+
+.c-flag__grd {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__glp {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__gum {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__gtm {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__ggy {
+  width: 220px;
+  height: 147px;
+  background-color: #FFF;
+  background-image: linear-gradient(90deg, transparent, transparent 91.875px, #e4002b 91.875px, #e4002b 128.625px, transparent 128.625px, transparent 100%), linear-gradient(180deg, transparent, transparent 55.125px, #e4002b 55.125px, #e4002b 91.875px, transparent 91.875px, transparent 100%); }
+  .c-flag__ggy:before {
+    color: #fedb00;
+    content: "";
+    font-size: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    position: absolute;
+    width: 110px;
+    top: 18.375px;
+    left: 54.875px; }
+
+.c-flag__gin {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #CE1126 0, #CE1126 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #FCD116 73.33333px, #FCD116 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #009460 146.66667px, #009460 220px, transparent 220px, transparent 100%); }
+
+.c-flag__gnb {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #c8102e 0, #c8102e 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #ffcd00 0, #ffcd00 55px, transparent 55px, transparent 100%), linear-gradient(180deg, transparent, transparent 55px, #009639 55px, #009639 110px, transparent 110px, transparent 100%); }
+  .c-flag__gnb:before {
+    color: #000;
+    content: "★";
+    font-size: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    position: absolute;
+    width: 37px;
+    top: 36.66667px;
+    left: 18.33333px; }
+
+.c-flag__guy {
+  width: 220px;
+  height: 132px;
+  background-color: #FFD900;
+  background-image: linear-gradient(-16.69924deg, transparent, transparent 0, #00AE42 0, #00AE42 63.21653px, transparent 63.21653px, transparent 100%), linear-gradient(196.69924deg, transparent, transparent 0, #00AE42 0, #00AE42 63.21653px, transparent 63.21653px, transparent 100%), linear-gradient(-16.69924deg, transparent, transparent 63.21653px, #FFF 63.21653px, #FFF 67.61653px, transparent 67.61653px, transparent 100%), linear-gradient(196.69924deg, transparent, transparent 63.21653px, #FFF 63.21653px, #FFF 67.81027px, transparent 67.81027px, transparent 100%); }
+  .c-flag__guy:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97.77778px;
+    height: 132px;
+    background-color: #CC0C2F;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    background-image: linear-gradient(-34.01935deg, transparent, transparent 54.70401px, #000 54.70401px, #000 60.01258px, transparent 60.01258px, transparent 100%), linear-gradient(214.01935deg, transparent, transparent 54.70401px, #000 54.70401px, #000 60.01258px, transparent 60.01258px, transparent 100%); }
+
+.c-flag__hti {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__hmd {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__vat {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__hnd {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #0073CF 0, #0073CF 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #FFF 36.66667px, #FFF 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #0073CF 73.33333px, #0073CF 110px, transparent 110px, transparent 100%); }
+  .c-flag__hnd:before {
+    color: #0073CF;
+    content: "★";
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+    position: absolute;
+    width: 12px;
+    top: 48.88889px;
+    left: 103.88889px;
+    text-shadow: 36.66667px 9.16667px 0px #0073CF, 36.66667px -9.16667px 0px #0073CF, -36.66667px 9.16667px 0px #0073CF, -36.66667px -9.16667px 0px #0073CF; }
+
+.c-flag__hkg {
+  width: 220px;
+  height: 147px;
+  background-color: #c8102e; }
+  .c-flag__hkg:before {
+    color: #FFF;
+    content: "";
+    font-size: 88px;
+    height: 88px;
+    line-height: 88px;
+    text-align: center;
+    position: absolute;
+    width: 88px;
+    top: 29.4px;
+    left: 65.9px; }
+
+.c-flag__hun {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #CD2A3E 0, #CD2A3E 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #FFF 36.66667px, #FFF 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #436F4D 73.33333px, #436F4D 110px, transparent 110px, transparent 100%); }
+
+.c-flag__isl {
+  width: 220px;
+  height: 158px;
+  background-color: #003897;
+  background-image: linear-gradient(180deg, transparent, transparent 70.2px, #D72828 70.2px, #D72828 87.8px, transparent 87.8px, transparent 100%), linear-gradient(90deg, transparent, transparent 61.6px, #D72828 61.6px, #D72828 79.2px, transparent 79.2px, transparent 100%), linear-gradient(180deg, transparent, transparent 61.4px, #FFF 61.4px, #FFF 96.6px, transparent 96.6px, transparent 100%), linear-gradient(90deg, transparent, transparent 52.8px, #FFF 52.8px, #FFF 88px, transparent 88px, transparent 100%); }
+
+.c-flag__ind {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__idn {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #CE1126 0, #CE1126 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.5px, #FFF 73.5px, #FFF 147px, transparent 147px, transparent 100%); }
+
+.c-flag__irn {
+  width: 220px;
+  height: 126px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #009639 0, #009639 42px, transparent 42px, transparent 100%), linear-gradient(180deg, transparent, transparent 42px, #FFF 42px, #FFF 84px, transparent 84px, transparent 100%), linear-gradient(180deg, transparent, transparent 84px, #c8102e 84px, #c8102e 126px, transparent 126px, transparent 100%); }
+  .c-flag__irn:before {
+    color: #c8102e;
+    content: "";
+    font-size: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    position: absolute;
+    width: 28px;
+    top: 49px;
+    left: 96px; }
+  .c-flag__irn:after {
+    content: "";
+    color: #FFF;
+    display: block;
+    position: absolute;
+    top: 71px;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    text-shadow: 0px -49px 0px #FFF; }
+
+.c-flag__irq {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #c8102e 0, #c8102e 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #FFF 49px, #FFF 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #000 98px, #000 147px, transparent 147px, transparent 100%); }
+  .c-flag__irq:before {
+    color: #009a44;
+    content: "";
+    font-size: 74px;
+    height: 74px;
+    line-height: 74px;
+    text-align: center;
+    position: absolute;
+    width: 74px;
+    top: 36.75px;
+    left: 73.25px; }
+
+.c-flag__irl {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #009B48 0, #009B48 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #FFF 73.33333px, #FFF 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #FF7900 146.66667px, #FF7900 220px, transparent 220px, transparent 100%); }
+
+.c-flag__imn {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__isr {
+  width: 220px;
+  height: 160px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #FFF 0, #FFF 15px, transparent 15px, transparent 100%), linear-gradient(180deg, transparent, transparent 15px, #0038b8 15px, #0038b8 40px, transparent 40px, transparent 100%), linear-gradient(180deg, transparent, transparent 40px, #FFF 40px, #FFF 120px, transparent 120px, transparent 100%), linear-gradient(180deg, transparent, transparent 120px, #0038b8 120px, #0038b8 145px, transparent 145px, transparent 100%), linear-gradient(180deg, transparent, transparent 145px, #FFF 145px, #FFF 160px, transparent 160px, transparent 100%); }
+  .c-flag__isr:before {
+    color: #0038b8;
+    content: "✡";
+    font-size: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    position: absolute;
+    width: 70px;
+    top: 45px;
+    left: 75px; }
+
+.c-flag__ita {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #009246 0, #009246 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #FFF 73.33333px, #FFF 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #CE2B37 146.66667px, #CE2B37 220px, transparent 220px, transparent 100%); }
+
+.c-flag__jam {
+  width: 220px;
+  height: 110px;
+  background: #000; }
+  .c-flag__jam:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #00b140;
+    width: 220px;
+    height: 110px;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(26.56505deg, transparent, transparent 89.22032px, #fedb00 89.22032px, #fedb00 107.55366px, transparent 107.55366px, transparent 100%), linear-gradient(-26.56505deg, transparent, transparent 89.22032px, #fedb00 89.22032px, #fedb00 107.55366px, transparent 107.55366px, transparent 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 8.19892px, 126.39783px 50%, 100% 101.80108px, 100% 100%, 0 100%, 0 101.80108px, 93.60217px 50%, 0 8.19892px);
+    clip-path: polygon(0 0, 100% 0, 100% 8.19892px, 126.39783px 50%, 100% 101.80108px, 100% 100%, 0 100%, 0 101.80108px, 93.60217px 50%, 0 8.19892px); }
+
+.c-flag__jpn {
+  width: 220px;
+  height: 147px;
+  background-color: #FFF;
+  background-image: radial-gradient(circle at 110px 73.5px, #BC002D 44.1px, transparent 45.1px); }
+
+.c-flag__jey {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__jor {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #000 0, #000 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #FFF 36.66667px, #FFF 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #007a33 73.33333px, #007a33 110px, transparent 110px, transparent 100%); }
+  .c-flag__jor:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 122.98374px;
+    height: 110px;
+    background-color: #c8102e;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+  .c-flag__jor:after {
+    color: #FFF;
+    content: "✸";
+    font-size: 21px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    position: absolute;
+    width: 21px;
+    top: 44.6875px;
+    left: 23.67937px; }
+
+.c-flag__kaz {
+  width: 220px;
+  height: 110px;
+  background-color: #00aec7; }
+  .c-flag__kaz:before {
+    color: #ffd100;
+    content: "";
+    font-size: 58px;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+    position: absolute;
+    width: 58px;
+    top: -28.875px;
+    left: -28.875px;
+    left: 85.305px;
+    top: 26.125px;
+    width: 69.19px; }
+  .c-flag__kaz:after {
+    color: #ffd100;
+    content: "";
+    font-size: 98px;
+    height: 98px;
+    line-height: 98px;
+    text-align: center;
+    position: absolute;
+    width: 98px;
+    top: -48.95px;
+    left: -48.95px;
+    left: 6.6px;
+    top: 6.05px;
+    width: 13.2px; }
+
+.c-flag__ken {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__kir {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__prk {
+  width: 220px;
+  height: 110px;
+  background-image: radial-gradient(circle at 73.33333px 55px, #FFF 24.44444px, transparent 25.44444px), linear-gradient(180deg, transparent, transparent 0, #024FA2 0, #024FA2 18.33333px, transparent 18.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 18.33333px, #FFF 18.33333px, #FFF 21.38889px, transparent 21.38889px, transparent 100%), linear-gradient(180deg, transparent, transparent 21.38889px, #ED1C27 21.38889px, #ED1C27 88.61111px, transparent 88.61111px, transparent 100%), linear-gradient(180deg, transparent, transparent 88.61111px, #FFF 88.61111px, #FFF 91.66667px, transparent 91.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 91.66667px, #024FA2 91.66667px, #024FA2 110.0px, transparent 110.0px, transparent 100%); }
+  .c-flag__prk:before {
+    color: #ED1C27;
+    content: "★";
+    font-size: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    position: absolute;
+    width: 44px;
+    top: 31.31944px;
+    left: 49.65278px; }
+
+.c-flag__kor {
+  width: 220px;
+  height: 147px;
+  background-color: #FFF; }
+  .c-flag__kor:before {
+    color: #000;
+    content: "";
+    font-size: 153px;
+    height: 153px;
+    line-height: 153px;
+    text-align: center;
+    position: absolute;
+    width: 153px;
+    top: -2.91431px;
+    left: 33.58569px;
+    top: 6.99217px;
+    height: 133.01566px;
+    line-height: 133.01566px; }
+  .c-flag__kor:after {
+    content: "";
+    position: absolute;
+    top: 36.75px;
+    left: 73.25px;
+    border-radius: 50%;
+    width: 73.5px;
+    height: 73.5px;
+    background-image: radial-gradient(circle at 18.375px 36.75px, #C60C30 18.375px, transparent 19.375px), radial-gradient(circle at 55.125px 36.75px, #003478 18.375px, transparent 19.375px), linear-gradient(180deg, transparent, transparent 0, #C60C30 0, #C60C30 36.75px, transparent 36.75px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.75px, #003478 36.75px, #003478 73.5px, transparent 73.5px, transparent 100%);
+    transform: rotate(33.75013deg); }
+
+.c-flag__kwt {
+  width: 220px;
+  height: 110px;
+  background: #FFF;
+  border-top: 36.66667px solid #43b02a;
+  border-bottom: 36.66667px solid #c8102e;
+  border-left: 55px solid #000;
+  border-right: 0; }
+
+.c-flag__kgz {
+  width: 220px;
+  height: 132px;
+  background-color: #e4002b; }
+  .c-flag__kgz:before {
+    color: #ffd100;
+    content: "";
+    font-size: 79px;
+    height: 79px;
+    line-height: 79px;
+    text-align: center;
+    position: absolute;
+    width: 79px;
+    top: 26.4px;
+    left: 70.4px; }
+
+.c-flag__lao {
+  width: 220px;
+  height: 147px;
+  background-image: radial-gradient(circle at 110px 73.5px, #FFF 29.4px, transparent 30.4px), linear-gradient(180deg, transparent, transparent 0, #CE1126 0, #CE1126 36.75px, transparent 36.75px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.75px, #002869 36.75px, #002869 110.25px, transparent 110.25px, transparent 100%), linear-gradient(180deg, transparent, transparent 110.25px, #CE1126 110.25px, #CE1126 147px, transparent 147px, transparent 100%); }
+
+.c-flag__lva {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #9E1B34 0, #9E1B34 44px, transparent 44px, transparent 100%), linear-gradient(180deg, transparent, transparent 44px, #FFF 44px, #FFF 66px, transparent 66px, transparent 100%), linear-gradient(180deg, transparent, transparent 66px, #9E1B34 66px, #9E1B34 110px, transparent 110px, transparent 100%); }
+
+.c-flag__lbn {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #FD4238 0, #FD4238 36.75px, transparent 36.75px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.75px, #FFF 36.75px, #FFF 110.25px, transparent 110.25px, transparent 100%), linear-gradient(180deg, transparent, transparent 110.25px, #FD4238 110.25px, #FD4238 147px, transparent 147px, transparent 100%); }
+  .c-flag__lbn:before {
+    color: #009A3D;
+    content: "";
+    font-size: 74px;
+    height: 74px;
+    line-height: 74px;
+    text-align: center;
+    position: absolute;
+    width: 74px;
+    top: 36.75px;
+    left: 73.25px; }
+
+.c-flag__lso {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #002595 0, #002595 44.1px, transparent 44.1px, transparent 100%), linear-gradient(180deg, transparent, transparent 44.1px, #FFF 44.1px, #FFF 102.9px, transparent 102.9px, transparent 100%), linear-gradient(180deg, transparent, transparent 102.9px, #009a44 102.9px, #009a44 147px, transparent 147px, transparent 100%); }
+  .c-flag__lso:before {
+    color: #000;
+    content: "";
+    font-size: 54px;
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+    position: absolute;
+    width: 54px;
+    top: 46.452px;
+    left: 82.952px; }
+
+.c-flag__lbr {
+  width: 220px;
+  height: 116px;
+  background-image: linear-gradient(180deg, transparent, transparent 52.72727px, #FFF 52.72727px, #FFF 63.27273px, transparent 63.27273px, transparent 100%), linear-gradient(180deg, transparent, transparent 63.27273px, #d50032 63.27273px, #d50032 73.81818px, transparent 73.81818px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.81818px, #FFF 73.81818px, #FFF 84.36364px, transparent 84.36364px, transparent 100%), linear-gradient(180deg, transparent, transparent 84.36364px, #d50032 84.36364px, #d50032 94.90909px, transparent 94.90909px, transparent 100%), linear-gradient(180deg, transparent, transparent 94.90909px, #FFF 94.90909px, #FFF 105.45455px, transparent 105.45455px, transparent 100%), linear-gradient(180deg, transparent, transparent 105.45455px, #d50032 105.45455px, #d50032 116px, transparent 116px, transparent 100%), linear-gradient(90deg, transparent, transparent 0, #0c2340 0, #0c2340 52.72727px, transparent 52.72727px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #d50032 0, #d50032 10.54545px, transparent 10.54545px, transparent 100%), linear-gradient(180deg, transparent, transparent 10.54545px, #FFF 10.54545px, #FFF 21.09091px, transparent 21.09091px, transparent 100%), linear-gradient(180deg, transparent, transparent 21.09091px, #d50032 21.09091px, #d50032 31.63636px, transparent 31.63636px, transparent 100%), linear-gradient(180deg, transparent, transparent 31.63636px, #FFF 31.63636px, #FFF 42.18182px, transparent 42.18182px, transparent 100%), linear-gradient(180deg, transparent, transparent 42.18182px, #d50032 42.18182px, #d50032 52.72727px, transparent 52.72727px, transparent 100%); }
+  .c-flag__lbr:before {
+    color: #FFF;
+    content: "★";
+    font-size: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    position: absolute;
+    width: 32px;
+    top: 10.54545px;
+    left: 10.54545px; }
+
+.c-flag__lby {
+  width: 220px;
+  height: 110px;
+  background-image: radial-gradient(circle at 114.58333px 55px, #000 11.45833px, transparent 12.45833px), radial-gradient(circle at 110px 55px, #FFF 13.75px, transparent 14.75px), linear-gradient(180deg, transparent, transparent 0, #239E46 0, #239E46 27.5px, transparent 27.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 27.5px, #000 27.5px, #000 82.5px, transparent 82.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 82.5px, #EF0012 82.5px, #EF0012 110px, transparent 110px, transparent 100%); }
+  .c-flag__lby:after {
+    color: #FFF;
+    content: "★";
+    font-size: 21px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    position: absolute;
+    width: 21px;
+    top: 44.6875px;
+    left: 118.59375px;
+    transform: rotate(-20deg); }
+
+.c-flag__lie {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__ltu {
+  width: 220px;
+  height: 132px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #fdb913 0, #fdb913 44px, transparent 44px, transparent 100%), linear-gradient(180deg, transparent, transparent 44px, #006a44 44px, #006a44 88px, transparent 88px, transparent 100%), linear-gradient(180deg, transparent, transparent 88px, #c1272d 88px, #c1272d 132px, transparent 132px, transparent 100%); }
+
+.c-flag__lux {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #ed2939 0, #ed2939 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #FFF 36.66667px, #FFF 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #00A1DE 73.33333px, #00A1DE 110px, transparent 110px, transparent 100%); }
+
+.c-flag__mac {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__mkd {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__mdg {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #FFF 0, #FFF 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #FC3D32 0, #FC3D32 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.5px, #007E3A 73.5px, #007E3A 147px, transparent 147px, transparent 100%); }
+
+.c-flag__mwi {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #000 0, #000 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #c8102e 49px, #c8102e 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #009639 98px, #009639 147px, transparent 147px, transparent 100%); }
+  .c-flag__mwi:before {
+    color: #c8102e;
+    content: "";
+    font-size: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    position: absolute;
+    width: 100px;
+    top: -49.98px;
+    left: -49.98px;
+    height: 39.445px;
+    top: 5.88px;
+    left: 60.27px; }
+
+.c-flag__mys {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 62.85714px, #e03c31 62.85714px, #e03c31 70.71429px, transparent 70.71429px, transparent 100%), linear-gradient(180deg, transparent, transparent 70.71429px, #FFF 70.71429px, #FFF 78.57143px, transparent 78.57143px, transparent 100%), linear-gradient(180deg, transparent, transparent 78.57143px, #e03c31 78.57143px, #e03c31 86.42857px, transparent 86.42857px, transparent 100%), linear-gradient(180deg, transparent, transparent 86.42857px, #FFF 86.42857px, #FFF 94.28571px, transparent 94.28571px, transparent 100%), linear-gradient(180deg, transparent, transparent 94.28571px, #e03c31 94.28571px, #e03c31 102.14286px, transparent 102.14286px, transparent 100%), linear-gradient(180deg, transparent, transparent 102.14286px, #FFF 102.14286px, #FFF 110px, transparent 110px, transparent 100%), radial-gradient(circle at 50.08929px 31.42857px, #041e42 20.625px, transparent 21.625px), radial-gradient(circle at 45.17857px 31.42857px, #ffd100 23.57143px, transparent 24.57143px), linear-gradient(90deg, transparent, transparent 0, #041e42 0, #041e42 110px, transparent 110px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #e03c31 0, #e03c31 7.85714px, transparent 7.85714px, transparent 100%), linear-gradient(180deg, transparent, transparent 7.85714px, #FFF 7.85714px, #FFF 15.71429px, transparent 15.71429px, transparent 100%), linear-gradient(180deg, transparent, transparent 15.71429px, #e03c31 15.71429px, #e03c31 23.57143px, transparent 23.57143px, transparent 100%), linear-gradient(180deg, transparent, transparent 23.57143px, #FFF 23.57143px, #FFF 31.42857px, transparent 31.42857px, transparent 100%), linear-gradient(180deg, transparent, transparent 31.42857px, #e03c31 31.42857px, #e03c31 39.28571px, transparent 39.28571px, transparent 100%), linear-gradient(180deg, transparent, transparent 39.28571px, #FFF 39.28571px, #FFF 47.14286px, transparent 47.14286px, transparent 100%), linear-gradient(180deg, transparent, transparent 47.14286px, #e03c31 47.14286px, #e03c31 55.0px, transparent 55.0px, transparent 100%), linear-gradient(180deg, transparent, transparent 55px, #FFF 55px, #FFF 62.85714px, transparent 62.85714px, transparent 100%); }
+  .c-flag__mys:before {
+    color: #ffd100;
+    content: "";
+    font-size: 39px;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    position: absolute;
+    width: 39px;
+    top: 11.78571px;
+    left: 49.10714px; }
+
+.c-flag__mdv {
+  width: 220px;
+  height: 147px;
+  background-color: #007e3a;
+  background-image: radial-gradient(circle at 128.625px 73.5px, #007e3a 24.5px, transparent 25.5px), radial-gradient(circle at 119.4375px 73.5px, #FFF 24.5px, transparent 25.5px), linear-gradient(180deg, transparent, transparent 0, #d21034 0, #d21034 36.75px, transparent 36.75px, transparent 100%), linear-gradient(180deg, transparent, transparent 110.25px, #d21034 110.25px, #d21034 147px, transparent 147px, transparent 100%), linear-gradient(90deg, transparent, transparent 0, #d21034 0, #d21034 36.75px, transparent 36.75px, transparent 100%), linear-gradient(90deg, transparent, transparent 183.75px, #d21034 183.75px, #d21034 220.5px, transparent 220.5px, transparent 100%); }
+
+.c-flag__mli {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #14B53A 0, #14B53A 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #FCD116 73.33333px, #FCD116 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #CE1126 146.66667px, #CE1126 220px, transparent 220px, transparent 100%); }
+
+.c-flag__mlt {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__mhl {
+  width: 220px;
+  height: 116px;
+  background-color: #003087;
+  background-image: linear-gradient(-16.86509deg, transparent, transparent 0, #003087 0, #003087 65.59918px, transparent 65.59918px, transparent 100%), linear-gradient(-21.69735deg, transparent, transparent 0, #FFF 0, #FFF 84.77757px, transparent 84.77757px, transparent 100%), linear-gradient(-26.22631deg, transparent, transparent 0, #e57200 0, #e57200 102.20767px, transparent 102.20767px, transparent 100%); }
+  .c-flag__mhl:before {
+    color: #FFF;
+    content: "";
+    font-size: 72px;
+    height: 72px;
+    line-height: 72px;
+    text-align: center;
+    position: absolute;
+    width: 72px;
+    top: 6.48421px;
+    left: 6.48421px; }
+
+.c-flag__mtq {
+  width: 220px;
+  height: 147px;
+  background-color: #0077c8;
+  background-image: linear-gradient(90deg, transparent, transparent 97.77778px, #FFF 97.77778px, #FFF 122.22222px, transparent 122.22222px, transparent 100%), linear-gradient(180deg, transparent, transparent 61.11111px, #FFF 61.11111px, #FFF 85.55556px, transparent 85.55556px, transparent 100%); }
+  .c-flag__mtq:before {
+    color: transparent;
+    content: "";
+    font-size: 49px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    position: absolute;
+    width: 49px;
+    top: 49.05556px;
+    left: 85.55556px;
+    text-shadow: -61.11111px -42.77778px 0px #FFF, 61.11111px -42.77778px 0px #FFF, 61.11111px 42.77778px 0px #FFF, -61.11111px 42.77778px 0px #FFF; }
+
+.c-flag__mrt {
+  width: 220px;
+  height: 147px;
+  background-color: #006230;
+  background-image: radial-gradient(circle at 110.25px 41.34375px, #006230 45.9375px, transparent 46.9375px), radial-gradient(circle at 110.25px 55.125px, #FFC400 47.46875px, transparent 48.46875px); }
+  .c-flag__mrt:before {
+    color: #FFC400;
+    content: "★";
+    font-size: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    position: absolute;
+    width: 37px;
+    top: 24.5px;
+    left: 91.875px; }
+
+.c-flag__mus {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #ee2737 0, #ee2737 36.75px, transparent 36.75px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.75px, #151f6d 36.75px, #151f6d 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.5px, #FFD600 73.5px, #FFD600 110.25px, transparent 110.25px, transparent 100%), linear-gradient(180deg, transparent, transparent 110.25px, #009f4d 110.25px, #009f4d 147px, transparent 147px, transparent 100%); }
+
+.c-flag__myt {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__mex {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__fsm {
+  width: 220px;
+  height: 116px;
+  background-color: #75B2DD; }
+  .c-flag__fsm:before {
+    color: #FFF;
+    content: "★";
+    font-size: 23px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    position: absolute;
+    width: 23px;
+    top: -11.6px;
+    left: -11.6px;
+    top: 11.6px;
+    left: 98.6px;
+    text-shadow: -34.8px 34.8px 0px #FFF, 34.8px 34.8px 0px #FFF, 0 69.6px 0px #FFF; }
+
+.c-flag__mda {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__mco {
+  width: 220px;
+  height: 176px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #CE1126 0, #CE1126 88px, transparent 88px, transparent 100%), linear-gradient(180deg, transparent, transparent 88px, #FFF 88px, #FFF 176px, transparent 176px, transparent 100%); }
+
+.c-flag__mng {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #F42938 0, #F42938 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #407ec9 73.33333px, #407ec9 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #F42938 146.66667px, #F42938 220px, transparent 220px, transparent 100%); }
+  .c-flag__mng:before {
+    color: #ffcd00;
+    content: "";
+    font-size: 83px;
+    height: 83px;
+    line-height: 83px;
+    text-align: center;
+    position: absolute;
+    width: 83px;
+    top: -41.25px;
+    left: -41.25px;
+    width: 40.33333px;
+    left: 16.5px;
+    top: 11px; }
+
+.c-flag__mne {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__msr {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__mar {
+  width: 220px;
+  height: 147px;
+  background-color: #C1272D; }
+  .c-flag__mar:before {
+    color: #006233;
+    content: "⛤";
+    font-size: 49px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    position: absolute;
+    width: 49px;
+    top: 49px;
+    left: 85.5px; }
+
+.c-flag__moz {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__mmr {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #FECB00 0, #FECB00 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #34B233 49px, #34B233 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #EA2839 98px, #EA2839 147px, transparent 147px, transparent 100%); }
+  .c-flag__mmr:before {
+    color: #FFF;
+    content: "★";
+    font-size: 98px;
+    height: 98px;
+    line-height: 98px;
+    text-align: center;
+    position: absolute;
+    width: 98px;
+    top: 24.5px;
+    left: 61px; }
+
+.c-flag__nam {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(146.24987deg, transparent, transparent 0, #003da5 0, #003da5 97.72585px, transparent 97.72585px, transparent 100%), linear-gradient(146.24987deg, transparent, transparent 97.72585px, #FFF 97.72585px, #FFF 103.85085px, transparent 103.85085px, transparent 100%), linear-gradient(146.24987deg, transparent, transparent 103.85085px, #ba0c2f 103.85085px, #ba0c2f 140.60085px, transparent 140.60085px, transparent 100%), linear-gradient(146.24987deg, transparent, transparent 140.60085px, #FFF 140.60085px, #FFF 146.72585px, transparent 146.72585px, transparent 100%), linear-gradient(146.24987deg, transparent, transparent 146.72585px, #009a44 146.72585px, #009a44 244.45171px, transparent 244.45171px, transparent 100%); }
+  .c-flag__nam:before {
+    color: #FFF;
+    content: "";
+    font-size: 49px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    position: absolute;
+    width: 49px;
+    top: 15.925px;
+    left: 19.6px; }
+
+.c-flag__nru {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #012169 0, #012169 50.41667px, transparent 50.41667px, transparent 100%), linear-gradient(180deg, transparent, transparent 50.41667px, #ffc72c 50.41667px, #ffc72c 59.58333px, transparent 59.58333px, transparent 100%), linear-gradient(180deg, transparent, transparent 59.58333px, #012169 59.58333px, #012169 110px, transparent 110px, transparent 100%); }
+  .c-flag__nru:before {
+    color: #FFF;
+    content: "";
+    font-size: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    position: absolute;
+    width: 37px;
+    top: 59.58333px;
+    left: 36.66667px; }
+
+.c-flag__npl {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__nld {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #AE1C28 0, #AE1C28 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #FFF 49px, #FFF 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #21468B 98px, #21468B 147px, transparent 147px, transparent 100%); }
+
+.c-flag__ncl {
+  width: 220px;
+  height: 147px;
+  background-image: radial-gradient(circle at 73.5px 73.5px, #fce300 49px, transparent 50px), linear-gradient(180deg, transparent, transparent 0, #0033a0 0, #0033a0 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #F42938 49px, #F42938 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #009a44 98px, #009a44 147px, transparent 147px, transparent 100%); }
+  .c-flag__ncl:before {
+    color: #000;
+    content: "";
+    font-size: 98px;
+    height: 98px;
+    line-height: 98px;
+    text-align: center;
+    position: absolute;
+    width: 98px;
+    top: 24.5px;
+    left: 24.5px; }
+
+.c-flag__nzl {
+  width: 220px;
+  height: 110px;
+  background-color: #012169; }
+  .c-flag__nzl:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 110px;
+    height: 55px;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, transparent, transparent 22px, #c8102e 22px, #c8102e 33px, transparent 33px, transparent 100%), linear-gradient(90deg, transparent, transparent 49.5px, #c8102e 49.5px, #c8102e 60.5px, transparent 60.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 18.33333px, #FFF 18.33333px, #FFF 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 45.83333px, #FFF 45.83333px, #FFF 64.16667px, transparent 64.16667px, transparent 100%), linear-gradient(26.56505deg, transparent, transparent 45.52683px, #c8102e 45.52683px, #c8102e 49.1935px, transparent 49.1935px, transparent 100%) 0 0/55px 100% no-repeat, linear-gradient(-26.56505deg, transparent, transparent 49.1935px, #c8102e 49.1935px, #c8102e 52.86016px, transparent 52.86016px, transparent 100%) 55px 0/55px 100% no-repeat, linear-gradient(26.56505deg, transparent, transparent 49.1935px, #c8102e 49.1935px, #c8102e 52.86016px, transparent 52.86016px, transparent 100%) 55px 27.5px/55px 100% no-repeat, linear-gradient(-26.56505deg, transparent, transparent 45.52683px, #c8102e 45.52683px, #c8102e 49.1935px, transparent 49.1935px, transparent 100%) 0 27.5px/55px 100% no-repeat, linear-gradient(26.56505deg, transparent, transparent 43.6935px, #FFF 43.6935px, #FFF 54.6935px, transparent 54.6935px, transparent 100%), linear-gradient(153.43495deg, transparent, transparent 43.6935px, #FFF 43.6935px, #FFF 54.6935px, transparent 54.6935px, transparent 100%), #012169; }
+  .c-flag__nzl:before {
+    color: transparent;
+    content: "★★";
+    font-size: 13px;
+    height: 13px;
+    line-height: 13px;
+    text-align: center;
+    position: absolute;
+    width: 13px;
+    top: -6.41667px;
+    left: -6.41667px;
+    position: relative;
+    white-space: pre;
+    top: 31.16667px;
+    left: 165px;
+    text-shadow: -15.58333px -24.5px 0px #c8102e, -41.00021px 2.07211px 0px #c8102e, 6.20256px -4.56181px 0px #c8102e, -15.58333px 41.5px 0px #c8102e; }
+  .c-flag__nzl:first-letter {
+    font-family: Symbols;
+    color: transparent;
+    font-size: 18.33333px;
+    line-height: 18.33333px;
+    text-shadow: 0 -22px 0px #FFF, -25.41688px 3.57211px 0px #FFF, 21.7859px -3.06181px 0px #FFF, 0 44px 0px #FFF; }
+
+.c-flag__nic {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__ner {
+  width: 220px;
+  height: 189px;
+  background-image: radial-gradient(circle at 110px 94.5px, #E05206 15.75px, transparent 16.75px), linear-gradient(180deg, transparent, transparent 0, #E05206 0, #E05206 63px, transparent 63px, transparent 100%), linear-gradient(180deg, transparent, transparent 63px, #FFF 63px, #FFF 126px, transparent 126px, transparent 100%), linear-gradient(180deg, transparent, transparent 126px, #0DB02B 126px, #0DB02B 189px, transparent 189px, transparent 100%); }
+
+.c-flag__nga {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #008753 0, #008753 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #FFF 73.33333px, #FFF 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #008753 146.66667px, #008753 220px, transparent 220px, transparent 100%); }
+
+.c-flag__niu {
+  width: 220px;
+  height: 110px;
+  background-color: #ffcd00; }
+  .c-flag__niu:after {
+    z-index: 10;
+    content: "★";
+    line-height: 55px;
+    text-align: center;
+    color: #ffcd00;
+    display: block;
+    position: absolute;
+    width: 110px;
+    height: 55px;
+    left: 0;
+    top: 0;
+    background: radial-gradient(circle at 55px 27.5px, #00205b 9.16667px, transparent 10.16667px), linear-gradient(180deg, transparent, transparent 22px, #c8102e 22px, #c8102e 33px, transparent 33px, transparent 100%), linear-gradient(90deg, transparent, transparent 49.5px, #c8102e 49.5px, #c8102e 60.5px, transparent 60.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 18.33333px, #FFF 18.33333px, #FFF 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 45.83333px, #FFF 45.83333px, #FFF 64.16667px, transparent 64.16667px, transparent 100%), linear-gradient(26.56505deg, transparent, transparent 45.52683px, #c8102e 45.52683px, #c8102e 49.1935px, transparent 49.1935px, transparent 100%) 0 0/55px 100% no-repeat, linear-gradient(-26.56505deg, transparent, transparent 49.1935px, #c8102e 49.1935px, #c8102e 52.86016px, transparent 52.86016px, transparent 100%) 55px 0/55px 100% no-repeat, linear-gradient(26.56505deg, transparent, transparent 49.1935px, #c8102e 49.1935px, #c8102e 52.86016px, transparent 52.86016px, transparent 100%) 55px 27.5px/55px 100% no-repeat, linear-gradient(-26.56505deg, transparent, transparent 45.52683px, #c8102e 45.52683px, #c8102e 49.1935px, transparent 49.1935px, transparent 100%) 0 27.5px/55px 100% no-repeat, linear-gradient(26.56505deg, transparent, transparent 43.6935px, #FFF 43.6935px, #FFF 54.6935px, transparent 54.6935px, transparent 100%), linear-gradient(153.43495deg, transparent, transparent 43.6935px, #FFF 43.6935px, #FFF 54.6935px, transparent 54.6935px, transparent 100%), #00205b; }
+  .c-flag__niu:before {
+    z-index: 20;
+    color: transparent;
+    content: "★";
+    font-size: 11px;
+    height: 11px;
+    line-height: 11px;
+    text-align: center;
+    position: absolute;
+    width: 11px;
+    top: 22px;
+    left: 49.5px;
+    text-shadow: 0px -18.33333px 0px #ffcd00, 32.08333px 0px 0px #ffcd00, 0px 18.33333px 0px #ffcd00, -32.08333px 0px 0px #ffcd00; }
+
+.c-flag__nfk {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #007a33 0, #007a33 66.95652px, transparent 66.95652px, transparent 100%), linear-gradient(90deg, transparent, transparent 66.95652px, #FFF 66.95652px, #FFF 153.04348px, transparent 153.04348px, transparent 100%), linear-gradient(90deg, transparent, transparent 153.04348px, #007a33 153.04348px, #007a33 220px, transparent 220px, transparent 100%); }
+  .c-flag__nfk:before {
+    color: #007a33;
+    content: "";
+    font-size: 93px;
+    height: 93px;
+    line-height: 93px;
+    text-align: center;
+    position: absolute;
+    width: 93px;
+    top: 8.36957px;
+    left: 63.36957px; }
+
+.c-flag__mnp {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__nor {
+  width: 220px;
+  height: 160px;
+  background-color: #ED2939;
+  background-image: linear-gradient(180deg, transparent, transparent 70px, #002664 70px, #002664 90px, transparent 90px, transparent 100%), linear-gradient(90deg, transparent, transparent 60px, #002664 60px, #002664 80px, transparent 80px, transparent 100%), linear-gradient(180deg, transparent, transparent 60px, #FFF 60px, #FFF 100px, transparent 100px, transparent 100%), linear-gradient(90deg, transparent, transparent 50px, #FFF 50px, #FFF 90px, transparent 90px, transparent 100%); }
+
+.c-flag__omn {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__pak {
+  width: 220px;
+  height: 147px;
+  background-color: #006230;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #FFF 0, #FFF 55.125px, transparent 55.125px, transparent 100%), radial-gradient(circle at 148.79942px 63.73385px, #006230 40.425px, transparent 41.425px), radial-gradient(circle at 137.8125px 73.5px, #FFF 44.1px, transparent 45.1px); }
+  .c-flag__pak:before {
+    color: #FFF;
+    content: "★";
+    font-size: 29px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    position: absolute;
+    width: 29px;
+    top: 39.2677px;
+    left: 145.08633px;
+    transform: rotate(45deg); }
+
+.c-flag__plw {
+  width: 220px;
+  height: 138px;
+  background-color: #418fde;
+  background-image: radial-gradient(circle at 96.6px 69px, #f7ea48 41.4px, transparent 42.4px); }
+
+.c-flag__pse {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #000 0, #000 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #FFF 36.66667px, #FFF 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #007a33 73.33333px, #007a33 110px, transparent 110px, transparent 100%); }
+  .c-flag__pse:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 110px;
+    background-color: #c8102e;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+
+.c-flag__pan {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #d21034 0, #d21034 73.5px, transparent 73.5px, transparent 100%), linear-gradient(90deg, transparent, transparent 110.25px, #FFF 110.25px, #FFF 220.5px, transparent 220.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.5px, #005293 73.5px, #005293 147px, transparent 147px, transparent 100%); }
+  .c-flag__pan:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110.25px;
+    height: 73.5px;
+    background: #FFF;
+    display: block;
+    content: ""; }
+  .c-flag__pan:after {
+    color: #005293;
+    content: "★";
+    font-size: 49px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    position: absolute;
+    width: 49px;
+    top: 12.25px;
+    left: 30.625px;
+    text-shadow: 110.25px 73.5px 0 #d21034; }
+
+.c-flag__png {
+  width: 220px;
+  height: 165px;
+  background-color: #c8102e;
+  background-image: linear-gradient(36.8699deg, transparent, transparent 0, #000 0, #000 132px, transparent 132px, transparent 100%); }
+  .c-flag__png:before {
+    color: #000;
+    content: "★★";
+    font-size: 11px;
+    height: 11px;
+    line-height: 11px;
+    text-align: center;
+    position: absolute;
+    width: 11px;
+    top: 56.14583px;
+    left: 49.27083px;
+    position: relative;
+    text-shadow: 0px 50.41667px 0px #FFF; }
+  .c-flag__png:first-letter {
+    font-size: 22.91667px;
+    height: 22.91667px;
+    line-height: 22.91667px;
+    width: 22.91667px;
+    color: #FFF;
+    text-shadow: -25.20833px 29.79167px 0px #FFF, 25.20833px 29.79167px 0px #FFF, 0px 75.625px 0px #FFF;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0; }
+  .c-flag__png:after {
+    color: #ffcd00;
+    content: "";
+    font-size: 73px;
+    height: 73px;
+    line-height: 73px;
+    text-align: center;
+    position: absolute;
+    width: 73px;
+    top: 16.04167px;
+    left: 110px; }
+
+.c-flag__pry {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__per {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #D91023 0, #D91023 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #FFF 73.33333px, #FFF 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #D91023 146.66667px, #D91023 220px, transparent 220px, transparent 100%); }
+
+.c-flag__phl {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #0033a0 0, #0033a0 55px, transparent 55px, transparent 100%), linear-gradient(180deg, transparent, transparent 55px, #bf0d3e 55px, #bf0d3e 110px, transparent 110px, transparent 100%); }
+  .c-flag__phl:after {
+    color: transparent;
+    content: "★";
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+    position: absolute;
+    width: 12px;
+    top: -6.11111px;
+    left: -6.11111px;
+    text-shadow: 8.55556px 14.81866px 0px #fed141, 8.55556px 95.18134px 0px #fed141, 78.15168px 55px 0px #fed141; }
+  .c-flag__phl:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95.26279px;
+    height: 110px;
+    background-color: #FFF;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    content: "";
+    text-indent: 8.53204px;
+    line-height: 110px;
+    color: #fed141;
+    font-size: 46.44444px; }
+
+.c-flag__pcn {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__pol {
+  width: 220px;
+  height: 138px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #dc143c 0, #dc143c 69px, transparent 69px, transparent 100%), linear-gradient(180deg, transparent, transparent 69px, #FFF 69px, #FFF 138px, transparent 138px, transparent 100%); }
+
+.c-flag__prt {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__pri {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #ba0c2f 0, #ba0c2f 29.4px, transparent 29.4px, transparent 100%), linear-gradient(180deg, transparent, transparent 29.4px, #FFF 29.4px, #FFF 58.8px, transparent 58.8px, transparent 100%), linear-gradient(180deg, transparent, transparent 58.8px, #ba0c2f 58.8px, #ba0c2f 88.2px, transparent 88.2px, transparent 100%), linear-gradient(180deg, transparent, transparent 88.2px, #FFF 88.2px, #FFF 117.6px, transparent 117.6px, transparent 100%), linear-gradient(180deg, transparent, transparent 117.6px, #ba0c2f 117.6px, #ba0c2f 147px, transparent 147px, transparent 100%); }
+  .c-flag__pri:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 127.30573px;
+    height: 147px;
+    background-color: #012169;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+  .c-flag__pri:after {
+    color: #FFF;
+    content: "★";
+    font-size: 49px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    position: absolute;
+    width: 49px;
+    top: 49px;
+    left: 17.93524px; }
+
+.c-flag__qat {
+  width: 220px;
+  height: 86px;
+  background-color: #8a1538;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #FFF 0, #FFF 62.54545px, transparent 62.54545px, transparent 100%); }
+  .c-flag__qat:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #FFF;
+    width: 15.63636px;
+    height: 86px;
+    left: 60.54545px;
+    top: 0;
+    -webkit-clip-path: polygon(0px 0px, 15.63636px 4.77778px, 0px 9.55556px, 15.63636px 14.33333px, 0px 19.11111px, 15.63636px 23.88889px, 0px 28.66667px, 15.63636px 33.44444px, 0px 38.22222px, 15.63636px 43px, 0px 47.77778px, 15.63636px 52.55556px, 0px 57.33333px, 15.63636px 62.11111px, 0px 66.88889px, 15.63636px 71.66667px, 0px 76.44444px, 15.63636px 81.22222px, 0px 86px);
+    clip-path: polygon(0px 0px, 15.63636px 4.77778px, 0px 9.55556px, 15.63636px 14.33333px, 0px 19.11111px, 15.63636px 23.88889px, 0px 28.66667px, 15.63636px 33.44444px, 0px 38.22222px, 15.63636px 43px, 0px 47.77778px, 15.63636px 52.55556px, 0px 57.33333px, 15.63636px 62.11111px, 0px 66.88889px, 15.63636px 71.66667px, 0px 76.44444px, 15.63636px 81.22222px, 0px 86px); }
+
+.c-flag__reu {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__rou {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #002B7F 0, #002B7F 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #FCD116 73.33333px, #FCD116 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #CE1126 146.66667px, #CE1126 220px, transparent 220px, transparent 100%); }
+
+.c-flag__rus {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #FFF 0, #FFF 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #0039a6 49px, #0039a6 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #d52b1e 98px, #d52b1e 147px, transparent 147px, transparent 100%); }
+
+.c-flag__rwa {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #0078CB 0, #0078CB 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #ffd100 73.33333px, #ffd100 110px, transparent 110px, transparent 100%), linear-gradient(180deg, transparent, transparent 110px, #00794F 110px, #00794F 146.66667px, transparent 146.66667px, transparent 100%); }
+  .c-flag__rwa:before {
+    color: #f2a900;
+    content: "";
+    font-size: 47px;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    position: absolute;
+    width: 47px;
+    top: 13.53846px;
+    left: 156.82051px; }
+
+.c-flag__blm {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__shn {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__kna {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(146.24987deg, transparent, transparent 0, #007a33 0, #007a33 91.35585px, transparent 91.35585px, transparent 100%), linear-gradient(146.24987deg, transparent, transparent 91.35585px, #FFCB00 91.35585px, #FFCB00 100.17585px, transparent 100.17585px, transparent 100%), linear-gradient(146.24987deg, transparent, transparent 100.17585px, #000 100.17585px, #000 144.27585px, transparent 144.27585px, transparent 100%), linear-gradient(146.24987deg, transparent, transparent 144.27585px, #FFCB00 144.27585px, #FFCB00 153.09585px, transparent 153.09585px, transparent 100%), linear-gradient(146.24987deg, transparent, transparent 153.09585px, #CC0C2F 153.09585px, #CC0C2F 244.45171px, transparent 244.45171px, transparent 100%); }
+  .c-flag__kna:before {
+    color: transparent;
+    content: "★";
+    font-size: 41px;
+    height: 41px;
+    line-height: 41px;
+    text-align: center;
+    position: absolute;
+    width: 41px;
+    top: 52.92px;
+    left: 89.42px;
+    transform: rotate(-35deg);
+    text-shadow: -39.44px 0px 0px #FFF, 43.85px 0px 0px #FFF; }
+
+.c-flag__lca {
+  width: 220px;
+  height: 110px;
+  background: #9bcbeb; }
+  .c-flag__lca:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #ffcd00;
+    width: 79.2px;
+    height: 88px;
+    left: 70.4px;
+    top: 11px;
+    background-image: linear-gradient(114.22775deg, transparent, transparent 0, #9bcbeb 0, #9bcbeb 36.11209px, transparent 36.11209px, transparent 100%), linear-gradient(-114.22775deg, transparent, transparent 0, #9bcbeb 0, #9bcbeb 36.11209px, transparent 36.11209px, transparent 100%), linear-gradient(114.22775deg, transparent, transparent 36.11209px, #FFF 36.11209px, #FFF 38.1434px, transparent 38.1434px, transparent 100%), linear-gradient(-114.22775deg, transparent, transparent 36.11209px, #FFF 36.11209px, #FFF 38.1434px, transparent 38.1434px, transparent 100%), linear-gradient(131.98721deg, transparent, transparent 0, #000 0, #000 58.8689px, transparent 58.8689px, transparent 100%), linear-gradient(-131.98721deg, transparent, transparent 0, #000 0, #000 58.8689px, transparent 58.8689px, transparent 100%); }
+
+.c-flag__maf {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__spm {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__vct {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #005eb8 0, #005eb8 55.125px, transparent 55.125px, transparent 100%), linear-gradient(90deg, transparent, transparent 55.125px, #ffcd00 55.125px, #ffcd00 165.375px, transparent 165.375px, transparent 100%), linear-gradient(90deg, transparent, transparent 165.375px, #009A4A 165.375px, #009A4A 220.5px, transparent 220.5px, transparent 100%); }
+  .c-flag__vct:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #009A4A;
+    width: 17.32412px;
+    height: 17.32412px;
+    left: 110.25px;
+    top: 104.125px;
+    transform: translateX(-8.66206px) translateY(-8.66206px) scaleY(2) rotate(45deg);
+    box-shadow: -23.44912px 0px 0px #009A4A, 0px -23.44912px 0px #009A4A; }
+
+.c-flag__wsm {
+  width: 220px;
+  height: 110px;
+  background-color: #012169;
+  background-image: linear-gradient(90deg, transparent, transparent 110px, #c8102e 110px, #c8102e 220px, transparent 220px, transparent 100%), linear-gradient(180deg, transparent, transparent 55px, #c8102e 55px, #c8102e 110px, transparent 110px, transparent 100%); }
+  .c-flag__wsm:before {
+    z-index: 20;
+    color: transparent;
+    content: "★★\a★";
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+    position: absolute;
+    width: 12px;
+    top: -6.11111px;
+    left: -6.11111px;
+    position: relative;
+    white-space: pre;
+    top: 0;
+    left: 0;
+    text-shadow: 48.88889px -19.09722px 0px #FFF, 66.45833px -7.63889px 0px #FFF, 32.08333px -5.34722px 0px #FFF; }
+  .c-flag__wsm:first-line {
+    font-family: Symbols;
+    font-size: 7.63889px;
+    line-height: 7.63889px;
+    color: transparent;
+    text-shadow: 49.65278px 19.86111px 0px #FFF; }
+  .c-flag__wsm:first-letter {
+    font-family: Symbols;
+    font-size: 15.27778px;
+    line-height: 15.27778px;
+    color: transparent;
+    text-shadow: 47.36111px 37.43056px 0px #FFF; }
+
+.c-flag__smr {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__stp {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #43b02a 0, #43b02a 31.42857px, transparent 31.42857px, transparent 100%), linear-gradient(180deg, transparent, transparent 31.42857px, #ffcd00 31.42857px, #ffcd00 78.57143px, transparent 78.57143px, transparent 100%), linear-gradient(180deg, transparent, transparent 78.57143px, #43b02a 78.57143px, #43b02a 110px, transparent 110px, transparent 100%); }
+  .c-flag__stp:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 110px;
+    background-color: #c8102e;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+  .c-flag__stp:after {
+    color: #000;
+    content: "★";
+    font-size: 31px;
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    position: absolute;
+    width: 31px;
+    top: 39.28571px;
+    left: 94.28571px;
+    text-shadow: 55px 0px 0px #000; }
+
+.c-flag__sau {
+  width: 220px;
+  height: 147px;
+  background-color: #009a44; }
+  .c-flag__sau:before {
+    color: #FFF;
+    content: "";
+    font-size: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    position: absolute;
+    width: 110px;
+    top: 18.375px;
+    left: 54.875px; }
+
+.c-flag__sct {
+  width: 220px;
+  height: 176px;
+  background-color: #005eb8;
+  background-image: linear-gradient(37.56859deg, transparent, transparent 116.25152px, #FFF 116.25152px, #FFF 157.73512px, transparent 157.73512px, transparent 100%), linear-gradient(-37.56859deg, transparent, transparent 116.25152px, #FFF 116.25152px, #FFF 157.73512px, transparent 157.73512px, transparent 100%); }
+
+.c-flag__sen {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #00853F 0, #00853F 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.33333px, #FDEF42 73.33333px, #FDEF42 146.66667px, transparent 146.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 146.66667px, #E31B23 146.66667px, #E31B23 220px, transparent 220px, transparent 100%); }
+  .c-flag__sen:before {
+    color: #00853F;
+    content: "★";
+    font-size: 49px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    position: absolute;
+    width: 49px;
+    top: 49px;
+    left: 85.5px; }
+
+.c-flag__srb {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__syc {
+  width: 220px;
+  height: 110px;
+  background-color: #d22630;
+  background-image: linear-gradient(123.69007deg, transparent, transparent 0, #002f6c 0, #002f6c 61.01702px, transparent 61.01702px, transparent 100%), linear-gradient(143.1301deg, transparent, transparent 0, #fed141 0, #fed141 88px, transparent 88px, transparent 100%), linear-gradient(-9.46232deg, transparent, transparent 0, #007a33 0, #007a33 36.16778px, transparent 36.16778px, transparent 100%), linear-gradient(-18.43495deg, transparent, transparent 0, #FFF 0, #FFF 69.57011px, transparent 69.57011px, transparent 100%); }
+
+.c-flag__sle {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #1EB53A 0, #1EB53A 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #FFF 49px, #FFF 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #0072C6 98px, #0072C6 147px, transparent 147px, transparent 100%); }
+
+.c-flag__sgp {
+  width: 220px;
+  height: 147px;
+  background-image: radial-gradient(circle at 61.25px 36.75px, #ed2939 29.60417px, transparent 30.60417px), radial-gradient(circle at 46.44792px 36.75px, #FFF 27.05208px, transparent 28.05208px), linear-gradient(180deg, transparent, transparent 0, #ed2939 0, #ed2939 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.5px, #FFF 73.5px, #FFF 147px, transparent 147px, transparent 100%); }
+  .c-flag__sgp:before {
+    color: #FFF;
+    content: "★";
+    font-size: 13px;
+    height: 13px;
+    line-height: 13px;
+    text-align: center;
+    position: absolute;
+    width: 13px;
+    top: 14.7px;
+    left: 54.71667px;
+    text-shadow: 14.75723px 10.72175px 0px #FFF, 9.12047px 28.06991px 0px #FFF, -9.12047px 28.06991px 0px #FFF, -14.75723px 10.72175px 0px #FFF; }
+
+.c-flag__sxm {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__svk {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__svn {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__slb {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(-26.56505deg, transparent, transparent 0, #006747 0, #006747 92.88699px, transparent 92.88699px, transparent 100%), linear-gradient(-26.56505deg, transparent, transparent 92.88699px, #fdda24 92.88699px, #fdda24 103.88699px, transparent 103.88699px, transparent 100%), linear-gradient(-26.56505deg, transparent, transparent 103.88699px, #005eb8 103.88699px, #005eb8 196.77398px, transparent 196.77398px, transparent 100%); }
+  .c-flag__slb:before {
+    color: #FFF;
+    content: "★";
+    font-size: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    position: absolute;
+    width: 22px;
+    top: 22px;
+    left: 27.5px;
+    text-shadow: -21.71474px -18.61263px 0px #FFF, 21.71474px -18.61263px 0px #FFF, 21.71474px 18.61263px 0px #FFF, -21.71474px 18.61263px 0px #FFF; }
+
+.c-flag__som {
+  width: 220px;
+  height: 147px;
+  background-color: #4189DD; }
+  .c-flag__som:before {
+    color: #FFF;
+    content: "★";
+    font-size: 49px;
+    height: 49px;
+    line-height: 49px;
+    text-align: center;
+    position: absolute;
+    width: 49px;
+    top: 49px;
+    left: 85.5px; }
+
+.c-flag__zaf {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #da291c 0, #da291c 48.88889px, transparent 48.88889px, transparent 100%), linear-gradient(180deg, transparent, transparent 48.88889px, #FFF 48.88889px, #FFF 58.66667px, transparent 58.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 58.66667px, #046a38 58.66667px, #046a38 88px, transparent 88px, transparent 100%), linear-gradient(180deg, transparent, transparent 88px, #FFF 88px, #FFF 97.77778px, transparent 97.77778px, transparent 100%), linear-gradient(180deg, transparent, transparent 97.77778px, #002d72 97.77778px, #002d72 146.66667px, transparent 146.66667px, transparent 100%); }
+  .c-flag__zaf:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #000;
+    width: 114.4px;
+    height: 147px;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(-33.75013deg, transparent, transparent 0, #002d72 0, #002d72 39.113px, transparent 39.113px, transparent 100%), linear-gradient(213.75013deg, transparent, transparent 0, #da291c 0, #da291c 39.113px, transparent 39.113px, transparent 100%), linear-gradient(-33.75013deg, transparent, transparent 39.113px, #FFF 39.113px, #FFF 48.89078px, transparent 48.89078px, transparent 100%), linear-gradient(213.75013deg, transparent, transparent 39.113px, #FFF 39.113px, #FFF 48.89078px, transparent 48.89078px, transparent 100%), linear-gradient(-33.75013deg, transparent, transparent 48.89078px, #046a38 48.89078px, #046a38 78.22411px, transparent 78.22411px, transparent 100%), linear-gradient(213.75013deg, transparent, transparent 48.89078px, #046a38 48.89078px, #046a38 78.22411px, transparent 78.22411px, transparent 100%), linear-gradient(-33.75013deg, transparent, transparent 78.22411px, #ffb81c 78.22411px, #ffb81c 88.00189px, transparent 88.00189px, transparent 100%), linear-gradient(213.75013deg, transparent, transparent 78.22411px, #ffb81c 78.22411px, #ffb81c 88.00189px, transparent 88.00189px, transparent 100%); }
+
+.c-flag__sgs {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__ssd {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #000 0, #000 33px, transparent 33px, transparent 100%), linear-gradient(180deg, transparent, transparent 33px, #FFF 33px, #FFF 38.5px, transparent 38.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 38.5px, #be3a34 38.5px, #be3a34 71.5px, transparent 71.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 71.5px, #FFF 71.5px, #FFF 77px, transparent 77px, transparent 100%), linear-gradient(180deg, transparent, transparent 77px, #006747 77px, #006747 110px, transparent 110px, transparent 100%); }
+  .c-flag__ssd:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95.26279px;
+    height: 110px;
+    background-color: #0033a0;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+  .c-flag__ssd:after {
+    color: #ffcd00;
+    content: "★";
+    font-size: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    position: absolute;
+    width: 37px;
+    top: 36.66667px;
+    left: 13.42093px;
+    transform: rotate(-20deg); }
+
+.c-flag__esp {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__lka {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__sdn {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #C8102E 0, #C8102E 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #FFF 36.66667px, #FFF 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #000 73.33333px, #000 110px, transparent 110px, transparent 100%); }
+  .c-flag__sdn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 73.33333px;
+    height: 110px;
+    background-color: #007a33;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+
+.c-flag__sur {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #007a33 0, #007a33 29.4px, transparent 29.4px, transparent 100%), linear-gradient(180deg, transparent, transparent 29.4px, #FFF 29.4px, #FFF 44.1px, transparent 44.1px, transparent 100%), linear-gradient(180deg, transparent, transparent 44.1px, #c8102e 44.1px, #c8102e 102.9px, transparent 102.9px, transparent 100%), linear-gradient(180deg, transparent, transparent 102.9px, #FFF 102.9px, #FFF 117.6px, transparent 117.6px, transparent 100%), linear-gradient(180deg, transparent, transparent 117.6px, #007a33 117.6px, #007a33 147px, transparent 147px, transparent 100%); }
+  .c-flag__sur:before {
+    color: #ffcd00;
+    content: "★";
+    font-size: 59px;
+    height: 59px;
+    line-height: 59px;
+    text-align: center;
+    position: absolute;
+    width: 59px;
+    top: 44.1px;
+    left: 80.6px; }
+
+.c-flag__sjm {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__swz {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__swe {
+  width: 220px;
+  height: 138px;
+  background-color: #006AA7;
+  background-image: linear-gradient(180deg, transparent, transparent 55.25px, #FECC00 55.25px, #FECC00 82.75px, transparent 82.75px, transparent 100%), linear-gradient(90deg, transparent, transparent 68.75px, #FECC00 68.75px, #FECC00 96.25px, transparent 96.25px, transparent 100%); }
+
+.c-flag__che {
+  width: 220px;
+  height: 220px;
+  background-color: #c8102e;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #c8102e 0, #c8102e 41.25px, transparent 41.25px, transparent 100%), linear-gradient(90deg, transparent, transparent 178.75px, #c8102e 178.75px, #c8102e 220px, transparent 220px, transparent 100%), linear-gradient(180deg, transparent, transparent 178.75px, #c8102e 178.75px, #c8102e 220px, transparent 220px, transparent 100%), linear-gradient(90deg, transparent, transparent 0, #c8102e 0, #c8102e 41.25px, transparent 41.25px, transparent 100%), linear-gradient(180deg, transparent, transparent 89.375px, #FFF 89.375px, #FFF 130.625px, transparent 130.625px, transparent 100%), linear-gradient(90deg, transparent, transparent 89.375px, #FFF 89.375px, #FFF 130.625px, transparent 130.625px, transparent 100%); }
+
+.c-flag__syr {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #c8102e 0, #c8102e 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #FFF 49px, #FFF 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #000 98px, #000 147px, transparent 147px, transparent 100%); }
+  .c-flag__syr:before {
+    color: transparent;
+    content: "★";
+    font-size: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    position: absolute;
+    width: 25px;
+    top: 61.25px;
+    left: 97.75px;
+    text-shadow: -36.75px 0px 0px #009a44, 36.75px 0px 0px #009a44; }
+
+.c-flag__twn {
+  width: 220px;
+  height: 147px;
+  background-color: #fe0000; }
+  .c-flag__twn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #000095;
+    width: 110.25px;
+    height: 73.5px;
+    left: 0;
+    top: 0; }
+  .c-flag__twn:after {
+    color: #FFF;
+    content: "";
+    font-size: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    position: absolute;
+    width: 55px;
+    top: 9.1875px;
+    left: 27.5625px; }
+
+.c-flag__tjk {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #060 0, #060 42px, transparent 42px, transparent 100%), linear-gradient(180deg, transparent, transparent 42px, #FFF 42px, #FFF 105px, transparent 105px, transparent 100%), linear-gradient(180deg, transparent, transparent 105px, #c00 105px, #c00 147px, transparent 147px, transparent 100%); }
+  .c-flag__tjk:before {
+    color: #f8c300;
+    content: "";
+    font-size: 63px;
+    height: 63px;
+    line-height: 63px;
+    text-align: center;
+    position: absolute;
+    width: 63px;
+    top: 42px;
+    left: 78.5px; }
+
+.c-flag__tza {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(146.24987deg, transparent, transparent 0, #009A3D 0, #009A3D 93.1321px, transparent 93.1321px, transparent 100%), linear-gradient(146.24987deg, transparent, transparent 93.1321px, #FCE700 93.1321px, #FCE700 102.3196px, transparent 102.3196px, transparent 100%), linear-gradient(146.24987deg, transparent, transparent 102.3196px, #000 102.3196px, #000 142.1321px, transparent 142.1321px, transparent 100%), linear-gradient(146.24987deg, transparent, transparent 142.1321px, #FCE700 142.1321px, #FCE700 151.3196px, transparent 151.3196px, transparent 100%), linear-gradient(146.24987deg, transparent, transparent 151.3196px, #0064BE 151.3196px, #0064BE 244.45171px, transparent 244.45171px, transparent 100%); }
+
+.c-flag__tha {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #ED1C24 0, #ED1C24 24.5px, transparent 24.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 24.5px, #FFF 24.5px, #FFF 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #241D4F 49px, #241D4F 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #FFF 98px, #FFF 122.5px, transparent 122.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 122.5px, #ED1C24 122.5px, #ED1C24 147px, transparent 147px, transparent 100%); }
+
+.c-flag__tls {
+  width: 220px;
+  height: 110px;
+  background-color: #000;
+  background-image: linear-gradient(26.56505deg, transparent, transparent 98.38699px, #da291c 98.38699px, #da291c 208.38699px, transparent 208.38699px, transparent 100%), linear-gradient(-206.56505deg, transparent, transparent 98.38699px, #da291c 98.38699px, #da291c 208.38699px, transparent 208.38699px, transparent 100%), linear-gradient(36.8699deg, transparent, transparent 88px, #ffc72c 88px, #ffc72c 308px, transparent 308px, transparent 100%), linear-gradient(-216.8699deg, transparent, transparent 88px, #ffc72c 88px, #ffc72c 198px, transparent 198px, transparent 100%); }
+  .c-flag__tls:before {
+    color: #FFF;
+    content: "★";
+    font-size: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    position: absolute;
+    width: 37px;
+    top: 36.66667px;
+    left: 6.11111px;
+    transform: rotate(-20deg); }
+
+.c-flag__tgo {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 88.2px, #fdda24 88.2px, #fdda24 117.6px, transparent 117.6px, transparent 100%), linear-gradient(180deg, transparent, transparent 117.6px, #00b140 117.6px, #00b140 147px, transparent 147px, transparent 100%), linear-gradient(90deg, transparent, transparent 0, #c8102e 0, #c8102e 88.2px, transparent 88.2px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #00b140 0, #00b140 29.4px, transparent 29.4px, transparent 100%), linear-gradient(180deg, transparent, transparent 29.4px, #fdda24 29.4px, #fdda24 58.8px, transparent 58.8px, transparent 100%), linear-gradient(180deg, transparent, transparent 58.8px, #00b140 58.8px, #00b140 88.2px, transparent 88.2px, transparent 100%); }
+  .c-flag__tgo:before {
+    color: #FFF;
+    content: "★";
+    font-size: 56px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    position: absolute;
+    width: 56px;
+    top: 16.17px;
+    left: 16.17px; }
+
+.c-flag__tkl {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__ton {
+  width: 220px;
+  height: 110px;
+  background-color: #FFF;
+  background-image: linear-gradient(180deg, transparent, transparent 55px, #c8102e 55px, #c8102e 110px, transparent 110px, transparent 100%), linear-gradient(90deg, transparent, transparent 91.66667px, #c8102e 91.66667px, #c8102e 220px, transparent 220px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #FFF 0, #FFF 5.2381px, transparent 5.2381px, transparent 100%), linear-gradient(180deg, transparent, transparent 49.7619px, #FFF 49.7619px, #FFF 55px, transparent 55px, transparent 100%), linear-gradient(90deg, transparent, transparent 0, #FFF 0, #FFF 23.57143px, transparent 23.57143px, transparent 100%), linear-gradient(90deg, transparent, transparent 68.09524px, #FFF 68.09524px, #FFF 91.66667px, transparent 91.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 19.64286px, #c8102e 19.64286px, #c8102e 35.35714px, transparent 35.35714px, transparent 100%), linear-gradient(90deg, transparent, transparent 37.97619px, #c8102e 37.97619px, #c8102e 53.69048px, transparent 53.69048px, transparent 100%); }
+
+.c-flag__tto {
+  width: 220px;
+  height: 132px;
+  background-image: linear-gradient(40.83872deg, transparent, transparent 0, #c8102e 0, #c8102e 99.86504px, transparent 99.86504px, transparent 100%), linear-gradient(40.83872deg, transparent, transparent 99.86504px, #FFF 99.86504px, #FFF 107.19837px, transparent 107.19837px, transparent 100%), linear-gradient(40.83872deg, transparent, transparent 107.19837px, #000 107.19837px, #000 136.53171px, transparent 136.53171px, transparent 100%), linear-gradient(40.83872deg, transparent, transparent 136.53171px, #FFF 136.53171px, #FFF 143.86504px, transparent 143.86504px, transparent 100%), linear-gradient(40.83872deg, transparent, transparent 143.86504px, #c8102e 143.86504px, #c8102e 243.73008px, transparent 243.73008px, transparent 100%); }
+
+.c-flag__tun {
+  width: 220px;
+  height: 147px;
+  background-color: #C8102E;
+  background-image: radial-gradient(circle at 117.6px 73.5px, #FFF 22.05px, transparent 23.05px), radial-gradient(circle at 110px 73.5px, #C8102E 27.5625px, transparent 28.5625px), radial-gradient(circle at 110px 73.5px, #FFF 36.75px, transparent 37.75px); }
+  .c-flag__tun:after {
+    color: #C8102E;
+    content: "★";
+    font-size: 33px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    position: absolute;
+    width: 33px;
+    top: 55.125px;
+    left: 101.0625px;
+    transform: rotate(-20deg); }
+
+.c-flag__tur {
+  width: 220px;
+  height: 147px;
+  background-color: #c8102e;
+  background-image: radial-gradient(circle at 82.6875px 73.5px, #c8102e 29.4px, transparent 30.4px), radial-gradient(circle at 73.5px 73.5px, #FFF 36.75px, transparent 37.75px); }
+  .c-flag__tur:before {
+    color: #FFF;
+    content: "★";
+    font-size: 37px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    position: absolute;
+    width: 37px;
+    top: 55.125px;
+    left: 102.2875px;
+    transform: rotate(-20deg); }
+
+.c-flag__tkm {
+  width: 220px;
+  height: 147px;
+  background-color: #006747;
+  background-image: radial-gradient(circle at 97.108px 30.282px, #006747 18.228px, transparent 19.228px), radial-gradient(circle at 101.665px 33.075px, #FFF 18.228px, transparent 19.228px); }
+  .c-flag__tkm:before {
+    color: transparent;
+    content: "★";
+    font-size: 7px;
+    height: 7px;
+    line-height: 7px;
+    text-align: center;
+    position: absolute;
+    width: 7px;
+    top: -3.528px;
+    left: -3.528px;
+    top: 0;
+    left: 66.15px;
+    transform: rotate(180deg);
+    text-shadow: -25.872px -15.729px 0px #FFF, -35.28px -20.433px 0px #FFF, -25.872px -25.137px 0px #FFF, -16.464px -29.841px 0px #FFF, -25.872px -34.545px 0px #FFF; }
+
+.c-flag__tca {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__tuv {
+  width: 220px;
+  height: 110px;
+  background-color: #6cace4; }
+  .c-flag__tuv:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 110px;
+    height: 55px;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, transparent, transparent 22px, #c8102e 22px, #c8102e 33px, transparent 33px, transparent 100%), linear-gradient(90deg, transparent, transparent 49.5px, #c8102e 49.5px, #c8102e 60.5px, transparent 60.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 18.33333px, #FFF 18.33333px, #FFF 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(90deg, transparent, transparent 45.83333px, #FFF 45.83333px, #FFF 64.16667px, transparent 64.16667px, transparent 100%), linear-gradient(26.56505deg, transparent, transparent 45.52683px, #c8102e 45.52683px, #c8102e 49.1935px, transparent 49.1935px, transparent 100%) 0 0/55px 100% no-repeat, linear-gradient(-26.56505deg, transparent, transparent 49.1935px, #c8102e 49.1935px, #c8102e 52.86016px, transparent 52.86016px, transparent 100%) 55px 0/55px 100% no-repeat, linear-gradient(26.56505deg, transparent, transparent 49.1935px, #c8102e 49.1935px, #c8102e 52.86016px, transparent 52.86016px, transparent 100%) 55px 27.5px/55px 100% no-repeat, linear-gradient(-26.56505deg, transparent, transparent 45.52683px, #c8102e 45.52683px, #c8102e 49.1935px, transparent 49.1935px, transparent 100%) 0 27.5px/55px 100% no-repeat, linear-gradient(26.56505deg, transparent, transparent 43.6935px, #FFF 43.6935px, #FFF 54.6935px, transparent 54.6935px, transparent 100%), linear-gradient(153.43495deg, transparent, transparent 43.6935px, #FFF 43.6935px, #FFF 54.6935px, transparent 54.6935px, transparent 100%), #012169;
+    content: "★";
+    font-size: 18.33333px;
+    line-height: 18.33333px;
+    color: transparent;
+    text-shadow: 187.91667px 4.58333px 0px #ffcd00, 197.08333px 41.25px 0px #ffcd00, 169.58333px 59.58333px 0px #ffcd00, 110px 91.66667px 0px #ffcd00; }
+  .c-flag__tuv:before {
+    color: transparent;
+    content: "★";
+    font-size: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    position: absolute;
+    width: 18px;
+    top: -9.16667px;
+    left: 100.83333px;
+    transform: rotate(180deg);
+    text-shadow: -68.75px -32.08333px 0px #ffcd00, -50.41667px -41.25px 0px #ffcd00, -36.66667px -73.33333px 0px #ffcd00, -36.66667px -91.66667px 0px #ffcd00, -55px -87.08333px 0px #ffcd00; }
+
+.c-flag__uga {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__ukr {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #005BBB 0, #005BBB 73.5px, transparent 73.5px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.5px, #FFD500 73.5px, #FFD500 147px, transparent 147px, transparent 100%); }
+
+.c-flag__are {
+  width: 220px;
+  height: 110px;
+  background-image: linear-gradient(90deg, transparent, transparent 0, #a6192e 0, #a6192e 55px, transparent 55px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #00534c 0, #00534c 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #FFF 36.66667px, #FFF 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #000 73.33333px, #000 110px, transparent 110px, transparent 100%); }
+
+.c-flag__gbr {
+  width: 220px;
+  height: 110px;
+  background: linear-gradient(180deg, transparent, transparent 44px, #c8102e 44px, #c8102e 66px, transparent 66px, transparent 100%), linear-gradient(90deg, transparent, transparent 99px, #c8102e 99px, #c8102e 121px, transparent 121px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #FFF 36.66667px, #FFF 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(90deg, transparent, transparent 91.66667px, #FFF 91.66667px, #FFF 128.33333px, transparent 128.33333px, transparent 100%), linear-gradient(26.56505deg, transparent, transparent 91.05366px, #c8102e 91.05366px, #c8102e 98.38699px, transparent 98.38699px, transparent 100%) 0 0/110px 100% no-repeat, linear-gradient(-26.56505deg, transparent, transparent 98.38699px, #c8102e 98.38699px, #c8102e 105.72032px, transparent 105.72032px, transparent 100%) 110px 0/110px 100% no-repeat, linear-gradient(26.56505deg, transparent, transparent 98.38699px, #c8102e 98.38699px, #c8102e 105.72032px, transparent 105.72032px, transparent 100%) 110px 55px/110px 100% no-repeat, linear-gradient(-26.56505deg, transparent, transparent 91.05366px, #c8102e 91.05366px, #c8102e 98.38699px, transparent 98.38699px, transparent 100%) 0 55px/110px 100% no-repeat, linear-gradient(26.56505deg, transparent, transparent 87.38699px, #FFF 87.38699px, #FFF 109.38699px, transparent 109.38699px, transparent 100%), linear-gradient(153.43495deg, transparent, transparent 87.38699px, #FFF 87.38699px, #FFF 109.38699px, transparent 109.38699px, transparent 100%), #012169; }
+
+.c-flag__usa {
+  width: 220px;
+  height: 116px;
+  background-image: linear-gradient(180deg, transparent, transparent 62.46154px, #FFF 62.46154px, #FFF 71.38462px, transparent 71.38462px, transparent 100%), linear-gradient(180deg, transparent, transparent 71.38462px, #ba0c2f 71.38462px, #ba0c2f 80.30769px, transparent 80.30769px, transparent 100%), linear-gradient(180deg, transparent, transparent 80.30769px, #FFF 80.30769px, #FFF 89.23077px, transparent 89.23077px, transparent 100%), linear-gradient(180deg, transparent, transparent 89.23077px, #ba0c2f 89.23077px, #ba0c2f 98.15385px, transparent 98.15385px, transparent 100%), linear-gradient(180deg, transparent, transparent 98.15385px, #FFF 98.15385px, #FFF 107.07692px, transparent 107.07692px, transparent 100%), linear-gradient(180deg, transparent, transparent 107.07692px, #ba0c2f 107.07692px, #ba0c2f 116px, transparent 116px, transparent 100%), linear-gradient(90deg, transparent, transparent 0, #012169 0, #012169 87.96437px, transparent 87.96437px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #ba0c2f 0, #ba0c2f 8.92308px, transparent 8.92308px, transparent 100%), linear-gradient(180deg, transparent, transparent 8.92308px, #FFF 8.92308px, #FFF 17.84615px, transparent 17.84615px, transparent 100%), linear-gradient(180deg, transparent, transparent 17.84615px, #ba0c2f 17.84615px, #ba0c2f 26.76923px, transparent 26.76923px, transparent 100%), linear-gradient(180deg, transparent, transparent 26.76923px, #FFF 26.76923px, #FFF 35.69231px, transparent 35.69231px, transparent 100%), linear-gradient(180deg, transparent, transparent 35.69231px, #ba0c2f 35.69231px, #ba0c2f 44.61538px, transparent 44.61538px, transparent 100%), linear-gradient(180deg, transparent, transparent 44.61538px, #FFF 44.61538px, #FFF 53.53846px, transparent 53.53846px, transparent 100%), linear-gradient(180deg, transparent, transparent 53.53846px, #ba0c2f 53.53846px, #ba0c2f 62.46154px, transparent 62.46154px, transparent 100%); }
+  .c-flag__usa:before {
+    color: transparent;
+    content: "★";
+    font-size: 7px;
+    height: 7px;
+    line-height: 7px;
+    text-align: center;
+    position: absolute;
+    width: 7px;
+    top: -3.56275px;
+    left: -3.56275px;
+    text-shadow: 7.33036px 6.23482px 0px #FFF, 21.99109px 6.23482px 0px #FFF, 36.65182px 6.23482px 0px #FFF, 51.31255px 6.23482px 0px #FFF, 65.97328px 6.23482px 0px #FFF, 80.63401px 6.23482px 0px #FFF, 14.66073px 12.46964px 0px #FFF, 29.32146px 12.46964px 0px #FFF, 43.98219px 12.46964px 0px #FFF, 58.64291px 12.46964px 0px #FFF, 73.30364px 12.46964px 0px #FFF, 7.33036px 18.70445px 0px #FFF, 21.99109px 18.70445px 0px #FFF, 36.65182px 18.70445px 0px #FFF, 51.31255px 18.70445px 0px #FFF, 65.97328px 18.70445px 0px #FFF, 80.63401px 18.70445px 0px #FFF, 14.66073px 24.93927px 0px #FFF, 29.32146px 24.93927px 0px #FFF, 43.98219px 24.93927px 0px #FFF, 58.64291px 24.93927px 0px #FFF, 73.30364px 24.93927px 0px #FFF, 7.33036px 31.17409px 0px #FFF, 21.99109px 31.17409px 0px #FFF, 36.65182px 31.17409px 0px #FFF, 51.31255px 31.17409px 0px #FFF, 65.97328px 31.17409px 0px #FFF, 80.63401px 31.17409px 0px #FFF, 14.66073px 37.40891px 0px #FFF, 29.32146px 37.40891px 0px #FFF, 43.98219px 37.40891px 0px #FFF, 58.64291px 37.40891px 0px #FFF, 73.30364px 37.40891px 0px #FFF, 7.33036px 43.64372px 0px #FFF, 21.99109px 43.64372px 0px #FFF, 36.65182px 43.64372px 0px #FFF, 51.31255px 43.64372px 0px #FFF, 65.97328px 43.64372px 0px #FFF, 80.63401px 43.64372px 0px #FFF, 14.66073px 49.87854px 0px #FFF, 29.32146px 49.87854px 0px #FFF, 43.98219px 49.87854px 0px #FFF, 58.64291px 49.87854px 0px #FFF, 73.30364px 49.87854px 0px #FFF, 7.33036px 56.11336px 0px #FFF, 21.99109px 56.11336px 0px #FFF, 36.65182px 56.11336px 0px #FFF, 51.31255px 56.11336px 0px #FFF, 65.97328px 56.11336px 0px #FFF, 80.63401px 56.11336px 0px #FFF; }
+
+.c-flag__umi {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__ury {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__uzb {
+  width: 220px;
+  height: 110px;
+  background-image: radial-gradient(circle at 36.74px 17.6px, #0092bc 11px, transparent 12px), radial-gradient(circle at 30.8px 17.6px, #FFF 13.2px, transparent 14.2px), linear-gradient(180deg, transparent, transparent 0, #0092bc 0, #0092bc 35.2px, transparent 35.2px, transparent 100%), linear-gradient(180deg, transparent, transparent 35.2px, #e03c31 35.2px, #e03c31 37.4px, transparent 37.4px, transparent 100%), linear-gradient(180deg, transparent, transparent 37.4px, #FFF 37.4px, #FFF 72.6px, transparent 72.6px, transparent 100%), linear-gradient(180deg, transparent, transparent 72.6px, #e03c31 72.6px, #e03c31 74.8px, transparent 74.8px, transparent 100%), linear-gradient(180deg, transparent, transparent 74.8px, #43b02a 74.8px, #43b02a 110px, transparent 110px, transparent 100%); }
+  .c-flag__uzb:before {
+    color: #FFF;
+    content: "★";
+    font-size: 5px;
+    height: 5px;
+    line-height: 5px;
+    text-align: center;
+    position: absolute;
+    width: 5px;
+    top: 25.52px;
+    left: 44.66px;
+    text-shadow: 10.56px 0px 0px #FFF, 21.12px 0px 0px #FFF, 31.68px 0px 0px #FFF, 42.24px 0px 0px #FFF, 10.56px -10.56px 0px #FFF, 21.12px -10.56px 0px #FFF, 31.68px -10.56px 0px #FFF, 42.24px -10.56px 0px #FFF, 21.12px -21.12px 0px #FFF, 31.68px -21.12px 0px #FFF, 42.24px -21.12px 0px #FFF; }
+
+.c-flag__vut {
+  width: 220px;
+  height: 116px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #c8102e 0, #c8102e 47.66667px, transparent 47.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 47.66667px, #000 47.66667px, #000 55px, transparent 55px, transparent 100%), linear-gradient(180deg, transparent, transparent 55px, #ffcd00 55px, #ffcd00 61.11111px, transparent 61.11111px, transparent 100%), linear-gradient(180deg, transparent, transparent 61.11111px, #000 61.11111px, #000 68.44444px, transparent 68.44444px, transparent 100%), linear-gradient(180deg, transparent, transparent 68.44444px, #009a44 68.44444px, #009a44 116.11111px, transparent 116.11111px, transparent 100%); }
+  .c-flag__vut:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #000;
+    width: 102.66667px;
+    height: 116px;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(-24.90477deg, transparent, transparent 0, #009a44 0, #009a44 43.23409px, transparent 43.23409px, transparent 100%), linear-gradient(204.90477deg, transparent, transparent 0, #c8102e 0, #c8102e 43.23409px, transparent 43.23409px, transparent 100%), linear-gradient(-24.90477deg, transparent, transparent 43.23409px, #000 43.23409px, #000 50.56743px, transparent 50.56743px, transparent 100%), linear-gradient(204.90477deg, transparent, transparent 43.23409px, #000 43.23409px, #000 50.56743px, transparent 50.56743px, transparent 100%), linear-gradient(-24.90477deg, transparent, transparent 50.56743px, #ffcd00 50.56743px, #ffcd00 56.67854px, transparent 56.67854px, transparent 100%), linear-gradient(204.90477deg, transparent, transparent 50.56743px, #ffcd00 50.56743px, #ffcd00 56.67854px, transparent 56.67854px, transparent 100%); }
+  .c-flag__vut:after {
+    color: #ffcd00;
+    content: "";
+    font-size: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    position: absolute;
+    width: 35px;
+    top: 40.27778px;
+    left: 7.94444px; }
+
+.c-flag__ven {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #ffcd00 0, #ffcd00 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #0039A7 49px, #0039A7 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #c8102e 98px, #c8102e 147px, transparent 147px, transparent 100%); }
+  .c-flag__ven:before {
+    color: transparent;
+    content: "★";
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+    position: absolute;
+    width: 12px;
+    top: 96.775px;
+    left: 104.125px;
+    text-shadow: -41.44044px -15.08309px 0px #FFF, -33.78256px -28.34693px 0px #FFF, -22.05px -38.19172px 0px #FFF, -7.65788px -43.43002px 0px #FFF, 7.65788px -43.43002px 0px #FFF, 22.05px -38.19172px 0px #FFF, 33.78256px -28.34693px 0px #FFF, 41.44044px -15.08309px 0px #FFF; }
+
+.c-flag__vnm {
+  width: 220px;
+  height: 147px;
+  background-color: #E21C1C; }
+  .c-flag__vnm:before {
+    color: #FFFF00;
+    content: "★";
+    font-size: 88px;
+    height: 88px;
+    line-height: 88px;
+    text-align: center;
+    position: absolute;
+    width: 88px;
+    top: 29.4px;
+    left: 65.9px; }
+
+.c-flag__vgb {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__vir {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__wlf {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 49.81667px, #d50032 49.81667px, #d50032 147px, transparent 147px, transparent 100%), linear-gradient(90deg, transparent, transparent 74.31667px, #d50032 74.31667px, #d50032 220px, transparent 220px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #FFF 49px, #FFF 49.81667px, transparent 49.81667px, transparent 100%), linear-gradient(90deg, transparent, transparent 73.5px, #FFF 73.5px, #FFF 74.31667px, transparent 74.31667px, transparent 100%), linear-gradient(90deg, transparent, transparent 0, #003057 0, #003057 24.5px, transparent 24.5px, transparent 100%), linear-gradient(90deg, transparent, transparent 24.5px, #FFF 24.5px, #FFF 49px, transparent 49px, transparent 100%), linear-gradient(90deg, transparent, transparent 49px, #d50032 49px, #d50032 73.5px, transparent 73.5px, transparent 100%); }
+  .c-flag__wlf:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #FFF;
+    width: 49px;
+    height: 49px;
+    left: 122px;
+    top: 49px;
+    background-image: linear-gradient(45deg, transparent, transparent 29.74823px, #d50032 29.74823px, #d50032 39.54823px, transparent 39.54823px, transparent 100%), linear-gradient(-45deg, transparent, transparent 29.74823px, #d50032 29.74823px, #d50032 39.54823px, transparent 39.54823px, transparent 100%); }
+
+.c-flag__esh {
+  width: 220px;
+  height: 110px;
+  background-image: radial-gradient(circle at 122.22222px 55px, #FFF 12.22222px, transparent 13.22222px), radial-gradient(circle at 114.88889px 55px, #e4002b 14.66667px, transparent 15.66667px), linear-gradient(180deg, transparent, transparent 0, #000 0, #000 36.66667px, transparent 36.66667px, transparent 100%), linear-gradient(180deg, transparent, transparent 36.66667px, #FFF 36.66667px, #FFF 73.33333px, transparent 73.33333px, transparent 100%), linear-gradient(180deg, transparent, transparent 73.33333px, #007a33 73.33333px, #007a33 110px, transparent 110px, transparent 100%); }
+  .c-flag__esh:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 73.33333px;
+    height: 110px;
+    background-color: #e4002b;
+    -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+  .c-flag__esh:after {
+    color: #e4002b;
+    content: "★";
+    font-size: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    position: absolute;
+    width: 24px;
+    top: 42.77778px;
+    left: 116.11111px;
+    transform: rotate(-20deg); }
+
+.c-flag__yem {
+  width: 220px;
+  height: 147px;
+  background-image: linear-gradient(180deg, transparent, transparent 0, #CE1126 0, #CE1126 49px, transparent 49px, transparent 100%), linear-gradient(180deg, transparent, transparent 49px, #FFF 49px, #FFF 98px, transparent 98px, transparent 100%), linear-gradient(180deg, transparent, transparent 98px, #000 98px, #000 147px, transparent 147px, transparent 100%); }
+
+.c-flag__zmb {
+  width: 220px;
+  height: 147px; }
+
+.c-flag__zwe {
+  width: 220px;
+  height: 147px; }
+
+html,
+body {
+  height: 100%;
+  background-color: #F4F7EF; }
+
+.o-outer-container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .o-outer-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.c-header {
+  background-color: #90A959;
+  border-bottom: 1px solid #748847;
+  color: rgba(255, 255, 255, 0.7);
+  height: 60px;
+  width: 100%;
+  z-index: 999; }
+
+.c-header__title {
+  display: block;
+  float: left;
+  font-size: 2rem;
+  height: 60px;
+  line-height: 60px;
+  margin: 0; }
+  .c-header__title a {
+    color: white; }
+
+.c-searchbar {
+  display: none;
+  border-bottom: 3px solid blue;
+  float: right;
+  height: 30px;
+  margin-right: 150px;
+  margin-top: 20px;
+  width: 550px; }
+  .c-searchbar .c-searchbar--input {
+    background: transparent;
+    border: transparent;
+    box-shadow: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 520px; }
+    .c-searchbar .c-searchbar--input:focus {
+      border: 0;
+      box-shadow: none;
+      outline: none; }
+
+.c-flaglist {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  padding-top: 30px; }
+
+.c-flaglist--item {
+  -webkit-flex-basis: 20em;
+  -moz-flex-basis: 20em;
+  flex-basis: 20em;
+  -ms-flex-preferred-size: 20em;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px #e6e6e6;
+  cursor: pointer;
+  margin: 0 1em 1.5em 1em;
+  position: relative; }
+
+.c-flaglist--item__hard {
+  display: none; }
+
+.c-flaglist--item__unknown {
+  display: none; }
+
+.c-flaglist--showcase {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+  height: 200px;
+  max-height: 200px;
+  background-color: gainsboro; }
+
+.c-flaglist--showcase-inner {
+  display: table-cell;
+  vertical-align: middle; }
+
+.c-flaglist--name {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+  border-radius: 3px 3px 0 0;
+  font-weight: bold;
+  line-height: 1.5em;
+  padding: 0.5em 0.75em; }
+
+
+/*# sourceMappingURL=main.css.map*/
