@@ -18,10 +18,12 @@
   "scripts": {
     "build": "brunch build",
     "serve": "brunch watch",
+    "gh-pages": "./scripts/gh-pages",
     "postinstall": "./scripts/postinstall"
   },
   "devDependencies": {
     "brunch": "1.8.5",
+    "gh-pages": "0.8.0",
     "javascript-brunch": "1.7.1",
     "sass-brunch": "1.9.0"
   },

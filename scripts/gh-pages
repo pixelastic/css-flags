@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+rm -rf node_modules/gh-pages/.cache
+rm -rf public
+brunch build
+gh-pages --dist public --branch gh-pages
