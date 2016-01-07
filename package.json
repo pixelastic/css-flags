@@ -19,12 +19,14 @@
     "build": "brunch build",
     "serve": "brunch watch",
     "gh-pages": "./scripts/gh-pages",
-    "postinstall": "./scripts/postinstall"
+    "postinstall": "./scripts/postinstall",
+    "test": "casperjs tests/testsuite.js"
   },
   "devDependencies": {
     "brunch": "1.8.5",
     "gh-pages": "0.8.0",
     "javascript-brunch": "1.7.1",
+    "phantomcss": "0.11.0",
     "sass-brunch": "1.9.0"
   },
   "dependencies": {
