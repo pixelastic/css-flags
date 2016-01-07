@@ -1,0 +1,15 @@
+{
+  "extends": "algolia",
+  "rules": {
+    "no-var": 2,
+    "no-console": 0,
+    "no-use-before-define": 0,
+    "func-style": [2, "expression", { "allowArrowFunctions": true }],
+    "algolia/relative-require": 2,
+    "algolia/force-import-root": 2,
+    "algolia/no-require": 1,
+    "algolia/no-module-exports": 2
+  }
+}
+
+

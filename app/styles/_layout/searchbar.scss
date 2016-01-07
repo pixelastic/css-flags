@@ -3,8 +3,8 @@ $searchbar-icon-width: 30px;
 $searchbar-input-width: $searchbar-width - $searchbar-icon-width;
 
 .c-searchbar {
-  display: none;
-  border-bottom: 3px solid blue;
+  border-bottom: 3px solid white;
+  color: #FFF;
   float: right;
   height: 30px;
   margin-right: 150px;
@@ -20,10 +20,18 @@ $searchbar-input-width: $searchbar-width - $searchbar-icon-width;
     margin: 0;
     padding: 0;
     width: $searchbar-input-width;
+    @include placeholder {
+      color: #FFF;
+    }
     &:focus {
       border: 0;
       box-shadow: none;
       outline: none;
     }
   }
+}
+
+em {
+  color: #90A959;
+  font-style: normal;
 }
