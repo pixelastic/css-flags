@@ -19,7 +19,7 @@
     "build": "brunch build",
     "serve": "brunch watch",
     "lint:js": "eslint ./scripts/*.js",
-    "gh-pages": "./scripts/gh-pages",
+    "deploy": "./scripts/gh-pages",
     "postinstall": "./scripts/postinstall",
     "test": "casperjs tests/testsuite.js",
     "algolia": "babel-node ./scripts/algolia.js"
