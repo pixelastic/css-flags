@@ -3388,8 +3388,8 @@ body {
     color: white; }
 
 .c-searchbar {
-  display: none;
-  border-bottom: 3px solid blue;
+  border-bottom: 3px solid white;
+  color: #FFF;
   float: right;
   height: 30px;
   margin-right: 150px;
@@ -3403,10 +3403,22 @@ body {
     margin: 0;
     padding: 0;
     width: 520px; }
+    .c-searchbar .c-searchbar--input::-webkit-input-placeholder {
+      color: #FFF; }
+    .c-searchbar .c-searchbar--input::-moz-placeholder {
+      color: #FFF; }
+    .c-searchbar .c-searchbar--input:-moz-placeholder {
+      color: #FFF; }
+    .c-searchbar .c-searchbar--input:-ms-input-placeholder {
+      color: #FFF; }
     .c-searchbar .c-searchbar--input:focus {
       border: 0;
       box-shadow: none;
       outline: none; }
+
+em {
+  color: #90A959;
+  font-style: normal; }
 
 .c-flaglist {
   display: -webkit-box;
