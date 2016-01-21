@@ -16,8 +16,10 @@
 
   background-image: 
                     // Green and yellow stripes on the bottom
+                    // Note: We add 10px on the last line to fix a rounding
+                    // problem
                     h-stripe($yellow, $stripe-height, 3 * $stripe-height),
-                    h-stripe($green,  $stripe-height, 4 * $stripe-height),
+                    h-stripe($green,  $stripe-height + 10, 4 * $stripe-height),
                     // Red stripe
                     v-stripe($red,  $square-size),
                     // Green and yellow stripes on the right
