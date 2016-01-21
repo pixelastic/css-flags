@@ -3050,7 +3050,7 @@ picture {
 .c-flag__tgo {
   width: 220px;
   height: 147px;
-  background-image: linear-gradient(180deg, transparent, transparent 88.2px, #fdda24 88.2px, #fdda24 117.6px, transparent 117.6px, transparent 100%), linear-gradient(180deg, transparent, transparent 117.6px, #00b140 117.6px, #00b140 147px, transparent 147px, transparent 100%), linear-gradient(90deg, transparent, transparent 0, #c8102e 0, #c8102e 88.2px, transparent 88.2px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #00b140 0, #00b140 29.4px, transparent 29.4px, transparent 100%), linear-gradient(180deg, transparent, transparent 29.4px, #fdda24 29.4px, #fdda24 58.8px, transparent 58.8px, transparent 100%), linear-gradient(180deg, transparent, transparent 58.8px, #00b140 58.8px, #00b140 88.2px, transparent 88.2px, transparent 100%); }
+  background-image: linear-gradient(180deg, transparent, transparent 88.2px, #fdda24 88.2px, #fdda24 117.6px, transparent 117.6px, transparent 100%), linear-gradient(180deg, transparent, transparent 117.6px, #00b140 117.6px, #00b140 157px, transparent 157px, transparent 100%), linear-gradient(90deg, transparent, transparent 0, #c8102e 0, #c8102e 88.2px, transparent 88.2px, transparent 100%), linear-gradient(180deg, transparent, transparent 0, #00b140 0, #00b140 29.4px, transparent 29.4px, transparent 100%), linear-gradient(180deg, transparent, transparent 29.4px, #fdda24 29.4px, #fdda24 58.8px, transparent 58.8px, transparent 100%), linear-gradient(180deg, transparent, transparent 58.8px, #00b140 58.8px, #00b140 88.2px, transparent 88.2px, transparent 100%); }
   .c-flag__tgo:before {
     color: #FFF;
     content: "★";
