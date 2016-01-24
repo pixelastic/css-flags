@@ -57,6 +57,7 @@ $card-image-hover-color: gainsboro;
 
 .c-flaglist--name {
   @include transition (all 0.2s ease-in-out);
+  text-align: center;
   display: block;
   background-color: $card-header-background;
   border-bottom: $card-border;
