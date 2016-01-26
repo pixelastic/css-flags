@@ -24,3 +24,15 @@ $header-z-index: 999;
     color: white;
   }
 }
+
+.c-header__source {
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  font-size: .9rem;
+  &:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}

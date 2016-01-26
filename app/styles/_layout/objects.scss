@@ -1,3 +1,4 @@
 .o-outer-container {
   @include outer-container;
+  position: relative;
 }
