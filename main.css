@@ -3363,7 +3363,8 @@ body {
 .o-outer-container {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative; }
   .o-outer-container::after {
     clear: both;
     content: "";
@@ -3387,12 +3388,22 @@ body {
   .c-header__title a {
     color: white; }
 
+.c-header__source {
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  font-size: .9rem; }
+  .c-header__source:hover {
+    color: white;
+    text-decoration: underline; }
+
 .c-searchbar {
   border-bottom: 3px solid white;
   color: #FFF;
   float: right;
   height: 30px;
-  margin-right: 150px;
+  margin-right: 240px;
   margin-top: 20px;
   width: 550px; }
   .c-searchbar .c-searchbar--input {
