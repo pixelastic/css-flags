@@ -41,7 +41,7 @@
               ;
   }
   // The :after will contain the triangle, as well as the big star. The star is
-  // positionned at the center of the height, but slightly to the left. We also
+  // positioned at the center of the height, but slightly to the left. We also
   // use a lower z-index that the before to put it below the small stars.
   &:before {
     @include triangle($white, $triangle-width);
