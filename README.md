@@ -89,7 +89,7 @@ Here are two others projects I did while working on CSS Flags.
 
 ### img2css
 
-[http://github.com/pixelastic/img2css/]()
+[http://github.com/pixelastic/img2css/](http://github.com/pixelastic/img2css/)
 
 Commanline tool to convert any image (jpg or png) to full CSS. This will
 replicate all pixels of the initial image using numerous `box-shadows`.
@@ -99,7 +99,7 @@ I choose not to use it in this project.
 
 ### pantone2hex
 
-[http://github.com/pixelastic/pantone2hex/]() 
+[http://github.com/pixelastic/pantone2hex/](http://github.com/pixelastic/pantone2hex/) 
 
 Commandline tool to get an approximation in hexadecimal of a Pantone color
 value. Really useful as Vexilla Mundi gives color values in Pantone.
