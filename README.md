@@ -3,7 +3,7 @@
 Recreating all the flags of the nations of the world in pure CSS, using only one
 `div` per flag.
 
-You can see it live on [https://pixelastic.github.io/css-flags/]()
+You can see it live on [https://pixelastic.github.io/css-flags/](https://pixelastic.github.io/css-flags/)
 
 This side-project has no real-world application, it was just an exercice to push
 the boundaries of what I know about CSS. Trying to use the language to do things
