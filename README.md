@@ -37,7 +37,7 @@ constructed. Vexilla Mundi contains handy construction sheet images with
 dimensions and angles.
 
 I also used [this list][4] to get the list of all countries with their three
-letter ISO code.)
+letter ISO code.). [This website][5] also gives a nice overview.
 
 Not all flags have an exact definition of the colors to use. Best case scenario,
 we have the official RGB/Hexa (or even Pantone) name of the color. Worst case,
@@ -47,11 +47,11 @@ Mundi, even if it is not the official one.
 ## Icons
 
 To be able to display some of the very specific symbols used on some flags,
-I had to craft my own icon font, using [icomoon.io][5].
+I had to craft my own icon font, using [icomoon.io][6].
 
 I had to find svg versions of all the symbols used. Sometimes the symbols
 already exists in the UTF8 table, so I just have to grab them from existing
-fonts (or use [utf8icons.com][6]).
+fonts (or use [utf8icons.com][7]).
 
 But more often, I had to use Vexilla Mundi. The website provides nice png images
 of all the symbols. Unfortunatly, the symbols they provide are already colored,
@@ -77,7 +77,7 @@ convert input.png -trim output.png
 
 Then, I need to convert the png to an svg. I couldn't find any commandline tool
 giving satisfying results, so I had to use an online service to do it:
-[online-convert.com][7]
+[online-convert.com][8]
 
 Once I got the svg, it is just a matter of uploading it to icomoon, center the
 symbol, scale it and adjust the border. I also used the reserved namespace in
@@ -147,6 +147,7 @@ add:
 [2]: http://www.crwflags.com/fotw/flags/country.html
 [3]: http://www.vexilla-mundi.com/
 [4]: https://raw.githubusercontent.com/lukes/ISO-3166-Countries-with-Regional-Codes/master/all/all.json
-[5]: http://icomoon.io/app
-[6]: http://www.utf8icons.com/
-[7]: http://image.online-convert.com/convert-to-svg
+[5]: http://files.stevenskelton.ca/flag-icon/flag-icon/examples/countries.html
+[6]: http://icomoon.io/app
+[7]: http://www.utf8icons.com/
+[8]: http://image.online-convert.com/convert-to-svg
