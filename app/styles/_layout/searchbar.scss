@@ -30,6 +30,12 @@ $searchbar-input-width: $searchbar-width - $searchbar-icon-width;
     }
   }
 }
+// Hide searchbar on smaller screens
+@media (max-width: 960px) {
+  .c-searchbar {
+    display: none;
+  }
+}
 
 em {
   color: #90A959;

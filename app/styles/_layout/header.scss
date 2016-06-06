@@ -17,6 +17,7 @@ $header-z-index: 999;
   display: block;
   float: left;
   font-size: 2rem;
+  padding-left: 1rem;
   height: $header-height;
   line-height: $header-height;
   margin: 0;
@@ -36,3 +37,10 @@ $header-z-index: 999;
     text-decoration: underline;
   }
 }
+
+@media (max-width: 320px) {
+  .c-header__source {
+    display: none;
+  }
+}
+
