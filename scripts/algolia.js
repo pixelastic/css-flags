@@ -16,7 +16,7 @@ let appId = 'O3F8QXYK6R';
 // Checks the apiKey in ENV and local file
 let apiKey = process.env.ALGOLIA_API_KEY;
 if (fs.existsSync('./_algolia_api_key')) {
-  apiKey = fs.readFileSync('./_algolia_api_key', 'utf8');
+  apiKey = fs.readFileSync('./_algolia_api_key', 'utf8').trim();
 }
 if (!apiKey) {
   console.info('Usage:');
