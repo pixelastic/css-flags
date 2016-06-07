@@ -1,5 +1,161 @@
 // Macedonia (the former Yugoslav Republic of)
 // http://www.crwflags.com/fotw/flags/mk.html
+// http://www.vexilla-mundi.com/macedonia_flag.html
 @mixin flag-mkd() {
-  @include ratio(2 / 3);
+  @include ratio(1 / 2);
+  $unit: $h140; 
+  $yellow: #ffd100;
+  $red: #c8102e;
+  $circle-radius: 20 * $unit;
+  $circle-border: 5 * $unit;
+  $circle-full-width: ($circle-radius + $circle-border) * 2;
+
+  $center-x: $width / 2;
+  $center-y: $height / 2;
+  $ray-width-large: 42 * $unit;
+  $ray-width-small: 28 * $unit;
+  $ray-spacing-large: 84 * $unit;
+  $ray-spacing-small: 56 * $unit;
+
+  // I have 8 rays, named top-left, top, top-right, right, bottom-right, bottom,
+  // bottom-left and left. 
+  // The right and left rays go directly to the center.
+  // The top and bottom rays go to an imaginary point 10 $units from the center
+  // The diagonal rays have one side following the diagonal, but the other hits
+  // an imaginary point 2.5 $units from the center
+  // I will name all points at the base of the rays A and B, in clockwise order.
+  // Each of the points will have an x and y
+  // Let's write that down:
+  // TOP LEFT
+  $top-left-A-x: 0;
+  $top-left-A-y: 0;
+  $top-left-B-x: $ray-width-large;
+  $top-left-B-y: 0;
+  $top-left-center-A-x: $center-x;
+  $top-left-center-A-y: $center-y;
+  $top-left-center-B-x: $center-x;
+  $top-left-center-B-y: $center-y - 2.5 * $unit;
+  // TOP
+  $top-A-x: $ray-width-large + $ray-spacing-large;
+  $top-A-y: 0;
+  $top-B-x: $ray-width-large + $ray-spacing-large + $ray-width-small;
+  $top-B-y: 0;
+  $top-center-x: $center-x;
+  $top-center-y: $center-y - 10 * $unit;
+  // TOP RIGHT
+  $top-right-A-x: $width - $ray-width-large;
+  $top-right-A-y: 0;
+  $top-right-B-x: $width;
+  $top-right-B-y: 0;
+  $top-right-center-A-x: $center-x;
+  $top-right-center-A-y: $center-y - 2.5 * $unit;
+  $top-right-center-B-x: $center-x;
+  $top-right-center-B-y: $center-y;
+  // RIGHT
+  $right-A-x: $width;
+  $right-A-y: $ray-spacing-small;
+  $right-B-x: $width;
+  $right-B-y: $height - $ray-spacing-small;
+  $right-center-x: $center-x;
+  $right-center-y: $center-y;
+  // BOTTOM RIGHT
+  $bottom-right-A-x: $width;
+  $bottom-right-A-y: $height;
+  $bottom-right-B-x: $width - $ray-width-large;
+  $bottom-right-B-y: $height;
+  $bottom-right-center-A-x: $center-x;
+  $bottom-right-center-A-y: $center-y;
+  $bottom-right-center-B-x: $center-x;
+  $bottom-right-center-B-y: $center-y + 2.5 * $unit;
+  // BOTTOM
+  $bottom-A-x: $width - $ray-width-large - $ray-spacing-large;
+  $bottom-A-y: $height;
+  $bottom-B-x: $ray-width-large + $ray-spacing-large;
+  $bottom-B-y: $height;
+  $bottom-center-x: $center-x;
+  $bottom-center-y: $center-y + 10 * $unit;
+  // BOTTOM LEFT
+  $bottom-left-A-x: $ray-width-large;
+  $bottom-left-A-y: $height;
+  $bottom-left-B-x: 0;
+  $bottom-left-B-y: $height;
+  $bottom-left-center-A-x: $center-x;
+  $bottom-left-center-A-y: $center-y + 2.5 * $unit;
+  $bottom-left-center-B-x: $center-x;
+  $bottom-left-center-B-y: $center-y;
+  // LEFT
+  $left-A-x: 0;
+  $left-A-y: $ray-spacing-small + $ray-width-small;
+  $left-B-x: 0;
+  $left-B-y: $ray-spacing-small;
+  $left-center-x: $center-x;
+  $left-center-y: $center-y;
+
+  background: $yellow;
+  // Red overlay, with cuts in clip-path to show the yellow underneath,
+  // simulating rays
+  &:before {
+    background: $red;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-clip-path: polygon(
+      $top-left-A-x $top-left-A-y,
+      $top-left-center-A-x $top-left-center-A-y,
+      $top-left-center-B-x $top-left-center-B-y,
+      $top-left-B-x $top-left-B-y,
+
+      $top-A-x $top-A-y,
+      $top-center-x $top-center-y,
+      $top-B-x $top-B-y,
+
+      $top-right-A-x $top-right-A-y,
+      $top-right-center-A-x $top-right-center-A-y,
+      $top-right-center-B-x $top-right-center-B-y,
+      $top-right-B-x $top-right-B-y,
+
+      $right-A-x $right-A-y,
+      $right-center-x $right-center-y,
+      $right-B-x $right-B-y,
+
+      $bottom-right-A-x $bottom-right-A-y,
+      $bottom-right-center-A-x $bottom-right-center-A-y,
+      $bottom-right-center-B-x $bottom-right-center-B-y,
+      $bottom-right-B-x $bottom-right-B-y,
+
+      $bottom-A-x $bottom-A-y,
+      $bottom-center-x $bottom-center-y,
+      $bottom-B-x $bottom-B-y,
+
+      $bottom-left-A-x $bottom-left-A-y,
+      $bottom-left-center-A-x $bottom-left-center-A-y,
+      $bottom-left-center-B-x $bottom-left-center-B-y,
+      $bottom-left-B-x $bottom-left-B-y,
+
+      $left-A-x $left-A-y,
+      $left-center-x $left-center-y,
+      $left-B-x $left-B-y
+    );
+    // TODO: postcss to use only clip-patj
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    
+  }
+
+  // Bordered-circle in the center
+  &:after {
+    content: '';
+    display: block;
+    background: $yellow;
+    border-radius: 50%;
+    width: $circle-full-width;
+    height: $circle-full-width;
+    border: $circle-border solid $red;
+    position: absolute;
+    top: $h2 - $circle-full-width / 2;
+    left: $w2 - $circle-full-width / 2;
+
+  }
 };
