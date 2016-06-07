@@ -361,8 +361,9 @@ html {
   box-sizing: inherit; }
 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
-  appearance: none;
-  background-color: #477dca;
+  -webkit-appearance: none;
+          appearance: none;
+  background-color: #1565c0;
   border: 0;
   border-radius: 3px;
   color: #fff;
@@ -376,41 +377,43 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   padding: 0.75em 1.5em;
   text-decoration: none;
   transition: background-color 150ms ease;
-  user-select: none;
+  -webkit-user-select: none;
+          user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
   button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
-    background-color: #3964a2;
+    background-color: #11519a;
     color: #fff; }
   button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
     button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="submit"]:disabled:hover {
-      background-color: #477dca; }
+      background-color: #1565c0; }
 
 fieldset {
-  background-color: #f7f7f7;
-  border: 1px solid #ddd;
-  margin: 0 0 0.75em;
-  padding: 1.5em; }
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+legend {
+  font-weight: 600;
+  margin-bottom: 0.375em;
+  padding: 0; }
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.375em; }
 
 input,
-label,
 select {
   display: block;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em; }
 
-label {
-  font-weight: 600;
-  margin-bottom: 0.375em; }
-  label.required::after {
-    content: "*"; }
-  label abbr {
-    display: none; }
-
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
-select[multiple=multiple] {
+select[multiple] {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 3px;
@@ -423,36 +426,34 @@ select[multiple=multiple] {
   transition: border-color 150ms ease;
   width: 100%; }
   input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
-  select[multiple=multiple]:hover {
+  select[multiple]:hover {
     border-color: #b1b1b1; }
   input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
-  select[multiple=multiple]:focus {
-    border-color: #477dca;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+  select[multiple]:focus {
+    border-color: #1565c0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(18, 89, 169, 0.7);
     outline: none; }
   input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
-  select[multiple=multiple]:disabled {
+  select[multiple]:disabled {
     background-color: #f2f2f2;
     cursor: not-allowed; }
     input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
-    select[multiple=multiple]:disabled:hover {
+    select[multiple]:disabled:hover {
       border: 1px solid #ddd; }
 
 textarea {
   resize: vertical; }
 
-input[type="search"] {
-  appearance: none; }
+[type="search"] {
+  -webkit-appearance: none;
+          appearance: none; }
 
-input[type="checkbox"],
-input[type="radio"] {
+[type="checkbox"],
+[type="radio"] {
   display: inline;
   margin-right: 0.375em; }
-  input[type="checkbox"] + label,
-  input[type="radio"] + label {
-    display: inline-block; }
 
-input[type="file"] {
+[type="file"] {
   margin-bottom: 0.75em;
   width: 100%; }
 
@@ -466,17 +467,17 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+
 dl {
   margin-bottom: 0.75em; }
   dl dt {
-    font-weight: bold;
+    font-weight: 600;
     margin-top: 0.75em; }
   dl dd {
     margin: 0; }
 
 table {
   border-collapse: collapse;
-  font-feature-settings: "kern", "liga", "tnum";
   margin: 0.75em 0;
   table-layout: fixed;
   width: 100%; }
@@ -499,7 +500,6 @@ th {
 body {
   color: #333;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-feature-settings: "kern", "liga", "pnum";
   font-size: 1em;
   line-height: 1.5; }
 
@@ -518,11 +518,11 @@ p {
   margin: 0 0 0.75em; }
 
 a {
-  color: #477dca;
+  color: #1565c0;
   text-decoration: none;
   transition: color 150ms ease; }
   a:active, a:focus, a:hover {
-    color: #355e98; }
+    color: #104c90; }
 
 hr {
   border-bottom: 1px solid #ddd;
@@ -757,7 +757,7 @@ picture {
     height: 110px;
     background-color: #000;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+            clip-path: polygon(0 0, 100% 50%, 0 100%); }
 
 .c-flag__bhr {
   width: 220px;
@@ -774,7 +774,7 @@ picture {
     left: 54px;
     top: 0;
     -webkit-clip-path: polygon(0px 0px, 33px 13.2px, 0px 26.4px, 33px 39.6px, 0px 52.8px, 33px 66px, 0px 79.2px, 33px 92.4px, 0px 105.6px, 33px 118.8px, 0px 132px);
-    clip-path: polygon(0px 0px, 33px 13.2px, 0px 26.4px, 33px 39.6px, 0px 52.8px, 33px 66px, 0px 79.2px, 33px 92.4px, 0px 105.6px, 33px 118.8px, 0px 132px); }
+            clip-path: polygon(0px 0px, 33px 13.2px, 0px 26.4px, 33px 39.6px, 0px 52.8px, 33px 66px, 0px 79.2px, 33px 92.4px, 0px 105.6px, 33px 118.8px, 0px 132px); }
 
 .c-flag__bgd {
   width: 220px;
@@ -949,7 +949,7 @@ picture {
     height: 115.47505px;
     background-color: #43b02a;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
     z-index: 10; }
   .c-flag__bdi:before {
     position: relative;
@@ -1123,7 +1123,7 @@ picture {
     height: 132px;
     background-color: #3D8E33;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+            clip-path: polygon(0 0, 100% 50%, 0 100%); }
   .c-flag__com:after {
     display: block;
     height: 132px;
@@ -1214,7 +1214,7 @@ picture {
     height: 110px;
     background-color: #c8102e;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+            clip-path: polygon(0 0, 100% 50%, 0 100%); }
   .c-flag__cub:after {
     color: #FFF;
     content: "★";
@@ -1272,7 +1272,7 @@ picture {
     height: 147px;
     background-color: #004b87;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+            clip-path: polygon(0 0, 100% 50%, 0 100%); }
 
 .c-flag__dnk {
   width: 220px;
@@ -1294,7 +1294,7 @@ picture {
     height: 110px;
     background-color: #FFF;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+            clip-path: polygon(0 0, 100% 50%, 0 100%); }
   .c-flag__dji:after {
     color: #D7141A;
     content: "★";
@@ -1590,7 +1590,7 @@ picture {
     height: 132px;
     background-color: #CC0C2F;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
     background-image: linear-gradient(-34.01935deg, transparent, transparent 54.70401px, #000 54.70401px, #000 60.01258px, transparent 60.01258px, transparent 100%), linear-gradient(214.01935deg, transparent, transparent 54.70401px, #000 54.70401px, #000 60.01258px, transparent 60.01258px, transparent 100%); }
 
 .c-flag__hti {
@@ -1745,7 +1745,7 @@ picture {
     top: 0;
     background-image: linear-gradient(26.56505deg, transparent, transparent 89.22032px, #fedb00 89.22032px, #fedb00 107.55366px, transparent 107.55366px, transparent 100%), linear-gradient(-26.56505deg, transparent, transparent 89.22032px, #fedb00 89.22032px, #fedb00 107.55366px, transparent 107.55366px, transparent 100%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 8.19892px, 126.39783px 50%, 100% 101.80108px, 100% 100%, 0 100%, 0 101.80108px, 93.60217px 50%, 0 8.19892px);
-    clip-path: polygon(0 0, 100% 0, 100% 8.19892px, 126.39783px 50%, 100% 101.80108px, 100% 100%, 0 100%, 0 101.80108px, 93.60217px 50%, 0 8.19892px); }
+            clip-path: polygon(0 0, 100% 0, 100% 8.19892px, 126.39783px 50%, 100% 101.80108px, 100% 100%, 0 100%, 0 101.80108px, 93.60217px 50%, 0 8.19892px); }
 
 .c-flag__jpn {
   width: 220px;
@@ -1771,7 +1771,7 @@ picture {
     height: 110px;
     background-color: #c8102e;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+            clip-path: polygon(0 0, 100% 50%, 0 100%); }
   .c-flag__jor:after {
     color: #FFF;
     content: "✸";
@@ -1990,7 +1990,29 @@ picture {
 
 .c-flag__mkd {
   width: 220px;
-  height: 147px; }
+  height: 110px;
+  background: #ffd100; }
+  .c-flag__mkd:before {
+    background: #c8102e;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-clip-path: polygon(0 0, 110px 55px, 110px 53.03571px, 33px 0, 99px 0, 110px 47.14286px, 121px 0, 187px 0, 110px 53.03571px, 110px 55px, 220px 0, 220px 44px, 110px 55px, 220px 66px, 220px 110px, 110px 55px, 110px 56.96429px, 187px 110px, 121px 110px, 110px 62.85714px, 99px 110px, 33px 110px, 110px 56.96429px, 110px 55px, 0 110px, 0 66px, 110px 55px, 0 44px);
+            clip-path: polygon(0 0, 110px 55px, 110px 53.03571px, 33px 0, 99px 0, 110px 47.14286px, 121px 0, 187px 0, 110px 53.03571px, 110px 55px, 220px 0, 220px 44px, 110px 55px, 220px 66px, 220px 110px, 110px 55px, 110px 56.96429px, 187px 110px, 121px 110px, 110px 62.85714px, 99px 110px, 33px 110px, 110px 56.96429px, 110px 55px, 0 110px, 0 66px, 110px 55px, 0 44px); }
+  .c-flag__mkd:after {
+    content: '';
+    display: block;
+    background: #ffd100;
+    border-radius: 50%;
+    width: 39.28571px;
+    height: 39.28571px;
+    border: 3.92857px solid #c8102e;
+    position: absolute;
+    top: 35.35714px;
+    left: 90.35714px; }
 
 .c-flag__mdg {
   width: 220px;
@@ -2409,7 +2431,7 @@ picture {
     height: 110px;
     background-color: #c8102e;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+            clip-path: polygon(0 0, 100% 50%, 0 100%); }
 
 .c-flag__pan {
   width: 220px;
@@ -2513,7 +2535,7 @@ picture {
     height: 110px;
     background-color: #FFF;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
     content: "";
     text-indent: 8.53204px;
     line-height: 110px;
@@ -2547,7 +2569,7 @@ picture {
     height: 147px;
     background-color: #012169;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+            clip-path: polygon(0 0, 100% 50%, 0 100%); }
   .c-flag__pri:after {
     color: #FFF;
     content: "★";
@@ -2575,7 +2597,7 @@ picture {
     left: 60.54545px;
     top: 0;
     -webkit-clip-path: polygon(0px 0px, 15.63636px 4.77778px, 0px 9.55556px, 15.63636px 14.33333px, 0px 19.11111px, 15.63636px 23.88889px, 0px 28.66667px, 15.63636px 33.44444px, 0px 38.22222px, 15.63636px 43px, 0px 47.77778px, 15.63636px 52.55556px, 0px 57.33333px, 15.63636px 62.11111px, 0px 66.88889px, 15.63636px 71.66667px, 0px 76.44444px, 15.63636px 81.22222px, 0px 86px);
-    clip-path: polygon(0px 0px, 15.63636px 4.77778px, 0px 9.55556px, 15.63636px 14.33333px, 0px 19.11111px, 15.63636px 23.88889px, 0px 28.66667px, 15.63636px 33.44444px, 0px 38.22222px, 15.63636px 43px, 0px 47.77778px, 15.63636px 52.55556px, 0px 57.33333px, 15.63636px 62.11111px, 0px 66.88889px, 15.63636px 71.66667px, 0px 76.44444px, 15.63636px 81.22222px, 0px 86px); }
+            clip-path: polygon(0px 0px, 15.63636px 4.77778px, 0px 9.55556px, 15.63636px 14.33333px, 0px 19.11111px, 15.63636px 23.88889px, 0px 28.66667px, 15.63636px 33.44444px, 0px 38.22222px, 15.63636px 43px, 0px 47.77778px, 15.63636px 52.55556px, 0px 57.33333px, 15.63636px 62.11111px, 0px 66.88889px, 15.63636px 71.66667px, 0px 76.44444px, 15.63636px 81.22222px, 0px 86px); }
 
 .c-flag__reu {
   width: 220px;
@@ -2725,7 +2747,7 @@ picture {
     height: 110px;
     background-color: #c8102e;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+            clip-path: polygon(0 0, 100% 50%, 0 100%); }
   .c-flag__stp:after {
     color: #000;
     content: "★";
@@ -2887,7 +2909,7 @@ picture {
     height: 110px;
     background-color: #0033a0;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+            clip-path: polygon(0 0, 100% 50%, 0 100%); }
   .c-flag__ssd:after {
     color: #ffcd00;
     content: "★";
@@ -2923,7 +2945,7 @@ picture {
     height: 110px;
     background-color: #007a33;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+            clip-path: polygon(0 0, 100% 50%, 0 100%); }
 
 .c-flag__sur {
   width: 220px;
@@ -3328,7 +3350,7 @@ picture {
     height: 110px;
     background-color: #e4002b;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-    clip-path: polygon(0 0, 100% 50%, 0 100%); }
+            clip-path: polygon(0 0, 100% 50%, 0 100%); }
   .c-flag__esh:after {
     color: #e4002b;
     content: "★";
@@ -3382,6 +3404,7 @@ body {
   display: block;
   float: left;
   font-size: 2rem;
+  padding-left: 1rem;
   height: 60px;
   line-height: 60px;
   margin: 0; }
@@ -3398,6 +3421,9 @@ body {
     color: white;
     text-decoration: underline; }
 
+@media (max-width: 320px) {
+  .c-header__source {
+    display: none; } }
 .c-searchbar {
   border-bottom: 3px solid white;
   color: #FFF;
@@ -3427,48 +3453,20 @@ body {
       box-shadow: none;
       outline: none; }
 
+@media (max-width: 960px) {
+  .c-searchbar {
+    display: none; } }
 em {
   color: #90A959;
   font-style: normal; }
 
 .c-flaglist {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -o-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: justify;
+  flex-flow: row wrap;
   padding-top: 30px; }
 
 .c-flaglist--item {
-  -webkit-flex-basis: 20em;
-  -moz-flex-basis: 20em;
-  flex-basis: 20em;
-  -ms-flex-preferred-size: 20em;
-  -webkit-flex-grow: 1;
-  -moz-flex-grow: 1;
-  flex-grow: 1;
-  -ms-flex-positive: 1;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  flex: 1 1 300px;
   background-color: #f7f7f7;
   border-radius: 3px;
   border: 1px solid #ddd;
@@ -3496,8 +3494,6 @@ em {
   vertical-align: middle; }
 
 .c-flaglist--name {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   text-align: center;
   display: block;
