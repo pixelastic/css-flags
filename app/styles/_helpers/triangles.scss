@@ -22,7 +22,6 @@
   height: $_height;
   background-color: $color;
 
-  -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
   clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
@@ -45,6 +44,5 @@
 }
 @mixin vertical-stripe-of-triangles($color, $number, $_width, $_height, $left:0) {
   @include rectangle($color, $_width, $height, $left);
-  -webkit-clip-path: vertical-stripe-of-triangles($color, $number, $_width, $_height, $left);
   clip-path: vertical-stripe-of-triangles($color, $number, $_width, $_height, $left);
 }

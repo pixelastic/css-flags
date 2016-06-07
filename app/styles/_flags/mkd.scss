@@ -102,7 +102,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    -webkit-clip-path: polygon(
+    clip-path: polygon(
       $top-left-A-x $top-left-A-y,
       $top-left-center-A-x $top-left-center-A-y,
       $top-left-center-B-x $top-left-center-B-y,
@@ -139,9 +139,6 @@
       $left-center-x $left-center-y,
       $left-B-x $left-B-y
     );
-    // TODO: postcss to use only clip-patj
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
-    
   }
 
   // Bordered-circle in the center

@@ -39,7 +39,6 @@
                   $black-tip-left 50%,
                   0 $stripe-padding-small
                 );
-    -webkit-clip-path: $polygon;
     clip-path: $polygon;
 
   }

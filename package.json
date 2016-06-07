@@ -27,6 +27,7 @@
   "devDependencies": {
     "algoliasearch": "3.10.2",
     "auto-reload-brunch": "2.0.0",
+    "autoprefixer": "6.3.6",
     "babel": "^5.8.29",
     "babel-brunch": "6.0.0",
     "babel-core": "^5.8.29",
@@ -42,6 +43,7 @@
     "javascript-brunch": "^1.7.1",
     "lodash": "3.10.1",
     "phantomcss": "^0.11.0",
+    "postcss-brunch": "0.5.0",
     "sass-brunch": "^1.9.0",
     "to-factory": "1.0.0",
     "x-ray": "^2.0.2",

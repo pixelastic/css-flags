@@ -10,6 +10,10 @@ module.exports = config:
       presets: ['es2015']
       ignore: []
       pattern: /\.(js)$/
+    postcss:
+      processors: [
+        require('autoprefixer')(['Chrome > 44, last 8 versions'])
+      ]
   server:
       run: yes
       port: 4001
