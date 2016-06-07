@@ -2,5 +2,66 @@
 // http://www.crwflags.com/fotw/flags/br.html
 // https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_Brazil_%28dimensions%29.svg
 @mixin flag-bra() {
-  @include ratio(2 / 3);
+  @include ratio(7 / 10);
+  $unit: $w2000;
+  $green: #009639;
+  $yellow: #FFE000;
+  $blue: #012169;
+  $white: #FFFFFF;
+
+  $diamond-distance: 170 * $unit;
+  // We'll do 4 green stripes to draw the inner yellow diamond
+  // To know their angle and distance, we'll get the dimensions of the imaginary
+  // triangle that we would get if we continue one of the diamond sides up to
+  // one of the flag sides.
+  // First, we need to get the left inside angle of the diamond
+  $diamond-height: $height - 2 * $diamond-distance;
+  $diamond-width: $width - 2 * $diamond-distance;
+  $half-diamond-height: $diamond-height / 2;
+  $half-diamond-width: $diamond-width / 2;
+  $diamond-angle: atan($half-diamond-height / $half-diamond-width) * 1deg;
+  // By symmetry and because we only have right-angled triangles, the diamond
+  // angle is the angle of the stripe
+  $alpha: $diamond-angle;
+  // We get the padding of the imaginary triangle
+  $padding-triangle: tan($alpha) * $diamond-distance;
+  // We now get the hypotenuse
+  $hypotenuse: $height / 2 + $padding-triangle;
+  // Finally, we can get the stripe distance
+  $stripe-size: cos($alpha) * $hypotenuse;
+
+  background-color: $yellow;
+  background-image: 
+                    stripe(180 - $alpha, $green, $stripe-size, 0),
+                    stripe(180 + $alpha, $green, $stripe-size, 0),
+                    stripe(-$alpha, $green, $stripe-size, 0),
+                    stripe($alpha, $green, $stripe-size, 0)
+                  ;
+
+
+  // We use a classical border-radius: 50% for the circle, but with a radial
+  // background to make the "Order e progresso" banner. Its center will be out
+  // of the element.
+  $circle-width: 700 * $unit;
+  $oep-x: ($circle-width / 2) - (200 * $unit);
+  $oep-y: ($circle-width / 2) + (700 * $unit);
+  $oep-distance: 800 * $unit;
+  $oep-height: 50 * $unit;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: $circle-width;
+    height: $circle-width;
+    border-radius: 50%;
+    top: ($height - $circle-width) / 2;
+    left: ($width - $circle-width) / 2;
+    background-color: $blue;
+    background-image: 
+                      circle($blue, $oep-distance * 2, $oep-x, $oep-y),
+                      circle($white, ($oep-distance + $oep-height) * 2, $oep-x, $oep-y);
+  }
+
 };
+
+// 
