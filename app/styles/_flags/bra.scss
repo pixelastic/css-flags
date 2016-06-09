@@ -62,6 +62,24 @@
                       circle($white, ($oep-distance + $oep-height) * 2, $oep-x, $oep-y);
   }
 
+  // TODO: Field of stars
+  // &:after {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   background: red;
+  //   // width: $circle-width;
+  //   // height: $circle-width;
+  //   // border-radius: 50%;
+  //   // top: ($height - $circle-width) / 2;
+  //   // left: ($width - $circle-width) / 2;
+  //   // background-color: $white;
+  //   clip-path: five-pointed-star($circle-width, 100px, 100px);
+  // }
 };
 
 // 
