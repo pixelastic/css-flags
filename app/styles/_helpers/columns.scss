@@ -16,9 +16,9 @@
     @if ($i % 2 == 0) {
       $color: nth($args, $i - 1);
       $width: nth($args, $i);
-      $end: round($start + $width);
-      $result: append($result, $color $start, comma);
-      $result: append($result, $color $end, comma);
+      $end: $start + $width;
+      $result: append($result, $color round($start), comma);
+      $result: append($result, $color round($end), comma);
       $start: $end;
     }
   }
@@ -33,7 +33,7 @@
 // @args top: Color of top column
 // @args bottom: Color of bottom column
 @function two-columns($top, $bottom) {
-  @return columns($top, $w2, $bottom, $w2);
+  @return columns($top, 50%, $bottom, 50%);
 }
 @mixin two-columns($top, $bottom) {
   background-image: two-columns($top, $bottom);
@@ -44,7 +44,7 @@
 // @args center: Color of center column
 // @args bottom: Color of bottom column
 @function three-columns($top, $center, $bottom) {
-  @return columns($top, $w3, $center, $w3, $bottom, $w3);
+  @return columns($top, 33.33%, $center, 33.33%, $bottom, 33.33%);
 }
 @mixin three-columns($top, $center, $bottom) {
   background-image: three-columns($top, $center, $bottom);

@@ -49,9 +49,9 @@
     @if ($i % 2 == 0) {
       $color: nth($args, $i - 1);
       $width: nth($args, $i);
-      $end: round($start + $width);
-      $result: append($result, $color $start, comma);
-      $result: append($result, $color $end, comma);
+      $end: $start + $width;
+      $result: append($result, $color round($start), comma);
+      $result: append($result, $color round($end), comma);
       $start: $end;
     }
   }
