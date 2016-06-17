@@ -8,20 +8,22 @@
 // @args[(n-1)*2 + 1]: Width of the nth column
 @function columns($args...) {
   // Default values
-  $offset:0;
+  $start:0;
+  $end: 0;
   $color:transparent;
   $result: ();
-
   @for $i from 1 to length($args) + 1 {
     // Only interested in even numbers
     @if ($i % 2 == 0) {
       $color: nth($args, $i - 1);
       $width: nth($args, $i);
-      $result: append($result, v-stripe($color, $width, $offset), comma);
-      $offset: $offset + $width;
+      $end: round($start + $width);
+      $result: append($result, $color $start, comma);
+      $result: append($result, $color $end, comma);
+      $start: $end;
     }
   }
-  @return $result;
+  @return linear-gradient(90deg, $result);
 }
 @mixin columns($args...) {
   background-image: columns($args...);
