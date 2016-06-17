@@ -16,7 +16,6 @@
   &:before {
     @include symbol($symbol, $symbol-color, $symbol-height, $symbol-left, $symbol-top);
     width: $symbol-width;
-
   }
 
 };

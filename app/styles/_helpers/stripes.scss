@@ -39,19 +39,23 @@
 // @args[n*2 - 1]: Color of the nth stripe
 // @args[n*2]: Width of the nth stripe
 @function stripes($angle, $args...) {
+  // Default values
+  $start:0;
+  $end: 0;
+  $angle: round($angle);
   $result: ();
-  $offset:0;
-
   @for $i from 1 to length($args) + 1 {
     // Only interested in even numbers
     @if ($i % 2 == 0) {
       $color: nth($args, $i - 1);
-      $size: nth($args, $i);
-      $result: append($result, stripe($angle, $color, $size, $offset), comma);
-      $offset: $offset + $size;
+      $width: nth($args, $i);
+      $end: round($start + $width);
+      $result: append($result, $color $start, comma);
+      $result: append($result, $color $end, comma);
+      $start: $end;
     }
   }
-  @return $result;
+  @return linear-gradient($angle, $result);
 }
 @mixin stripes($args...) {
   background-image: stripes($args...);

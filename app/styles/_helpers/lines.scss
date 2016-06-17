@@ -8,20 +8,21 @@
 // @args[(n-1)*2 + 1]: Width of the nth line
 @function lines($args...) {
   // Default values
-  $offset:0;
-  $color:transparent;
+  $start:0;
+  $end: 0;
   $result: ();
-
   @for $i from 1 to length($args) + 1 {
     // Only interested in even numbers
     @if ($i % 2 == 0) {
       $color: nth($args, $i - 1);
-      $height: nth($args, $i);
-      $result: append($result, h-stripe($color, $height, $offset), comma);
-      $offset: $offset + $height;
+      $width: nth($args, $i);
+      $end: round($start + $width);
+      $result: append($result, $color $start, comma);
+      $result: append($result, $color $end, comma);
+      $start: $end;
     }
   }
-  @return $result;
+  @return linear-gradient(180deg, $result);
 }
 @mixin lines($args...) {
   background-image: lines($args...);

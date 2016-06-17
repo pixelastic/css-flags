@@ -141,14 +141,12 @@ add:
 - Making it work on more browsers...
 - ...which implies that I need to add a visual testing framework on top if it
 - Adding the missings flags
-- Simplifying the tricolor/bicolor by using only one radiant definition
 - Using a clip-path when only one star instead of a font
 - Building the font with npm instead of icomoon.io
 - Adding stars to Brazil
 - Doing the Nepal flag
 - Check if Lea Verou has a background pattern close to the British India
 - Add the Leather Pride flag as an easter egg
-- Round px values
 
 
 [1]: http://en.wikipedia.org/wiki/List_of_countries_by_style_of_national_flags

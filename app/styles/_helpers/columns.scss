@@ -10,7 +10,6 @@
   // Default values
   $start:0;
   $end: 0;
-  $color:transparent;
   $result: ();
   @for $i from 1 to length($args) + 1 {
     // Only interested in even numbers
