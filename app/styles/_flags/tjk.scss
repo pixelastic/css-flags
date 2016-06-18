@@ -16,8 +16,6 @@
                   $white, $stripe-big-height,
                   $red, $stripe-small-height
                 );
-  // TODO: Need to re-export the symbol, including the stars
-  // Or add the stars in CSS only
   &:before {
     @include centered-symbol($UTF8_COUNTRY_TJK, $yellow, $symbol-size);
   }

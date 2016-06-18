@@ -4,15 +4,15 @@
 @mixin flag-mmr() {
   @include ratio(2 / 3);
   $unit: $h12;
-  $top: #FECB00;
-  $center: #34B233;
-  $bottom: #EA2839;
-  $star: #FFF;
+  $yellow: #FECB00;
+  $green: #34B233;
+  $red: #EA2839;
+  $white: #FFF;
   $star-size: 8 * $unit;
 
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($yellow, $green, $red);
   &:before {
-    @include centered-star($star, $star-size);
+    @include centered-star($white, $star-size);
   }
 };

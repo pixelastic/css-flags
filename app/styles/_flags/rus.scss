@@ -2,13 +2,12 @@
 // http://www.crwflags.com/fotw/flags/ru.html
 // https://en.wikipedia.org/wiki/Flag_of_Russia
 // https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Russia.svg
-//
-// Note: I used the colors from the Wikipedia SVG
+// http://www.vexilla-mundi.com/russia_flag.html
 @mixin flag-rus() {
   @include ratio(2 / 3);
-  $top: #FFF;
-  $center: #0039a6;
-  $bottom: #d52b1e;
+  $white: #FFF;
+  $blue: #003da5;
+  $red: #da291c;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($white, $blue, $red);
 };

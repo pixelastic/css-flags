@@ -3,9 +3,9 @@
 // https://en.wikipedia.org/wiki/Flag_of_Guinea
 @mixin flag-gin() {
   @include ratio(2 / 3);
-  $left: #CE1126;
-  $center: #FCD116;
-  $right: #009460;
+  $red: #CE1126;
+  $yellow: #FCD116;
+  $green: #009460;
 
-  @include three-columns($left, $center, $right);
+  @include three-columns($red, $yellow, $green);
 };

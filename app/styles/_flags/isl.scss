@@ -4,17 +4,17 @@
 
 @mixin flag-isl() {
   @include ratio(18 / 25);
-  $bg: #003897;
-  $border-color: #FFF;
-  $inner-color: #D72828;
+  $blue: #003897;
+  $white: #FFF;
+  $red: #D72828;
   $cross-width: 4 * $w25;
   $inner-width: 2 * $w25;
   $cross-offset: 7 * $w25;
 
   @include nordic-cross-border(
-    $bg,
-    $border-color,
-    $inner-color,
+    $blue,
+    $white,
+    $red,
     $cross-width,
     $inner-width,
     $cross-offset

@@ -2,13 +2,14 @@
 // http://www.crwflags.com/fotw/flags/id.html
 // https://en.wikipedia.org/wiki/Flag_of_Indonesia
 // https://commons.wikimedia.org/wiki/File:Flag_of_Indonesia.svg
+// http://www.vexilla-mundi.com/indonesia_flag.html
 //
 // Note: Except for the ratio, this is the exact same flag as Monaco
 // Note: I used the color used in the SVG from the Wikipedia
 @mixin flag-idn() {
   @include ratio(2 / 3);
-  $top: #CE1126;
-  $bottom: #FFF;
+  $red: #c8102e;
+  $white: #FFF;
 
-  @include two-lines($top, $bottom);
+  @include two-lines($red, $white);
 };

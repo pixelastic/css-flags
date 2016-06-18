@@ -5,17 +5,14 @@
 @mixin flag-sgp() {
   @include ratio(2 / 3);
   $unit: $h2880;
-  $top: #ed2939;
-  $bottom: #FFF;
-  $crescent-front-color: $top;
+  $red: #ed2939;
+  $white: #FFF;
   $crescent-front-size: 1160 * $unit;
   $crescent-front-left: 1200 * $unit;
   $crescent-front-top: 720 * $unit;
-  $crescent-back-color: $bottom;
   $crescent-back-size: 1060 * $unit;
   $crescent-back-left: 910 * $unit;
   $crescent-back-top: 720 * $unit;
-  $star: $bottom;
   $star-size: 256 * $unit;
   $star-left: 1200 * $unit;
   $star-top: 416 * $unit;
@@ -34,15 +31,15 @@
   $star-4-left: -$star-1-left;
   $star-4-top: $star-1-top; 
 
-  background-image: circle($crescent-front-color, $crescent-front-size, $crescent-front-left, $crescent-front-top),
-                    circle($crescent-back-color, $crescent-back-size, $crescent-back-left, $crescent-back-top),
-                    two-lines($top, $bottom);
+  background-image: circle($red, $crescent-front-size, $crescent-front-left, $crescent-front-top),
+                    circle($white, $crescent-back-size, $crescent-back-left, $crescent-back-top),
+                    two-lines($red, $white);
   &:before {
-    @include star($star, $star-size, $star-left, $star-top);
+    @include star($white, $star-size, $star-left, $star-top);
     text-shadow:
-                ($star-1-left) ($star-1-top) 0px $star,
-                ($star-2-left) ($star-2-top) 0px $star,
-                ($star-3-left) ($star-3-top) 0px $star,
-                ($star-4-left) ($star-4-top) 0px $star;
+                ($star-1-left) ($star-1-top) 0px $white,
+                ($star-2-left) ($star-2-top) 0px $white,
+                ($star-3-left) ($star-3-top) 0px $white,
+                ($star-4-left) ($star-4-top) 0px $white;
   }
 };

@@ -1,42 +1,32 @@
 // Tunisia
 // http://www.crwflags.com/fotw/flags/tn.html
-// http://www.vexilla-mundi.com/tunisia_flag.htmlhttp://www.vexilla-mundi.com/tunisia_flag.htmlhttp://www.vexilla-mundi.com/tunisia_flag.html
+// http://www.vexilla-mundi.com/tunisia_flag.html
 // http://www.crwflags.com/fotw/flags/tn'.html
 @mixin flag-tun() {
   @include ratio(2 / 3);
   $unit: $h80;
   $red: #C8102E;
   $white: #FFF;
-  // We'll stack three circle to do the crescent in a circle
-  $circle-1-color: $white;
-  $circle-1-size: 24 * $unit;
-  $circle-1-left: 64 * $unit;
-  $circle-1-top: $h2;
-  $circle-2-color: $red;
-  $circle-2-size: 30 * $unit;
-  $circle-2-left: $w2;
-  $circle-2-top: $h2;
-  $circle-3-color: $white;
-  $circle-3-size: 40 * $unit;
-  $circle-3-left: $w2;
-  $circle-3-top: $h2;
 
-  $star-color: $red;
+  $circle-size: 40 * $unit;
+  $crescent-front-size: 24 * $unit;
+  $crescent-front-left: $circle-size / 2 + 4 * $unit;
+  $crescent-back-size: 30 * $unit;
+
   $star-size: 18 * $unit;
-  $star-left: $circle-1-left;
+  $star-left: $width / 2 + 4 * $unit;
   // Note: we add a slight bump to the top to accomodate the rotation
-  $star-top: $circle-1-top - $unit;
+  $star-top: $height / 2 - $unit;
   
   background-color: $red;
-  background-image: 
-                    circle($circle-1-color, $circle-1-size, $circle-1-left, $circle-1-top),
-                    circle($circle-2-color, $circle-2-size, $circle-2-left, $circle-2-top),
-                    circle($circle-3-color, $circle-3-size, $circle-3-left, $circle-3-top);
+  &:before {
+    @include centered-circle-pseudo($white, $circle-size);
+    background-image: 
+                    circle($white, $crescent-front-size, $crescent-front-left, 50%),
+                    circle($red, $crescent-back-size, 50%, 50%);
+  }
   &:after {
-    @include star($star-color, $star-size, $star-left, $star-top);
+    @include star($red, $star-size, $star-left, $star-top);
     transform: rotate(-20deg);
   }
-
-                  
-  // @include centered-circle($circle, $circle-size);
 };

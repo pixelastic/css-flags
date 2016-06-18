@@ -4,7 +4,7 @@
 @mixin flag-kgz() {
   @include ratio(3 / 5);
   $unit: $height / 3000;
-  // The Vexilla Mundi instructions indicates only 900 but this seems to small
+  // The Vexilla Mundi instructions indicates only 900 but this seems too small
   $symbol-size: 1800 * $unit; 
   $red: #e4002b;
   $yellow: #ffd100;

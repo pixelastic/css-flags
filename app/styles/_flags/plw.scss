@@ -12,5 +12,7 @@
   $circle-top: $h2;
   
   background-color: $blue;
-  @include circle($yellow, $circle-size, $circle-left, $circle-top);
+  &:before {
+    @include circle-pseudo($yellow, $circle-size, $circle-left, $circle-top);
+  }
 };

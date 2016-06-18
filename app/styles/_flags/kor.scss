@@ -63,8 +63,7 @@
                       circle($red, $red-circle-size, $red-circle-left, $red-circle-top),
                       circle($blue, $blue-circle-size, $blue-circle-left, $blue-circle-top),
                       // Red and blue stripes
-                      h-stripe($red, $circle-radius, 0),
-                      h-stripe($blue, $circle-radius, $circle-radius)
+                      two-lines($red, $blue);
                      ;
     transform: rotate($alpha);
   }

@@ -17,7 +17,6 @@
   // construction sheet to guess everything because none contains all the data
   $crescent-back-size: 4 / 5 * $stripe-height;
   $crescent-unit: $crescent-back-size / 12;
-  $crescent-front-color: $white;
   $crescent-front-size: 10 * $crescent-unit;
   $crescent-front-offset-top: $crescent-unit;
   $crescent-front-offset-left: 3 * $crescent-unit;
@@ -26,7 +25,6 @@
   $crescent-back-left: $crescent-front-left - $crescent-front-offset-left;
   $crescent-back-top: $h2;
 
-  // $star-color: $symbol-color;
   $star-size: 10 * $crescent-unit;
   $star-left: $crescent-back-left + 5.5 * $crescent-unit;
   $star-top: $h2;

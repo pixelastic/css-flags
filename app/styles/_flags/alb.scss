@@ -3,18 +3,18 @@
 // http://www.vexilla-mundi.com/albania_flag.html
 @mixin flag-alb() {
   @include ratio(5 / 7);
-  $unit: $h30;
-  $bg: #da291c;
+  $unit: $height / 30;
+  $red: #da291c;
+  $black: #000;
   $symbol: $UTF8_COUNTRY_ALB;
-  $symbol-color: #000;
   $symbol-height: 20 * $unit;
   $symbol-width: 18 * $unit;
   $symbol-left: 21 * $unit;
   $symbol-top: 15 * $unit;
 
-  background-color: $bg;
+  background-color: $red;
   &:before {
-    @include symbol($symbol, $symbol-color, $symbol-height, $symbol-left, $symbol-top);
+    @include symbol($symbol, $black, $symbol-height, $symbol-left, $symbol-top);
     width: $symbol-width;
   }
 

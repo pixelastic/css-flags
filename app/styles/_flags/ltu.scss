@@ -2,9 +2,9 @@
 // http://www.crwflags.com/fotw/flags/lt.html
 @mixin flag-ltu() {
   @include ratio(3 / 5);
-  $top: #fdb913;
-  $center: #006a44;
-  $bottom: #c1272d;
+  $yellow: #fdb913;
+  $green: #006a44;
+  $red: #c1272d;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($yellow, $green, $red);
 };

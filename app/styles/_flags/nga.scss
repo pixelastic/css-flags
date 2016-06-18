@@ -3,9 +3,8 @@
 // https://en.wikipedia.org/wiki/Flag_of_Nigeria
 @mixin flag-nga() {
   @include ratio(1 / 2);
-  $left: #008753;
-  $center: #FFF;
-  $right: #008753;
+  $green: #008753;
+  $white: #FFF;
 
-  @include three-columns($left, $center, $right);
+  @include three-columns($green, $white, $green);
 };

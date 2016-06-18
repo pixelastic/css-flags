@@ -7,22 +7,17 @@
   $white: #FFF;
   $red: #c8102e;
   $blue: #003087;
-  $stripe-height: $h2;
   $square-size: 4 * $unit;
   $star-size: 2 * $unit;
   $star-top: 2 * $unit;
   $star-left: 2 * $unit;
 
 
-  background-image: 
-                    // Red strip
-                    h-stripe($red,   $stripe-height, $stripe-height),
-                    // Blue stripe
-                    v-stripe($blue,  $square-size),
-                    // White stripe
-                    h-stripe($white, $stripe-height),
-                  ;
+  background-image: two-lines($white, $red);
   &:before {
+    @include square($blue, $square-size);
+  }
+  &:after {
     @include star($white, $star-size, $star-left, $star-top);
   }
 };

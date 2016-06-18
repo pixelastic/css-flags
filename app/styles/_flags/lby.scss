@@ -14,13 +14,8 @@
   $crescent-front-left: 750 * $unit;
   $crescent-back-size: $height / 4;
   $crescent-back-left: 720 * $unit;
-  // $crescent-front-left: $w2 + ($unit / 6);
-  // $crescent-front-top: $h2;
-  // $crescent-back-color: $symbol-color;
-  // $crescent-back-left: $w2;
-  // $crescent-back-top: $h2;
 
-  // // Note: Size and position of star is completly manual, I did not do the math
+  // Note: Size and position of star is completly manual, I did not do the math
   $star-size: $crescent-front-size * 3 / 4;
   $star-left: $w2 + $crescent-front-size / 2 + $star-size / 4;
   $star-top: $h2;

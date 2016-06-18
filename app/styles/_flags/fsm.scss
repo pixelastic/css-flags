@@ -7,19 +7,19 @@
 @mixin flag-fsm() {
   @include ratio(10 / 19);
   $unit: $h20;
-  $bg: #75B2DD;
-  $star: #FFF;
+  $blue: #75B2DD;
+  $white: #FFF;
   $star-size: 4 * $unit;
   $top-offset-top: 2 * $unit;
   $top-offset-left: 17 * $unit;
 
-  background-color: $bg;
+  background-color: $blue;
   &:before {
-    @include star($star, $star-size);
+    @include star($white, $star-size);
     top: $top-offset-top;
     left: $top-offset-left;
-    text-shadow:(-6 * $unit) (6 * $unit) 0px $star,
-                (6 * $unit) (6 * $unit) 0px $star,
-                (0) (12 * $unit) 0px $star;
+    text-shadow:(-6 * $unit) (6 * $unit) 0px $white,
+                (6 * $unit) (6 * $unit) 0px $white,
+                (0) (12 * $unit) 0px $white;
   }
 };

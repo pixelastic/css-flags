@@ -11,10 +11,8 @@
   $white-stripe-width: 25 * $unit;
 
   background-color: $red;
-  background-image:
-                    v-stripe($white, $white-stripe-width)
-                  ;
-    &:before {
-      @include vertical-stripe-of-triangles($white, 5, $triangle-width, $triangle-height, $white-stripe-width - 1px);
+  background-image: v-stripe($white, $white-stripe-width);
+  &:before {
+    @include vertical-stripe-of-triangles($white, 5, $triangle-width, $triangle-height, $white-stripe-width - 1px);
   }
 };

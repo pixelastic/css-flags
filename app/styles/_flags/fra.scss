@@ -3,9 +3,9 @@
 // https://en.wikipedia.org/wiki/Flag_of_France
 @mixin flag-fra() {
   @include ratio(2 / 3);
-  $left: #002395;
-  $center: #FFF;
-  $right: #ED2939;
+  $blue: #002395;
+  $white: #FFF;
+  $red: #ED2939;
 
-  @include three-columns($left, $center, $right);
+  @include three-columns($blue, $white, $red);
 };

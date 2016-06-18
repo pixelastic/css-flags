@@ -6,9 +6,9 @@
 // Note: I used the colors from the Wikipedia SVG
 @mixin flag-sle() {
   @include ratio(2 / 3);
-  $top: #1EB53A;
-  $center: #FFF;
-  $bottom: #0072C6;
+  $green: #1EB53A;
+  $white: #FFF;
+  $blue: #0072C6;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($green, $white, $blue);
 };

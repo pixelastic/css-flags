@@ -22,14 +22,10 @@
   $cross-top: 15 * $unit;
   $cross-left: 29 * $unit;
 
-  // We will put a white background and two big red striped to draw the canton
-  // Then in the canton we'll hide white stripes on each border, then draw two
-  // red lines in it to make the cross
-  background-color: $white;
-  background-image:
-                    // Canton
-                    h-stripe($red, $red-stripe-height, $canton-height),
-                    v-stripe($red, $red-stripe-width, $canton-width),
+  background-color: $red;
+  &:before {
+    @include rectangle($white, $canton-width, $canton-height);
+    background-image:
                     // Borders in canton
                     h-stripe($white, $canton-border-top),
                     h-stripe($white, $canton-border-bottom, ($canton-height - $canton-border-bottom)),
@@ -39,5 +35,6 @@
                     h-stripe($red, $cross-width, $cross-top),
                     v-stripe($red, $cross-width, $cross-left)
                   ;
+  }
 
 };

@@ -20,13 +20,7 @@
                  $yellow, 20%,
                  $green, 20%);
   &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: $red;
-    width: $square-size;
-    height: $square-size;
+    @include square($red, $square-size);
   }
   &:after {
     @include star($white, $star-size, $star-left, $star-top);

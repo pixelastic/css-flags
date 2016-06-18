@@ -3,14 +3,14 @@
 @mixin flag-ago() {
   @include ratio(2 / 3);
   $unit: $h100;
-  $top: #CE1126;
-  $bottom: #000;
+  $red: #CE1126;
+  $black: #000;
   $symbol: $UTF8_COUNTRY_AGO;
-  $symbol-color: #F9D616;
+  $yellow: #F9D616;
   $symbol-size: 54 * $unit;
 
-  @include two-lines($top, $bottom);
+  @include two-lines($red, $black);
   &:before {
-    @include centered-symbol($symbol, $symbol-color, $symbol-size);
+    @include centered-symbol($symbol, $yellow, $symbol-size);
   }
 };

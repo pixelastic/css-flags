@@ -3,13 +3,13 @@
 @mixin flag-mar() {
   @include ratio(2 / 3);
   $unit: $h12;
-  $bg: #C1272D;
+  $red: #C1272D;
+  $green: #006233;
   $star-symbol: $UTF8_PENTAGRAM;
-  $star-color: #006233;
   $star-size: 4 * $unit;
 
-  background-color: $bg;
+  background-color: $red;
   &:before {
-    @include centered-symbol($star-symbol, $star-color, $star-size);
+    @include centered-symbol($star-symbol, $green, $star-size);
   }
 };

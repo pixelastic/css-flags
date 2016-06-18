@@ -4,14 +4,14 @@
 @mixin flag-pse() {
   @include ratio(1 / 2);
   $unit: $h6;
-  $top: #000;
-  $center: #FFF;
-  $bottom: #007a33;
-  $triangle: #c8102e;
+  $black: #000;
+  $white: #FFF;
+  $green: #007a33;
+  $red: #c8102e;
   $triangle-width: 3 * $unit;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($black, $white, $green);
   &:before {
-    @include triangle($triangle, $triangle-width);
+    @include triangle($red, $triangle-width);
   }
 };

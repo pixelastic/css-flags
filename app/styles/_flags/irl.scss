@@ -3,9 +3,9 @@
 // https://en.wikipedia.org/wiki/Flag_of_Ireland
 @mixin flag-irl() {
   @include ratio(2 / 3);
-  $left: #009B48;
-  $center: #FFF;
-  $right: #FF7900;
+  $green: #009B48;
+  $white: #FFF;
+  $orange: #FF7900;
 
-  @include three-columns($left, $center, $right);
+  @include three-columns($green, $white, $orange);
 };

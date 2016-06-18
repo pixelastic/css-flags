@@ -2,13 +2,12 @@
 // http://www.crwflags.com/fotw/flags/sn.html
 @mixin flag-sen() {
   @include ratio(2 / 3);
-  $left: #00853F;
-  $center: #FDEF42;
-  $right: #E31B23;
-  $star: $left;
+  $green: #00853F;
+  $yellow: #FDEF42;
+  $red: #E31B23;
 
-  @include three-columns($left, $center, $right);
+  @include three-columns($green, $yellow, $red);
   &:before {
-    @include centered-star($star);
+    @include centered-star($green);
   }
 };

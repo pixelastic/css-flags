@@ -4,10 +4,12 @@
 @mixin flag-jpn() {
   @include ratio(2 / 3);
   $unit: $h20;
-  $bg: #FFF;
-  $circle: #BC002D;
+  $white: #FFF;
+  $red: #BC002D;
   $circle-size: 12 * $unit;
   
-  background-color: $bg;
-  @include centered-circle($circle, $circle-size);
+  background-color: $white;
+  &:before {
+    @include centered-circle-pseudo($red, $circle-size);
+  }
 };

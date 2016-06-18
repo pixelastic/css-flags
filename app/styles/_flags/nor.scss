@@ -3,17 +3,17 @@
 
 @mixin flag-nor() {
   @include ratio(16 / 22);
-  $bg: #ED2939;
-  $border-color: #FFF;
-  $inner-color: #002664;
+  $red: #ED2939;
+  $white: #FFF;
+  $blue: #002664;
   $cross-width: 4 * $w22;
   $inner-width: 2 * $w22;
   $cross-offset: 6 * $w22;
 
   @include nordic-cross-border(
-    $bg,
-    $border-color,
-    $inner-color,
+    $red,
+    $white,
+    $blue,
     $cross-width,
     $inner-width,
     $cross-offset

@@ -11,10 +11,7 @@
   $stripe-size: sin($alpha) * $width;
   $symbol-size: 4 * $unit;
 
-  background-image: stripes($alpha,
-                           $yellow, $stripe-size,
-                           $green, $stripe-size
-                          );
+  background-image: stripes($alpha, $yellow, 50%, $green, 50%);
   &:before {
     @include centered-star($red, $symbol-size);
   }

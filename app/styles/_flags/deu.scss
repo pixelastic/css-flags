@@ -3,9 +3,9 @@
 // https://en.wikipedia.org/wiki/Flag_of_Germany
 @mixin flag-deu() {
   @include ratio(3 / 5);
-  $top: #000;
-  $center: #FF0000;
-  $bottom: #FFCC00;
+  $black: #000;
+  $red: #FF0000;
+  $yellow: #FFCC00;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($black, $red, $yellow);
 };

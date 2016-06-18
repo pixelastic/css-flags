@@ -17,20 +17,15 @@
   $square-top: $height - (120 * $unit);
   $hypotenuse: sqrt($square-size * $square-size * 2);
   $half-hypotenuse: $hypotenuse / 2;
-  $alpha: atan(1) * 1deg;
   $square-stripe-size: 12 * $unit;
   $half-square-stripe-size: $square-stripe-size / 2;
-  $square-stripe-distance: $half-hypotenuse - $half-square-stripe-size;
+  // Rounding error forces me to remove 1px
+  $square-stripe-distance: $half-hypotenuse - $half-square-stripe-size - 1px;
 
   background-color: $red;
 
   &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: $canton-width;
-    height: $canton-height;
+    @include rectangle($white, $canton-width, $canton-height);
     border-right: $canton-border solid $white;
     border-bottom: $canton-border solid $white;
     @include three-columns($blue, $white, $red);
@@ -38,9 +33,7 @@
 
   &:after {
     @include square($white, $square-size, $square-left, $square-top);
-    background-image:
-                      stripe($alpha, $red, $square-stripe-size, $square-stripe-distance),
-                      stripe(-$alpha, $red, $square-stripe-size, $square-stripe-distance)
-                    ;
+    background-image: stripe(45deg, $red, $square-stripe-size, $square-stripe-distance),
+                      stripe(-45deg, $red, $square-stripe-size, $square-stripe-distance);
   }
 };

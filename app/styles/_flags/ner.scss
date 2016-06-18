@@ -4,12 +4,13 @@
 @mixin flag-ner() {
   @include ratio(6 / 7);
   $unit: $h12;
-  $top: #E05206;
-  $center: #FFF;
-  $bottom: #0DB02B;
-  $circle-color: $top;
+  $orange: #E05206;
+  $white: #FFF;
+  $green: #0DB02B;
   $circle-size: 2 * $unit;
 
-  background-image: centered-circle($circle-color, $circle-size),
-                    three-lines($top, $center, $bottom);
+  background-image: three-lines($orange, $white, $green);
+  &:before {
+    @include centered-circle-pseudo($orange, $circle-size);
+  }
 };

@@ -11,16 +11,13 @@
   $line-height: 30 * $unit;
   $green: #3D8E33;
   $triangle-width: 100 * $unit;
-  $crescent-front-color: $green;
   $crescent-front-size: 54 * $unit;
   $crescent-front-left: 46 * $unit;
   $crescent-front-top: 60 * $unit;
-  $crescent-back-color: $white;
   $crescent-back-size: 54 * $unit;
   $crescent-back-left: 34 * $unit;
   $crescent-back-top: 60 * $unit;
   $star-symbol: $UTF8_BLACK_STAR;
-  $star-color: $white;
   $star-size: 8 * $unit;
   $star-left: 36 * $unit;
   $star-top: 36 * $unit;
@@ -43,19 +40,19 @@
     position: absolute;
     width: $triangle-width;
     // Stars
-    color: $star-color;
+    color: $white;
     content: $star-symbol;
     font-family: Symbols;
     font-size: $star-size;
     padding-left: $star-left;
     padding-top: $star-top;
     text-shadow: 
-                0px $star-spacing 0px $star-color,
-                0px (2 * $star-spacing) 0px $star-color,
-                0px (3 * $star-spacing) 0px $star-color;
+                0px $star-spacing 0px $white,
+                0px (2 * $star-spacing) 0px $white,
+                0px (3 * $star-spacing) 0px $white;
     // Crescent
     background-image: 
-                  circle($crescent-front-color, $crescent-front-size, $crescent-front-left, $crescent-front-top),
-                  circle($crescent-back-color, $crescent-back-size, $crescent-back-left, $crescent-back-top);
+                  circle($green, $crescent-front-size, $crescent-front-left, $crescent-front-top),
+                  circle($white, $crescent-back-size, $crescent-back-left, $crescent-back-top);
   }
 };

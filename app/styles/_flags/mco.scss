@@ -7,8 +7,8 @@
 // Note: I used the color used in the SVG from the Wikipedia
 @mixin flag-mco() {
   @include ratio(4 / 5);
-  $top: #CE1126;
-  $bottom: #FFF;
+  $red: #c8102e;
+  $white: #FFF;
 
-  @include two-lines($top, $bottom);
+  @include two-lines($red, $white);
 };

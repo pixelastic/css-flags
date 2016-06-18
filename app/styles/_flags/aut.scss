@@ -4,9 +4,8 @@
 // https://commons.wikimedia.org/wiki/File:Flag_of_Austria.svg
 @mixin flag-aut() {
   @include ratio(2 / 3);
-  $top: #ed2939;
-  $center: #FFF;;
-  $bottom: #ed2939;
+  $red: #ed2939;
+  $white: #FFF;;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($red, $white, $red);
 };

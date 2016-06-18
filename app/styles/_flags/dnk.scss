@@ -2,10 +2,10 @@
 // http://www.crwflags.com/fotw/flags/dk.html
 @mixin flag-dnk() {
   @include ratio(28 / 37);
-  $bg: #D81E05;
-  $cross: #FFF;
+  $red: #D81E05;
+  $white: #FFF;
   $cross-width: 4 * $w37;
   $cross-offset: 12 * $w37;
 
-  @include nordic-cross($bg, $cross, $cross-width, $cross-offset);
+  @include nordic-cross($red, $white, $cross-width, $cross-offset);
 };

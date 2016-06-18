@@ -2,12 +2,11 @@
 // http://www.crwflags.com/fotw/flags/pl.html
 // https://en.wikipedia.org/wiki/Flag_of_Poland
 // https://en.wikipedia.org/wiki/File:Flag_of_Poland.svg
-//
-// Note: I used the red from the SVG from Wikipedia
+// http://www.vexilla-mundi.com/poland_flag.html
 @mixin flag-pol() {
   @include ratio(5 / 8);
-  $top: #dc143c;
-  $bottom: #FFF;
+  $red: #d22630;
+  $white: #FFF;
 
-  @include two-lines($top, $bottom);
+  @include two-lines($red, $white);
 };

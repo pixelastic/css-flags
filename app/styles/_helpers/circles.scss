@@ -27,6 +27,26 @@
  background-image: centered-circle($color, $size);
 }
 
+// Returns the code for the pseudo-element to display a circle
+// @args color: Color to fill the circle
+// @args size: Diameter of the circle
+// @args left: Distance from left of flag
+// @args top: Distance from top of flag
+@mixin circle-pseudo($color, $size, $left, $top) {
+  content: "";
+  position: absolute;
+  background: $color;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  left: $left - $size / 2;
+  top: $top - $size / 2;
+}
+@mixin centered-circle-pseudo($color, $size) {
+  @include circle-pseudo($color, $size, $w2, $h2);
+}
+
+
 
 // Create a colored circle, with limited width and height
 // @args color: Color to fill the circle

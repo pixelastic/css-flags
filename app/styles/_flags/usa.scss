@@ -32,13 +32,7 @@
                  $white, $stripe-size,
                  $red, $stripe-size);
   &:before {
-    content: "";
-    position: absolute;
-    background: $blue;
-    top: 0;
-    left: 0;
-    width: $canton-width;
-    height: $canton-height;
+    @include rectangle($blue, $canton-width, $canton-height);
   }
   &:after {
     @include symbol($UTF8_BLACK_STAR, transparent, $star-size);

@@ -3,9 +3,9 @@
 // https://en.wikipedia.org/wiki/Flag_of_Chad
 @mixin flag-tcd() {
   @include ratio(2 / 3);
-  $left: #002664;
-  $center: #FCD116;
-  $right: #CE1126;
+  $blue: #002664;
+  $yellow: #FCD116;
+  $red: #CE1126;
 
-  @include three-columns($left, $center, $right);
+  @include three-columns($blue, $yellow, $red);
 };

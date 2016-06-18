@@ -4,10 +4,10 @@
 @mixin flag-syr() {
   @include ratio(2 / 3);
   $unit: $h12;
-  $green: #009a44;
   $red: #c8102e;
-  $black: #000;
   $white: #FFF;
+  $black: #000;
+  $green: #009a44;
   $symbol-size: 2 * $unit;
   $symbol-offset-left: 3 * $unit;
 

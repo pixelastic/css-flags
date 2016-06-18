@@ -10,8 +10,8 @@
   $white: #FFF;
   $circle-size: 8 * $unit;
 
-  background-image: centered-circle($white, $circle-size),
-                    lines($red, 25%,
-                          $blue, 50%,
-                          $red, 25%);
+  background-image: lines($red, 25%, $blue, 50%, $red, 25%); 
+  &:before {
+    @include centered-circle-pseudo($white, $circle-size);
+  }
 };

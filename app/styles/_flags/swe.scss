@@ -1,12 +1,11 @@
 // Sweden
 // http://www.crwflags.com/fotw/flags/se.html
-
 @mixin flag-swe() {
   @include ratio(10 / 16);
   $cross-offset: 5 * $w16;
-  $bg: #006AA7;
-  $cross: #FECC00;
+  $blue: #006AA7;
+  $yellow: #FECC00;
   $cross-width: 2 * $w16;
 
-  @include nordic-cross($bg, $cross, $cross-width, $cross-offset);
+  @include nordic-cross($blue, $yellow, $cross-width, $cross-offset);
 };

@@ -5,13 +5,12 @@
 @mixin flag-jor() {
   @include ratio(1 / 2);
   $unit: $h32;
-  $top: #000;
-  $center: #FFF;
-  $bottom: #007a33;
-  $triangle: #c8102e;
+  $black: #000;
+  $white: #FFF;
+  $green: #007a33;
+  $red: #c8102e;
   $triangle-width: (sqrt($height * $height + $width * $width) / 2 ) * 1px;
   $star-symbol: $UTF8_HEAVY_EIGHT_POINTED_RECTILINEAR_BLACK_STAR;
-  $star-color: $center;
   $star-size: 6 * $unit;
   $star-top: $h2;
   // Alpha is the red triangle angle, top left corner
@@ -19,11 +18,11 @@
   $beta: $alpha / 2;
   $star-left: tan($beta) * $h2;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($black, $white, $green);
   &:before {
-    @include triangle($triangle, $triangle-width);
+    @include triangle($red, $triangle-width);
   }
   &:after {
-    @include symbol($star-symbol, $star-color, $star-size, $star-left, $star-top);
+    @include symbol($star-symbol, $white, $star-size, $star-left, $star-top);
   }
 };

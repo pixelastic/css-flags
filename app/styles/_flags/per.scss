@@ -2,9 +2,8 @@
 // http://www.crwflags.com/fotw/flags/pe.html
 @mixin flag-per() {
   @include ratio(2 / 3);
-  $left: #D91023;
-  $center: #FFF;
-  $right: #D91023;
+  $red: #D91023;
+  $white: #FFF;
 
-  @include three-columns($left, $center, $right);
+  @include three-columns($red, $white, $red);
 };

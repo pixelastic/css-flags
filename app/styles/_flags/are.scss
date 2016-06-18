@@ -10,7 +10,6 @@
   $stripe-height: 2 * $unit;
   $stripe-width: 3 * $unit;
 
-  background-image:
-                    v-stripe($red, $stripe-width),
+  background-image: v-stripe($red, $stripe-width),
                     three-lines($green, $white, $black);
 };

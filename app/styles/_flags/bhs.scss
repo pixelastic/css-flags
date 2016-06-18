@@ -3,14 +3,13 @@
 @mixin flag-bhs() {
   @include ratio(1 / 2);
   $unit: $h6;
-  $top: #00a9ce;
-  $center: #fdda24;
-  $bottom: $top;
-  $triangle: #000;
+  $blue: #00a9ce;
+  $yellow: #fdda24;
+  $black: #000;
   $triangle-width: sqrt(27) * $unit;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($blue, $yellow, $blue);
   &:before {
-    @include triangle($triangle, $triangle-width);
+    @include triangle($black, $triangle-width);
   }
 };

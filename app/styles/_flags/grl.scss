@@ -15,16 +15,8 @@
   
   // We're doing the bicolor circle using borders and border-radius
   &:before {
-    content: "";
-    width: $circle-size;
-    height:0;
-    border-radius: 50%;
+    @include circle-pseudo(transparent, $circle-size, $circle-left, $h2);
     border-top: $circle-radius solid $red;
     border-bottom: $circle-radius solid $white;
-    border-left: none;
-    border-right: none;
-    position:absolute;
-    top: calc(50% - #{$circle-radius});
-    left: $circle-left - $circle-radius;
   }
 };

@@ -6,9 +6,9 @@
 @mixin flag-bol() {
   @include wip();
   @include ratio(15 / 22);
-  $top: #D52B1E;
-  $center: #F9E300;
-  $bottom: #007934;
+  $red: #D52B1E;
+  $yellow: #F9E300;
+  $green: #007934;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($red, $yellow, $green);
 };

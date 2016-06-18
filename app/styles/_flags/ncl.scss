@@ -15,11 +15,13 @@
   $symbol-left: $circle-left;
   $symbol-top: $circle-top;
 
-  background-image:
-                    circle($yellow, $circle-size, $circle-left, $circle-top),
-                    three-lines($blue, $red, $green)
-                  ;
+  background-image: three-lines($blue, $red, $green);
+
+
   &:before {
+    @include circle-pseudo($yellow, $circle-size, $circle-left, $circle-top);
+  }
+  &:after {
     @include symbol($UTF8_COUNTRY_NCL, $black, $symbol-size, $symbol-left, $symbol-top);
   }
 

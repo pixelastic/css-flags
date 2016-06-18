@@ -3,9 +3,9 @@
 // https://en.wikipedia.org/wiki/Flag_of_the_Netherlands
 @mixin flag-nld() {
   @include ratio(2 / 3);
-  $top: #AE1C28;
-  $center: #FFF;
-  $bottom: #21468B;
+  $red: #AE1C28;
+  $white: #FFF;
+  $blue: #21468B;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($red, $white, $blue);
 };

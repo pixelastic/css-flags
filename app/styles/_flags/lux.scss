@@ -5,9 +5,9 @@
 // Note: I used the colors from the Wikipedia SVG
 @mixin flag-lux() {
   @include ratio(1 / 2);
-  $top: #ed2939;
-  $center: #FFF;
-  $bottom: #00A1DE;
+  $red: #ed2939;
+  $white: #FFF;
+  $blue: #00A1DE;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($red, $white, $blue);
 };

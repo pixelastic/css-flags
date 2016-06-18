@@ -4,27 +4,20 @@
 @mixin flag-isr() {
   @include ratio(8 / 11);
   $unit: $h32;
-  $border-color: #FFF;
+  $white: #FFF;
+  $blue: #0038b8;
   $border-height: 3 * $unit;
-  $blue-color: #0038b8;
   $blue-height: 5 * $unit;
-  $center-color: #FFF;
   $center-height: 16 * $unit;
   $star-symbol: $UTF8_STAR_OF_DAVID;
-  $star-color: $blue-color;
   $star-size: 14 * $unit;
 
-  @include lines($border-color,
-                 $border-height,
-                 $blue-color,
-                 $blue-height,
-                 $center-color,
-                 $center-height,
-                 $blue-color,
-                 $blue-height,
-                 $border-color,
-                 $border-height);
+  @include lines($white, $border-height,
+                 $blue, $blue-height,
+                 $white, $center-height,
+                 $blue, $blue-height,
+                 $white, $border-height);
   &:before {
-    @include centered-symbol($star-symbol, $star-color, $star-size);
+    @include centered-symbol($star-symbol, $blue, $star-size);
   }
 };

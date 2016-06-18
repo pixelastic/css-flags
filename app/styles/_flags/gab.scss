@@ -2,13 +2,12 @@
 // http://www.crwflags.com/fotw/flags/ga.html
 // https://en.wikipedia.org/wiki/Flag_of_Gabon
 // https://upload.wikimedia.org/wikipedia/commons/0/04/Flag_of_Gabon.svg
-//
-// Note: I used the colors from the SVG from Wikipedia
+// http://www.vexilla-mundi.com/gabon_flag.html
 @mixin flag-gab() {
   @include ratio(3 / 4);
-  $top: #009e60;
-  $center: #fcd116;
-  $bottom: #3a75c4;
+  $green: #009a44;
+  $yellow: #ffcd00;
+  $blue: #0072ce;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($green, $yellow, $blue);
 };

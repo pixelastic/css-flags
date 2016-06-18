@@ -5,26 +5,25 @@
 @mixin flag-mdv() {
   @include ratio(2 / 3);
   $unit: $h48;
-  $border-color: rgb(210, 16, 52);
+  $red: #bf0d3e;
+  $green: #007367;
+  $white: #FFF;
   $border-size: 12 * $unit;
-  $center-color: rgb(0, 126, 58);
-  $crescent-front-color: $center-color;
   $crescent-front-size: 16 * $unit;
   $crescent-front-left: 42 * $unit;
   $crescent-front-top: 24 * $unit;
-  $crescent-back-color: #FFF;
   $crescent-back-size: 16 * $unit;
   $crescent-back-left: 39 * $unit;
   $crescent-back-top: 24 * $unit;
 
-  background-color: $center-color;
+  background-color: $green;
   background-image:
                     // Crescent
-                    circle($crescent-front-color, $crescent-front-size, $crescent-front-left, $crescent-front-top),
-                    circle($crescent-back-color, $crescent-back-size, $crescent-back-left, $crescent-back-top),
+                    circle($green, $crescent-front-size, $crescent-front-left, $crescent-front-top),
+                    circle($white, $crescent-back-size, $crescent-back-left, $crescent-back-top),
                     // Borders
-                    h-stripe($border-color, $border-size, 0),
-                    h-stripe($border-color, $border-size, 36 * $unit),
-                    v-stripe($border-color, $border-size, 0),
-                    v-stripe($border-color, $border-size, 60 * $unit);
+                    h-stripe($red, $border-size, 0),
+                    h-stripe($red, $border-size, 36 * $unit),
+                    v-stripe($red, $border-size, 0),
+                    v-stripe($red, $border-size, 60 * $unit);
 };

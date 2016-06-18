@@ -3,9 +3,9 @@
 // https://en.wikipedia.org/wiki/Flag_of_Ivory_Coast
 @mixin flag-civ() {
   @include ratio(2 / 3);
-  $left: #F77F00;
-  $center: #FFF;
-  $right: #009E60;
+  $orange: #F77F00;
+  $white: #FFF;
+  $green: #009E60;
 
-  @include three-columns($left, $center, $right);
+  @include three-columns($orange, $white, $green);
 };

@@ -1,19 +1,19 @@
 // Åland Islands
 // http: //www.crwflags.com/fotw/flags/ax.html
-
 @mixin flag-ala() {
   @include ratio(34 / 52);
-  $bg: #0053A5;
-  $border-color: #FFCE00;
-  $inner-color: #D21034;
-  $cross-width: 10 * $w52;
-  $inner-width: 4 * $w52;
-  $cross-offset: 16 * $w52;
+  $unit: $width / 52;
+  $blue: #0053A5;
+  $yellow: #FFCE00;
+  $red: #D21034;
+  $cross-width: 10 * $unit;
+  $inner-width: 4 * $unit;
+  $cross-offset: 16 * $unit;
 
   @include nordic-cross-border(
-    $bg,
-    $border-color,
-    $inner-color,
+    $blue,
+    $yellow,
+    $red,
     $cross-width,
     $inner-width,
     $cross-offset

@@ -2,23 +2,18 @@
 // http://www.crwflags.com/fotw/flags/gm.html
 @mixin flag-gmb() {
   @include ratio(2 / 3);
-  $top-color: #EF3340;
+  $red: #EF3340;
+  $blue: #003DA5;
+  $green: #009639;
+  $white: #FFF;
   $top-height: 6 * $h18;
-  $center-color: #003DA5;
   $center-height: 4 * $h18;
-  $bottom-color: #009639;
   $bottom-height: 6 * $h18;
-  $border-color: #FFF;
   $border-height: $h18;
 
-  @include lines($top-color,
-                 $top-height,
-                 $border-color,
-                 $border-height,
-                 $center-color,
-                 $center-height,
-                 $border-color,
-                 $border-height,
-                 $bottom-color,
-                 $bottom-height);
+  @include lines($red, $top-height,
+                 $white, $border-height,
+                 $blue, $center-height,
+                 $white, $border-height,
+                 $green, $bottom-height);
 };

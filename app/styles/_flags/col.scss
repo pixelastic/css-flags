@@ -7,8 +7,5 @@
   $blue: #003893;
   $red: #CE1126;
 
-  @include lines(
-    $yellow, 50%,
-    $blue, 25%,
-    $red, 25%);
+  @include lines($yellow, 50%, $blue, 25%, $red, 25%);
 };

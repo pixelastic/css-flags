@@ -5,12 +5,12 @@
 @mixin flag-vnm() {
   @include ratio(2 / 3);
   $unit: $h20;
-  $bg: #E21C1C;
-  $star: #FFFF00;
+  $red: #E21C1C;
+  $yellow: #FFFF00;
   $star-size: 12 * $unit;
 
-  background-color: $bg;
+  background-color: $red;
   &:before {
-    @include centered-star($star, $star-size);
+    @include centered-star($yellow, $star-size);
   }
 };

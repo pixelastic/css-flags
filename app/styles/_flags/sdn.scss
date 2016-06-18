@@ -4,14 +4,14 @@
 @mixin flag-sdn() {
   @include ratio(1 / 2);
   $unit: $h6;
-  $top: #C8102E;
-  $center: #FFF;
-  $bottom: #000;
-  $triangle: #007a33;
+  $red: #C8102E;
+  $white: #FFF;
+  $black: #000;
+  $green: #007a33;
   $triangle-width: 4 * $unit;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($red, $white, $black);
   &:before {
-    @include triangle($triangle, $triangle-width);
+    @include triangle($green, $triangle-width);
   }
 };

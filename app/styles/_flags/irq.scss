@@ -3,10 +3,10 @@
 @mixin flag-irq() {
   @include ratio(2 / 3);
   $unit: $h6;
-  $green: #009a44;
   $red: #c8102e;
-  $black: #000;
   $white: #FFF;
+  $black: #000;
+  $green: #009a44;
   $symbol-size: 3 * $unit;
 
   @include three-lines($red, $white, $black);

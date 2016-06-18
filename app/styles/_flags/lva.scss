@@ -6,7 +6,5 @@
   $red: #9E1B34;
   $white: #FFF;
 
-  @include lines($red, 40%,
-                 $white, 20%,
-                 $red, 40%);
+  @include lines($red, 40%, $white, 20%, $red, 40%);
 };

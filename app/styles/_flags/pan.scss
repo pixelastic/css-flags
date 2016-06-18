@@ -24,15 +24,7 @@
                     h-stripe($blue, $part-height, $part-height)
                   ;
   &:before {
-    // Adding a white quarter in the top left
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: $part-width;
-    height: $part-height;
-    background: $white;
-    display: block;
-    content: "";
+    @include rectangle($white, $part-width, $part-height);
   }
   &:after {
     @include star($blue, $star-size, $star-top-left, $star-top-top);

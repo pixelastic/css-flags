@@ -43,13 +43,7 @@
                           $white, $stripe-height,
                           $red, $stripe-height);
   &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: $canton-width;
-    height: $canton-height;
-    background-color: $blue;
+    @include rectangle($blue, $canton-width, $canton-height);
     background-image:
                     circle($blue, $crescent-front-size, $crescent-front-left, $crescent-front-top),
                     circle($yellow, $crescent-back-size, $crescent-back-left, $crescent-back-top);

@@ -2,10 +2,10 @@
 // http://www.crwflags.com/fotw/flags/fi.html
 @mixin flag-fin() {
   @include ratio(11 / 18);
-  $bg: #FFF;
-  $cross: #003580;
+  $white: #FFF;
+  $blue: #003580;
   $cross-width: 3 * $w18;
   $cross-offset: 5 * $w18;
 
-  @include nordic-cross($bg, $cross, $cross-width, $cross-offset);
+  @include nordic-cross($white, $blue, $cross-width, $cross-offset);
 };

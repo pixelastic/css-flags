@@ -11,12 +11,12 @@
   $circle-size: 40 * $unit;
   $symbol-size: 32 * $unit;
 
-  background-image:
-                    centered-circle($blue, $circle-size),
-                    three-lines($green, $yellow, $red)
-  ;
+  background-image: three-lines($green, $yellow, $red);
 
   &:before {
+    @include centered-circle-pseudo($blue, $circle-size);
+  }
+  &:after {
     @include centered-symbol($UTF8_COUNTRY_ETH, $yellow, $symbol-size);
   }
 };

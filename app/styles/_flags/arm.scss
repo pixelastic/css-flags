@@ -2,9 +2,9 @@
 // http://www.crwflags.com/fotw/flags/am.html
 @mixin flag-arm() {
   @include ratio(1 / 2);
-  $top: #D90012;
-  $center: #0033A0;
-  $bottom: #F2A800;
+  $red: #D90012;
+  $blue: #0033A0;
+  $yellow: #F2A800;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($red, $blue, $yellow);
 };

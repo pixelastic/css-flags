@@ -3,9 +3,9 @@
 // https://en.wikipedia.org/wiki/Flag_of_Bulgaria
 @mixin flag-bgr() {
   @include ratio(3 / 5);
-  $top: #FFF;
-  $center: #00966E;
-  $bottom: #D62612;
+  $white: #FFF;
+  $green: #00966E;
+  $red: #D62612;
 
-  @include three-lines($top, $center, $bottom);
+  @include three-lines($white, $green, $red);
 };

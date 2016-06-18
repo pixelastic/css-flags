@@ -33,7 +33,7 @@
                     // Green
                     stripe(-$alpha, $green, $green-size),
                     stripe(180 + $alpha, $green, $green-size),
-                    // // White
+                    // White
                     stripe(-$alpha, $white, $white-padding, $white-distance),
                     stripe(180 + $alpha, $white, $white-size, $white-distance),
                   ;
