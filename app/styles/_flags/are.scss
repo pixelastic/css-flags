@@ -12,8 +12,5 @@
 
   background-image:
                     v-stripe($red, $stripe-width),
-                    h-stripe($green, $stripe-height),
-                    h-stripe($white, $stripe-height, $stripe-height),
-                    h-stripe($black, $stripe-height, 2 * $stripe-height)
-                  ;
+                    three-lines($green, $white, $black);
 };

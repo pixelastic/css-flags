@@ -5,9 +5,9 @@
   $unit: $h30;
   $blue: #00205b;
   $white: #FFF;
-  $stripe-height: 6 * $unit;
+  $red: #c8102e;
+  $stripe-height: percentage(1/5);
 
-  $triangle: #c8102e;
   $triangle-hypotenuse: 30 * $unit;
   $triangle-side: 15 * $unit;
   $triangle-width: sqrt($triangle-hypotenuse * $triangle-hypotenuse - $triangle-side * $triangle-side) * 1px;
@@ -26,7 +26,7 @@
                   $blue, $stripe-height
                 );
   &:before {
-    @include triangle($triangle, $triangle-width);
+    @include triangle($red, $triangle-width);
   }
   &:after {
     @include symbol($star-symbol, $star-color, $star-size, $star-left, $star-top);

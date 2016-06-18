@@ -7,15 +7,12 @@
   $red: #FD4238;
   $green: #009A3D;
   $white: #FFF;
-  $stripe-small-height: $unit;
-  $stripe-big-height: 2 * $unit;
+
   $symbol-size: 2 * $unit;
 
-  @include lines(
-                  $red, $stripe-small-height,
-                  $white, $stripe-big-height,
-                  $red, $stripe-small-height
-                );
+  @include lines($red, 25%,
+                 $white, 50%,
+                 $red, 25%);
   &:before {
     @include centered-symbol($UTF8_COUNTRY_LBN, $green, $symbol-size);
   }

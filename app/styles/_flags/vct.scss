@@ -8,9 +8,6 @@
   $green: #009A4A;
   $blue: #005eb8;
 
-  $stripe-small-width: 18 * $unit;
-  $stripe-big-width: 36 * $unit;
-
   $losange-width: 8 * $unit;
   $losange-height: 16 * $unit;
   $losange-left: 36 * $unit;
@@ -18,9 +15,9 @@
   $stripe-yellow-size: 2 * $unit;
 
   @include columns(
-                    $blue, $stripe-small-width,
-                    $yellow, $stripe-big-width,
-                    $green, $stripe-small-width
+                    $blue, 25%,
+                    $yellow, 50%,
+                    $green, 25%
                   );
 
   &:before {

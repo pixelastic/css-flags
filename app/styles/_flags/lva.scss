@@ -3,17 +3,10 @@
 // https://en.wikipedia.org/wiki/Flag_of_Latvia
 @mixin flag-lva() {
   @include ratio(1 / 2);
-  $top-color: #9E1B34;
-  $top-height: 2 * $h5;
-  $center-color: #FFF;
-  $center-height: $h5;
-  $bottom-color: #9E1B34;
-  $bottom-height: 2 * $h5;
+  $red: #9E1B34;
+  $white: #FFF;
 
-  @include lines($top-color,
-                 $top-height,
-                 $center-color,
-                 $center-height,
-                 $bottom-color,
-                 $bottom-height);
+  @include lines($red, 40%,
+                 $white, 20%,
+                 $red, 40%);
 };

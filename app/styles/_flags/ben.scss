@@ -13,6 +13,5 @@
                     // Vertical green stripe
                     v-stripe($green, $stripe-width),
                     // Two horizontal stripes
-                    h-stripe($yellow, $stripe-height),
-                    h-stripe($red, $stripe-height, $stripe-height);
+                    two-lines($yellow, $red);
 };

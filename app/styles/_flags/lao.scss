@@ -5,18 +5,13 @@
 @mixin flag-lao() {
   @include ratio(2 / 3);
   $unit: $h20;
-  $border-color: #CE1126;
-  $border-height: 5 * $unit;
-  $center-color: #002869;
-  $center-height: 10 * $unit;
-  $circle-color: #FFF;
+  $red: #CE1126;
+  $blue: #002869;
+  $white: #FFF;
   $circle-size: 8 * $unit;
 
-  background-image: centered-circle($circle-color, $circle-size),
-                    lines($border-color,
-                          $border-height,
-                          $center-color,
-                          $center-height,
-                          $border-color,
-                          $border-height);
+  background-image: centered-circle($white, $circle-size),
+                    lines($red, 25%,
+                          $blue, 50%,
+                          $red, 25%);
 };

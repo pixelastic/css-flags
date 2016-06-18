@@ -38,10 +38,7 @@
                     circle($white, $crescent-front-size, $crescent-front-left, $crescent-front-top),
                     circle($red, $crescent-back-size, $crescent-back-left, $crescent-back-top),
                     // Stripes
-                    h-stripe($black, $stripe-height),
-                    h-stripe($white, $stripe-height, $stripe-height),
-                    h-stripe($green, $stripe-height, 2 * $stripe-height)
-                  ;
+                    three-lines($black, $white, $green);
   &:before {
     @include triangle($red, $triangle-width);
   }

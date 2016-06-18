@@ -27,14 +27,10 @@
   $star-spacing: 12 * $unit;
 
   @include lines(
-                  $yellow,
-                  $line-height,
-                  $white,
-                  $line-height,
-                  $red,
-                  $line-height,
-                  $blue,
-                  $line-height
+                  $yellow, 25%,
+                  $white, 25%,
+                  $red, 25%,
+                  $blue, 25%
                 );
   // Triangle
   &:before {

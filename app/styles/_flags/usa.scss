@@ -6,7 +6,7 @@
   $red: #ba0c2f;
   $blue: #012169;
   $white: #FFF;
-  $stripe-size: $height / 13;
+  $stripe-size: percentage(1/13);
   $star-size: 800 * $unit;
   $star-margin-left: 1646 * $unit;
   $star-margin-top: 700 * $unit;
@@ -15,27 +15,32 @@
   $star-odd-offset-left: 1646 * $unit;
   $star-odd-offset-top: 1400 * $unit;
   $canton-width: 9876 * $unit;
+  $canton-height: 7000 * $unit; 
 
-  background-image:
-                   // Bottom stripes
-                   h-stripe($white, $stripe-size, 7 * $stripe-size),
-                   h-stripe($red, $stripe-size, 8 * $stripe-size),
-                   h-stripe($white, $stripe-size, 9 * $stripe-size),
-                   h-stripe($red, $stripe-size, 10 * $stripe-size),
-                   h-stripe($white, $stripe-size, 11 * $stripe-size),
-                   h-stripe($red, $stripe-size, 12 * $stripe-size),
-                   // // Canton
-                   v-stripe($blue, $canton-width),
-                   // Right stripes
-                   h-stripe($red, $stripe-size),
-                   h-stripe($white, $stripe-size, 1 * $stripe-size),
-                   h-stripe($red, $stripe-size, 2 * $stripe-size),
-                   h-stripe($white, $stripe-size, 3 * $stripe-size),
-                   h-stripe($red, $stripe-size, 4 * $stripe-size),
-                   h-stripe($white, $stripe-size, 5 * $stripe-size),
-                   h-stripe($red, $stripe-size, 6 * $stripe-size)
-                ;
+
+  @include lines($red, $stripe-size,
+                 $white, $stripe-size,
+                 $red, $stripe-size,
+                 $white, $stripe-size,
+                 $red, $stripe-size,
+                 $white, $stripe-size,
+                 $red, $stripe-size,
+                 $white, $stripe-size,
+                 $red, $stripe-size,
+                 $white, $stripe-size,
+                 $red, $stripe-size,
+                 $white, $stripe-size,
+                 $red, $stripe-size);
   &:before {
+    content: "";
+    position: absolute;
+    background: $blue;
+    top: 0;
+    left: 0;
+    width: $canton-width;
+    height: $canton-height;
+  }
+  &:after {
     @include symbol($UTF8_BLACK_STAR, transparent, $star-size);
     $shadows: ();
     @for $y from 0 to 9 {
@@ -59,6 +64,5 @@
       }
     }
     text-shadow: $shadows;
-      
   }
 };

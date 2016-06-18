@@ -7,13 +7,11 @@
   $red: #FC3D32;
   $white: #FFF;
   $stripe-width: $unit;
-  $stripe-height: $unit;
 
   background-image:
                     // Vertical white stripe
                     v-stripe($white, $stripe-width),
                     // Two horizontal stripes
-                    h-stripe($red, $stripe-height),
-                    h-stripe($green, $stripe-height, $stripe-height);
+                    two-lines($red, $green);
 
 };

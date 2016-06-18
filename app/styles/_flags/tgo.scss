@@ -7,27 +7,28 @@
   $green: #00b140;
   $yellow: #fdda24;
   $red: #c8102e;
-  $stripe-height: 20 * $unit;
+  $stripe-height: 20%;
   $square-size: 60 * $unit;
   $star-size: 38 * $unit;
   $star-top: 30 * $unit;
   $star-left: 30 * $unit;
 
 
-  background-image: 
-                    // Green and yellow stripes on the bottom
-                    // Note: We add 10px on the last line to fix a rounding
-                    // problem
-                    h-stripe($yellow, $stripe-height, 3 * $stripe-height),
-                    h-stripe($green,  $stripe-height + 10, 4 * $stripe-height),
-                    // Red stripe
-                    v-stripe($red,  $square-size),
-                    // Green and yellow stripes on the right
-                    h-stripe($green,  $stripe-height, 0),
-                    h-stripe($yellow, $stripe-height, 1 * $stripe-height),
-                    h-stripe($green,  $stripe-height, 2 * $stripe-height),
-                  ;
+  @include lines($green, 20%,
+                 $yellow, 20%,
+                 $green, 20%,
+                 $yellow, 20%,
+                 $green, 20%);
   &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $red;
+    width: $square-size;
+    height: $square-size;
+  }
+  &:after {
     @include star($white, $star-size, $star-left, $star-top);
   }
 };

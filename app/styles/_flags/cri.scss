@@ -5,21 +5,16 @@
 // Note: This is the same as Thailand, but with red and blue reversed
 @mixin flag-cri() {
   @include ratio(3/5);
-  $blue-color: #002B7F;
-  $blue-height: $h6;
-  $white-color: #FFF;
-  $white-height: $h6;
-  $red-color: #CE1126;
-  $red-height: $h3;
+  $blue: #002B7F;
+  $white: #FFF;
+  $red: #CE1126;
+  $stripe-height: percentage(1/6);
 
-  @include lines($blue-color,
-                 $blue-height,
-                 $white-color,
-                 $white-height,
-                 $red-color,
-                 $red-height,
-                 $white-color,
-                 $white-height,
-                 $blue-color,
-                 $blue-height);
+  @include lines(
+    $blue, $stripe-height,
+    $white, $stripe-height,
+    $red, 2 * $stripe-height,
+    $white, $stripe-height,
+    $blue, $stripe-height
+  );
 };

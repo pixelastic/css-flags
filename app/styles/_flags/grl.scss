@@ -24,7 +24,7 @@
     border-left: none;
     border-right: none;
     position:absolute;
-    top: $h2 - $circle-radius;
+    top: calc(50% - #{$circle-radius});
     left: $circle-left - $circle-radius;
   }
 };

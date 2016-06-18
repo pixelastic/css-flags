@@ -4,35 +4,33 @@
 // http://www.vexilla-mundi.com/libya_flag.html
 @mixin flag-lby() {
   @include ratio(1 / 2);
-  $unit: $h4;
-  $top-color: #239E46;
-  $top-size: $unit;
-  $center-color: #000;
-  $center-size: 2 * $unit;
-  $bottom-color: #EF0012;
-  $bottom-size: $unit;
-  $symbol-color: #FFF;
-  $crescent-front-color: $center-color;
-  $crescent-front-size: 5 / 6 * $unit;
-  $crescent-front-left: $w2 + ($unit / 6);
-  $crescent-front-top: $h2;
-  $crescent-back-color: $symbol-color;
-  $crescent-back-size: $unit;
-  $crescent-back-left: $w2;
-  $crescent-back-top: $h2;
+  $unit: $width / 1440;
+  $red: #EF0012;
+  $black: #000;
+  $green: #239E46;
+  $white: #FFF;
 
-  // Note: Size and position of star is completly manual, I did not do the math
-  $star-color: $symbol-color;
-  $star-size: 3 * $unit / 4;
-  $star-left: $w2 + $unit / 2 + $star-size / 4;
+  $crescent-front-size: 158 * $unit;
+  $crescent-front-left: 750 * $unit;
+  $crescent-back-size: $height / 4;
+  $crescent-back-left: 720 * $unit;
+  // $crescent-front-left: $w2 + ($unit / 6);
+  // $crescent-front-top: $h2;
+  // $crescent-back-color: $symbol-color;
+  // $crescent-back-left: $w2;
+  // $crescent-back-top: $h2;
+
+  // // Note: Size and position of star is completly manual, I did not do the math
+  $star-size: $crescent-front-size * 3 / 4;
+  $star-left: $w2 + $crescent-front-size / 2 + $star-size / 4;
   $star-top: $h2;
 
   background-image:
-                    circle($crescent-front-color, $crescent-front-size, $crescent-front-left, $crescent-front-top),
-                    circle($crescent-back-color, $crescent-back-size, $crescent-back-left, $crescent-back-top),
-                    lines($top-color, $top-size, $center-color, $center-size, $bottom-color, $bottom-size);
+                    circle($black, $crescent-front-size, $crescent-front-left, 50%),
+                    circle($white, $crescent-back-size, $crescent-back-left, 50%),
+                    lines($red, 25%, $black, 50%, $green, 25%);
   &:after {
-    @include star($star-color, $star-size, $star-left, $star-top);
+    @include star($white, $star-size, $star-left, $star-top);
     transform: rotate(-20deg);
   }
 };

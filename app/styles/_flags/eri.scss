@@ -9,19 +9,17 @@
   $blue: #418fde;
   $yellow: #ffc72c;
 
-  $alpha: atan($h2 / $width) * 1deg;
-  $stripe-size: sin($alpha) * $width;
   $symbol-size: 2 * $unit;
   $symbol-left: 2 * $unit;
   $symbol-top: 2 * $unit;
 
-
-  background-color: $red;
-  background-image:
-                    stripe(-$alpha, $blue, $stripe-size),
-                    stripe(180 + $alpha, $green, $stripe-size)
-                  ;
+  background-image: two-lines($green, $blue);
+  // Triangle
   &:before {
+    @include triangle($red, $width);
+  }
+  // Symbol
+  &:after {
     @include symbol($UTF8_COUNTRY_ERI, $yellow, $symbol-size, $symbol-left, $symbol-top);
   }
 

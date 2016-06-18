@@ -7,10 +7,11 @@
   $blue: #0033a0;
   $white: #FFF;
 
-  $stripe-size: 2 * $unit;
+  $stripe-size: percentage(1/9);
   $canton-size: 10 * $unit;
   $cross-left: 4 * $unit;
   $cross-top: 4 * $unit;
+  $cross-size: 2 * $unit;
 
   background-image: 
                    lines(
@@ -28,8 +29,8 @@
   &:before {
     @include square($blue, $canton-size);
     background-image:
-                      h-stripe($white, $stripe-size, $cross-top),
-                      v-stripe($white, $stripe-size, $cross-left)
+                      h-stripe($white, $cross-size, $cross-top),
+                      v-stripe($white, $cross-size, $cross-left)
                     ;
   }
 

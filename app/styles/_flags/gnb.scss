@@ -17,8 +17,7 @@
                     // Vertical red stripe
                     v-stripe($red, $stripe-width),
                     // Two horizontal stripes
-                    h-stripe($yellow, $stripe-height),
-                    h-stripe($green, $stripe-height, $stripe-height);
+                    two-lines($yellow, $green);
   &:before {
     @include star($black, $star-size, $star-left, $star-top);
   }

@@ -8,10 +8,10 @@
   // line and one on the second line. Using first-letter and first-line I was
   // able to target each symbol individually. It was needed that I add
   // white-space: pre and position: relative to make both selector work, though.
-  // I also calculated all the stars positions from coords 0,0. I also add to
+  // I also calculated all the stars positions from coords 0,0. I also had to
   // calculate all of my pseudo-stars offset coordinates. I then displayed my
   // stars with invisible ink, but added text-shadow for displaying them where
-  // I wanted. I add to substract the stars offset to the calculated coords.
+  // I wanted. I had to substract the stars offset to the calculated coords.
   @include ratio(1 / 2);
   $unit: $h6000;
   $blue: #012169;

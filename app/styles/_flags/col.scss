@@ -3,17 +3,12 @@
 // https://en.wikipedia.org/wiki/Flag_of_Colombia
 @mixin flag-col() {
   @include ratio(2 / 3);
-  $top-color: #FCD116;
-  $top-height: 2 * $h4;
-  $center-color: #003893;
-  $center-height: $h4;
-  $bottom-color: #CE1126;
-  $bottom-height: $h4;
+  $yellow: #FCD116;
+  $blue: #003893;
+  $red: #CE1126;
 
-  @include lines($top-color,
-                 $top-height,
-                 $center-color,
-                 $center-height,
-                 $bottom-color,
-                 $bottom-height);
+  @include lines(
+    $yellow, 50%,
+    $blue, 25%,
+    $red, 25%);
 };

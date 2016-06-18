@@ -8,8 +8,10 @@
   $red: #e03c31;
   $blue: #041e42;
   $yellow: #ffd100;
-  $stripe-height: 16 * $unit;
-  $canton-width: 224 * $unit;
+  $stripe-height: $height / 14;
+
+  $canton-width: $width / 2;
+  $canton-height: 8 * $stripe-height;
   $crescent-front-size: 84 * $unit;
   $crescent-front-left: 102 * $unit;
   $crescent-front-top: 64 * $unit;
@@ -22,29 +24,37 @@
   $star-top: 64 * $unit;
 
   background-image: 
-                    // Red and white stripes on the bottom
-                    h-stripe($red,   $stripe-height, 8 * $stripe-height),
-                    h-stripe($white, $stripe-height, 9 * $stripe-height),
-                    h-stripe($red,   $stripe-height, 10 * $stripe-height),
-                    h-stripe($white, $stripe-height, 11 * $stripe-height),
-                    h-stripe($red,   $stripe-height, 12 * $stripe-height),
-                    h-stripe($white, $stripe-height, 13 * $stripe-height),
-                    // Crescent
-                    circle($blue, $crescent-front-size, $crescent-front-left, $crescent-front-top),
-                    circle($yellow, $crescent-back-size, $crescent-back-left, $crescent-back-top),
-                    // Blue stripe
-                    v-stripe($blue,  $canton-width),
-                    // // Red and white stripes on the left
-                    h-stripe($red,   $stripe-height),
-                    h-stripe($white, $stripe-height, 1 * $stripe-height),
-                    h-stripe($red,   $stripe-height, 2 * $stripe-height),
-                    h-stripe($white, $stripe-height, 3 * $stripe-height),
-                    h-stripe($red,   $stripe-height, 4 * $stripe-height),
-                    h-stripe($white, $stripe-height, 5 * $stripe-height),
-                    h-stripe($red,   $stripe-height, 6 * $stripe-height),
-                    h-stripe($white, $stripe-height, 7 * $stripe-height)
-                  ;
+                    // Red and white stripes
+                    lines($red, $stripe-height,
+                          $white, $stripe-height,
+                          $red, $stripe-height,
+                          $white, $stripe-height,
+                          $red, $stripe-height,
+                          $white, $stripe-height,
+                          $red, $stripe-height,
+                          $white, $stripe-height,
+                          $red, $stripe-height,
+                          $white, $stripe-height,
+                          $red, $stripe-height,
+                          $white, $stripe-height,
+                          $red, $stripe-height,
+                          $white, $stripe-height,
+                          $red, $stripe-height,
+                          $white, $stripe-height,
+                          $red, $stripe-height);
   &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $canton-width;
+    height: $canton-height;
+    background-color: $blue;
+    background-image:
+                    circle($blue, $crescent-front-size, $crescent-front-left, $crescent-front-top),
+                    circle($yellow, $crescent-back-size, $crescent-back-left, $crescent-back-top);
+  }
+  &:after {
     @include symbol($star-symbol, $yellow, $star-size, $star-left, $star-top);
   }
 };
