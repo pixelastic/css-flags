@@ -83,6 +83,20 @@ Once I got the svg, it is just a matter of uploading it to icomoon, center the
 symbol, scale it and adjust the border. I also used the reserved namespace in
 the UTF8 table for custom characters. And finally exported the font.
 
+## FAQS
+
+### You're using half pixels. That does not make any sense.
+
+Ok, that's not really a question, but I'll explain anyway.
+
+I try to use percentage as much as I can, when it makes sense. Percentage are
+relative to either the width or the height of the flag. When doing
+a tricolore flag, I will use 33.33% as the width of each stripe for example. But
+as soon as I need to draw a square that has the same width than height, I can no
+longer user percentage values, I need real, absolute, pixel values.
+
+
+
 ## Sibling projects
 
 Here are two others projects I did while working on CSS Flags.

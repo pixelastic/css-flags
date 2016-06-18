@@ -13,6 +13,8 @@ module.exports = config:
     postcss:
       processors: [
         require('autoprefixer')(['Chrome > 44, last 8 versions'])
+        require('postcss-round-subpixels'),
+        require('cssnano')
       ]
   server:
       run: yes

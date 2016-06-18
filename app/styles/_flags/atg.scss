@@ -1,5 +1,6 @@
 // Antigua and Barbuda
 // http://www.crwflags.com/fotw/flags/ag.html
+// http://www.vexilla-mundi.com/antigua_and_barbuda_flag.html
 @mixin flag-atg() {
   @include ratio(2 / 3);
   $unit: $h92;
@@ -11,33 +12,33 @@
 
   $black-height: 36 * $unit;
   $blue-height: 20 * $unit;
-  $blue-top: $black-height;
   $white-height: 36 * $unit;
-  $white-top: $black-height + $blue-height;
-
-  // Let's calculate alpha, the top left red angle
-  $alpha-opposite: 69 * $unit;
-  $alpha-adjacent: $height;
-  $alpha: atan($alpha-opposite / $alpha-adjacent) * 1deg;
-  // Let's calculate the distance between the bottom left corner and the red
-  // hypotenuse
-  $red-stripe-distance: sin($alpha) * $height;
 
   $star-symbol: $UTF8_COUNTRY_ATG;
   $star-size: 60 * $unit;
   $star-left: 69 * $unit;
   $star-top: 36 * $unit;
 
-  background-image: 
-                    // Red stripes
-                    stripe(90 - $alpha, $red, $red-stripe-distance),
-                    stripe(-90 + $alpha, $red, $red-stripe-distance),
-                    // Tricolor stripes
-                    h-stripe($black, $black-height),
-                    h-stripe($blue, $blue-height, $blue-top),
-                    h-stripe($white, $white-height, $white-top);
+  background-color: $red;
 
+  // Tricolor stripes as an overlay with a clip-path
   &:before {
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-image: lines(
+                        $black, $black-height,
+                        $blue, $blue-height,
+                        $white, $white-height
+                      );
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+  }
+
+  // Sun as a font symbol
+  &:after {
     @include symbol($star-symbol, $yellow, $star-size, $star-left, $star-top);
   }
 };

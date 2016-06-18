@@ -30,22 +30,22 @@
 
 
 // Two columns of equal width
-// @args top: Color of top column
-// @args bottom: Color of bottom column
-@function two-columns($top, $bottom) {
-  @return columns($top, 50%, $bottom, 50%);
+// @args left: Color of left column
+// @args right: Color of right column
+@function two-columns($left, $right) {
+  @return columns($left, 50%, $right, 50%);
 }
-@mixin two-columns($top, $bottom) {
-  background-image: two-columns($top, $bottom);
+@mixin two-columns($left, $right) {
+  background-image: two-columns($left, $right);
 }
 
 // Three columns of equal width
-// @args top: Color of top column
+// @args top: Color of left column
 // @args center: Color of center column
-// @args bottom: Color of bottom column
-@function three-columns($top, $center, $bottom) {
-  @return columns($top, 33.33%, $center, 33.33%, $bottom, 33.33%);
+// @args bottom: Color of right column
+@function three-columns($left, $center, $right) {
+  @return columns($left, 33.33%, $center, 33.33%, $right, 33.33%);
 }
-@mixin three-columns($top, $center, $bottom) {
-  background-image: three-columns($top, $center, $bottom);
+@mixin three-columns($left, $center, $right) {
+  background-image: three-columns($left, $center, $right);
 }

@@ -28,8 +28,8 @@
                     centered-circle($crescent-back-color, $crescent-back-size),
                     two-columns($left, $right);
   
-  // We're doing a bicolor circle using borders, and putting it on top of the
-  // red circle in background
+  // We're doing a bicolor circle using rounded borders, and putting it on top
+  // of the red circle in background
   &:before {
     content: "";
     height: $crescent-front-size;

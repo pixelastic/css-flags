@@ -5,6 +5,8 @@
 // @args top: Distance from top of flag
 @function circle($color, $diameter, $left, $top) {
   $radius: $diameter / 2;
+  $left: $left;
+  $top: $top;
   // Note: We add 1px to help in the aliasing
   @return radial-gradient(circle at $left $top,
                           $color $radius,
@@ -19,7 +21,7 @@
 // @args color: Color to fill the circle
 // @args size: Diameter of the circle
 @function centered-circle($color, $size) {
-  @return circle($color, $size, $w2, $h2);
+  @return circle($color, $size, 50%, 50%);
 }
 @mixin centered-circle($color, $size) {
  background-image: centered-circle($color, $size);
