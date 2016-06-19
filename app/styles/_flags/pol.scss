@@ -8,5 +8,5 @@
   $red: #d22630;
   $white: #FFF;
 
-  @include two-lines($red, $white);
+  @include two-lines($white, $red);
 };
