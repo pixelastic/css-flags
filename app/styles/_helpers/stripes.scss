@@ -20,14 +20,23 @@
 // @args angle: Angle (in deg) for the stripe
 // @args color: Color of the stripe
 // @args size: Width of the stripe
-// @args distance: Distance from the border
-@function stripe($angle, $color, $size, $distance:0) {
+// @args start: Distance from the border
+@function stripe($angle, $color, $size, $start:0) {
   $angle: round($angle);
+  $end: $start + $size;
+
+  @if ($start > 0) {
+    @return linear-gradient($angle,
+                            transparent, transparent $start,
+                            $color $start, $color $end,
+                            transparent $end, transparent 100%
+                            );
+  }
   @return linear-gradient($angle,
-                          transparent, transparent $distance,
-                          $color $distance, $color ($distance + $size),
-                          transparent ($distance + $size), transparent 100%
+                          $color $start, $color $end,
+                          transparent $end
                           );
+
 }
 
 // Create several stripes of various size

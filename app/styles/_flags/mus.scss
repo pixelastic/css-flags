@@ -2,7 +2,7 @@
 // http://www.crwflags.com/fotw/flags/mu.html
 @mixin flag-mus() {
   @include ratio(2 / 3);
-  $unit: $height / 4;
+  $unit: 25%;
   $red: #ee2737;
   $blue: #151f6d;
   $yellow: #FFD600;
