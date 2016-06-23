@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+svg2ttf ./app/assets/fonts/Symbols.svg ./app/assets/fonts/Symbols.ttf

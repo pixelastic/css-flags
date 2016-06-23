@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+ttf2woff ./app/assets/fonts/Symbols.ttf ./app/assets/fonts/Symbols.woff

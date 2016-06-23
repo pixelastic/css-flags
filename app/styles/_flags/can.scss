@@ -15,6 +15,6 @@
                     $red,   $red-stripe-width
                   );
   &:before {
-    @include centered-symbol($UTF8_MAPLE_LEAF, $red, $leaf-size);
+    @include centered-symbol($UTF8_CAN, $red, $leaf-size);
   }
 };
