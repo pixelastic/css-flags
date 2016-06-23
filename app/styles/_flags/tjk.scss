@@ -17,6 +17,6 @@
                   $red, $stripe-small-height
                 );
   &:before {
-    @include centered-symbol($UTF8_COUNTRY_TJK, $yellow, $symbol-size);
+    @include centered-symbol($UTF8_TJK, $yellow, $symbol-size);
   }
 };

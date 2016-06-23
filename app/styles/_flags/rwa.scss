@@ -20,6 +20,6 @@
                   $green, $stripe-small
                 );
   &:before {
-    @include symbol($UTF8_COUNTRY_RWA, $orange, $symbol-size, $symbol-left, $symbol-top);
+    @include symbol($UTF8_RWA, $orange, $symbol-size, $symbol-left, $symbol-top);
   }
 };

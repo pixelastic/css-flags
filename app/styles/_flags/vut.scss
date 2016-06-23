@@ -53,7 +53,7 @@
   }
 
   &:after {
-    @include symbol($UTF8_COUNTRY_VUT, $yellow, $symbol-size, $symbol-left, $symbol-top);
+    @include symbol($UTF8_VUT, $yellow, $symbol-size, $symbol-left, $symbol-top);
   }
 
 

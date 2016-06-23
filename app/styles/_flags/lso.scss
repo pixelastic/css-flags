@@ -18,6 +18,6 @@
                   $green, $stripe-small-height
                 );
   &:before {
-    @include centered-symbol($UTF8_COUNTRY_LSO, $black, $symbol-size);
+    @include centered-symbol($UTF8_LSO, $black, $symbol-size);
   }
 };

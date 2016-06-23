@@ -15,13 +15,13 @@
 
   background-color: $blue;
   &:before {
-    @include symbol($KAZAKHSTAN_BIRD, $yellow, $symbol-height);
+    @include symbol($UTF8_KAZAKHSTAN_BIRD, $yellow, $symbol-height);
     left: $symbol-left - $symbol-width / 2;
     top: $h2 - $symbol-height / 2;
     width: $symbol-width;
   }
   &:after {
-    @include symbol($KAZAKHSTAN_ORNAMENT, $yellow, $stripe-height);
+    @include symbol($UTF8_KAZAKHSTAN_ORNAMENT, $yellow, $stripe-height);
     left: $stripe-left;
     top: $stripe-top;
     width: $stripe-width;

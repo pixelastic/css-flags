@@ -8,7 +8,7 @@
   $green: #009639;
   $red: #c8102e;
   $white: #FFF;
-  $line-symbols: $IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE+$IRAN_LINE;
+  $line-symbols: $UTF8_IRAN_LINE+$UTF8_IRAN_LINE+$UTF8_IRAN_LINE+$UTF8_IRAN_LINE+$UTF8_IRAN_LINE+$UTF8_IRAN_LINE+$UTF8_IRAN_LINE+$UTF8_IRAN_LINE+$UTF8_IRAN_LINE+$UTF8_IRAN_LINE+$UTF8_IRAN_LINE;
   $line-symbol-height: 28 * $unit;
   $line-symbol-width: $width / 11;
   $line-symbol-top: $height - 140 * $unit - $line-symbol-width;
@@ -16,7 +16,7 @@
 
   @include three-lines($green, $white, $red);
   &:before {
-    @include centered-symbol($IRAN_SYMBOL, $red, $symbol-size);
+    @include centered-symbol($UTF8_IRAN_SYMBOL, $red, $symbol-size);
   }
   &:after {
     content: $line-symbols;

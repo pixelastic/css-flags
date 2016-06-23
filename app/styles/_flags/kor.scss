@@ -45,7 +45,7 @@
 
   background-color: $white;
   &:before {
-    @include centered-symbol($UTF8_COUNTRY_KOR, $black, $symbol-rectangle-width);
+    @include centered-symbol($UTF8_KOR, $black, $symbol-rectangle-width);
     top: $h2 - $symbol-rectangle-height / 2;
     height: $symbol-rectangle-height;
     line-height: $symbol-rectangle-height;

@@ -18,7 +18,7 @@
                 );
 
   &:before {
-    @include symbol($UTF8_COUNTRY_BLR, $red, $height);
+    @include symbol($UTF8_BLR, $red, $height);
     // Force it to coords 0,0 (otherwise it is centered on the symbol
     top: 0;
     left: 0;

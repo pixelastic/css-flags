@@ -35,7 +35,7 @@
                   );
 
   &:before {
-    @include symbol($UTF8_COUNTRY_NAM, $white, $symbol-size, $symbol-left, $symbol-top);
+    @include symbol($UTF8_NAM, $white, $symbol-size, $symbol-left, $symbol-top);
   }
 
 

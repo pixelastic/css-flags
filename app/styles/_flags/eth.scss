@@ -17,6 +17,6 @@
     @include centered-circle-pseudo($blue, $circle-size);
   }
   &:after {
-    @include centered-symbol($UTF8_COUNTRY_ETH, $yellow, $symbol-size);
+    @include centered-symbol($UTF8_ETH, $yellow, $symbol-size);
   }
 };

@@ -6,7 +6,7 @@
   $blue: #00267f;
   $yellow: #ffc726;
   $black: #000;
-  $symbol: $UTF8_COUNTRY_BRB;
+  $symbol: $UTF8_BRB;
   $symbol-height: 2 * $unit;
 
   @include three-columns($blue, $yellow, $blue);

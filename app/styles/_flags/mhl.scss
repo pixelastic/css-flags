@@ -42,7 +42,7 @@
                   ;
 
   &:before {
-    @include symbol($UTF8_COUNTRY_MHL, $white, $symbol-size, $symbol-left, $symbol-top);
+    @include symbol($UTF8_MHL, $white, $symbol-size, $symbol-left, $symbol-top);
   }
   
 };

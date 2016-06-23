@@ -20,7 +20,7 @@
   }
   // Symbol
   &:after {
-    @include symbol($UTF8_COUNTRY_ERI, $yellow, $symbol-size, $symbol-left, $symbol-top);
+    @include symbol($UTF8_ERI, $yellow, $symbol-size, $symbol-left, $symbol-top);
   }
 
 };

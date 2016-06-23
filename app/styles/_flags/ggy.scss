@@ -19,6 +19,6 @@
                   ;
 
   &:before {
-    @include centered-symbol($UTF8_COUNTRY_GGY, $yellow, $cross-size);
+    @include centered-symbol($UTF8_GGY, $yellow, $cross-size);
   }
 };

@@ -11,6 +11,6 @@
 
   background-color: $red;
   &:before {
-    @include centered-symbol($UTF8_COUNTRY_HKG, $white, $symbol-size);
+    @include centered-symbol($UTF8_HKG, $white, $symbol-size);
   }
 };

@@ -19,7 +19,7 @@
                   $blue, $blue-stripe-size
                 );
   &:before {
-    @include symbol($UTF8_COUNTRY_NRU, $white, $symbol-size, $symbol-left, $symbol-top);
+    @include symbol($UTF8_NRU, $white, $symbol-size, $symbol-left, $symbol-top);
   }
                   
 };

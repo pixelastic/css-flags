@@ -20,7 +20,7 @@
                   ;
 
   &:before {
-    @include centered-symbol($UTF8_COUNTRY_MTQ, transparent, $symbol-size);
+    @include centered-symbol($UTF8_MTQ, transparent, $symbol-size);
     text-shadow:
                 (-$symbol-offset-left) (-$symbol-offset-top) 0px $white,
                 ($symbol-offset-left) (-$symbol-offset-top) 0px $white,

@@ -28,16 +28,17 @@ const FontHelper = {
     });
 
     let unicodeIndex = 0;
+    let baseUnicodeCodePoint = 58880; // \e6XX private space
     symbolList.forEach((symbol) => {
       let glyph = fs.createReadStream(symbol);
       let name = path.basename(symbol, '.svg');
-      let paddedUnicodeIndex = `00${unicodeIndex}`.substr(-3, 3);
-      let unicodeCharacter = String.fromCharCode(unicodeIndex + 57344);
-      let scssValue = `\\e${paddedUnicodeIndex}`;
+      let unicodeCodePoint = unicodeIndex + baseUnicodeCodePoint;
+      let unicodeCharacter = String.fromCodePoint(unicodeCodePoint);
+      let unicodeCharacterEscaped = `\\${unicodeCodePoint.toString(16)}`;
       unicodeIndex++;
 
       glyph.metadata = {name, unicode: [unicodeCharacter]};
-      glyphMapping[name] = scssValue;
+      glyphMapping[name] = unicodeCharacterEscaped;
 
       stream.write(glyph);
     });

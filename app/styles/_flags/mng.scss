@@ -14,7 +14,7 @@
   @include three-columns($red, $blue, $red);
 
   &:before {
-    @include symbol($UTF8_COUNTRY_MNG, $yellow, $symbol-height);
+    @include symbol($UTF8_MNG, $yellow, $symbol-height);
     width: $symbol-width;
     left: $symbol-left;
     top: $symbol-top;

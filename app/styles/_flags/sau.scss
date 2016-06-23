@@ -10,6 +10,6 @@
 
   background-color: $green;
   &:before {
-    @include centered-symbol($UTF8_COUNTRY_SAU, $white, $symbol-size);
+    @include centered-symbol($UTF8_SAU, $white, $symbol-size);
   }
 };

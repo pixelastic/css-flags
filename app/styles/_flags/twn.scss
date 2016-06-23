@@ -17,6 +17,6 @@
     @include rectangle($blue, $canton-width, $canton-height);
   }
   &:after {
-    @include symbol($UTF8_COUNTRY_TWN, $white, $star-size, $star-left, $star-top);
+    @include symbol($UTF8_TWN, $white, $star-size, $star-left, $star-top);
   }
 };

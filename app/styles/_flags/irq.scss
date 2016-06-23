@@ -11,6 +11,6 @@
 
   @include three-lines($red, $white, $black);
   &:before {
-    @include centered-symbol($UTF8_COUNTRY_IRQ, $green, $symbol-size);
+    @include centered-symbol($UTF8_IRQ, $green, $symbol-size);
   }
 };

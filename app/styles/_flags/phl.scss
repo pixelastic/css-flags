@@ -45,7 +45,7 @@
   // use a lower z-index that the before to put it below the small stars.
   &:before {
     @include triangle($white, $triangle-width);
-    content: $UTF8_COUNTRY_PHL;
+    content: $UTF8_PHL;
     text-indent: $triangle-width / 3 - $star-big-size / 2;
     line-height: $height;
     color: $yellow;

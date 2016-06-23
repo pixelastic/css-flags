@@ -15,6 +15,6 @@
                     $green, $stripe-small-size
                   );
   &:before {
-    @include centered-symbol($UTF8_COUNTRY_NFK, $green, $symbol-size);
+    @include centered-symbol($UTF8_NFK, $green, $symbol-size);
   }
 };

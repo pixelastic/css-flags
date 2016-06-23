@@ -19,7 +19,7 @@
                     h-stripe($red, $stripe-size, $stripe-top)
                   ;
   &:before {
-    @include centered-symbol($UTF8_COUNTRY_GEO, transparent, $cross-size);
+    @include centered-symbol($UTF8_GEO, transparent, $cross-size);
     text-shadow:
                  ($w2 - $cross-left) ($h2 - $cross-top) 0px $red,
                  ($w2 - $cross-left) (-$h2 + $cross-top) 0px $red,

@@ -28,7 +28,7 @@
   @include three-lines($black, $red, $green);
 
   &:before {
-    @include symbol($UTF8_COUNTRY_MWI, $red, $symbol-width);
+    @include symbol($UTF8_MWI, $red, $symbol-width);
     height: $symbol-height;
     top: $symbol-top;
     left: $symbol-left;
