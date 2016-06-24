@@ -2,5 +2,5 @@
 
 rm -rf node_modules/gh-pages/.cache
 rm -rf public
-brunch build
+npm run build
 gh-pages --dist public --branch gh-pages
