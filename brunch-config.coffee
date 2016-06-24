@@ -1,4 +1,6 @@
 module.exports = config:
+  paths:
+    watched: ['app']
   files:
     javascripts: joinTo: 'main.js'
     stylesheets: joinTo: 'main.css'
@@ -17,6 +19,6 @@ module.exports = config:
         # require('cssnano')
       ]
   server:
-      run: yes
-      port: 4001
+    run: yes
+    port: 4001
 
