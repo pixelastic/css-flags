@@ -14,9 +14,8 @@ module.exports = config:
       pattern: /\.(js)$/
     postcss:
       processors: [
-        require('autoprefixer')(['Chrome > 44, last 8 versions'])
+        require('autoprefixer')(['last 8 versions'])
         require('postcss-round-subpixels'),
-        # require('cssnano')
       ]
   server:
     run: yes
