@@ -1795,7 +1795,20 @@ picture {
 
 .c-flag__ind {
   width: 220px;
-  height: 147px; }
+  height: 147px;
+  background-image: -webkit-linear-gradient(top, #ff671f 0, #ff671f 33%, #FFF 33%, #FFF 67%, #00843d 67%, #00843d 100%);
+  background-image: linear-gradient(180deg, #ff671f 0, #ff671f 33%, #FFF 33%, #FFF 67%, #00843d 67%, #00843d 100%); }
+  .c-flag__ind:before {
+    color: #00263a;
+    content: "";
+    font-size: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    position: absolute;
+    width: 44px;
+    top: 52px;
+    left: 88px; }
 
 .c-flag__idn {
   width: 220px;
