@@ -1,5 +1,16 @@
 // India
 // http://www.crwflags.com/fotw/flags/in.html
+// http://www.vexilla-mundi.com/india_flag.html
 @mixin flag-ind() {
   @include ratio(2 / 3);
+  $orange: #ff671f;
+  $white: #FFF;
+  $green: #00843d;
+  $blue: #00263a;
+  $symbol-width: $w5; // Radius is 1/10 of the width
+
+  @include three-lines($orange, $white, $green);
+  &:before {
+    @include centered-symbol($UTF8_IND, $blue, $symbol-width);
+  }
 };
