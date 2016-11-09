@@ -97,9 +97,7 @@ longer user percentage values, I need real, absolute, pixel values.
 
 
 
-## Sibling projects
-
-Here are two others projects I did while working on CSS Flags.
+## Related projects
 
 ### img2css
 
@@ -117,6 +115,13 @@ I choose not to use it in this project.
 
 Commandline tool to get an approximation in hexadecimal of a Pantone color
 value. Really useful as Vexilla Mundi gives color values in Pantone.
+
+
+### Vexillum
+
+[https://github.com/talgautb/vexillum](https://github.com/talgautb/vexillum)
+
+Someone else had the same idea.
 
 ## Tips and tricks
 
