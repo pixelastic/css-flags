@@ -70,7 +70,7 @@
     line-height: $star-commonwealth-small-size;
 
     // Offset from 0,0
-    $offset-left: -$star-commonwealth-big-size / 2 - $star-commonwealth-small-size / 2;
+    $offset-left: -$star-commonwealth-big-size - $star-commonwealth-small-size / 2;
     $offset-top: -$star-commonwealth-big-size / 2 - $star-commonwealth-small-size / 2;
     $text-shadow-left1: $star-commonwealth-small-left1 + $offset-left;
     $text-shadow-top1: $star-commonwealth-small-top1 + $offset-top;
