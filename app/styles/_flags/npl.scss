@@ -2,4 +2,101 @@
 // http://www.crwflags.com/fotw/flags/np.html
 @mixin flag-npl() {
   @include ratio(2 / 3);
+  $unit: $h800;
+  $red: #c8102e;
+  $blue: #0c2340;
+  $white: #FFFFFF;
+
+  background: $blue;
+  
+  // We'll name points from A to E, starting on the top and rotating clockwise
+  $DE: 600 * $unit;
+  $CD: 600 * $unit;
+  $AE: 800 * $unit;
+  $A-x: 0;
+  $A-y: 0;
+  $D-x: $DE;
+  $D-y: $AE;
+  $E-x: 0;
+  $E-y: $AE;
+
+  // To get the two missing points, we'll need to calculate the width of the
+  // inner triangle formed by (DC), (AE) and the perpendicular of (AE) coming
+  // through B.
+  // Let's consider K the intersection of (DC) with (AE)
+  $EK: 600 * $unit;
+  $AK: 200 * $unit;
+  $DK: hypotenuse($EK, $DE);
+  $CK: $DK - $CD;
+
+  // Let's consider J the intersection of (CB) with (AE)
+  $alpha-DKE: asin($DE / $DK);
+  $alpha-CKJ: $alpha-DKE;
+  $JK: cos($alpha-CKJ) * $CK;
+  $CJ: sin($alpha-CKJ) * $CK;
+  $AJ: $AK + $JK;
+  $B-x: $DE;
+  $B-y: $AJ;
+  $C-x: $CJ;
+  $C-y: $AJ;
+  
+  clip-path: polygon(
+    $A-x $A-y,
+    $B-x $B-y,
+    $C-x $C-y,
+    $D-x $D-y,
+    $E-x $E-y
+  );
+
+  // We need to add the blue border around the flag. The border size is
+  // consistent, but we need to re-calculate all the coordinates.
+  $border-width: 25 * $unit;
+
+  $BJ: $DE;
+  $AB: hypotenuse($AJ, $BJ);
+  $alpha-JAB: asin($BJ / $AB);
+  $alpha-JAB-prime: $alpha-JAB / 2;
+  $A-x-offset: - $border-width;
+  $A-y-offset: - $border-width / tan($alpha-JAB-prime);
+
+  $alpha-ABJ: 90deg - $alpha-JAB;
+  $alpha-ABJ-prime: $alpha-ABJ / 2;
+  $B-x-offset: $border-width / tan($alpha-ABJ-prime);
+  $B-y-offset: $border-width;
+
+  $alpha-JCK: 90deg - $alpha-CKJ;
+  $alpha-BCD: $alpha-JCK;
+  $alpha-BCD-prime: $alpha-BCD / 2;
+  $C-x-offset: $border-width / tan($alpha-BCD-prime);
+  $C-y-offset: $border-width;
+
+  $alpha-CDE: 90deg - $alpha-CKJ;
+  $alpha-CDE-prime: $alpha-CDE / 2;
+  $D-x-offset: $border-width / tan($alpha-CDE-prime);
+  $D-y-offset: $border-width;
+
+  $E-x-offset: - $border-width;
+  $E-y-offset: $border-width;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $width;
+    height: $height;
+    background-color: $red;
+
+    clip-path: polygon(
+      ($A-x - $A-x-offset) ($A-y - $A-y-offset),
+      ($B-x - $B-x-offset) ($B-y - $B-y-offset),
+      ($C-x - $C-x-offset) ($C-y - $C-y-offset),
+      ($D-x - $D-x-offset) ($D-y - $D-y-offset),
+      ($E-x - $E-x-offset) ($E-y - $E-y-offset)
+    );
+  }
+
+
+
 };
