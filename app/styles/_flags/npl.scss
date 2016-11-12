@@ -1,5 +1,14 @@
 // Nepal
 // http://www.crwflags.com/fotw/flags/np.html
+// http://www.vexilla-mundi.com/nepal_flag.html
+// http://crwflags.com/fotw/flags/np%27.html
+// This one is one of the hardest of the lot. The peculiar shape is done
+// through clip-path. We first cut the blue shape in the main div, then we cut
+// the red one in an :after. The two symbols are positionned through :before
+// and :first-letter. Symbols are simply displayed on the first line each one
+// is then placed at the correct position using text-shadow.
+// A lot of geometry is involved, don't hesitate to draw it on a sheet of
+// paper.
 @mixin flag-npl() {
   @include ratio(2 / 3);
   $unit: $h800;
@@ -7,7 +16,6 @@
   $blue: #0c2340;
   $white: #FFFFFF;
 
-  background: $blue;
   
   // We'll name points from A to E, starting on the top and rotating clockwise
   $DE: 600 * $unit;
@@ -40,6 +48,7 @@
   $C-x: $CJ;
   $C-y: $AJ;
   
+  background: $blue;
   clip-path: polygon(
     $A-x $A-y,
     $B-x $B-y,
@@ -78,9 +87,9 @@
   $E-x-offset: - $border-width;
   $E-y-offset: $border-width;
 
-  &:before {
-    content: "";
-    display: block;
+  &:after {
+    content: '';
+    z-index: 5;
     position: absolute;
     top: 0;
     left: 0;
@@ -98,5 +107,42 @@
   }
 
 
+  // Let's roughly calculate the scale difference between the red and blue
+  // shapes and apply it to everything we calculated here.
+  $red-rectangle-area: $AE * $DE;
+  $blue-rectangle-area: ($AE + 2 * $border-width) * ($DE + 2 * $border-width);
+  $blue-red-ratio: $red-rectangle-area / $blue-rectangle-area;
 
+  $star-width: 256 * $unit * $blue-red-ratio;
+  $star-height: $star-width;
+  $crescent-width: 240 * $unit * $blue-red-ratio;
+  $crescent-height: 80 * $unit * $blue-red-ratio;
+  $crescent-left: $border-width + 150 * $unit * $blue-red-ratio - $crescent-width / 2;
+  $crescent-top: - $star-height / 2 + 240 * $unit;
+
+  // Let's consider M the center of [CD] and L the point where the
+  // perpendicular to (DE) goes through M
+  $DM: $CD / 2;
+  $LM: sin($alpha-CDE) * $DM;
+  $star-top: - $star-height / 2 + ($height - $LM) + $border-width;
+  $star-left: - $crescent-width + $crescent-left;
+
+  &:before {
+    content: $UTF8_NPL_CRESCENT+$UTF8_NPL_STAR;
+    position: relative; // needed for first-letter and z-index to work
+    z-index: 10;
+    color: transparent;
+    font-family: Symbols;
+    font-size: $star-width;
+    line-height: $star-width;
+    text-shadow: $star-left $star-top 0 $white;
+  }
+
+  &:first-letter {
+    font-family: Symbols;
+    color: transparent;
+    line-height: $star-width; // Use a line-height equal to the biggest of the two
+    font-size: $crescent-width;
+    text-shadow: $crescent-left $crescent-top 0 $white;
+  }
 };
