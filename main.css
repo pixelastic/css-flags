@@ -726,7 +726,7 @@ picture {
   .c-flag__aus:before {
     z-index: 20;
     color: transparent;
-    content: "\a";
+    content: "\a";
     font-size: 9px;
     height: 9px;
     line-height: 9px;
@@ -913,7 +913,7 @@ picture {
     left: 25px; }
   .c-flag__bes:after {
     color: #c8102e;
-    content: "";
+    content: "";
     font-size: 37px;
     height: 37px;
     line-height: 37px;
@@ -1030,7 +1030,7 @@ picture {
     border-radius: 50%;
     top: 29px;
     left: 73px;
-    content: "";
+    content: "";
     font-size: 12px;
     line-height: 75px;
     text-indent: 29px;
@@ -2486,7 +2486,7 @@ picture {
   background-image: linear-gradient(180deg, #012169 0, #012169 50px, #ffc72c 50px, #ffc72c 60px, #012169 60px, #012169 110px); }
   .c-flag__nru:before {
     color: #FFF;
-    content: "";
+    content: "";
     font-size: 37px;
     height: 37px;
     line-height: 37px;
@@ -2498,7 +2498,36 @@ picture {
 
 .c-flag__npl {
   width: 220px;
-  height: 147px; }
+  height: 147px;
+  background: #0c2340;
+  -webkit-clip-path: polygon(0 0, 110px 69px, 32px 69px, 110px 147px, 0 147px);
+          clip-path: polygon(0 0, 110px 69px, 32px 69px, 110px 147px, 0 147px); }
+  .c-flag__npl:after {
+    content: '';
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 147px;
+    background-color: #c8102e;
+    -webkit-clip-path: polygon(5px 8px, 94px 64px, 21px 64px, 99px 142px, 5px 142px);
+            clip-path: polygon(5px 8px, 94px 64px, 21px 64px, 99px 142px, 5px 142px); }
+  .c-flag__npl:before {
+    content: "";
+    position: relative;
+    z-index: 10;
+    color: transparent;
+    font-family: Symbols;
+    font-size: 41px;
+    line-height: 41px;
+    text-shadow: -29px 92px 0 #FFFFFF; }
+  .c-flag__npl:first-letter {
+    font-family: Symbols;
+    color: transparent;
+    line-height: 41px;
+    font-size: 38px;
+    text-shadow: 9px 24px 0 #FFFFFF; }
 
 .c-flag__nld {
   width: 220px;
@@ -2770,7 +2799,7 @@ picture {
     margin: 0; }
   .c-flag__png:after {
     color: #ffcd00;
-    content: "";
+    content: "";
     font-size: 73px;
     height: 73px;
     line-height: 73px;
@@ -2818,7 +2847,7 @@ picture {
     background-color: #FFF;
     -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
             clip-path: polygon(0 0, 100% 50%, 0 100%);
-    content: "";
+    content: "";
     text-indent: 9px;
     line-height: 110px;
     color: #fed141;
@@ -2907,7 +2936,7 @@ picture {
   background-image: linear-gradient(180deg, #0078CB 0, #0078CB 73px, #ffd100 73px, #ffd100 110px, #00794F 110px, #00794F 147px); }
   .c-flag__rwa:before {
     color: #f2a900;
-    content: "";
+    content: "";
     font-size: 47px;
     height: 47px;
     line-height: 47px;
@@ -3064,7 +3093,7 @@ picture {
   background-color: #009a44; }
   .c-flag__sau:before {
     color: #FFF;
-    content: "";
+    content: "";
     font-size: 110px;
     height: 110px;
     line-height: 110px;
@@ -3328,7 +3357,7 @@ picture {
     top: 0; }
   .c-flag__twn:after {
     color: #FFF;
-    content: "";
+    content: "";
     font-size: 55px;
     height: 55px;
     line-height: 55px;
@@ -3345,7 +3374,7 @@ picture {
   background-image: linear-gradient(180deg, #060 0, #060 42px, #FFF 42px, #FFF 105px, #c00 105px, #c00 147px); }
   .c-flag__tjk:before {
     color: #f8c300;
-    content: "";
+    content: "";
     font-size: 63px;
     height: 63px;
     line-height: 63px;
@@ -3647,7 +3676,7 @@ picture {
     background-image: linear-gradient(-25deg, #009a44 0, #009a44 43px, transparent 43px), linear-gradient(205deg, #c8102e 0, #c8102e 43px, transparent 43px), linear-gradient(-25deg, transparent, transparent 43px, #000 43px, #000 51px, transparent 51px, transparent 100%), linear-gradient(205deg, transparent, transparent 43px, #000 43px, #000 51px, transparent 51px, transparent 100%), linear-gradient(-25deg, transparent, transparent 51px, #ffcd00 51px, #ffcd00 57px, transparent 57px, transparent 100%), linear-gradient(205deg, transparent, transparent 51px, #ffcd00 51px, #ffcd00 57px, transparent 57px, transparent 100%); }
   .c-flag__vut:after {
     color: #ffcd00;
-    content: "";
+    content: "";
     font-size: 35px;
     height: 35px;
     line-height: 35px;
