@@ -5,6 +5,29 @@
     @return $value / ($value * 0 + 1);
 }
 
+// Link polygen point lists to a single one
+// @args: lists with positions
+// @returns: New single list which can be used in polygen()
+@function link_list($args...) {
+  $result: ();
+  $len: length($args);
+
+  @for $i from 1 to $len + 1 {
+    $list: nth($args, $i);
+    $result: append($result, $list, comma);
+  }
+
+  @if ($len <= 2) {
+    @return $result;
+  }
+
+  @for $i from $len - 1 to 1 {
+    $list: nth($args, $i);
+    $result: append($result, nth($list, 1), comma);
+  }
+  @return $result;
+}
+
 // Sets the flag ratio and update all magic variables
 // @args ratio: Ratio of height / width
 @mixin ratio($ratio:1) {

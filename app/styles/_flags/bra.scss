@@ -78,7 +78,7 @@
   //   // top: ($height - $circle-width) / 2;
   //   // left: ($width - $circle-width) / 2;
   //   // background-color: $white;
-  //   clip-path: five-pointed-star($circle-width, 100px, 100px);
+  //   clip-path: polygon(five-pointed-star($circle-width, 100px, 100px));
   // }
 };
 
