@@ -6,20 +6,22 @@
   $red: #de2910;
   $yellow: #FDDA24;
   $star-size: 6 * $unit;
-  $star-offset-top: 5 * $unit;
-  $star-offset-left: 5 * $unit;
   $star-size-small: 2 * $unit;
-  $star-offset-top-small: 2 * $unit;
-  $star-offset-left-small: 10 * $unit;
 
   background-color: $red;
   &:before {
-    @include star($yellow, $star-size, $star-offset-left, $star-offset-top);
-  }
-  &:after {
-    @include star($yellow, $star-size-small, $star-offset-left-small, $star-offset-top-small);
-    text-shadow:(2 * $unit) (2 * $unit) 0px $yellow,
-                (2 * $unit) (5 * $unit) 0px $yellow,
-                (0) (7 * $unit) 0px $yellow;
+    content: '';
+    display: block;
+    position: relative;
+    width: $width;
+    height: $height;
+    background: $yellow;
+    clip-path: polygon(link_list(
+      five-pointed-star($star-size, 5 * $unit, 5 * $unit),
+      five-pointed-star($star-size-small, 10 * $unit, 2 * $unit, -120.96),
+      five-pointed-star($star-size-small, 12 * $unit, 4 * $unit, -98.13),
+      five-pointed-star($star-size-small, 12 * $unit, 7 * $unit, -74.055),
+      five-pointed-star($star-size-small, 10 * $unit, 9 * $unit, -54.34)
+    ));
   }
 };

@@ -5,7 +5,8 @@
 // http://www.mathalino.com/sites/default/files/images/005-planegeom-pentagram.jpg
 // http://musicians4freedom.com/wp-content/uploads/2014/06/phi-dimentions-in-pentagram_0.gif
 //
-@function five-pointed-star($diameter, $left, $top) {
+@function five-pointed-star($diameter, $left, $top, $rotate:0) {
+  $result: ();
   $radius: _($diameter / 2);
   $golden-ratio: 1.618;
   // There are two circles that make a five pointed star.
@@ -14,86 +15,15 @@
   // Both radius have a ratio equal to the golden ratio
   $inner-radius: $radius - $radius / $golden-ratio;
 
-  // Whatever the size of the star, the inner angle of the peaks is always 36°
-  $teta: 36deg;
-  // The other angles of the triangles are 72°
-  $beta: 72deg;
-  $pentagram-side: 2 * (sin($teta) * $inner-radius);
-  // teta is also equal to the angle from the center of the star to one inner
-  // peak and with a right angle to the base of one of the triangles
-  $inner-top-padding-x: $pentagram-side / 2;
-  $inner-top-padding-y: cos($teta) * $inner-radius;
-  $outer-top-padding-x: sqrt($radius * $radius - $inner-top-padding-y * $inner-top-padding-y);
-  $outer-top-padding-y: $inner-top-padding-y;
-  $inner-bottom-padding-x: ($pentagram-side / 2) + (cos($beta) * $pentagram-side);
-  $inner-bottom-padding-y: sqrt($inner-radius * $inner-radius - $inner-bottom-padding-x * $inner-bottom-padding-x);
-  $outer-bottom-padding-x: sin($teta) * $radius;
-  $outer-bottom-padding-y: cos($teta) * $radius;
-  
-  // We'll name the points of the star starting from the top and in clockwise
-  // order
-  $A-x: 0;
-  $A-y: -$radius;
+  $ang: $rotate;
+  @for $i from 0 to 11 {
+    $r: $radius;
+    @if ($i % 2 == 1) {
+      $r: $inner-radius;
+    }
+    $result: append($result, ($left + $r * sin($ang) $top - $r * cos($ang)), comma);
+    $ang: $ang + 36;
+  }
 
-  $B-x: $inner-top-padding-x;
-  $B-y: -$inner-top-padding-y;
-
-  $C-x: $outer-top-padding-x;
-  $C-y: -$outer-top-padding-y;
-
-  $D-x: $inner-bottom-padding-x;
-  $D-y: $inner-bottom-padding-y;
-
-  $E-x: $outer-bottom-padding-x;
-  $E-y: $outer-bottom-padding-y;
-
-  $F-x: 0;
-  $F-y: $inner-radius;
-
-  $G-x: -$outer-bottom-padding-x;
-  $G-y: $outer-bottom-padding-y;
-
-  $H-x: -$inner-bottom-padding-x;
-  $H-y: $inner-bottom-padding-y;
-
-  $I-x: -$outer-top-padding-x;
-  $I-y: -$outer-top-padding-y;
-
-  $J-x: -$inner-top-padding-x;
-  $J-y: -$inner-top-padding-y;
-
-  // Converting to px and placing relative to origin
-  $A-x: $A-x * 1px + $left;
-  $A-y: $A-y * 1px + $top;
-  $B-x: $B-x * 1px + $left;
-  $B-y: $B-y * 1px + $top;
-  $C-x: $C-x * 1px + $left;
-  $C-y: $C-y * 1px + $top;
-  $D-x: $D-x * 1px + $left;
-  $D-y: $D-y * 1px + $top;
-  $E-x: $E-x * 1px + $left;
-  $E-y: $E-y * 1px + $top;
-  $F-x: $F-x * 1px + $left;
-  $F-y: $F-y * 1px + $top;
-  $G-x: $G-x * 1px + $left;
-  $G-y: $G-y * 1px + $top;
-  $H-x: $H-x * 1px + $left;
-  $H-y: $H-y * 1px + $top;
-  $I-x: $I-x * 1px + $left;
-  $I-y: $I-y * 1px + $top;
-  $J-x: $J-x * 1px + $left;
-  $J-y: $J-y * 1px + $top;
-
-  @return polygon(
-    $A-x $A-y,
-    $B-x $B-y,
-    $C-x $C-y,
-    $D-x $D-y,
-    $E-x $E-y,
-    $F-x $F-y,
-    $G-x $G-y,
-    $H-x $H-y,
-    $I-x $I-y,
-    $J-x $J-y
-  );
+  @return $result;
 }
