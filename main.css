@@ -1159,28 +1159,14 @@ picture {
   height: 147px;
   background-color: #de2910; }
   .c-flag__chn:before {
-    color: #FDDA24;
-    content: "";
-    font-size: 44px;
-    height: 44px;
-    line-height: 44px;
-    text-align: center;
-    position: absolute;
-    width: 44px;
-    top: 15px;
-    left: 15px; }
-  .c-flag__chn:after {
-    color: #FDDA24;
-    content: "";
-    font-size: 15px;
-    height: 15px;
-    line-height: 15px;
-    text-align: center;
-    position: absolute;
-    width: 15px;
-    top: 7px;
-    left: 66px;
-    text-shadow: 15px 15px 0px #FDDA24, 15px 37px 0px #FDDA24, 0 51px 0px #FDDA24; }
+    content: '';
+    display: block;
+    position: relative;
+    width: 220px;
+    height: 147px;
+    background: #FDDA24;
+    -webkit-clip-path: polygon(37px 15px, 42px 30px, 58px 30px, 45px 39px, 50px 55px, 37px 45px, 24px 55px, 29px 39px, 16px 30px, 32px 30px, 37px 15px, 67px 18px, 71px 14px, 68px 10px, 73px 12px, 76px 8px, 76px 13px, 81px 15px, 76px 17px, 75px 22px, 72px 17px, 67px 18px, 81px 30px, 86px 28px, 85px 23px, 89px 27px, 93px 24px, 91px 29px, 95px 33px, 89px 32px, 87px 37px, 86px 31px, 81px 30px, 81px 49px, 86px 49px, 88px 44px, 90px 49px, 95px 49px, 91px 52px, 93px 57px, 88px 54px, 84px 58px, 86px 52px, 81px 49px, 68px 62px, 73px 63px, 76px 59px, 76px 64px, 81px 66px, 76px 68px, 76px 73px, 73px 69px, 68px 71px, 71px 66px, 68px 62px, 81px 49px, 81px 30px, 67px 18px);
+            clip-path: polygon(37px 15px, 42px 30px, 58px 30px, 45px 39px, 50px 55px, 37px 45px, 24px 55px, 29px 39px, 16px 30px, 32px 30px, 37px 15px, 67px 18px, 71px 14px, 68px 10px, 73px 12px, 76px 8px, 76px 13px, 81px 15px, 76px 17px, 75px 22px, 72px 17px, 67px 18px, 81px 30px, 86px 28px, 85px 23px, 89px 27px, 93px 24px, 91px 29px, 95px 33px, 89px 32px, 87px 37px, 86px 31px, 81px 30px, 81px 49px, 86px 49px, 88px 44px, 90px 49px, 95px 49px, 91px 52px, 93px 57px, 88px 54px, 84px 58px, 86px 52px, 81px 49px, 68px 62px, 73px 63px, 76px 59px, 76px 64px, 81px 66px, 76px 68px, 76px 73px, 73px 69px, 68px 71px, 71px 66px, 68px 62px, 81px 49px, 81px 30px, 67px 18px); }
 
 .c-flag__cxr {
   width: 220px;
