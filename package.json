@@ -51,7 +51,7 @@
     "phantomcss": "^0.11.0",
     "postcss-brunch": "^0.5.0",
     "postcss-round-subpixels": "^1.2.0",
-    "sass-brunch": "^1.9.0",
+    "sass-brunch": "^2.10.4",
     "svg2ttf": "4.0.1",
     "svgicons2svgfont": "^5.0.0",
     "to-factory": "^1.0.0",

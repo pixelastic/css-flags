@@ -5,10 +5,12 @@
     @return $value / ($value * 0 + 1);
 }
 
-// Link polygen point lists to a single one
+// Link polygon point lists to a single one
 // @args: lists with positions
-// @returns: New single list which can be used in polygen()
-@function link_list($args...) {
+// @returns: New single list which can be used in polygon()
+// Inspired by:
+// https://css-tricks.com/cutting-inner-part-element-using-clip-path/
+@function link_polygons($args...) {
   $result: ();
   $len: length($args);
 

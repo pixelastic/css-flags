@@ -2,27 +2,29 @@
 // @args size: Diameter of the circle in which the star is
 // @args left: X coord of the star center
 // @args top: Y coord of the star center
+// @args rotate: Angle to rotate the star
 // http://www.mathalino.com/sites/default/files/images/005-planegeom-pentagram.jpg
 // http://musicians4freedom.com/wp-content/uploads/2014/06/phi-dimentions-in-pentagram_0.gif
 //
-@function five-pointed-star($diameter, $left, $top, $rotate:0) {
+@function five-pointed-star($diameter, $left, $top, $alpha:0) {
   $result: ();
-  $radius: _($diameter / 2);
+  $whole-radius: _($diameter / 2);
   $golden-ratio: 1.618;
   // There are two circles that make a five pointed star.
   // A outer circle, where all the peaks are located
   // And an inner circle, where all the inner bases are located
   // Both radius have a ratio equal to the golden ratio
-  $inner-radius: $radius - $radius / $golden-ratio;
+  $inner-radius: $whole-radius - $whole-radius / $golden-ratio;
 
-  $ang: $rotate;
   @for $i from 0 to 11 {
-    $r: $radius;
+    $radius: $whole-radius;
     @if ($i % 2 == 1) {
-      $r: $inner-radius;
+      $radius: $inner-radius;
     }
-    $result: append($result, ($left + $r * sin($ang) $top - $r * cos($ang)), comma);
-    $ang: $ang + 36;
+    $result: append($result, 
+                    ($left + $radius * sin($alpha) $top - $radius * cos($alpha)), 
+                    comma);
+    $alpha: $alpha + 36;
   }
 
   @return $result;
