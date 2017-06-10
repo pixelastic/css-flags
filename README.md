@@ -5,13 +5,14 @@ Recreating all the flags of the nations of the world in pure CSS, using only one
 
 You can see it live on [https://pixelastic.github.io/css-flags/](https://pixelastic.github.io/css-flags/)
 
-This side-project has no real-world application, it was just an exercice to push
+This side-project has no real-world application, it was just an exercise to push
 the boundaries of what I know about CSS. Trying to use the language to do things
-it wasn't meant to do in the first place teached me a lot about the language.
+it wasn't meant to do in the first place taught me a lot about the language.
 
 ## Running the project locally
 
 ```sh
+bundle install
 npm install
 npm run serve
 ```
@@ -54,7 +55,7 @@ already exists in the UTF8 table, so I just have to grab them from existing
 fonts (or use [utf8icons.com][7]).
 
 But more often, I had to use Vexilla Mundi. The website provides nice png images
-of all the symbols. Unfortunatly, the symbols they provide are already colored,
+of all the symbols. Unfortunately, the symbols they provide are already colored,
 and I needed them black to use in the font so I was able to define the color
 myself.
 
@@ -103,7 +104,7 @@ longer user percentage values, I need real, absolute, pixel values.
 
 [http://github.com/pixelastic/img2css/](http://github.com/pixelastic/img2css/)
 
-Commanline tool to convert any image (jpg or png) to full CSS. This will
+Commandline tool to convert any image (jpg or png) to full CSS. This will
 replicate all pixels of the initial image using numerous `box-shadows`.
 
 This works wel but results in really heavy generated CSS (several MB), so
@@ -130,7 +131,7 @@ Here is an incomplete list of the tricks I had to use:
 ### Invisible text-shadow
 
 I sometimes put an invisible symbol in an `after` or `before` element (through
-`color: transparent`) and positionned it at `top:0; left: 0`.
+`color: transparent`) and positioned it at `top:0; left: 0`.
 
 Then I added several `text-shadow` to it, with a full color. Doing so helped in
 getting the coordinates right because everything is then relative to the origin
@@ -159,7 +160,7 @@ add:
 - Link to codepen to let users play with the code
 - Making it work on more browsers...
 - ...which implies that I need to add a visual testing framework on top if it
-- Adding the missings flags
+- Adding the missing flags
 - Using a clip-path when only one star instead of a font
 - Building the font with npm instead of icomoon.io
 - Adding stars to Brazil
